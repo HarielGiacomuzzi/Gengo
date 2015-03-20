@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (User)
+@interface User : NSObject
+
+@property NSString *nome;
+@property NSInteger nivel;
+@property NSInteger xp;
+@property NSMutableArray *items;
+@property char sexo;
+@property NSMutableArray *lições;
+@property NSMutableArray *puzzles;
 
 @end

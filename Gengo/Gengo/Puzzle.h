@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Puzzle)
+@interface Puzzle : NSObject
 
 @end

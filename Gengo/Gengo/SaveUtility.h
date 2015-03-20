@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+#import "User.h"
 
-@interface NSObject (SaveUtility)
+@interface SaveUtility : NSObject
 
 @end

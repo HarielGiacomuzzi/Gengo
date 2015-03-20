@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Daniel Amarante. All rights reserved.
 //
 
-#import "NSObject+User.h"
+#import "User.h"
 
-@implementation NSObject (User)
+@implementation User
 
 @end

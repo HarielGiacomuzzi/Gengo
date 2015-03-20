@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Daniel Amarante. All rights reserved.
 //
 
-#import "NSObject+Achievement.h"
+#import "Achievement.h"
 
-@implementation NSObject (Achievement)
+@implementation Achievement
 
 @end

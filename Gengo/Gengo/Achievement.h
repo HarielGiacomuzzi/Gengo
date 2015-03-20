@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Achievement)
+@interface Achievement : NSObject
 
 @end

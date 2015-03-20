@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Daniel Amarante. All rights reserved.
 //
 
-#import "NSObject+Lesson.h"
+#import "Lesson.h"
 
-@implementation NSObject (Lesson)
+@implementation Lesson
 
 @end

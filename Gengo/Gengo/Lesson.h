@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Lesson)
+@interface Lesson : NSObject
 
 @end

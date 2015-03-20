@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Daniel Amarante. All rights reserved.
 //
 
-#import "NSObject+Puzzle.h"
+#import "Puzzle.h"
 
-@implementation NSObject (Puzzle)
+@implementation Puzzle
 
 @end

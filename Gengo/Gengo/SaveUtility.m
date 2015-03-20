@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Daniel Amarante. All rights reserved.
 //
 
-#import "NSObject+SaveUtility.h"
+#import "SaveUtility.h"
 
-@implementation NSObject (SaveUtility)
+@implementation SaveUtility
+
 
 @end

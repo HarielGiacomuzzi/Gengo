@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Daniel Amarante. All rights reserved.
 //
 
-#import "NSObject+Item.h"
+#import "Item.h"
 
-@implementation NSObject (Item)
+@implementation Item
 
 @end
