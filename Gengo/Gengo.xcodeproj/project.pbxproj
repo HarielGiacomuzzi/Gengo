@@ -14,6 +14,8 @@
 		5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6811ABC810F00905BC5 /* Images.xcassets */; };
 		5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */; };
 		5ED9E6911ABC810F00905BC5 /* GengoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6901ABC810F00905BC5 /* GengoTests.m */; };
+		5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EF71ABC8C2F00D141B1 /* Test.m */; };
+		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		5ED9E68A1ABC810F00905BC5 /* GengoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GengoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E68F1ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6901ABC810F00905BC5 /* GengoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GengoTests.m; sourceTree = "<group>"; };
+		5EEA8EF61ABC8C2F00D141B1 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		5EEA8EF71ABC8C2F00D141B1 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,10 @@
 				5ED9E67B1ABC810F00905BC5 /* ViewController.h */,
 				5ED9E67C1ABC810F00905BC5 /* ViewController.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
+				5EEA8EF61ABC8C2F00D141B1 /* Test.h */,
+				5EEA8EF71ABC8C2F00D141B1 /* Test.m */,
+				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
+				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
 				5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */,
 				5ED9E6741ABC810F00905BC5 /* Supporting Files */,
@@ -220,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
+				5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
+				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +426,7 @@
 				5ED9E6961ABC810F00905BC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ED9E6971ABC810F00905BC5 /* Build configuration list for PBXNativeTarget "GengoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +435,7 @@
 				5ED9E6991ABC810F00905BC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
