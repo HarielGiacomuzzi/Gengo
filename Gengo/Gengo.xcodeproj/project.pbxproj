@@ -14,6 +14,9 @@
 		5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6811ABC810F00905BC5 /* Images.xcassets */; };
 		5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */; };
 		5ED9E6911ABC810F00905BC5 /* GengoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6901ABC810F00905BC5 /* GengoTests.m */; };
+		5EEA0D101AC07A0100D1EF3A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA0D0C1AC07A0100D1EF3A /* GameScene.m */; };
+		5EEA0D111AC07A0100D1EF3A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA0D0D1AC07A0100D1EF3A /* GameScene.sks */; };
+		5EEA0D121AC07A0100D1EF3A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA0D0F1AC07A0100D1EF3A /* GameViewController.m */; };
 		5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EF71ABC8C2F00D141B1 /* Test.m */; };
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
@@ -66,6 +69,11 @@
 		5ED9E68A1ABC810F00905BC5 /* GengoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GengoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E68F1ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6901ABC810F00905BC5 /* GengoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GengoTests.m; sourceTree = "<group>"; };
+		5EEA0D0B1AC07A0100D1EF3A /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../../../../../Desktop/NekoSenseiGame/NekoSenseiGame/GameScene.h; sourceTree = "<group>"; };
+		5EEA0D0C1AC07A0100D1EF3A /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = ../../../../../Desktop/NekoSenseiGame/NekoSenseiGame/GameScene.m; sourceTree = "<group>"; };
+		5EEA0D0D1AC07A0100D1EF3A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../../../../../Desktop/NekoSenseiGame/NekoSenseiGame/GameScene.sks; sourceTree = "<group>"; };
+		5EEA0D0E1AC07A0100D1EF3A /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = ../../../../../Desktop/NekoSenseiGame/NekoSenseiGame/GameViewController.h; sourceTree = "<group>"; };
+		5EEA0D0F1AC07A0100D1EF3A /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = ../../../../../Desktop/NekoSenseiGame/NekoSenseiGame/GameViewController.m; sourceTree = "<group>"; };
 		5EEA8EF61ABC8C2F00D141B1 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		5EEA8EF71ABC8C2F00D141B1 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
 				5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */,
+				5EEA0D131AC07C6700D1EF3A /* Game */,
 				5ED9E6741ABC810F00905BC5 /* Supporting Files */,
 			);
 			path = Gengo;
@@ -201,6 +210,18 @@
 				5ED9E68F1ABC810F00905BC5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EEA0D131AC07C6700D1EF3A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5EEA0D0C1AC07A0100D1EF3A /* GameScene.m */,
+				5EEA0D0D1AC07A0100D1EF3A /* GameScene.sks */,
+				5EEA0D0E1AC07A0100D1EF3A /* GameViewController.h */,
+				5EEA0D0F1AC07A0100D1EF3A /* GameViewController.m */,
+				5EEA0D0B1AC07A0100D1EF3A /* GameScene.h */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 		DB7119921ABCA7BD00ACDD71 /* Model */ = {
@@ -327,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEA0D111AC07A0100D1EF3A /* GameScene.sks in Resources */,
 				5ED9E6801ABC810F00905BC5 /* Main.storyboard in Resources */,
 				5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */,
 				5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */,
@@ -352,11 +374,13 @@
 				5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
+				5EEA0D121AC07A0100D1EF3A /* GameViewController.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
 				DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */,
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
+				5EEA0D101AC07A0100D1EF3A /* GameScene.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
