@@ -15,8 +15,9 @@
 @property NSInteger xp;
 @property NSMutableArray *items;
 @property char sexo;
-@property NSMutableArray *lições;
+@property NSMutableArray *licoes;
 @property NSMutableArray *puzzles;
+@property NSString *email;
 
 +(id) loadUser;
 

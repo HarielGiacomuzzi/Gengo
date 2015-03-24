@@ -31,15 +31,41 @@
                             user:(id<FBGraphUser>)user{
     if (FBSession.activeSession.state == FBSessionStateOpen) {
         PFQuery *query = [PFQuery queryWithClassName:@"User"];
-        [query getObjectInBackgroundWithId:@"xWMyZ4YEGZ" block:^(PFObject *gameScore, NSError *error) {
-            // Do something with the returned PFObject in the gameScore variable.
-            NSLog(@"%@", gameScore);
+        [query whereKey:@"email" equalTo:[user objectForKey:@"email"]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error && objects.count >=1) {
+                // The find succeeded.
+                NSLog(@"Successfully retrieved %lu User.", (unsigned long)objects.count);
+                // Do something with the found objects
+                for (PFObject *object in objects) {
+                    NSLog(@"%@", [object objectForKey:@"nome"]);
+                    NSLog(@"%@", [object objectForKey:@"email"]);
+                }
+            } else if (!error) {
+                // if the user does not exists we'll create it
+                User *usuario = [[User alloc] init];
+                usuario.nome = [user name];
+                usuario.email = [user objectForKey:@"email"];
+                usuario.nivel = 0;
+                usuario.xp = 0;
+                
+                PFObject *newUser = [PFObject objectWithClassName:@"User"];
+                newUser[@"nome"] = usuario.nome;
+                newUser[@"email"] = usuario.email;
+                //newUser[@"nivel"] = usuario.nivel;
+                [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (succeeded) {
+                        NSLog(@"User Saved");
+                    } else {
+                        // There was a problem, check error.description
+                    }
+                }];
+                
+                
+            }else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
         }];
-        
-        NSLog(@"User Name: %@",[user name]);
-        NSLog(@"Birthday: %@",[user birthday]);
-        NSLog(@"E-mail: %@",[user objectForKey:@"email"]);
-        NSLog(@"Gender: %@",[user objectForKey:@"gender"]);
     }
     
     
