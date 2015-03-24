@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SaveUtility.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "User.h"
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ViewController : UIViewController <FBLoginViewDelegate>
