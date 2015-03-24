@@ -17,26 +17,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /*
-     Testing fb data
-     */
-    NSArray *permissions = @[@"public_profile"];
-    
-    [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
-        if (!user) {
-            NSLog(@"Uh oh. The user cancelled the Facebook login.");
-        } else if (user.isNew) {
-            NSLog(@"User signed up and logged in through Facebook!");
-        } else {
-            NSLog(@"User logged in through Facebook!");
-        }
-    }];
-    /*
-     Testing fb data
-     */
+    FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
+    loginView.center = self.view.center;
+    loginView.delegate = self;
+    [self.view addSubview:loginView];
+
     
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user{
+    if (FBSession.activeSession.state == FBSessionStateOpen) {
+        PFQuery *query = [PFQuery queryWithClassName:@"User"];
+        [query getObjectInBackgroundWithId:@"xWMyZ4YEGZ" block:^(PFObject *gameScore, NSError *error) {
+            // Do something with the returned PFObject in the gameScore variable.
+            NSLog(@"%@", gameScore);
+        }];
+        
+        NSLog(@"User Name: %@",[user name]);
+        NSLog(@"Birthday: %@",[user birthday]);
+        NSLog(@"E-mail: %@",[user objectForKey:@"email"]);
+        NSLog(@"Gender: %@",[user objectForKey:@"gender"]);
+    }
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning {

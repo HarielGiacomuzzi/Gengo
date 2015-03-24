@@ -18,4 +18,7 @@
 @property NSMutableArray *lições;
 @property NSMutableArray *puzzles;
 
++(id) loadUser;
+
+
 @end
