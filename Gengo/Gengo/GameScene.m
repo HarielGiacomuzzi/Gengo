@@ -178,6 +178,9 @@ const uint32_t WALL = 0x1 << 1;
         [self runObstacles];
         
     } else if ([self.gameState isEqualToString:@"endGame"]) {
+        if (self.points > self.viewController.lesson.highScore) {
+            self.viewController.lesson.highScore = self.points;
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"loadScene" object:nil];
         [self.viewController dismissViewControllerAnimated:YES completion:nil];
         
