@@ -10,5 +10,10 @@
 
 @implementation SaveUtility
 
++(BOOL)SyncUser{
+    NSLog(@"With Great Powers come Great Responsabilities");
+    return YES;
+}
+
 
 @end
