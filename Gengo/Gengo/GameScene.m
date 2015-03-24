@@ -70,7 +70,6 @@ const uint32_t WALL = 0x1 << 1;
         }
     }
     
-        NSLog(@"%f", self.aLabel.position.y);
     self.title.alpha = 1;
     
     NSArray *chars = [self.dictionary getPairOfKeys];
@@ -105,7 +104,6 @@ const uint32_t WALL = 0x1 << 1;
     self.obstacle.position = point;
     SKAction *moveDown = [SKAction moveToY:-self.height / 4 duration:[self.duration doubleValue]];
     self.duration = [NSNumber numberWithDouble:[self.duration doubleValue] * 0.99];
-    NSLog(@"%@",self.duration);
     [self.obstacle runAction:moveDown completion:^{
         
         [self.aLabel setFontColor:[UIColor whiteColor]];
@@ -181,6 +179,8 @@ const uint32_t WALL = 0x1 << 1;
         
     } else if ([self.gameState isEqualToString:@"endGame"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"loadScene" object:nil];
+        [self.viewController dismissViewControllerAnimated:YES completion:nil];
+        
     }
     
 }

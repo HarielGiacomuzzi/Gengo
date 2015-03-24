@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "LessonCellTableViewCell.h"
+#import "TestViewController.h"
+#import "Lesson.h"
+#import "GameViewController.h"
 
 @interface LessonTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic) Lesson *lesson;
 
 @end

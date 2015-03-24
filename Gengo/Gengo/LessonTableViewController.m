@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.lesson = [[Lesson alloc] init];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"%@", self.lesson.grade);
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -30,10 +35,35 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LessonCellTableViewCell *cell = (LessonCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"lessonCell"];
+    
+    [cell.testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.exerciseButton addTarget:self action:@selector(exerciseButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
  
     
     return cell;
 }
+
+-(void)testButtonClicked:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"goToTest" sender:self];
+}
+
+-(void)exerciseButtonClicked:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"goToGame" sender:self];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToTest"]) {
+        TestViewController *test = (TestViewController *)segue.destinationViewController;
+        test.lesson = self.lesson;
+        
+    } else if ([segue.identifier isEqualToString:@"goToGame"]){
+        GameViewController *game = (GameViewController *)segue.destinationViewController;
+        game.lesson = self.lesson;
+        
+    }
+}
+
 
 
 

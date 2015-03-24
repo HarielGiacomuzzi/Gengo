@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface User : NSObject
 
@@ -18,8 +20,10 @@
 @property NSMutableArray *licoes;
 @property NSMutableArray *puzzles;
 @property NSString *email;
+@property User *SharedUser;
 
 +(id) loadUser;
++(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user;
 
 
 @end
