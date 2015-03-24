@@ -174,8 +174,6 @@
 				5ED9E67B1ABC810F00905BC5 /* ViewController.h */,
 				5ED9E67C1ABC810F00905BC5 /* ViewController.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
-				5EEA8EF61ABC8C2F00D141B1 /* Test.h */,
-				5EEA8EF71ABC8C2F00D141B1 /* Test.m */,
 				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
 				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
@@ -215,10 +213,10 @@
 		5EEA0D131AC07C6700D1EF3A /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				5EEA0D0C1AC07A0100D1EF3A /* GameScene.m */,
 				5EEA0D0D1AC07A0100D1EF3A /* GameScene.sks */,
 				5EEA0D0E1AC07A0100D1EF3A /* GameViewController.h */,
 				5EEA0D0F1AC07A0100D1EF3A /* GameViewController.m */,
+				5EEA0D0C1AC07A0100D1EF3A /* GameScene.m */,
 				5EEA0D0B1AC07A0100D1EF3A /* GameScene.h */,
 			);
 			name = Game;
@@ -227,6 +225,8 @@
 		DB7119921ABCA7BD00ACDD71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5EEA8EF61ABC8C2F00D141B1 /* Test.h */,
+				5EEA8EF71ABC8C2F00D141B1 /* Test.m */,
 				DB7119A21ABCA80E00ACDD71 /* User.h */,
 				DB7119A31ABCA80E00ACDD71 /* User.m */,
 				DB71199C1ABCA7FF00ACDD71 /* Puzzle.h */,
