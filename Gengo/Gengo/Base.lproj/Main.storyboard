@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fN5-1f-7mn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,70 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parede" translatesAutoresizingMaskIntoConstraints="NO" id="fic-9d-6kF">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackboard" translatesAutoresizingMaskIntoConstraints="NO" id="Aud-BD-He0">
-                                <rect key="frame" x="28" y="60" width="544" height="267"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chao" translatesAutoresizingMaskIntoConstraints="NO" id="ETb-gZ-r0W">
-                                <rect key="frame" x="0.0" y="377" width="600" height="230"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="Dsj-RZ-Xfp"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neko shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Iov-bm-gyJ">
-                                <rect key="frame" x="156" y="497" width="288" height="89"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="SZX-Vm-f8a"/>
-                                    <constraint firstAttribute="height" constant="89" id="X8B-U2-3ZJ"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neko sensei" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-MT-NNN">
-                                <rect key="frame" x="150" y="205" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="W1g-MT-NNN" secondAttribute="height" multiplier="1:1" id="HPK-5N-KUy"/>
-                                    <constraint firstAttribute="width" constant="300" id="epy-JP-mMn"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.76000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upper bar" translatesAutoresizingMaskIntoConstraints="NO" id="BZJ-bX-QN8">
-                                <rect key="frame" x="-7" y="55" width="614" height="124"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medalha" translatesAutoresizingMaskIntoConstraints="NO" id="b17-yg-VK5">
-                                <rect key="frame" x="180" y="53" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="4hr-2v-gE9"/>
-                                    <constraint firstAttribute="width" constant="240" id="Zal-co-MwJ"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="W1g-MT-NNN" secondAttribute="centerX" id="BKW-Gi-grI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fic-9d-6kF" secondAttribute="bottom" id="Dib-Zj-jM3"/>
-                            <constraint firstItem="Iov-bm-gyJ" firstAttribute="top" secondItem="W1g-MT-NNN" secondAttribute="bottom" constant="-8" id="Dj0-x0-qaL"/>
-                            <constraint firstItem="Aud-BD-He0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="E5J-Y7-sLW"/>
-                            <constraint firstItem="W1g-MT-NNN" firstAttribute="centerX" secondItem="Iov-bm-gyJ" secondAttribute="centerX" id="FYM-pi-8cJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BZJ-bX-QN8" secondAttribute="trailing" constant="-23" id="Fki-Bi-ewZ"/>
-                            <constraint firstItem="ETb-gZ-r0W" firstAttribute="leading" secondItem="fic-9d-6kF" secondAttribute="leading" id="IiL-il-apy"/>
-                            <constraint firstItem="ETb-gZ-r0W" firstAttribute="top" secondItem="W1g-MT-NNN" secondAttribute="bottom" constant="-128" id="Jnp-p2-SHm"/>
-                            <constraint firstItem="ETb-gZ-r0W" firstAttribute="trailing" secondItem="fic-9d-6kF" secondAttribute="trailing" id="MIK-Fg-Oyf"/>
-                            <constraint firstItem="fic-9d-6kF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="O2P-oa-qgG"/>
-                            <constraint firstItem="ETb-gZ-r0W" firstAttribute="top" secondItem="Aud-BD-He0" secondAttribute="bottom" constant="50" id="TN4-Td-EJI"/>
-                            <constraint firstItem="fic-9d-6kF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="YGI-eq-ubc"/>
-                            <constraint firstAttribute="centerX" secondItem="b17-yg-VK5" secondAttribute="centerX" id="ZUd-8N-W52"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Aud-BD-He0" secondAttribute="trailing" constant="12" id="a9Z-wy-CRa"/>
-                            <constraint firstItem="Aud-BD-He0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="hLt-Iz-7bc"/>
-                            <constraint firstItem="b17-yg-VK5" firstAttribute="centerY" secondItem="BZJ-bX-QN8" secondAttribute="centerY" id="j56-VG-GES"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fic-9d-6kF" secondAttribute="trailing" constant="-16" id="klr-tk-mug"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ETb-gZ-r0W" secondAttribute="trailing" constant="-16" id="o7l-HD-gYs"/>
-                            <constraint firstItem="ETb-gZ-r0W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="oce-JV-WZc"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ETb-gZ-r0W" secondAttribute="bottom" constant="-7" id="oe6-Wq-XBb"/>
-                            <constraint firstItem="BZJ-bX-QN8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="tCx-RS-aPE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ETb-gZ-r0W" secondAttribute="trailing" constant="-16" id="vmm-Ce-Mow"/>
-                            <constraint firstItem="BZJ-bX-QN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-23" id="wjQ-2T-f81"/>
-                        </constraints>
                     </view>
                     <connections>
                         <segue destination="wDy-6y-UhM" kind="show" identifier="loginSegue" id="cix-db-c4f"/>
@@ -347,13 +282,4 @@
             <point key="canvasLocation" x="551" y="1784"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="blackboard" width="544" height="267"/>
-        <image name="chao" width="1025" height="286"/>
-        <image name="medalha" width="8165" height="3478"/>
-        <image name="neko sensei" width="760" height="626"/>
-        <image name="neko shadow" width="462" height="295"/>
-        <image name="parede" width="1024" height="768"/>
-        <image name="upper bar" width="1022" height="124"/>
-    </resources>
 </document>

@@ -327,6 +327,7 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = ZX7GUMJ35C;
 					};
 					5ED9E6891ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
@@ -517,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Gengo",
@@ -532,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Gengo",
