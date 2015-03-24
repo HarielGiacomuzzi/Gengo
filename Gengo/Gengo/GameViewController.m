@@ -33,6 +33,7 @@
 -(void)createScene {
     //load file
     GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
+    scene.viewController = self;
     
     //configure the view
     SKView * skView = (SKView *)self.view;

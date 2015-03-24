@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "CharacterDictionary.h"
+#import "Lesson.h"
 
 @interface TestViewController : UIViewController
 @property (nonatomic) CharacterDictionary *dictionary;
 @property (nonatomic) NSMutableArray *questions;
 
+@property (nonatomic, weak) Lesson *lesson;
 @property (nonatomic) NSInteger rightAnswers;
 @property (nonatomic) NSInteger wrongAnswers;
 @property (nonatomic) NSInteger currentQuestion;

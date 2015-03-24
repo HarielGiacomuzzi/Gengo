@@ -8,8 +8,11 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "CharacterDictionary.h"
+#import "GameViewController.h"
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
+
+@property (nonatomic, weak) GameViewController *viewController;
 
 //actors
 @property (nonatomic) SKLabelNode *title;

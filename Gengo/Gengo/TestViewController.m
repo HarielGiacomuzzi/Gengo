@@ -39,8 +39,11 @@
     
     if (self.currentQuestion >= self.questions.count) {
         self.quetionLabel.text = @"fim";
-        //TODO
-        //perform segue / pop segue / etc
+        if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
+            self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
+        }
+        [self dismissViewControllerAnimated:YES completion:nil];
+
     } else {
         self.quetionLabel.text = self.questions[self.currentQuestion];
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fN5-1f-7mn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVu-Wp-esn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="3466"/>
+            <point key="canvasLocation" x="63" y="2812"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="yIv-YT-6Du">
@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGn-XD-WOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="3472"/>
+            <point key="canvasLocation" x="837" y="2812"/>
         </scene>
         <!--Item-->
         <scene sceneID="e3Z-mz-D8B">
@@ -272,6 +272,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0kd-ti-c9K"/>
+                    <connections>
+                        <segue destination="8iI-UW-tVo" kind="show" identifier="goToTest" id="hjs-ff-PyN"/>
+                        <segue destination="hse-Ec-GjY" kind="show" identifier="goToGame" id="DQX-Qn-kcL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHs-jN-Wue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
