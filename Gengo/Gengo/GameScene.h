@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "CharacterDictionary.h"
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 
@@ -41,7 +42,7 @@
 @property (nonatomic) CGFloat laneRight;
 
 //dictionary
-@property (nonatomic) NSDictionary *characters;
+@property (nonatomic) CharacterDictionary *dictionary;
 
 
 @property(nonatomic) NSString *gameState;
