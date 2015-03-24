@@ -16,8 +16,9 @@ const uint32_t WALL = 0x1 << 1;
 //vc lifecycle
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
+    self.dictionary = [[CharacterDictionary alloc] init];
     self.title.text = @"Neko Sensei saves the world";
-    self.deviceSize = [UIScreen mainScreen].bounds;
+    self.deviceSize = [[UIScreen mainScreen] bounds];
     self.width = self.deviceSize.size.width * 2;
     self.height = self.deviceSize.size.height * 2;
     self.laneLeft = self.width / 3 / 2;
@@ -28,14 +29,6 @@ const uint32_t WALL = 0x1 << 1;
     self.gameState = @"mainScreen";
     self.colided  = NO;
     self.duration = @4;
-    
-    _characters = @{ @"あ" : @"a",
-                     @"い" : @"i",
-                     @"う" : @"u",
-                     @"え" : @"e",
-                     @"お" : @"o",
-                     };
-    
     
     //find actors
     for (SKNode *child in self.children) {
@@ -52,12 +45,6 @@ const uint32_t WALL = 0x1 << 1;
         } else if ([child.name isEqualToString:@"obstacle"]) {
             self.obstacle = (SKSpriteNode *)child;
             self.yObstacle = self.obstacle.position.y;
-            
-        } else if ([child.name isEqualToString:@"leftButton"]) {
-            self.leftButton = (SKSpriteNode *)child;
-            
-        } else if ([child.name isEqualToString:@"rightButton"]) {
-            self.rightButton = (SKSpriteNode *)child;
             
         } else if ([child.name isEqualToString:@"japLeft"]) {
             self.japLeft = (SKLabelNode *)child;
@@ -85,7 +72,7 @@ const uint32_t WALL = 0x1 << 1;
     
     self.title.alpha = 1;
     
-    NSArray *chars = [self getCharacters];
+    NSArray *chars = [self.dictionary getPairOfKeys];
     self.japLeft.text = chars[0];
     self.japRight.text = chars[1];
     
@@ -117,7 +104,6 @@ const uint32_t WALL = 0x1 << 1;
     self.obstacle.position = point;
     SKAction *moveDown = [SKAction moveToY:-self.height / 4 duration:[self.duration doubleValue]];
     self.duration = [NSNumber numberWithDouble:[self.duration doubleValue] * 0.99];
-    NSLog(@"%@",self.duration);
     [self.obstacle runAction:moveDown completion:^{
         
         [self.aLabel setFontColor:[UIColor whiteColor]];
@@ -125,7 +111,7 @@ const uint32_t WALL = 0x1 << 1;
         [self.eLabel setFontColor:[UIColor whiteColor]];
         [self.oLabel setFontColor:[UIColor whiteColor]];
         [self.uLabel setFontColor:[UIColor whiteColor]];
-        NSArray *chars = [self getCharacters];
+        NSArray *chars = [self.dictionary getPairOfKeys];
         self.japLeft.text = chars[0];
         self.japRight.text = chars[1];
         CGPoint playerPoint;
@@ -161,14 +147,14 @@ const uint32_t WALL = 0x1 << 1;
         
         [labelTouched setFontColor:[UIColor redColor]];
         
-        if ([[self.characters objectForKey:self.japLeft.text] isEqualToString: labelTouched.text]) {
+        if ([[self.dictionary.characters objectForKey:self.japLeft.text] isEqualToString: labelTouched.text]) {
             CGPoint point;
             point.x = self.laneLeft;
             point.y = self.player.position.y;
             self.player.position = point;
             self.canMove = NO;
             [labelTouched setFontColor:[UIColor greenColor]];
-        } else if ([[self.characters objectForKey:self.japRight.text] isEqualToString: labelTouched.text]) {
+        } else if ([[self.dictionary.characters objectForKey:self.japRight.text] isEqualToString: labelTouched.text]) {
             point.x = self.laneRight;
             point.y = self.player.position.y;
             self.player.position = point;
@@ -193,6 +179,8 @@ const uint32_t WALL = 0x1 << 1;
         
     } else if ([self.gameState isEqualToString:@"endGame"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"loadScene" object:nil];
+        [self.viewController dismissViewControllerAnimated:YES completion:nil];
+        
     }
     
 }
@@ -209,18 +197,6 @@ const uint32_t WALL = 0x1 << 1;
         self.title.alpha = 1;
     }
     
-}
-
-
--(NSArray *)getCharacters {
-    NSArray *keys = [self.characters allKeys];
-    int size = (int)keys.count;
-    int i = arc4random() % size;
-    int j = i;
-    while (j == i) {
-        j = arc4random() % size;
-    }
-    return @[keys[i], keys[j]];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

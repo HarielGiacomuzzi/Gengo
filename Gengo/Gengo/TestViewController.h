@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Test.h"
+#import "CharacterDictionary.h"
+#import "Lesson.h"
 
 @interface TestViewController : UIViewController
-@property (nonatomic) Test *test;
+@property (nonatomic) CharacterDictionary *dictionary;
+@property (nonatomic) NSMutableArray *questions;
+
+@property (nonatomic, weak) Lesson *lesson;
+@property (nonatomic) NSInteger rightAnswers;
+@property (nonatomic) NSInteger wrongAnswers;
+@property (nonatomic) NSInteger currentQuestion;
 @property (strong, nonatomic) IBOutlet UILabel *quetionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *currentQuestionLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;

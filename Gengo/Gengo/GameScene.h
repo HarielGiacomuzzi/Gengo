@@ -7,8 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "CharacterDictionary.h"
+#import "GameViewController.h"
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
+
+@property (nonatomic, weak) GameViewController *viewController;
 
 //actors
 @property (nonatomic) SKLabelNode *title;
@@ -41,7 +45,7 @@
 @property (nonatomic) CGFloat laneRight;
 
 //dictionary
-@property (nonatomic) NSDictionary *characters;
+@property (nonatomic) CharacterDictionary *dictionary;
 
 
 @property(nonatomic) NSString *gameState;

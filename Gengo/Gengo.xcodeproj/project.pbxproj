@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
+		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
 		5E6C3FE21AC12E5700B57FD1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */; };
 		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
+		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
 		5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6791ABC810F00905BC5 /* AppDelegate.m */; };
 		5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E67C1ABC810F00905BC5 /* ViewController.m */; };
@@ -17,7 +20,6 @@
 		5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6811ABC810F00905BC5 /* Images.xcassets */; };
 		5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */; };
 		5ED9E6911ABC810F00905BC5 /* GengoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6901ABC810F00905BC5 /* GengoTests.m */; };
-		5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EF71ABC8C2F00D141B1 /* Test.m */; };
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
 		DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119971ABCA7F200ACDD71 /* Item.m */; };
@@ -56,11 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
+		5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
+		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
+		5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCellTableViewCell.m; sourceTree = "<group>"; };
 		5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDictionary.h; sourceTree = "<group>"; };
+		5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDictionary.m; sourceTree = "<group>"; };
 		5ED9E6711ABC810F00905BC5 /* Gengo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gengo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E6751ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6761ABC810F00905BC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,8 +82,6 @@
 		5ED9E68A1ABC810F00905BC5 /* GengoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GengoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E68F1ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6901ABC810F00905BC5 /* GengoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GengoTests.m; sourceTree = "<group>"; };
-		5EEA8EF61ABC8C2F00D141B1 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		5EEA8EF71ABC8C2F00D141B1 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		DB7119931ABCA7E100ACDD71 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievement.h; sourceTree = "<group>"; };
@@ -174,6 +180,10 @@
 				5ED9E67B1ABC810F00905BC5 /* ViewController.h */,
 				5ED9E67C1ABC810F00905BC5 /* ViewController.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
+				5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */,
+				5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */,
+				5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */,
+				5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */,
 				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
 				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
@@ -225,8 +235,8 @@
 		DB7119921ABCA7BD00ACDD71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5EEA8EF61ABC8C2F00D141B1 /* Test.h */,
-				5EEA8EF71ABC8C2F00D141B1 /* Test.m */,
+				5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */,
+				5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */,
 				DB7119A21ABCA80E00ACDD71 /* User.h */,
 				DB7119A31ABCA80E00ACDD71 /* User.m */,
 				DB71199C1ABCA7FF00ACDD71 /* Puzzle.h */,
@@ -370,14 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
+				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
 				DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */,
-				5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
+				5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */,
 				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
+				5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */,
 				DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */,
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
 				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,

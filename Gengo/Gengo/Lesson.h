@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CharacterDictionary.h"
 
 @interface Lesson : NSObject
+
+@property (nonatomic) NSNumber *grade;
+@property (nonatomic) NSInteger highScore;
+@property (nonatomic) CharacterDictionary *dictionary;
+
+-(id)init;
+
 
 @end
