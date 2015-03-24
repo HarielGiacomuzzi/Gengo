@@ -30,6 +30,13 @@
     return self;
 }
 
+-(NSString *)getRandomKey {
+    NSArray *keys = [self.characters allKeys];
+    int size = (int)keys.count;
+    int i = arc4random() % size;
+    return keys[i];
+}
+
 -(NSString *)getQuestion {
     self.currentQuestion = self.currentQuestion + 1;
     int size = (int)self.keys.count;

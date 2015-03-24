@@ -19,6 +19,7 @@
 -(id)init;
 
 -(NSString *)getQuestion;
+-(NSString *)getRandomKey;
 
 -(NSArray *)getAnswsers;
 

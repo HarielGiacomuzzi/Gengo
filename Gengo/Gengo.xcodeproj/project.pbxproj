@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
+		5E6C3FE21AC12E5700B57FD1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */; };
+		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
 		5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6791ABC810F00905BC5 /* AppDelegate.m */; };
 		5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E67C1ABC810F00905BC5 /* ViewController.m */; };
@@ -53,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		5ED9E6711ABC810F00905BC5 /* Gengo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gengo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E6751ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6761ABC810F00905BC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,12 +174,11 @@
 				5ED9E67B1ABC810F00905BC5 /* ViewController.h */,
 				5ED9E67C1ABC810F00905BC5 /* ViewController.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
-				5EEA8EF61ABC8C2F00D141B1 /* Test.h */,
-				5EEA8EF71ABC8C2F00D141B1 /* Test.m */,
 				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
 				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
 				5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */,
+				5EEA0D131AC07C6700D1EF3A /* Game */,
 				5ED9E6741ABC810F00905BC5 /* Supporting Files */,
 			);
 			path = Gengo;
@@ -203,9 +210,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5EEA0D131AC07C6700D1EF3A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */,
+				5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */,
+				5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */,
+				5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */,
+				5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 		DB7119921ABCA7BD00ACDD71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5EEA8EF61ABC8C2F00D141B1 /* Test.h */,
+				5EEA8EF71ABC8C2F00D141B1 /* Test.m */,
 				DB7119A21ABCA80E00ACDD71 /* User.h */,
 				DB7119A31ABCA80E00ACDD71 /* User.m */,
 				DB71199C1ABCA7FF00ACDD71 /* Puzzle.h */,
@@ -327,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6C3FE21AC12E5700B57FD1 /* GameScene.sks in Resources */,
 				5ED9E6801ABC810F00905BC5 /* Main.storyboard in Resources */,
 				5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */,
 				5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */,
@@ -352,11 +374,13 @@
 				5EEA8EF81ABC8C2F00D141B1 /* Test.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
+				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
 				DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */,
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
+				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
