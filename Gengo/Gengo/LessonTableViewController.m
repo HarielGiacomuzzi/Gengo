@@ -21,7 +21,9 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"%@", self.lesson.grade);
+    NSLog(@"MELHOR NOTA %@", self.lesson.grade);
+    NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", self.lesson.highScore);
+    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
