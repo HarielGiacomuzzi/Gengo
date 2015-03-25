@@ -10,4 +10,8 @@
 
 @interface Achievement : NSObject
 
+@property NSString *name;
+@property NSString *desc;
+@property NSString *imagePath;
+
 @end
