@@ -18,11 +18,13 @@
 @property (nonatomic) NSInteger rightAnswers;
 @property (nonatomic) NSInteger wrongAnswers;
 @property (nonatomic) NSInteger currentQuestion;
-@property (nonatomic) NSInteger wordLength;
+@property (nonatomic) NSString *currentWord;
+@property (nonatomic) NSInteger currentLetterIndex;
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *currentQuestionLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
 @property (strong, nonatomic) IBOutlet UILabel *rightLabel;
 @property (strong, nonatomic) IBOutlet UILabel *wrongLabel;
+@property (strong, nonatomic) IBOutlet UILabel *currentAnswerLabel;
 
 @end

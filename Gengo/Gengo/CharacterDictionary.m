@@ -24,7 +24,6 @@
                    @"amor" : @"あい",
                    @"não"  : @"いいえ",
                    @"dizer" : @"いう",
-                   @"mentira" : @"うそ",
                    @"tudo certo" : @"う",
                    @"bom" : @"ええ",
                    @"desenho" : @"え",
