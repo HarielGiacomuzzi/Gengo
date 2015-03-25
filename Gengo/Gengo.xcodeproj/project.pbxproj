@@ -152,6 +152,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E7075AB1AC1EE43009B6B4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5ED9E67B1ABC810F00905BC5 /* ViewController.h */,
+				5ED9E67C1ABC810F00905BC5 /* ViewController.m */,
+				5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */,
+				5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */,
+				5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */,
+				5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */,
+				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
+				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		5ED9E6681ABC810F00905BC5 = {
 			isa = PBXGroup;
 			children = (
@@ -177,15 +192,8 @@
 				DB7119921ABCA7BD00ACDD71 /* Model */,
 				5ED9E6781ABC810F00905BC5 /* AppDelegate.h */,
 				5ED9E6791ABC810F00905BC5 /* AppDelegate.m */,
-				5ED9E67B1ABC810F00905BC5 /* ViewController.h */,
-				5ED9E67C1ABC810F00905BC5 /* ViewController.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
-				5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */,
-				5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */,
-				5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */,
-				5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */,
-				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
-				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
+				5E7075AB1AC1EE43009B6B4C /* ViewControllers */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
 				5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */,
 				5EEA0D131AC07C6700D1EF3A /* Game */,

@@ -8,6 +8,7 @@
 
 #import "LessonTableViewController.h"
 
+
 @interface LessonTableViewController ()
 
 @end
@@ -16,13 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.user = (User *)[User loadUser];
     self.lesson = [[Lesson alloc] init];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    self.user.licoes[0] = self.lesson;
     NSLog(@"MELHOR NOTA %@", self.lesson.grade);
     NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", self.lesson.highScore);
+    NSLog(@"%@", self.user.nome);
+    
     
 }
 

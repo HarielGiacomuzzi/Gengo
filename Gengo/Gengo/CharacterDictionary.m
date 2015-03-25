@@ -19,6 +19,18 @@
                          @"え" : @"e",
                          @"お" : @"o",
                          };
+        
+        _words = @{@"azul" : @"あおい",
+                   @"amor" : @"あい",
+                   @"não"  : @"いいえ",
+                   @"dizer" : @"いう",
+                   @"mentira" : @"うそ",
+                   @"tudo certo" : @"う",
+                   @"bom" : @"ええ",
+                   @"desenho" : @"え",
+                   @"sobrinho": @"おい",
+                   @"rei" : @"おう"
+                   };
     }
     return self;
 }
@@ -37,7 +49,22 @@
 
     }
     return rearrangedKeys;
-    
+}
+
+-(NSMutableArray *)getWordsAtRandomOrder {
+    NSMutableArray *words = [[NSMutableArray alloc] init];
+    NSMutableArray *rearrangedWords = [[NSMutableArray alloc] init];
+    for (NSString *key in self.words) {
+        [words addObject:key];
+    }
+    while (words.count > 0) {
+        int size = (int)words.count;
+        int i = arc4random() % size;
+        [rearrangedWords addObject:words[i]];
+        [words removeObjectAtIndex:i];
+        
+    }
+    return rearrangedWords;
 }
 
 -(NSArray *)getValues {

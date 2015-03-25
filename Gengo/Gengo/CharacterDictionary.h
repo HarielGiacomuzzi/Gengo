@@ -10,11 +10,13 @@
 
 @interface CharacterDictionary : NSObject
 @property (nonatomic) NSDictionary *characters;
+@property (nonatomic) NSDictionary *words;
 
 -(id)init;
 
 -(NSMutableArray *)getKeysAtRandomOrder;
 -(NSArray *)getValues;
 -(NSArray *)getPairOfKeys;
+-(NSMutableArray *)getWordsAtRandomOrder;
 
 @end

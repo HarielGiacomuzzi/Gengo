@@ -13,11 +13,12 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.dictionary = [[CharacterDictionary alloc] init];
-    self.questions = [self.dictionary getKeysAtRandomOrder];
-    self.quetionLabel.text = self.questions[0];
+    self.questions = [self.dictionary getWordsAtRandomOrder];
+    self.questionLabel.text = self.questions[0];
+    self.wordLength = self.questionLabel.text.length;
     self.currentQuestion = 0;
     
-    NSArray *answers = [self.dictionary getValues];
+    NSArray *answers = [self.dictionary.characters allKeys];
     for (int i = 0; i < 5; i++) {
         [self.answerButtons[i] setTitle:answers[i] forState:UIControlStateNormal];
     }
@@ -26,10 +27,16 @@
 
 - (IBAction)buttonTapped:(UIButton *)sender {
     self.currentQuestion = self.currentQuestion + 1;
-    NSString *rightAnswer = [self.dictionary.characters objectForKey:self.quetionLabel.text];
-    NSString *answerClicked = sender.titleLabel.text;
+    NSString *rightKey = [self.dictionary.words objectForKey:self.questionLabel.text];
+    NSRange range;
+    range.length = 1;
+    range.location = 0;
+    rightKey = [rightKey substringWithRange:range];
+    NSString *keyClicked = sender.titleLabel.text;
+    NSLog(@"right key: %@",rightKey);
+    NSLog(@"key clicked %@",keyClicked);
     
-    if ([rightAnswer isEqualToString:answerClicked]) {
+    if ([rightKey isEqualToString:keyClicked]) {
         self.rightAnswers = self.rightAnswers + 1;
         self.rightLabel.text = [NSString stringWithFormat:@"certas: %ld", self.rightAnswers];
     } else {
@@ -38,14 +45,14 @@
     }
     
     if (self.currentQuestion >= self.questions.count) {
-        self.quetionLabel.text = @"fim";
+        self.questionLabel.text = @"fim";
         if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
             self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
         }
         [self dismissViewControllerAnimated:YES completion:nil];
 
     } else {
-        self.quetionLabel.text = self.questions[self.currentQuestion];
+        self.questionLabel.text = self.questions[self.currentQuestion];
     }
     self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", self.currentQuestion];
     

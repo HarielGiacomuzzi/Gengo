@@ -11,9 +11,11 @@
 #import "TestViewController.h"
 #import "Lesson.h"
 #import "GameViewController.h"
+#import "User.h"
 
 @interface LessonTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic) User *user;
 @property (nonatomic) Lesson *lesson;
 
 @end

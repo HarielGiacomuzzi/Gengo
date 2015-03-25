@@ -18,7 +18,8 @@
 @property (nonatomic) NSInteger rightAnswers;
 @property (nonatomic) NSInteger wrongAnswers;
 @property (nonatomic) NSInteger currentQuestion;
-@property (strong, nonatomic) IBOutlet UILabel *quetionLabel;
+@property (nonatomic) NSInteger wordLength;
+@property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *currentQuestionLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
 @property (strong, nonatomic) IBOutlet UILabel *rightLabel;
