@@ -11,6 +11,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *imgButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPortaDireita;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPortaEsquerda;
 
 
 @end
@@ -20,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //[_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
+    
+    _imgPortaDireita.image = [[UIImage alloc] initWithContentsOfFile:@"porta dir"];
+    _imgPortaEsquerda.image = [[UIImage alloc] initWithContentsOfFile:@"porta esqu"];
+    
     FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
     loginView.center = self.view.center;
     loginView.delegate = self;
@@ -36,7 +42,7 @@
     
     if (FBSession.activeSession.state == FBSessionStateOpen) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+        //[self performSegueWithIdentifier:@"loginSegue" sender:nil];
     }
 }
 

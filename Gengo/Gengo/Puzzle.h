@@ -10,4 +10,12 @@
 
 @interface Puzzle : NSObject
 
+@property NSString *image1;
+@property NSString *image2;
+@property NSString *image3;
+@property NSString *image4;
+@property NSString *history;
+@property NSString *soundLocation;
+@property Byte piecesUnlocked;
+
 @end

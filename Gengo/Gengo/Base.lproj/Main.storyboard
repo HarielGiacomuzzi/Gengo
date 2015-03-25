@@ -17,33 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landscape - Retina" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-Ra-o6z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Landscape - Retina" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-Ra-o6z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUA-pY-rdI">
-                                <rect key="frame" x="264" y="494" width="117" height="43"/>
-                                <state key="normal" backgroundImage="facebookbutton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="fbLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38O-U3-hvc"/>
-                                    <action selector="logginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCh-nJ-Y15"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLs-jc-qgB">
+                                <rect key="frame" x="48" y="0.0" width="240" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-Mr-SF6">
+                                <rect key="frame" x="344" y="0.0" width="240" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="pUA-pY-rdI" secondAttribute="centerY" constant="-220" id="1d5-0y-bsi"/>
-                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-5" id="6dq-R2-xPH"/>
-                            <constraint firstAttribute="centerX" secondItem="pUA-pY-rdI" secondAttribute="centerX" id="A7y-Zm-tBt"/>
-                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VTm-v9-Vz9"/>
-                            <constraint firstAttribute="trailing" secondItem="CUg-Ra-o6z" secondAttribute="trailing" id="lqk-E1-MfQ"/>
-                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wDN-X6-5rm"/>
-                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xWR-mf-TmG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CUg-Ra-o6z" secondAttribute="trailing" id="6lI-4x-bgc"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="E7r-RY-uFn"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gXa-W2-auN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CUg-Ra-o6z" secondAttribute="bottom" id="nXc-GT-6x3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imgButton" destination="pUA-pY-rdI" id="kxB-LO-rvB"/>
+                        <outlet property="imgPortaDireita" destination="PV6-Mr-SF6" id="Vpg-rB-xqX"/>
+                        <outlet property="imgPortaEsquerda" destination="QLs-jc-qgB" id="J3k-rP-xHg"/>
                         <segue destination="wDy-6y-UhM" kind="show" identifier="loginSegue" id="cix-db-c4f"/>
                     </connections>
                 </viewController>
@@ -317,6 +314,5 @@
     </scenes>
     <resources>
         <image name="Landscape - Retina" width="375" height="667"/>
-        <image name="facebookbutton" width="315" height="58"/>
     </resources>
 </document>
