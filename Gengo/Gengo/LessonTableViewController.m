@@ -19,14 +19,22 @@
     [super viewDidLoad];
     self.user = (User *)[User loadUser];
     self.lesson = [[Lesson alloc] init];
+    //if (self.user.licoes.count == 0) {
+    //    [self.user.licoes addObject:[[Lesson alloc] init]];
+   // }
+   // self.lesson = self.user.licoes[0];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.user.licoes[0] = self.lesson;
+    NSLog(@"%@", self.user.email);
+    self.user.nivel = self.lesson.highScore;
+    [self.user.licoes addObject:self.lesson.grade];
+    [SaveUtility SyncUser];
     NSLog(@"MELHOR NOTA %@", self.lesson.grade);
     NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)self.lesson.highScore);
     NSLog(@"%@", self.user.nome);
+    NSLog(@"%ld",self.user.nivel);
     
     
 }

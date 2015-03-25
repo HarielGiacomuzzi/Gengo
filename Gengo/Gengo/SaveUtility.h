@@ -12,6 +12,6 @@
 
 @interface SaveUtility : NSObject
 
-+(BOOL)SyncUser;
++(void)SyncUser;
 
 @end

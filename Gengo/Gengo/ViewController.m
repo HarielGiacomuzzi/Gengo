@@ -42,7 +42,7 @@
     
     if (FBSession.activeSession.state == FBSessionStateOpen) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-        //[self performSegueWithIdentifier:@"loginSegue" sender:nil];
+        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
     }
 }
 

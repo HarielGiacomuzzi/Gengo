@@ -12,6 +12,7 @@
 #import "Lesson.h"
 #import "GameViewController.h"
 #import "User.h"
+#import "SaveUtility.h"
 
 @interface LessonTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

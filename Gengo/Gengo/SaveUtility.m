@@ -10,9 +10,9 @@
 
 @implementation SaveUtility
 
-+(BOOL)SyncUser{
++(void)SyncUser{
     User *u = (User *)[User loadUser];
-    __block BOOL saved = NO;
+    //__block BOOL saved = NO;
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:u.email];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -24,7 +24,8 @@
             object[@"licoes"] = u.licoes;
             object[@"puzzles"] = u.puzzles;
             
-            saved = [object save];
+            [object saveInBackground];
+      //      saved = [object save];
             
         } else if (!error) {
             NSLog(@"Looks Like your user does not exists on our database :-/ ");
@@ -33,7 +34,7 @@
         }
     }];
     
-    return saved;
+    //return saved;
 }
 
 
