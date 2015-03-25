@@ -10,21 +10,31 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *imgButton;
+
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
-    loginView.center = self.view.center;
-    loginView.delegate = self;
-    [self.view addSubview:loginView];
+  
+ //   _imgButton.frame = CGRectMake(100.0, 100.0, 57.0, 57.0);
+    [_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
 
     
     
-    // Do any additional setup after loading the view, typically from a nib.
+
+    FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
+    
+    
+/*  loginView.center = self.view.center;
+    loginView.delegate = self;
+    [self.view addSubview:loginView];
+*/
+    
+    
 }
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
@@ -45,6 +55,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)fbLogin:(id)sender {
+    
+    
 }
 
 @end

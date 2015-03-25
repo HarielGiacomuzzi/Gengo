@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wDy-6y-UhM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -15,15 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landscape - Retina" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-Ra-o6z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUA-pY-rdI">
+                                <rect key="frame" x="264" y="494" width="117" height="43"/>
+                                <state key="normal" backgroundImage="facebookbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fbLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38O-U3-hvc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pUA-pY-rdI" secondAttribute="centerY" constant="-220" id="1d5-0y-bsi"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-5" id="6dq-R2-xPH"/>
+                            <constraint firstAttribute="centerX" secondItem="pUA-pY-rdI" secondAttribute="centerX" id="A7y-Zm-tBt"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VTm-v9-Vz9"/>
+                            <constraint firstAttribute="trailing" secondItem="CUg-Ra-o6z" secondAttribute="trailing" id="lqk-E1-MfQ"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wDN-X6-5rm"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xWR-mf-TmG"/>
+                        </constraints>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="imgButton" destination="pUA-pY-rdI" id="kxB-LO-rvB"/>
                         <segue destination="wDy-6y-UhM" kind="show" identifier="loginSegue" id="cix-db-c4f"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="249"/>
+            <point key="canvasLocation" x="-400" y="152"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="Pr9-X9-ubg">
@@ -38,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-ak-cmH">
-                                <rect key="frame" x="28" y="191" width="390" height="21"/>
+                                <rect key="frame" x="134" y="191" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -282,4 +308,8 @@
             <point key="canvasLocation" x="551" y="1784"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Landscape - Retina" width="375" height="667"/>
+        <image name="facebookbutton" width="315" height="58"/>
+    </resources>
 </document>
