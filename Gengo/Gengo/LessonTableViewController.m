@@ -25,7 +25,7 @@
     [super viewDidAppear:animated];
     //self.user.licoes[0] = self.lesson;
     NSLog(@"MELHOR NOTA %@", self.lesson.grade);
-    NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", self.lesson.highScore);
+    NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)self.lesson.highScore);
     NSLog(@"%@", self.user.nome);
     
     

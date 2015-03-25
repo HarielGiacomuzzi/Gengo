@@ -119,7 +119,7 @@ const uint32_t WALL = 0x1 << 1;
         playerPoint.x = self.laneCenter;
         self.player.position = playerPoint;
         self.points = self.points + 1;
-        self.score.text = [NSString stringWithFormat:@"%ld", self.points];
+        self.score.text = [NSString stringWithFormat:@"%ld", (long)self.points];
         self.canMove = YES;
         [self runObstacles];
     }];
@@ -195,7 +195,7 @@ const uint32_t WALL = 0x1 << 1;
         for (SKNode *child in self.children) {
             child.alpha = 0;
         }
-        self.title.text = [NSString stringWithFormat:@"FINAL SCORE %ld", self.points];
+        self.title.text = [NSString stringWithFormat:@"FINAL SCORE %ld", (long)self.points];
         
         self.title.alpha = 1;
     }

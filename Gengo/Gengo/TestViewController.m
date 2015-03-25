@@ -38,10 +38,10 @@
     
     if ([rightKey isEqualToString:keyClicked]) {
         self.rightAnswers = self.rightAnswers + 1;
-        self.rightLabel.text = [NSString stringWithFormat:@"certas: %ld", self.rightAnswers];
+        self.rightLabel.text = [NSString stringWithFormat:@"certas: %ld", (long)self.rightAnswers];
     } else {
         self.wrongAnswers = self.wrongAnswers + 1;
-        self.wrongLabel.text = [NSString stringWithFormat:@"erradas: %ld", self.wrongAnswers];
+        self.wrongLabel.text = [NSString stringWithFormat:@"erradas: %ld", (long)self.wrongAnswers];
     }
     
     if (self.currentQuestion >= self.questions.count) {
@@ -54,7 +54,7 @@
     } else {
         self.questionLabel.text = self.questions[self.currentQuestion];
     }
-    self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", self.currentQuestion];
+    self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion];
     
 }
 
