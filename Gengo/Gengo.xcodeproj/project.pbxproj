@@ -45,6 +45,7 @@
 		DB7119C51ABCA8BB00ACDD71 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C41ABCA8BB00ACDD71 /* libz.dylib */; };
 		DB7119C71ABCA8C400ACDD71 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C61ABCA8C400ACDD71 /* libsqlite3.dylib */; };
 		DB7119C91ABCA96800ACDD71 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C81ABCA96800ACDD71 /* Bolts.framework */; };
+		DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8149AA1AC3274900D65332 /* AsyncImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		DB7119C41ABCA8BB00ACDD71 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DB7119C61ABCA8C400ACDD71 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DB7119C81ABCA96800ACDD71 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DB8149A91AC3274900D65332 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		DB8149AA1AC3274900D65332 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,7 @@
 		DB7119921ABCA7BD00ACDD71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB8149A81AC3274900D65332 /* AsyncImageView */,
 				5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */,
 				5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */,
 				DB7119A21ABCA80E00ACDD71 /* User.h */,
@@ -284,6 +288,15 @@
 				DB7119A91ABCA82B00ACDD71 /* ParseUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB8149A81AC3274900D65332 /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DB8149A91AC3274900D65332 /* AsyncImageView.h */,
+				DB8149AA1AC3274900D65332 /* AsyncImageView.m */,
+			);
+			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +408,7 @@
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
 				5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */,
 				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
+				DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,

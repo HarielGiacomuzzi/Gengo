@@ -10,4 +10,9 @@
 
 @interface Item : NSObject
 
+@property NSString *name;
+@property NSString *desc;
+@property NSString *image;
+@property int price;
+
 @end
