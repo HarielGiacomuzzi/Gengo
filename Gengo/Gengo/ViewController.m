@@ -19,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
+    //[_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
+    FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
+    loginView.center = self.view.center;
+    loginView.delegate = self;
+    [self.view addSubview:loginView];
 }
 
 - (IBAction)logginButton:(id)sender {

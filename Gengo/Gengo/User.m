@@ -34,6 +34,11 @@ static User *sharedUser = nil;
             usuario.email = [user objectForKey:@"email"];
             usuario.nivel = 0;
             usuario.xp = 0;
+            usuario.items = [[NSMutableArray alloc] init];
+            usuario.licoes = [[NSMutableArray alloc] init];
+            usuario.puzzles = [[NSMutableArray alloc] init];
+            usuario.sexo = 'm';
+            
             
             PFObject *newUser = [PFObject objectWithClassName:@"User"];
             newUser[@"nome"] = usuario.nome;
