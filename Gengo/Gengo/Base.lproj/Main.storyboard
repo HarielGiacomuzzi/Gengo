@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -41,13 +40,13 @@
                             <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wDN-X6-5rm"/>
                             <constraint firstItem="CUg-Ra-o6z" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xWR-mf-TmG"/>
                         </constraints>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imgButton" destination="pUA-pY-rdI" id="kxB-LO-rvB"/>
                         <segue destination="wDy-6y-UhM" kind="show" identifier="loginSegue" id="cix-db-c4f"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-400" y="152"/>
         </scene>
@@ -137,7 +136,7 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestionLabel" destination="BLI-R0-cGE" id="FfB-Ar-gtG"/>
-                        <outlet property="quetionLabel" destination="HNn-ak-cmH" id="TvT-Do-ghd"/>
+                        <outlet property="questionLabel" destination="HNn-ak-cmH" id="APJ-MS-Pee"/>
                         <outlet property="rightLabel" destination="IT1-qP-ZJO" id="qKK-DW-V0g"/>
                         <outlet property="wrongLabel" destination="AT9-3R-1up" id="OOW-T9-jzi"/>
                         <outletCollection property="answerButtons" destination="3fg-U9-fEy" id="xJv-Rn-YfQ"/>
