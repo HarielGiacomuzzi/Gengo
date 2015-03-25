@@ -28,6 +28,7 @@ static User *sharedUser = nil;
             
         } else if (!error) {
             // if the user does not exists we'll create it
+            NSLog(@"Vou criar o user !!!");
             User *usuario = [[User alloc] init];
             usuario.nome = [user name];
             usuario.email = [user objectForKey:@"email"];
@@ -37,14 +38,30 @@ static User *sharedUser = nil;
             PFObject *newUser = [PFObject objectWithClassName:@"User"];
             newUser[@"nome"] = usuario.nome;
             newUser[@"email"] = usuario.email;
+            newUser[@"nivel"] = @(usuario.nivel);
+            newUser[@"xp"] = @(usuario.xp);
+            newUser[@"items"] = usuario.items;
+            newUser[@"licoes"] = usuario.licoes;
+            newUser[@"puzzles"] = usuario.puzzles;
+            newUser[@"sexo"] = @(usuario.sexo);
+            
+            
+            if ([newUser save]){
+                NSLog(@"User Saved");
+            }else{
+                NSLog(@"Deu Ruin");
+            }
+            
             //newUser[@"nivel"] = usuario.nivel;
+            /*
             [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
                     NSLog(@"User Saved");
                 } else {
-                    // There was a problem, check error.description
+                    NSLog(@"Deu Ruin");
                 }
             }];
+             */
             
             
         }else {

@@ -27,6 +27,7 @@
                                 </state>
                                 <connections>
                                     <action selector="fbLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38O-U3-hvc"/>
+                                    <action selector="logginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCh-nJ-Y15"/>
                                 </connections>
                             </button>
                         </subviews>

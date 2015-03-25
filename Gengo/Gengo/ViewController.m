@@ -19,32 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
- //   _imgButton.frame = CGRectMake(100.0, 100.0, 57.0, 57.0);
     [_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
+}
 
-    
-    
-
+- (IBAction)logginButton:(id)sender {
     FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
-    
-    
-/*  loginView.center = self.view.center;
     loginView.delegate = self;
-    [self.view addSubview:loginView];
-*/
-    
-    
 }
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user{
+    
     if (FBSession.activeSession.state == FBSessionStateOpen) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
         [self performSegueWithIdentifier:@"loginSegue" sender:nil];
     }
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
