@@ -21,9 +21,7 @@ const uint32_t WALL = 0x1 << 1;
     self.deviceSize = [[UIScreen mainScreen] bounds];
     self.width = self.deviceSize.size.width * 2;
     self.height = self.deviceSize.size.height * 2;
-    self.laneLeft = self.width / 3 / 2;
-    self.laneCenter = self.width / 2;
-    self.laneRight = self.width - self.laneLeft;
+    
     self.points = 0;
     self.canMove = YES;
     self.gameState = @"mainScreen";
@@ -70,6 +68,9 @@ const uint32_t WALL = 0x1 << 1;
         }
     }
     
+    self.laneCenter = self.player.position.x;
+    self.laneLeft = self.aLabel.position.x;
+    self.laneRight = self.oLabel.position.x;
     self.title.alpha = 1;
     
     NSArray *chars = [self.dictionary getPairOfKeys];

@@ -43,16 +43,19 @@
     skView.showsFields = YES;
     skView.showsPhysics = YES;
     skView.showsQuadCount = YES;
-    
     //spritekit applies additional optimizations to improve rendering performance
     skView.ignoresSiblingOrder = YES;
     
     //set the scale mode to scale to fit the window
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.scaleMode = SKSceneScaleModeAspectFit;
     
     //present scene with fade
     [skView presentScene:scene transition:[SKTransition fadeWithDuration:0.5]];
 
+}
+
+-(void)viewWillLayoutSubviews {
+    
 }
 
 - (void)viewDidLoad
