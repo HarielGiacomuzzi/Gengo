@@ -29,8 +29,8 @@
 }
 
 - (IBAction)buttonTapped:(UIButton *)sender {
+    
     //get correct key and key clicked
-
     NSString *rightKey = [self.dictionary.words objectForKey:self.questionLabel.text];
     NSRange range;
     range.length = 1;
@@ -46,21 +46,7 @@
             self.currentAnswerLabel.text = @"";
             self.rightAnswers = self.rightAnswers + 1;
             self.rightLabel.text = [NSString stringWithFormat:@"certas: %ld", (long)self.rightAnswers];
-            self.currentQuestion = self.currentQuestion + 1;
-            if (self.currentQuestion == self.questions.count) {
-                if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
-                    self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
-                }
-                [self dismissViewControllerAnimated:YES completion:nil];
-                
-            } else {
-                self.questionLabel.text = self.questions[self.currentQuestion];
-                self.currentWord = [self.dictionary.words valueForKey:self.questionLabel.text];
-                self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion];
-                self.currentLetterIndex = 0;
-                NSLog(@"palavra completa %@", self.currentWord);
-                
-            }
+            [self updateNextQuestion];
             
         }
 
@@ -68,23 +54,29 @@
         self.currentAnswerLabel.text = @"";
         self.wrongAnswers = self.wrongAnswers + 1;
         self.wrongLabel.text = [NSString stringWithFormat:@"erradas: %ld", (long)self.wrongAnswers];
-        self.currentQuestion = self.currentQuestion + 1;
-        if (self.currentQuestion == self.questions.count) {
-            if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
-                self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
-            }
-            [self dismissViewControllerAnimated:YES completion:nil];
-            
-        } else {
-            self.questionLabel.text = self.questions[self.currentQuestion];
-            self.currentWord = [self.dictionary.words valueForKey:self.questionLabel.text];
-            self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion];
-            self.currentLetterIndex = 0;
-            NSLog(@"palavra completa %@", self.currentWord);
-            
-        }
+        [self updateNextQuestion];
+        
     }
     
+}
+
+-(void)updateNextQuestion {
+    self.currentQuestion = self.currentQuestion + 1;
+    //if last question
+    if (self.currentQuestion == self.questions.count) {
+        if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
+            self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
+        }
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    } else {
+        self.questionLabel.text = self.questions[self.currentQuestion];
+        self.currentWord = [self.dictionary.words valueForKey:self.questionLabel.text];
+        self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion];
+        self.currentLetterIndex = 0;
+        NSLog(@"palavra completa %@", self.currentWord);
+        
+    }
 }
 
 

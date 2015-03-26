@@ -35,8 +35,6 @@
     NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)self.lesson.highScore);
     NSLog(@"%@", self.user.nome);
     NSLog(@"%ld",self.user.nivel);
-    
-    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
