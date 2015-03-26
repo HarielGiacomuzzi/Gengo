@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "Lesson.h"
+#import "Item.h"
+#import "Puzzle.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface User : NSObject

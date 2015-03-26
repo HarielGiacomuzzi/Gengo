@@ -28,7 +28,7 @@ static User *sharedUser = nil;
             sharedUser.nivel = [((NSNumber *)[object objectForKey:@"nivel"]) intValue];
             sharedUser.xp = [((NSNumber *)[object objectForKey:@"xp"]) intValue];
             sharedUser.items = [object objectForKey:@"items"];
-            sharedUser.licoes = [object objectForKey:@"licoes"];
+            sharedUser.licoes = [self processUserLessons:[object objectForKey:@"licoes"]];
             sharedUser.puzzles = [object objectForKey:@"puzzles"];
             sharedUser.sexo = [((NSString*)[object objectForKey:@"sexo"]) UTF8String][0];
             
@@ -74,6 +74,25 @@ static User *sharedUser = nil;
         return YES;
     }
     return NO;
+}
+
++(NSMutableArray *)processUserLessons:(NSMutableArray *) array{
+    NSMutableArray *temp = [[NSMutableArray alloc] init];
+    for (PFObject *obj in array) {
+        NSLog(@"ObjectId : %@",[obj objectForKey:@"objectId"]);
+        NSLog(@"Grade : %@",[obj objectForKey:@"grade"]);
+        NSLog(@"HighScore : %@",[obj objectForKey:@"highScore"]);
+        
+        Lesson *aux = [[Lesson alloc] init];
+        aux.grade = [obj objectForKey:@"grade"];
+        aux.highScore = [((NSNumber *)[obj objectForKey:@"highScore"]) integerValue];
+        
+       
+        
+        [temp addObject:aux];
+    }
+    
+    return temp;
 }
 
 @end

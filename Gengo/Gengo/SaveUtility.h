@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "User.h"
+#import "Item.h"
+#import "Lesson.h"
+#import "Puzzle.h"
 
 @interface SaveUtility : NSObject
 
 +(void)SyncUser;
++(NSMutableArray *)processUserItems;
 
 @end

@@ -28,9 +28,9 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     NSLog(@"%@", self.user.email);
-   // self.user.nivel = self.lesson.highScore;
-   // [self.user.licoes addObject:self.lesson.grade];
-   // [SaveUtility SyncUser];
+    self.user.nivel = 100;
+    //[self.user.licoes addObject:self.lesson];
+    [SaveUtility SyncUser];
     NSLog(@"MELHOR NOTA %@", self.lesson.grade);
     NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)self.lesson.highScore);
     NSLog(@"%@", self.user.nome);

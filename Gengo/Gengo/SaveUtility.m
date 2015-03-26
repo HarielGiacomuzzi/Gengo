@@ -12,7 +12,6 @@
 
 +(void)SyncUser{
     User *u = (User *)[User loadUser];
-    //__block BOOL saved = NO;
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:u.email];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -20,12 +19,11 @@
             PFObject *object = (PFObject *)objects[0];
             object[@"nivel"] = @(u.nivel);
             object[@"xp"] = @(u.xp);
-            object[@"items"] = u.items;
-            object[@"licoes"] = u.licoes;
-            object[@"puzzles"] = u.puzzles;
+            object[@"items"] = [SaveUtility processUserItems];
+            object[@"licoes"] = [SaveUtility processUserLessons];
+            object[@"puzzles"] = [SaveUtility processUserPuzzles];
             
-            [object saveInBackground];
-      //      saved = [object save];
+            [object save];
             
         } else if (!error) {
             NSLog(@"Looks Like your user does not exists on our database :-/ ");
@@ -34,8 +32,52 @@
         }
     }];
     
-    //return saved;
 }
 
++(NSMutableArray *)processUserItems{
+    User *u = (User *)[User loadUser];
+    NSMutableArray *temp = [[NSMutableArray alloc] init];
+    for (Item *object in u.items) {
+        PFObject *aux = [PFObject objectWithClassName:@"Item"];
+        aux[@"name"] = object.name;
+        aux[@"desc"] = object.desc;
+        aux[@"image"] = object.image;
+        aux[@"price"] = @(object.price);
+        [temp addObject:aux];
+    }
+    
+    return temp;
+}
+
++(NSMutableArray *)processUserPuzzles{
+    User *u = (User *)[User loadUser];
+    NSMutableArray *temp = [[NSMutableArray alloc] init];
+    for (Puzzle *object in u.puzzles) {
+        PFObject *aux = [PFObject objectWithClassName:@"Puzzle"];
+        aux[@"image1"] = object.image1;
+        aux[@"image2"] = object.image2;
+        aux[@"image3"] = object.image3;
+        aux[@"image4"] = object.image4;
+        aux[@"history"] = object.history;
+        aux[@"soundLocation"] = object.soundLocation;
+        aux[@"piecesUnlocked"] = @(object.piecesUnlocked);
+        [temp addObject:aux];
+    }
+    
+    return temp;
+}
+
++(NSMutableArray *)processUserLessons{
+    User *u = (User *)[User loadUser];
+    NSMutableArray *temp = u.licoes;
+    for (Lesson *object in u.licoes) {
+        PFObject *aux = [PFObject objectWithClassName:@"Lesson"];
+        aux[@"grade"] = object.grade;
+        aux[@"highScore"] = @(object.highScore);
+        [temp addObject:aux];
+    }
+    
+    return temp;
+}
 
 @end
