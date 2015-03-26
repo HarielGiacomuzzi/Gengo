@@ -46,6 +46,7 @@
 		DB7119C71ABCA8C400ACDD71 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C61ABCA8C400ACDD71 /* libsqlite3.dylib */; };
 		DB7119C91ABCA96800ACDD71 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C81ABCA96800ACDD71 /* Bolts.framework */; };
 		DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8149AA1AC3274900D65332 /* AsyncImageView.m */; };
+		DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		DB7119C81ABCA96800ACDD71 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DB8149A91AC3274900D65332 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		DB8149AA1AC3274900D65332 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTutorial.h; sourceTree = "<group>"; };
+		DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTutorial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */,
 				5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */,
 				5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */,
+				DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */,
+				DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -348,10 +353,11 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = ZX7GUMJ35C;
+						DevelopmentTeam = DVXNNDG4U4;
 					};
 					5ED9E6891ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = DVXNNDG4U4;
 						TestTargetID = 5ED9E6701ABC810F00905BC5;
 					};
 				};
@@ -416,6 +422,7 @@
 				DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */,
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
 				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,
+				DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
