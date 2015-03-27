@@ -236,9 +236,9 @@
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-u4-EDC">
-                                <rect key="frame" x="270" y="522" width="60" height="37"/>
+                                <rect key="frame" x="270" y="539" width="60" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="0TD-GA-Cv1"/>
+                                    <constraint firstAttribute="height" constant="20" id="0TD-GA-Cv1"/>
                                     <constraint firstAttribute="width" constant="60" id="Xoq-ze-5n5"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

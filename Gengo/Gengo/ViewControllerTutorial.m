@@ -54,6 +54,7 @@
     
     secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
     secondViewUIView.letter.image = [UIImage imageNamed:@"a--.png"];
+    secondViewUIView.draw = [[UIImage alloc] init];
     [self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
