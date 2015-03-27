@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QqO-ME-gNL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -440,8 +440,9 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="exerciseButton" destination="gnk-kC-dcc" id="TAD-hg-2DY"/>
-                                            <outlet property="testButton" destination="cbB-ns-vzd" id="Zqu-Ed-XkM"/>
+                                            <outlet property="exerciseButton" destination="cbB-ns-vzd" id="KWw-NG-gT0"/>
+                                            <outlet property="lessonButton" destination="gnk-kC-dcc" id="soS-VI-S7s"/>
+                                            <outlet property="testButton" destination="FKN-RH-0Q0" id="OAg-22-qim"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -463,6 +464,7 @@
                     <connections>
                         <segue destination="8iI-UW-tVo" kind="show" identifier="goToTest" id="hjs-ff-PyN"/>
                         <segue destination="hse-Ec-GjY" kind="show" identifier="goToGame" id="DQX-Qn-kcL"/>
+                        <segue destination="QqO-ME-gNL" kind="show" identifier="goToTutorial" id="Pjg-Qx-tQS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHs-jN-Wue" userLabel="First Responder" sceneMemberID="firstResponder"/>
