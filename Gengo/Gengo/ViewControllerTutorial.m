@@ -11,7 +11,7 @@
 @interface ViewControllerTutorial ()
 {
     UIView *firstViewUIView;
-    UIView *secondViewUIView;
+    TutorialDrawView *secondViewUIView;
     UIView *thirdViewUIView;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -53,6 +53,7 @@
 
     
     secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
+    secondViewUIView.letter.image = [UIImage imageNamed:@"a--.png"];
     [self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];

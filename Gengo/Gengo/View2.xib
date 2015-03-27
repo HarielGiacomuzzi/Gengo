@@ -6,23 +6,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TutorialDrawView">
             <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ews-Sp-n6V">
-                    <rect key="frame" x="236" y="223" width="46" height="30"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMC-Xk-mEq">
+                    <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="Ews-Sp-n6V" secondAttribute="centerX" id="bXL-tE-bXA"/>
-                <constraint firstAttribute="centerY" secondItem="Ews-Sp-n6V" secondAttribute="centerY" id="zVG-uP-qbY"/>
+                <constraint firstAttribute="trailing" secondItem="CMC-Xk-mEq" secondAttribute="trailing" id="BIC-SH-dDg"/>
+                <constraint firstItem="CMC-Xk-mEq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H08-kE-9sf"/>
+                <constraint firstAttribute="bottom" secondItem="CMC-Xk-mEq" secondAttribute="bottom" id="PqI-Bd-BpM"/>
+                <constraint firstItem="CMC-Xk-mEq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ahn-7k-WFt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="letter" destination="CMC-Xk-mEq" id="3jV-cG-gwY"/>
+            </connections>
         </view>
     </objects>
 </document>
