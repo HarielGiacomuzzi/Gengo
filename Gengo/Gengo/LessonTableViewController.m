@@ -51,6 +51,8 @@
     
     [cell.testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.exerciseButton addTarget:self action:@selector(exerciseButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.lessonButton addTarget:self action:@selector(lessonButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
  
     
     return cell;
@@ -63,6 +65,10 @@
 -(void)exerciseButtonClicked:(UIButton *)sender {
     [self performSegueWithIdentifier:@"goToGame" sender:self];
 
+}
+
+-(void)lessonButtonClicked:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"goToTutorial" sender:self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
