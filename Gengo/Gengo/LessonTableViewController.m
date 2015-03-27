@@ -30,7 +30,7 @@
     NSLog(@"%@", self.user.email);
     self.user.nivel = 100;
     //[self.user.licoes addObject:self.lesson];
-    [SaveUtility SyncUser];
+    //[SaveUtility SyncUser];
     NSLog(@"MELHOR NOTA %@", self.lesson.grade);
     NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)self.lesson.highScore);
     NSLog(@"%@", self.user.nome);
