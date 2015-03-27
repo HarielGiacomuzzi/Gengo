@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -18,25 +19,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Landscape - Retina" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-Ra-o6z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landscape - Retina" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-Ra-o6z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLs-jc-qgB">
-                                <rect key="frame" x="48" y="0.0" width="240" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-Mr-SF6">
+                                <rect key="frame" x="296" y="0.0" width="240" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-Mr-SF6">
-                                <rect key="frame" x="344" y="0.0" width="240" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLs-jc-qgB">
+                                <rect key="frame" x="48" y="0.0" width="240" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="CUg-Ra-o6z" secondAttribute="trailing" id="6lI-4x-bgc"/>
-                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="E7r-RY-uFn"/>
-                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gXa-W2-auN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CUg-Ra-o6z" secondAttribute="bottom" id="nXc-GT-6x3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PV6-Mr-SF6" secondAttribute="bottom" id="8P7-dX-0Iw"/>
+                            <constraint firstItem="PV6-Mr-SF6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8cW-uN-p2G"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CUg-Ra-o6z" secondAttribute="bottom" id="EMg-rN-Dr0"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nv3-9D-EJ8"/>
+                            <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vj7-4K-zNN"/>
+                            <constraint firstAttribute="trailing" secondItem="CUg-Ra-o6z" secondAttribute="trailing" id="dRa-bd-zXD"/>
+                            <constraint firstItem="QLs-jc-qgB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kNb-j6-zWd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QLs-jc-qgB" secondAttribute="bottom" id="zNy-VH-orW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -112,7 +117,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3j-4L-f4X">
-                                <rect key="frame" x="277" y="425" width="44.5" height="21.5"/>
+                                <rect key="frame" x="277" y="425" width="45" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -133,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-ak-cmH">
-                                <rect key="frame" x="249" y="111" width="103" height="51.5"/>
+                                <rect key="frame" x="249" y="111" width="103" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Puzzle" id="gRD-xy-klJ"/>
+                    <tabBarItem key="tabBarItem" title="Puzzle" image="puzzle" id="gRD-xy-klJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJE-L1-l2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,7 +303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Loja" id="L6B-5z-avx"/>
+                    <tabBarItem key="tabBarItem" title="Loja" image="store" id="L6B-5z-avx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4J-Ox-Jf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,7 +343,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" id="jmR-uu-cYW"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="profile" id="jmR-uu-cYW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibN-6r-3lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,43 +361,83 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jyd-xX-bHQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="227" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jyd-xX-bHQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lessonCell" rowHeight="94" id="Nu5-4V-B6L" customClass="LessonCellTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lessonCell" rowHeight="227" id="Nu5-4V-B6L" customClass="LessonCellTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nu5-4V-B6L" id="aih-91-dmb">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-kC-dcc">
-                                                    <rect key="frame" x="28" y="32" width="58" height="30"/>
-                                                    <state key="normal" title="Exercise">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-ns-vzd">
-                                                    <rect key="frame" x="285" y="32" width="30" height="30"/>
-                                                    <state key="normal" title="Test">
+                                                    <rect key="frame" x="226" y="53" width="148" height="122"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="cbB-ns-vzd" secondAttribute="height" multiplier="74:61" id="Jx1-vG-Nyf"/>
+                                                        <constraint firstAttribute="width" secondItem="cbB-ns-vzd" secondAttribute="height" multiplier="74:61" id="kpT-i4-tdE"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="exercicio icon">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="kpT-i4-tdE"/>
+                                                        </mask>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-RH-0Q0">
+                                                    <rect key="frame" x="394" y="53" width="101" height="122"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="FKN-RH-0Q0" secondAttribute="height" multiplier="50:61" id="sCM-pl-hiw"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="prova icon">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-RH-0Q0">
-                                                    <rect key="frame" x="522" y="32" width="50" height="30"/>
-                                                    <state key="normal" title="Tutorial">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidade 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwc-dW-Mro">
+                                                    <rect key="frame" x="259" y="20" width="83" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" red="0.31372549020000001" green="0.17254901959999999" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-kC-dcc">
+                                                    <rect key="frame" x="48" y="33" width="134" height="163"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gnk-kC-dcc" secondAttribute="height" multiplier="50:61" id="LdW-SB-MJp"/>
+                                                        <constraint firstAttribute="width" secondItem="gnk-kC-dcc" secondAttribute="height" multiplier="50:61" id="dbK-Eg-eJ4"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="licao icon">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="LdW-SB-MJp"/>
+                                                        </mask>
+                                                    </variation>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FKN-RH-0Q0" secondAttribute="trailing" constant="20" id="3L2-NY-NJC"/>
+                                                <constraint firstItem="Cwc-dW-Mro" firstAttribute="top" secondItem="aih-91-dmb" secondAttribute="top" constant="20" id="4Zd-62-hdx"/>
+                                                <constraint firstAttribute="centerX" secondItem="Cwc-dW-Mro" secondAttribute="centerX" id="9hs-y5-Jd6"/>
                                                 <constraint firstAttribute="centerY" secondItem="cbB-ns-vzd" secondAttribute="centerY" id="BE8-PO-mF2"/>
                                                 <constraint firstAttribute="centerY" secondItem="FKN-RH-0Q0" secondAttribute="centerY" constant="-0.25" id="CTk-kU-hLZ"/>
                                                 <constraint firstAttribute="centerY" secondItem="gnk-kC-dcc" secondAttribute="centerY" constant="-0.25" id="GWG-ix-Plk"/>
-                                                <constraint firstItem="gnk-kC-dcc" firstAttribute="leading" secondItem="aih-91-dmb" secondAttribute="leadingMargin" constant="20" id="RvH-Tc-Zpw"/>
+                                                <constraint firstItem="cbB-ns-vzd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gnk-kC-dcc" secondAttribute="trailing" constant="20" id="Qon-ga-WCF"/>
+                                                <constraint firstItem="cbB-ns-vzd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Cwc-dW-Mro" secondAttribute="bottom" constant="10" id="Wb8-2Z-5YA"/>
+                                                <constraint firstItem="FKN-RH-0Q0" firstAttribute="leading" secondItem="cbB-ns-vzd" secondAttribute="trailing" constant="20" id="XX7-l9-Kiy"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FKN-RH-0Q0" secondAttribute="trailing" constant="20" id="Yu1-jA-X7d"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FKN-RH-0Q0" secondAttribute="trailing" multiplier="1.05" constant="20" id="ayW-Hc-qE0"/>
+                                                <constraint firstItem="gnk-kC-dcc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aih-91-dmb" secondAttribute="leadingMargin" multiplier="1.5" constant="20" id="koo-ag-rgc"/>
+                                                <constraint firstItem="FKN-RH-0Q0" firstAttribute="height" secondItem="cbB-ns-vzd" secondAttribute="height" id="lCv-kK-WFO"/>
+                                                <constraint firstItem="gnk-kC-dcc" firstAttribute="height" secondItem="cbB-ns-vzd" secondAttribute="height" id="oft-Jq-h23"/>
                                                 <constraint firstAttribute="centerX" secondItem="cbB-ns-vzd" secondAttribute="centerX" id="sd7-ke-xVS"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Yu1-jA-X7d"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="exerciseButton" destination="gnk-kC-dcc" id="TAD-hg-2DY"/>
@@ -414,7 +459,7 @@
                             <constraint firstItem="jyd-xX-bHQ" firstAttribute="top" secondItem="i52-IE-hB6" secondAttribute="topMargin" id="udD-dQ-fOn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Lições" id="0kd-ti-c9K"/>
+                    <tabBarItem key="tabBarItem" title="Lições" image="lessons" id="0kd-ti-c9K"/>
                     <connections>
                         <segue destination="8iI-UW-tVo" kind="show" identifier="goToTest" id="hjs-ff-PyN"/>
                         <segue destination="hse-Ec-GjY" kind="show" identifier="goToGame" id="DQX-Qn-kcL"/>
@@ -427,5 +472,13 @@
     </scenes>
     <resources>
         <image name="Landscape - Retina" width="375" height="667"/>
+        <image name="exercicio icon" width="148" height="122"/>
+        <image name="lessons" width="25" height="25"/>
+        <image name="licao icon" width="100" height="122"/>
+        <image name="profile" width="25" height="25"/>
+        <image name="prova icon" width="100" height="122"/>
+        <image name="puzzle" width="25" height="25"/>
+        <image name="store" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="0.31372549020000001" green="0.17254901959999999" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
