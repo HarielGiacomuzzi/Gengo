@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -229,13 +229,13 @@
                                     <action selector="letterChosed:" destination="QqO-ME-gNL" eventType="valueChanged" id="phh-mK-5dq"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-dt-kat">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-dt-kat">
                                 <rect key="frame" x="41" y="109" width="518" height="471"/>
                                 <connections>
                                     <outlet property="delegate" destination="QqO-ME-gNL" id="qRj-f1-sdM"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-u4-EDC">
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-u4-EDC">
                                 <rect key="frame" x="270" y="539" width="60" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0TD-GA-Cv1"/>
@@ -270,6 +270,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqh-Vu-faC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792" y="2794"/>
+        </scene>
+        <!--View Controller Desenha Letra-->
+        <scene sceneID="SPm-Dq-t5M">
+            <objects>
+                <viewController storyboardIdentifier="ViewDesenhaLetra" id="AGG-wN-ftj" customClass="ViewControllerDesenhaLetra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3oD-Nm-sqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="tsY-1B-IK9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rcy-gY-zei">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-9Q-Oak">
+                                <rect key="frame" x="16" y="56" width="568" height="425"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-X5-rJq">
+                                <rect key="frame" x="277" y="489" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tJ8-X5-rJq" firstAttribute="top" secondItem="gdr-9Q-Oak" secondAttribute="bottom" constant="8" id="1Ib-88-7Ht"/>
+                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="trailing" secondItem="Rcy-gY-zei" secondAttribute="trailingMargin" id="GlH-k2-api"/>
+                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="top" secondItem="3oD-Nm-sqg" secondAttribute="bottom" constant="20" id="Ls3-ym-60z"/>
+                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="leading" secondItem="Rcy-gY-zei" secondAttribute="leadingMargin" id="Z27-gU-aNB"/>
+                            <constraint firstAttribute="centerX" secondItem="tJ8-X5-rJq" secondAttribute="centerX" id="hlw-Gw-D05"/>
+                            <constraint firstItem="tsY-1B-IK9" firstAttribute="top" secondItem="tJ8-X5-rJq" secondAttribute="bottom" constant="50" id="sOk-uB-Qqb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="gdr-9Q-Oak" id="h0b-MD-ffT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBV-et-jBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2216" y="3584"/>
         </scene>
         <!--Puzzle-->
         <scene sceneID="e3Z-mz-D8B">

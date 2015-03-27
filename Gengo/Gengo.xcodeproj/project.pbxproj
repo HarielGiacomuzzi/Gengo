@@ -51,6 +51,7 @@
 		DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3611AC5A3A1002DE928 /* View2.xib */; };
 		DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3631AC5BFBC002DE928 /* View3.xib */; };
 		DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */; };
+		DBA32FE31AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */; };
 		DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,8 @@
 		DB92D3631AC5BFBC002DE928 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
 		DBA17E8D1AC5D08300E807F7 /* TutorialDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialDrawView.h; sourceTree = "<group>"; };
 		DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialDrawView.m; sourceTree = "<group>"; };
+		DBA32FE11AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDesenhaLetra.h; sourceTree = "<group>"; };
+		DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDesenhaLetra.m; sourceTree = "<group>"; };
 		DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTutorial.h; sourceTree = "<group>"; };
 		DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTutorial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +188,8 @@
 				DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */,
 				DBA17E8D1AC5D08300E807F7 /* TutorialDrawView.h */,
 				DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */,
+				DBA32FE11AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.h */,
+				DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
 				5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */,
+				DBA32FE31AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m in Sources */,
 				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
 				DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,

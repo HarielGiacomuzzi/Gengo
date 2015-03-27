@@ -11,7 +11,7 @@
 @interface ViewControllerTutorial ()
 {
     UIView *firstViewUIView;
-    TutorialDrawView *secondViewUIView;
+    UIViewController *secondViewUIView;
     UIView *thirdViewUIView;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -50,15 +50,20 @@
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
     [self.scrollView addSubview:firstViewUIView];
+    
+    
 
     
-    secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
-    secondViewUIView.letter.image = [UIImage imageNamed:@"a--.png"];
-    secondViewUIView.draw = [[UIImage alloc] init];
-    [self.scrollView addSubview:secondViewUIView];
+    secondViewUIView = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
+    [self addChildViewController:secondViewUIView];
+    [self.scrollView addSubview:secondViewUIView.view];
+    //UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
+
+    
+    //[self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
-    [self.scrollView addSubview:secondViewUIView];
+    [self.scrollView addSubview:thirdViewUIView];
 }
 
 
@@ -85,7 +90,7 @@
     
     firstViewUIView.frame = CGRectMake(0, 0, firstViewUIView.frame.size.width, firstViewUIView.frame.size.height);
     
-    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
+    secondViewUIView.view.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.view.frame.size.width, secondViewUIView.view.frame.size.height);
     
     thirdViewUIView.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, thirdViewUIView.frame.size.width, thirdViewUIView.frame.size.height);
     
