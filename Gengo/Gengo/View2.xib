@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,14 +12,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMC-Xk-mEq">
-                    <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
+                    <rect key="frame" x="0.0" y="60" width="518" height="315"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua Vez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro1-7p-KXZ">
+                    <rect key="frame" x="228.5" y="26.5" width="62" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OL9-3M-Y4n">
+                    <rect key="frame" x="234" y="383" width="50" height="30"/>
+                    <state key="normal" title="Apagar">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="CMC-Xk-mEq" secondAttribute="trailing" id="BIC-SH-dDg"/>
-                <constraint firstItem="CMC-Xk-mEq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H08-kE-9sf"/>
-                <constraint firstAttribute="bottom" secondItem="CMC-Xk-mEq" secondAttribute="bottom" id="PqI-Bd-BpM"/>
-                <constraint firstItem="CMC-Xk-mEq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ahn-7k-WFt"/>
+                <constraint firstItem="OL9-3M-Y4n" firstAttribute="top" secondItem="CMC-Xk-mEq" secondAttribute="bottom" constant="8" id="1NM-uc-xUR"/>
+                <constraint firstItem="CMC-Xk-mEq" firstAttribute="top" secondItem="ro1-7p-KXZ" secondAttribute="bottom" constant="13" id="F0d-8p-VLC"/>
+                <constraint firstAttribute="bottomMargin" secondItem="OL9-3M-Y4n" secondAttribute="bottom" constant="50" id="Gz4-Lm-o7K"/>
+                <constraint firstAttribute="centerX" secondItem="ro1-7p-KXZ" secondAttribute="centerX" id="Mgp-oy-aVS"/>
+                <constraint firstAttribute="centerX" secondItem="OL9-3M-Y4n" secondAttribute="centerX" id="RKV-rq-HkZ"/>
+                <constraint firstItem="CMC-Xk-mEq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ktq-dM-cJD"/>
+                <constraint firstItem="ro1-7p-KXZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="18" id="kvW-cN-0GR"/>
+                <constraint firstAttribute="trailing" secondItem="CMC-Xk-mEq" secondAttribute="trailing" id="qI6-DB-i9h"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
