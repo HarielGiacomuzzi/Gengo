@@ -47,6 +47,9 @@
 		DB7119C91ABCA96800ACDD71 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C81ABCA96800ACDD71 /* Bolts.framework */; };
 		DB7211891AC58D5500D20D01 /* simple-drum-beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */; };
 		DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8149AA1AC3274900D65332 /* AsyncImageView.m */; };
+		DB92D3601AC5A10A002DE928 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D35F1AC5A10A002DE928 /* View1.xib */; };
+		DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3611AC5A3A1002DE928 /* View2.xib */; };
+		DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3631AC5BFBC002DE928 /* View3.xib */; };
 		DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +123,9 @@
 		DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "simple-drum-beat.wav"; sourceTree = "<group>"; };
 		DB8149A91AC3274900D65332 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		DB8149AA1AC3274900D65332 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		DB92D35F1AC5A10A002DE928 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
+		DB92D3611AC5A3A1002DE928 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
+		DB92D3631AC5BFBC002DE928 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
 		DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTutorial.h; sourceTree = "<group>"; };
 		DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTutorial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +210,9 @@
 				5ED9E6781ABC810F00905BC5 /* AppDelegate.h */,
 				5ED9E6791ABC810F00905BC5 /* AppDelegate.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
+				DB92D3631AC5BFBC002DE928 /* View3.xib */,
+				DB92D3611AC5A3A1002DE928 /* View2.xib */,
+				DB92D35F1AC5A10A002DE928 /* View1.xib */,
 				5E7075AB1AC1EE43009B6B4C /* ViewControllers */,
 				5ED9E6811ABC810F00905BC5 /* Images.xcassets */,
 				5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */,
@@ -389,11 +398,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */,
 				DB7211891AC58D5500D20D01 /* simple-drum-beat.wav in Resources */,
+				DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */,
 				5E6C3FE21AC12E5700B57FD1 /* GameScene.sks in Resources */,
 				5ED9E6801ABC810F00905BC5 /* Main.storyboard in Resources */,
 				5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */,
 				5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */,
+				DB92D3601AC5A10A002DE928 /* View1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

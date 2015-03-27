@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewControllerTutorial : UIViewController <UIScrollViewDelegate, UIGestureRecognizerDelegate>
+@interface ViewControllerTutorial : UIViewController <UIScrollViewDelegate>
 
 @end

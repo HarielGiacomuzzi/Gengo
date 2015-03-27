@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QqO-ME-gNL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -61,7 +61,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-l7-AKT">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-l7-AKT">
                                 <rect key="frame" x="67" y="475" width="65" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Button">
@@ -126,7 +126,7 @@
                                     <navigationItem title="Title" id="Ev2-U4-UqT"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gj-0Y-6PR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gj-0Y-6PR">
                                 <rect key="frame" x="279" y="183" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,59 +224,40 @@
                                     <action selector="letterChosed:" destination="QqO-ME-gNL" eventType="valueChanged" id="phh-mK-5dq"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-dt-kat">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-dt-kat">
                                 <rect key="frame" x="41" y="109" width="518" height="471"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-5Y-1GZ">
-                                        <rect key="frame" x="8" y="8" width="502" height="275"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Za-aS-AjQ">
-                                        <rect key="frame" x="8" y="291" width="502" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                        </accessibility>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-u4-EDC">
-                                        <rect key="frame" x="229" y="411" width="60" height="37"/>
-                                        <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="pageChenged:" destination="QqO-ME-gNL" eventType="valueChanged" id="6At-KA-bM1"/>
-                                        </connections>
-                                    </pageControl>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="4Za-aS-AjQ" secondAttribute="trailing" constant="8" id="0Qs-B8-dOO"/>
-                                    <constraint firstItem="EqM-5Y-1GZ" firstAttribute="leading" secondItem="dyL-dt-kat" secondAttribute="leading" constant="8" id="E9X-p9-UeF"/>
-                                    <constraint firstAttribute="centerX" secondItem="4Za-aS-AjQ" secondAttribute="centerX" id="EX4-oB-lyM"/>
-                                    <constraint firstAttribute="centerX" secondItem="OP0-u4-EDC" secondAttribute="centerX" id="FSl-KD-Koh"/>
-                                    <constraint firstAttribute="bottom" secondItem="OP0-u4-EDC" secondAttribute="bottom" constant="15" id="IIc-zr-AmY"/>
-                                    <constraint firstAttribute="trailing" secondItem="EqM-5Y-1GZ" secondAttribute="trailing" constant="8" id="Wip-Uv-NZj"/>
-                                    <constraint firstItem="EqM-5Y-1GZ" firstAttribute="top" secondItem="dyL-dt-kat" secondAttribute="top" constant="8" id="elg-k0-GZt"/>
-                                    <constraint firstItem="4Za-aS-AjQ" firstAttribute="top" secondItem="EqM-5Y-1GZ" secondAttribute="bottom" constant="8" id="f1A-2F-FVC"/>
-                                    <constraint firstItem="OP0-u4-EDC" firstAttribute="top" secondItem="4Za-aS-AjQ" secondAttribute="bottom" constant="15" id="rqH-8Q-bhA"/>
-                                    <constraint firstItem="4Za-aS-AjQ" firstAttribute="leading" secondItem="dyL-dt-kat" secondAttribute="leading" constant="8" id="rxv-ee-X3V"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="QqO-ME-gNL" id="qRj-f1-sdM"/>
+                                </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-u4-EDC">
+                                <rect key="frame" x="270" y="522" width="60" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="0TD-GA-Cv1"/>
+                                    <constraint firstAttribute="width" constant="60" id="Xoq-ze-5n5"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="pageChenged:" destination="QqO-ME-gNL" eventType="valueChanged" id="6At-KA-bM1"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6iL-Vd-usi" firstAttribute="top" secondItem="dyL-dt-kat" secondAttribute="bottom" constant="20" id="4cX-73-g0i"/>
                             <constraint firstItem="dyL-dt-kat" firstAttribute="top" secondItem="E8P-tW-UcD" secondAttribute="bottom" constant="10" id="CsG-ji-ycw"/>
+                            <constraint firstAttribute="centerX" secondItem="OP0-u4-EDC" secondAttribute="centerX" id="KBZ-Pr-TY5"/>
                             <constraint firstItem="E8P-tW-UcD" firstAttribute="top" secondItem="PJC-T7-Mgv" secondAttribute="bottom" constant="35" id="Krk-Qt-bK1"/>
                             <constraint firstItem="E8P-tW-UcD" firstAttribute="leading" secondItem="m8F-xc-BGr" secondAttribute="leadingMargin" constant="25" id="Pv8-aW-GNv"/>
                             <constraint firstItem="dyL-dt-kat" firstAttribute="leading" secondItem="m8F-xc-BGr" secondAttribute="leadingMargin" constant="25" id="XPn-lX-jh8"/>
+                            <constraint firstItem="6iL-Vd-usi" firstAttribute="top" secondItem="OP0-u4-EDC" secondAttribute="bottom" constant="41" id="f2y-uP-p6z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E8P-tW-UcD" secondAttribute="trailing" constant="25" id="ilR-dl-IT2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dyL-dt-kat" secondAttribute="trailing" constant="25" id="vMB-e2-UYX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lessonControl" destination="E8P-tW-UcD" id="qJr-hK-PWF"/>
-                        <outlet property="lessonImageView" destination="EqM-5Y-1GZ" id="GmA-Kk-LY3"/>
                         <outlet property="pageControl" destination="OP0-u4-EDC" id="XAG-sL-vUX"/>
                         <outlet property="scrollView" destination="dyL-dt-kat" id="MKH-VY-ixK"/>
                     </connections>
