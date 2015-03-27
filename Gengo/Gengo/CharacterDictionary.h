@@ -11,6 +11,7 @@
 @interface CharacterDictionary : NSObject
 @property (nonatomic) NSDictionary *characters;
 @property (nonatomic) NSDictionary *words;
+@property (nonatomic) NSDictionary *toRomanji;
 
 -(id)init;
 

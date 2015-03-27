@@ -30,6 +30,16 @@
                    @"sobrinho": @"おい",
                    @"rei" : @"おう"
                    };
+        _toRomanji = @{@"あおい" : @"aoi",
+                       @"あい" : @"ai",
+                       @"いいえ" : @"iie",
+                       @"いう" : @"iu",
+                       @"う" : @"u",
+                       @"ええ" : @"ee",
+                       @"え" : @"e",
+                       @"おい" : @"oi",
+                       @"おう" : @"ou"
+                       };
     }
     return self;
 }
@@ -45,7 +55,7 @@
         int i = arc4random() % size;
         [rearrangedKeys addObject:keys[i]];
         [keys removeObjectAtIndex:i];
-
+        
     }
     return rearrangedKeys;
 }

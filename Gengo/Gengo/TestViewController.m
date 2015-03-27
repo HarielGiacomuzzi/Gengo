@@ -12,10 +12,12 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.navBarTitle.title = @"Question 1";
     self.dictionary = [[CharacterDictionary alloc] init];
     self.questions = [self.dictionary getWordsAtRandomOrder];
     self.questionLabel.text = self.questions[0];
     self.currentWord = [self.dictionary.words valueForKey:self.questionLabel.text];
+    self.romanjiLabel.text = [self.dictionary.toRomanji valueForKey:self.currentWord];
     self.currentQuestion = 0;
     self.currentLetterIndex = 0;
     NSLog(@"palavra completa %@", self.currentWord);
@@ -25,7 +27,7 @@
     for (int i = 0; i < 5; i++) {
         [self.answerButtons[i] setTitle:answers[i] forState:UIControlStateNormal];
     }
-
+    
 }
 
 - (IBAction)buttonTapped:(UIButton *)sender {
@@ -41,19 +43,19 @@
     if ([rightKey isEqualToString:keyClicked]) {
         self.currentLetterIndex = self.currentLetterIndex + 1;
         self.currentAnswerLabel.text = [NSString stringWithFormat:@"%@%@",self.currentAnswerLabel.text,keyClicked];
-
+        
         if (self.currentLetterIndex == self.currentWord.length) {
+            [self alertWithResult:YES andAnswer:self.currentWord];
             self.currentAnswerLabel.text = @"";
             self.rightAnswers = self.rightAnswers + 1;
-            self.rightLabel.text = [NSString stringWithFormat:@"certas: %ld", (long)self.rightAnswers];
             [self updateNextQuestion];
             
         }
-
+        
     } else {
+        [self alertWithResult:NO andAnswer:self.currentWord];
         self.currentAnswerLabel.text = @"";
         self.wrongAnswers = self.wrongAnswers + 1;
-        self.wrongLabel.text = [NSString stringWithFormat:@"erradas: %ld", (long)self.wrongAnswers];
         [self updateNextQuestion];
         
     }
@@ -72,11 +74,27 @@
     } else {
         self.questionLabel.text = self.questions[self.currentQuestion];
         self.currentWord = [self.dictionary.words valueForKey:self.questionLabel.text];
-        self.currentQuestionLabel.text = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion];
+        self.romanjiLabel.text = [self.dictionary.toRomanji valueForKey:self.currentWord];
+        self.navBarTitle.title = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion + 1];
         self.currentLetterIndex = 0;
         NSLog(@"palavra completa %@", self.currentWord);
         
     }
+}
+
+-(void)alertWithResult:(BOOL)correct andAnswer:(NSString *)answer {
+    NSString *result;
+    if (correct) {
+        result = @"Correto";
+    } else {
+        result = @"Errado";
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:result
+                                                    message:[NSString stringWithFormat:@"a resposta correta era %@", answer]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 
