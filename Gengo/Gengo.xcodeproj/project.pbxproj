@@ -12,6 +12,8 @@
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
 		5E6C3FE21AC12E5700B57FD1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */; };
 		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
+		5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E11AC5E1340063E962 /* StoreViewController.m */; };
+		5E6D96E51AC5E14E0063E962 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */; };
 		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
 		5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6791ABC810F00905BC5 /* AppDelegate.m */; };
@@ -74,6 +76,10 @@
 		5E6C3FDE1AC12E5700B57FD1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5E6D96E01AC5E1340063E962 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		5E6D96E11AC5E1340063E962 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		5E6D96E31AC5E14E0063E962 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
+		5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
 		5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDictionary.h; sourceTree = "<group>"; };
 		5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDictionary.m; sourceTree = "<group>"; };
 		5ED9E6711ABC810F00905BC5 /* Gengo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gengo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +191,10 @@
 				DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */,
 				DBA17E8D1AC5D08300E807F7 /* TutorialDrawView.h */,
 				DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */,
+				5E6D96E01AC5E1340063E962 /* StoreViewController.h */,
+				5E6D96E11AC5E1340063E962 /* StoreViewController.m */,
+				5E6D96E31AC5E14E0063E962 /* StoreTableViewCell.h */,
+				5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -437,6 +447,7 @@
 				5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */,
 				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
 				DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */,
+				5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
@@ -446,6 +457,7 @@
 				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,
 				DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,
+				5E6D96E51AC5E14E0063E962 /* StoreTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
