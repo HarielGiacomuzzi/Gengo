@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lessonControl;
 @property (weak, nonatomic) IBOutlet UIImageView *lessonImageView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -20,28 +21,115 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformActionLeft:)];
+
+    //adding swipe gesture to the view.
+    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformAction:)];
     left.direction = UISwipeGestureRecognizerDirectionLeft ;
-    [self.scrollView addGestureRecognizer:left];
+    [self.view addGestureRecognizer:left];
     
-    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformActionRight:)];
+    //adding swipe gesture to the view.
+    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformAction:)];
     right.direction = UISwipeGestureRecognizerDirectionRight ;
-    [self.scrollView addGestureRecognizer:right];
+    [self.view addGestureRecognizer:right];
+    
+    //Setting the image touch action.
+    UITapGestureRecognizer *imageTouched = [[UITapGestureRecognizer alloc]
+                                             initWithTarget:self action:@selector(ClickEventOnImage:)];
+    [imageTouched setNumberOfTouchesRequired:1];
+    [imageTouched setDelegate:self];
+     self.lessonImageView.userInteractionEnabled = YES;
+    [self.lessonImageView addGestureRecognizer:imageTouched];
     
     self.lessonImageView.image = [UIImage imageNamed:@"a.png"];
 }
 
--(void)PerformActionLeft:(UISwipeGestureRecognizer *)sender {
-    if (self.pageControl.currentPage > 2 && self.pageControl.currentPage > 0){
-        self.pageControl.currentPage--;
-    }
+-(void) ClickEventOnImage:(id) sender
+{
+        NSString *audioName = [[NSString alloc] init];
+    
+        switch (self.lessonControl.selectedSegmentIndex) {
+            case 1:
+                audioName = @"simple-drum-beat";
+                break;
+            
+            case 2:
+                audioName = @"simple-drum-beat";
+                break;
+            
+            case 3:
+                audioName = @"simple-drum-beat";
+                break;
+            
+            case 4:
+                audioName = @"simple-drum-beat";
+                break;
+            
+            case 5:
+                audioName = @"simple-drum-beat";
+                break;
+            
+            default:
+                break;
+        }
+    
+    
+        NSError *error;
+        
+        NSBundle* bundle = [NSBundle mainBundle];
+        
+        NSURL *url = [NSURL URLWithString:[bundle pathForResource:audioName ofType:@"wav"]];
+    
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+
+        self.audioPlayer.numberOfLoops = 0;
+    
+        if (self.audioPlayer != nil)
+        {
+            [self.audioPlayer play];
+        }
 }
 
--(void)PerformActionRight:(UISwipeGestureRecognizer *)sender {
-    if (self.pageControl.currentPage < 2){
-     self.pageControl.currentPage++;
+- (IBAction)letterChosed:(id)sender {
+    switch (self.lessonControl.selectedSegmentIndex) {
+        case 0:
+            self.lessonImageView.image = [UIImage imageNamed:@"a.png"];
+            break;
+            
+        case 1:
+            self.lessonImageView.image = [UIImage imageNamed:@"i.png"];
+            break;
+            
+        case 2:
+            self.lessonImageView.image = [UIImage imageNamed:@"u.png"];
+            break;
+            
+        case 3:
+            self.lessonImageView.image = [UIImage imageNamed:@"e.png"];
+            break;
+            
+        case 4:
+            self.lessonImageView.image = [UIImage imageNamed:@"o.png"];
+            break;
+            
+        default:
+            break;
     }
+    
+}
+
+
+
+-(void)PerformAction:(UISwipeGestureRecognizer *)sender {
+    if(sender.direction == UISwipeGestureRecognizerDirectionRight && self.pageControl.currentPage > 2 && self.pageControl.currentPage > 0) {
+        self.pageControl.currentPage--;
+    }
+    
+    if(sender.direction == UISwipeGestureRecognizerDirectionLeft && self.pageControl.currentPage < 2) {
+        self.pageControl.currentPage++;
+    }
+}
+- (IBAction)pageChenged:(UIPageControl *)sender {
+    NSLog(@"Page Changed");
 }
 
 -(void)viewWillAppear:(BOOL)animated{
