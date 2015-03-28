@@ -53,6 +53,7 @@
         
     } else {
         [self playAnimation:NO];
+
         self.wrongAnswers = self.wrongAnswers + 1;
         [self updateNextQuestion];
         
@@ -78,6 +79,21 @@
         NSLog(@"palavra completa %@", self.currentWord);
         
     }
+}
+
+-(void)alertWithResult:(BOOL)correct andAnswer:(NSString *)answer {
+    NSString *result;
+    if (correct) {
+        result = @"Correto";
+    } else {
+        result = @"Errado";
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:result
+                                                    message:[NSString stringWithFormat:@"a resposta correta era %@", answer]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)playAnimation:(BOOL)correct {
