@@ -97,5 +97,9 @@
     [alert show];
 }
 
+-(void)playAnimation {
+    
+}
+
 
 @end

@@ -26,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *romanjiLabel;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navBarTitle;
 
+@property (strong, nonatomic) IBOutlet UIView *backgroundView;
 
 
 @end
