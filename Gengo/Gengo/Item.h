@@ -13,6 +13,8 @@
 @property NSString *name;
 @property NSString *desc;
 @property NSString *image;
-@property int price;
+@property NSInteger price;
+
+-(id)initWithName:(NSString *)name desc:(NSString *)desc image:(NSString *)image andPrice:(NSInteger)price;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -333,7 +333,7 @@
         <!--Loja-->
         <scene sceneID="43p-Pj-V4f">
             <objects>
-                <viewController id="nfF-6p-aH4" sceneMemberID="viewController">
+                <viewController id="nfF-6p-aH4" customClass="StoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UAN-ws-i8t"/>
                         <viewControllerLayoutGuide type="bottom" id="NSr-Br-8dc"/>
@@ -341,9 +341,67 @@
                     <view key="view" contentMode="scaleToFill" id="keC-is-Wjc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="stY-VI-dV9">
+                                <rect key="frame" x="0.0" y="67" width="600" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storeCell" rowHeight="108" id="7X2-wD-pwK" customClass="StoreTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7X2-wD-pwK" id="fow-ZW-xW9">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlW-nZ-n2f">
+                                                    <rect key="frame" x="22" y="0.0" width="103" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-gF-MMQ">
+                                                    <rect key="frame" x="139" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFB-gd-zoD">
+                                                    <rect key="frame" x="137" y="70" width="32" height="30"/>
+                                                    <state key="normal" title="BUY">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buyButton" destination="qFB-gd-zoD" id="kjo-7D-iEU"/>
+                                            <outlet property="itemImage" destination="RlW-nZ-n2f" id="SNs-im-HV0"/>
+                                            <outlet property="itemName" destination="RnS-gF-MMQ" id="xew-4R-w8v"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nfF-6p-aH4" id="9na-Ve-pxC"/>
+                                    <outlet property="delegate" destination="nfF-6p-aH4" id="ax8-6G-8ZS"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqZ-8g-FiF">
+                                <rect key="frame" x="16" y="28" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="stY-VI-dV9" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" constant="-16" id="5GJ-2l-VDN"/>
+                            <constraint firstItem="OqZ-8g-FiF" firstAttribute="top" secondItem="UAN-ws-i8t" secondAttribute="bottom" constant="8" id="IaV-2Q-bcf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="stY-VI-dV9" secondAttribute="bottom" constant="-20" id="Ols-gs-KGG"/>
+                            <constraint firstItem="OqZ-8g-FiF" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" id="eyo-CI-Wf7"/>
+                            <constraint firstItem="stY-VI-dV9" firstAttribute="top" secondItem="OqZ-8g-FiF" secondAttribute="bottom" constant="18.5" id="i6C-m0-xOn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="stY-VI-dV9" secondAttribute="trailing" constant="-16" id="v39-Cp-usG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Loja" image="store" id="L6B-5z-avx"/>
+                    <connections>
+                        <outlet property="tableView" destination="stY-VI-dV9" id="Lzv-hu-uSl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4J-Ox-Jf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
