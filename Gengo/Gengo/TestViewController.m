@@ -68,6 +68,7 @@
             self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
         }
         [self dismissViewControllerAnimated:YES completion:nil];
+        [self endTest];
         
     } else {
         self.questionLabel.text = self.questions[self.currentQuestion];
@@ -94,7 +95,7 @@
                      completion:^(BOOL finished){
                          [UIView animateWithDuration:0.5
                                           animations:^{
-                                              [self.backgroundView setBackgroundColor:[UIColor whiteColor]];
+                                              [self.backgroundView setBackgroundColor:[UIColor orangeColor]];
                                               
                                           }
                                           completion:^(BOOL finished){
@@ -102,6 +103,13 @@
                                           }];
                      }];
     
+}
+
+-(void)endTest {
+    NSString *message = [NSString stringWithFormat:@"Você acertou %ld palavras", self.rightAnswers];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fim do Teste" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+
 }
 
 

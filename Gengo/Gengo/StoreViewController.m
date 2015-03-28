@@ -16,10 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Item *item1 = [[Item alloc] initWithName:@"item1" desc:@"desc1" image:@"image1" andPrice:20];
-    Item *item2 = [[Item alloc] initWithName:@"item2" desc:@"desc1" image:@"image1" andPrice:20];
-    Item *item3 = [[Item alloc] initWithName:@"item3" desc:@"desc1" image:@"image1" andPrice:20];
-    Item *item4 = [[Item alloc] initWithName:@"item4" desc:@"desc1" image:@"image1" andPrice:20];
+    Item *item1 = [[Item alloc] initWithName:@"Neko Sensei Claws" desc:@"Garras afiadas para degolar seus inimigos" image:@"image1" andPrice:50];
+    Item *item2 = [[Item alloc] initWithName:@"Katana Maligna" desc:@"Uma espada do mal" image:@"image1" andPrice:100];
+    Item *item3 = [[Item alloc] initWithName:@"Chapeu de Samurai" desc:@"Chapeu descolado da moda samurai" image:@"image1" andPrice:20];
+    Item *item4 = [[Item alloc] initWithName:@"Bandana do Naruto" desc:@"Pros otaku comprar" image:@"image1" andPrice:200];
     self.items = [[NSMutableArray alloc] initWithObjects:item1,item2,item3,item4, nil];
     self.user = [[User alloc] init];
     self.user.money = 1000;
@@ -39,6 +39,8 @@
     StoreTableViewCell *cell = (StoreTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"storeCell"];
     Item * item = [self.items objectAtIndex:indexPath.row];
     cell.itemName.text = item.name;
+    cell.descriptionLabel.text = item.desc;
+    cell.priceLabel.text = [NSString stringWithFormat:@"%ld N$", item.price];
     
     [cell.buyButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
