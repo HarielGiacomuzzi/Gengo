@@ -24,6 +24,7 @@
     self.user = [[User alloc] init];
     self.user.money = 1000;
     self.user.items = [[NSMutableArray alloc] init];
+    self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -72,6 +73,7 @@
     for (Item *i in self.user.items) {
         NSLog(@"%@",i.name);
     }
+    self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
     
 }
 

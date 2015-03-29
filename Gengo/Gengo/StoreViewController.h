@@ -15,5 +15,6 @@
 
 @property (nonatomic) NSMutableArray *items;
 @property (nonatomic) User *user;
+@property (strong, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end

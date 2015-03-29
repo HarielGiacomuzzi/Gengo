@@ -17,8 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.user = (User *)[User loadUser];
-    self.lesson = [[Lesson alloc] init];
+    //self.user = (User *)[User loadUser];
+    self.lessonArray = [[NSMutableArray alloc] init];
+    [self.lessonArray addObject:[[Lesson alloc] init]];
     //if (self.user.licoes.count == 0) {
     //    [self.user.licoes addObject:[[Lesson alloc] init]];
    // }
@@ -27,14 +28,15 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"%@", self.user.email);
-    self.user.nivel = 100;
+    //NSLog(@"%@", self.user.email);
+    //self.user.nivel = 100;
     //[self.user.licoes addObject:self.lesson];
     //[SaveUtility SyncUser];
-    NSLog(@"MELHOR NOTA %@", self.lesson.grade);
-    NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)self.lesson.highScore);
-    NSLog(@"%@", self.user.nome);
-    NSLog(@"%ld",self.user.nivel);
+    Lesson *lesson = self.lessonArray[0];
+    NSLog(@"MELHOR NOTA %@", lesson.grade);
+    NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)lesson.highScore);
+    //NSLog(@"%@", self.user.nome);
+    //NSLog(@"%ld",self.user.nivel);
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -43,7 +45,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    return self.lessonArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -71,14 +73,15 @@
     [self performSegueWithIdentifier:@"goToTutorial" sender:self];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender {
+    
     if ([segue.identifier isEqualToString:@"goToTest"]) {
         TestViewController *test = (TestViewController *)segue.destinationViewController;
-        test.lesson = self.lesson;
+        test.lesson = self.lessonArray[0];
         
     } else if ([segue.identifier isEqualToString:@"goToGame"]){
         GameViewController *game = (GameViewController *)segue.destinationViewController;
-        game.lesson = self.lesson;
+        game.lesson = self.lessonArray[0];
         
     }
 }

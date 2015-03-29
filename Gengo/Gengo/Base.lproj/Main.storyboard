@@ -470,10 +470,10 @@
                                                         <constraint firstAttribute="height" constant="89" id="nkE-55-ipj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-gF-MMQ">
-                                                    <rect key="frame" x="117" y="8" width="64.5" height="32.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-gF-MMQ">
+                                                    <rect key="frame" x="117" y="8" width="48.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFB-gd-zoD">
@@ -486,13 +486,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCd-tb-qUi">
                                                     <rect key="frame" x="117" y="40" width="30.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTw-hL-euE">
                                                     <rect key="frame" x="550" y="14" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -509,6 +509,7 @@
                                                 <constraint firstItem="NTw-hL-euE" firstAttribute="top" secondItem="fow-ZW-xW9" secondAttribute="topMargin" constant="6" id="xvb-0Y-hAQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="buyButton" destination="qFB-gd-zoD" id="kjo-7D-iEU"/>
                                             <outlet property="descriptionLabel" destination="ZCd-tb-qUi" id="DLU-2k-rbf"/>
@@ -532,26 +533,29 @@
                                     <navigationItem title="Loja" id="IyL-mh-tEc"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahz-b8-gKz">
-                                <rect key="frame" x="16" y="70" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahz-b8-gKz">
+                                <rect key="frame" x="16" y="70" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ahz-b8-gKz" firstAttribute="top" secondItem="IEt-uz-0Yq" secondAttribute="bottom" constant="8" id="EqH-xB-Jmz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="stY-VI-dV9" secondAttribute="bottom" constant="-19.5" id="HQc-aq-lrn"/>
                             <constraint firstItem="stY-VI-dV9" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" constant="-16" id="NwV-mX-q5D"/>
                             <constraint firstItem="stY-VI-dV9" firstAttribute="top" secondItem="UAN-ws-i8t" secondAttribute="bottom" constant="89" id="dch-lf-3nI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IEt-uz-0Yq" secondAttribute="trailing" constant="-16" id="gnh-oh-OYE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="stY-VI-dV9" secondAttribute="trailing" constant="-16" id="qCY-Yw-0mr"/>
+                            <constraint firstItem="ahz-b8-gKz" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" id="sAe-ei-s1E"/>
                             <constraint firstItem="IEt-uz-0Yq" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" constant="-16" id="ums-Zn-ZGM"/>
                             <constraint firstItem="IEt-uz-0Yq" firstAttribute="top" secondItem="keC-is-Wjc" secondAttribute="topMargin" constant="18" id="zZY-pJ-03q"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Loja" image="store" id="L6B-5z-avx"/>
                     <connections>
+                        <outlet property="moneyLabel" destination="ahz-b8-gKz" id="UVY-hK-tOg"/>
                         <outlet property="tableView" destination="stY-VI-dV9" id="Lzv-hu-uSl"/>
                     </connections>
                 </viewController>
@@ -720,6 +724,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Lições" image="lessons" id="0kd-ti-c9K"/>
                     <connections>
+                        <outlet property="tableView" destination="jyd-xX-bHQ" id="GRW-8E-jvJ"/>
                         <segue destination="8iI-UW-tVo" kind="show" identifier="goToTest" id="hjs-ff-PyN"/>
                         <segue destination="hse-Ec-GjY" kind="show" identifier="goToGame" id="DQX-Qn-kcL"/>
                         <segue destination="QqO-ME-gNL" kind="show" identifier="goToTutorial" id="Pjg-Qx-tQS"/>
