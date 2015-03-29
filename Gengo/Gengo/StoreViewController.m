@@ -25,6 +25,10 @@
     self.user.money = 1000;
     self.user.items = [[NSMutableArray alloc] init];
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
+    [self.tableView setBackgroundColor:[UIColor colorWithRed:253/255.0
+                                                       green:187/255.0
+                                                        blue:91/255.0
+                                                       alpha:1.0]];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

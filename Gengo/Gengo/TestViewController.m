@@ -88,6 +88,10 @@
     } else {
         color = [UIColor redColor];
     }
+    UIColor *backgroundDefault = [UIColor colorWithRed:253/255.0
+                                                green:187/255.0
+                                                 blue:91/255.0
+                                                alpha:1.0];
     [UIView animateWithDuration:0.5
                      animations:^{
                          [self.backgroundView setBackgroundColor:color];
@@ -95,7 +99,7 @@
                      completion:^(BOOL finished){
                          [UIView animateWithDuration:0.5
                                           animations:^{
-                                              [self.backgroundView setBackgroundColor:[UIColor orangeColor]];
+                                              [self.backgroundView setBackgroundColor:backgroundDefault];
                                               
                                           }
                                           completion:^(BOOL finished){
