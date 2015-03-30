@@ -88,9 +88,9 @@
     } else {
         color = [UIColor redColor];
     }
-    UIColor *backgroundDefault = [UIColor colorWithRed:253/255.0
-                                                green:187/255.0
-                                                 blue:91/255.0
+    UIColor *backgroundDefault = [UIColor colorWithRed:253.0/255.0
+                                                green:185.0/255.0
+                                                 blue:100.0/255.0
                                                 alpha:1.0];
     [UIView animateWithDuration:0.5
                      animations:^{

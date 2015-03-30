@@ -258,6 +258,9 @@
                                     <constraint firstAttribute="height" constant="55" id="WlM-1P-Tq6"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.99215686270000003" green="0.67450980390000004" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem id="Ev2-U4-UqT">
                                         <nil key="title"/>
@@ -548,6 +551,9 @@
                                     <constraint firstAttribute="height" constant="55" id="7bd-ls-gvX"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.99215686270000003" green="0.67450980390000004" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Loja" id="IyL-mh-tEc"/>
                                 </items>
@@ -615,6 +621,9 @@
                                     <constraint firstAttribute="height" constant="55" id="8QV-aA-BY7"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.99215686270000003" green="0.67450980390000004" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Perfil" id="lVW-Yl-PLc"/>
                                 </items>
@@ -651,6 +660,9 @@
                                     <constraint firstAttribute="height" constant="55" id="Kha-cp-ikW"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.99215686270000003" green="0.67450980390000004" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Lições" id="8ax-10-O07"/>
                                 </items>
