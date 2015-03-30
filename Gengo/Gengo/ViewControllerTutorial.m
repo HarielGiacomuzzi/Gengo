@@ -10,7 +10,8 @@
 
 @interface ViewControllerTutorial ()
 {
-    UIView *firstViewUIView;
+
+    ViewTutorial1 *firstViewUIView;
     TutorialDrawView *secondViewUIView;
     UIView *thirdViewUIView;
 }
@@ -27,6 +28,7 @@
     [super viewDidLoad];
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
+    firstViewUIView.imageLetter.image = [UIImage imageNamed:@"a.png"];
     [self.scrollView addSubview:firstViewUIView];
     
     
