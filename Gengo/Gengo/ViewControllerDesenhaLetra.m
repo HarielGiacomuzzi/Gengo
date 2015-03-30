@@ -22,9 +22,16 @@
     blue = 0.0/255.0;
     brush = 10.0;
     opacity = 1.0;
-    _mainImage.image = [UIImage imageNamed:@"test"];
+    _mainImage.image = [UIImage imageNamed:self.imageName];
     _draw = [[UIImage alloc] init];
     [super viewDidLoad];
+}
+- (IBAction)btnVoltar:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)apagarBTN:(id)sender {
+    self.mainImage.image = nil;
+    _mainImage.image = [UIImage imageNamed:self.imageName];
 }
 
 - (void)didReceiveMemoryWarning {

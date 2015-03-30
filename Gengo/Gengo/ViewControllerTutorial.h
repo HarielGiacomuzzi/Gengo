@@ -10,6 +10,7 @@
 #import "TutorialDrawView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "ViewTutorial1.h"
+#import "ViewControllerDesenhaLetra.h"
 
 @interface ViewControllerTutorial : UIViewController <UIScrollViewDelegate>
 

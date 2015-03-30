@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,20 +10,45 @@
             <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-TM-eR6">
-                    <rect key="frame" x="38" y="23" width="442" height="440"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LXS-i6-3b0">
+                    <rect key="frame" x="50" y="355" width="418" height="95"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Toque para ouvir" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFj-DX-3PF">
+                    <rect key="frame" x="207" y="41" width="128" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-TM-eR6">
+                    <rect key="frame" x="42" y="33" width="418" height="314"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="314" id="ndK-Fd-7fb"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="dwd-TM-eR6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="15" id="082-Jk-CTO"/>
-                <constraint firstAttribute="centerX" secondItem="dwd-TM-eR6" secondAttribute="centerX" id="92i-uu-mPJ"/>
-                <constraint firstItem="dwd-TM-eR6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="30" id="do6-vW-ngh"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="9MZ-y5-WFZ"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="trailing" secondItem="LXS-i6-3b0" secondAttribute="trailing" id="T8y-Py-G0C"/>
+                <constraint firstItem="yFj-DX-3PF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="dCg-vy-xAt"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ePT-BO-mlX"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="top" secondItem="yFj-DX-3PF" secondAttribute="bottom" constant="-37" id="ePj-AB-NyO"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="centerX" secondItem="yFj-DX-3PF" secondAttribute="centerX" constant="-8" id="eZQ-Wu-tbZ"/>
+                <constraint firstAttribute="centerX" secondItem="yFj-DX-3PF" secondAttribute="centerX" id="h7R-DW-OJu"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="33" id="jzL-m3-tDn"/>
+                <constraint firstItem="dwd-TM-eR6" firstAttribute="leading" secondItem="LXS-i6-3b0" secondAttribute="leading" id="mVI-Zj-Zc6"/>
+                <constraint firstItem="LXS-i6-3b0" firstAttribute="top" secondItem="dwd-TM-eR6" secondAttribute="bottom" constant="8" symbolic="YES" id="rvC-g5-DaE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="ImageInfo" destination="LXS-i6-3b0" id="AWG-ae-KIh"/>
+                <outlet property="ImageLetter" destination="dwd-TM-eR6" id="iQa-wv-jvp"/>
                 <outlet property="imageLetter" destination="dwd-TM-eR6" id="xhR-7t-E48"/>
             </connections>
-            <point key="canvasLocation" x="489" y="386.5"/>
+            <point key="canvasLocation" x="385" y="219.5"/>
         </view>
     </objects>
 </document>

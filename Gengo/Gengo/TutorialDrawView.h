@@ -11,4 +11,6 @@
 @interface TutorialDrawView : UIView{
 }
 
+@property UIViewController *mainView;
+
 @end
