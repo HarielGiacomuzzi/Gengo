@@ -18,4 +18,6 @@
     BOOL mouseSwiped;
 }
 
+@property NSString *imageName;
+
 @end

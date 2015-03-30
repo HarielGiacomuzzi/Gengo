@@ -19,6 +19,7 @@ static User *sharedUser = nil;
 +(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user{
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:email];
+    //array = query.findObjects;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error && objects.count == 1) {
             PFObject *object = objects[0];

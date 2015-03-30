@@ -10,13 +10,13 @@
 
 @interface ViewControllerTutorial ()
 {
+
     ViewTutorial1 *firstViewUIView;
-    UIView *secondViewUIView;
+    TutorialDrawView *secondViewUIView;
     UIView *thirdViewUIView;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lessonControl;
-//@property (weak, nonatomic) IBOutlet UIImageView *lessonImageView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
@@ -34,38 +34,16 @@
     firstViewUIView.ImageInfo.text = @"a";
     [self.scrollView addSubview:firstViewUIView];
     
-    
     secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
+    secondViewUIView.mainView = self;
     [self.scrollView addSubview:secondViewUIView];
-    
-    //secondViewUIView = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
-    //[self addChildViewController:secondViewUIView];
-    //[self.scrollView addSubview:secondViewUIView.view];
-    //UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
-
-    
-    //[self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
     [self.scrollView addSubview:thirdViewUIView];
 }
 
 
--(void)viewWillAppear:(BOOL)animated
-{
-//    UIView *firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
-//    
-//    firstViewUIView.frame = CGRectMake(0, 0, firstViewUIView.frame.size.width, firstViewUIView.frame.size.height);
-//    
-//    [self.scrollView addSubview:firstViewUIView];
-//    
-//    
-//    UIView *secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
-//    
-//    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
-//    
-//    [self.scrollView addSubview:secondViewUIView];
-    
+-(void)viewWillAppear:(BOOL)animated{
     
 }
 
@@ -163,6 +141,41 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoDrawView"]) {
+        ViewControllerDesenhaLetra *view = (ViewControllerDesenhaLetra *)((UINavigationController*)segue.destinationViewController).topViewController;
+        
+        NSString *temp = [[NSString alloc] init];
+        
+            switch (self.lessonControl.selectedSegmentIndex) {
+                case 0:
+                    temp = @"a--.png";
+                    break;
+        
+                case 1:
+                    temp = @"i--.png";
+                    break;
+        
+                case 2:
+                    temp = @"u--.png";
+                    break;
+        
+                case 3:
+                    temp = @"e--.png";
+                    break;
+        
+                case 4:
+                    temp = @"o--.png";
+                    break;
+        
+                default:
+                    break;
+            }
+        
+        view.imageName = temp;
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
