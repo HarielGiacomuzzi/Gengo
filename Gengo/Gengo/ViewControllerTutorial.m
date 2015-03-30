@@ -11,12 +11,11 @@
 @interface ViewControllerTutorial ()
 {
     UIView *firstViewUIView;
-    UIView *secondViewUIView;
+    TutorialDrawView *secondViewUIView;
     UIView *thirdViewUIView;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lessonControl;
-//@property (weak, nonatomic) IBOutlet UIImageView *lessonImageView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
@@ -32,6 +31,7 @@
     
     
     secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
+    secondViewUIView.mainView = self;
     [self.scrollView addSubview:secondViewUIView];
     
     //secondViewUIView = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
@@ -173,6 +173,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat pageWidth = self.scrollView.frame.size.width;

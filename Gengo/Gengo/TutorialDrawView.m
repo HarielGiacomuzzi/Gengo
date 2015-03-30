@@ -18,6 +18,7 @@
 */
 - (IBAction)ButtonTouched:(id)sender {
      NSLog(@"Botão Pressionado.");
+    [self.mainView performSegueWithIdentifier:@"gotoDrawView" sender:nil];
 }
 
 @end
