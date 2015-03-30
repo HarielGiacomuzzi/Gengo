@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QqO-ME-gNL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -364,6 +364,18 @@
                                     <action selector="pageChenged:" destination="QqO-ME-gNL" eventType="valueChanged" id="6At-KA-bM1"/>
                                 </connections>
                             </pageControl>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-vU-OPC">
+                                <rect key="frame" x="0.0" y="11" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Lição" id="0nW-dJ-BID">
+                                        <barButtonItem key="leftBarButtonItem" title="X" id="ik9-dd-0ub">
+                                            <connections>
+                                                <action selector="backBTN:" destination="QqO-ME-gNL" id="4Jy-jJ-6yY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -374,8 +386,11 @@
                             <constraint firstItem="E8P-tW-UcD" firstAttribute="leading" secondItem="m8F-xc-BGr" secondAttribute="leadingMargin" constant="25" id="Pv8-aW-GNv"/>
                             <constraint firstItem="dyL-dt-kat" firstAttribute="leading" secondItem="m8F-xc-BGr" secondAttribute="leadingMargin" constant="25" id="XPn-lX-jh8"/>
                             <constraint firstItem="6iL-Vd-usi" firstAttribute="top" secondItem="OP0-u4-EDC" secondAttribute="bottom" constant="41" id="f2y-uP-p6z"/>
+                            <constraint firstItem="LAd-vU-OPC" firstAttribute="leading" secondItem="m8F-xc-BGr" secondAttribute="leading" id="gYQ-Ml-6Vj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E8P-tW-UcD" secondAttribute="trailing" constant="25" id="ilR-dl-IT2"/>
+                            <constraint firstItem="LAd-vU-OPC" firstAttribute="bottom" secondItem="E8P-tW-UcD" secondAttribute="top" id="m21-LB-4K7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dyL-dt-kat" secondAttribute="trailing" constant="25" id="vMB-e2-UYX"/>
+                            <constraint firstItem="LAd-vU-OPC" firstAttribute="centerX" secondItem="E8P-tW-UcD" secondAttribute="centerX" id="xey-kY-44i"/>
                         </constraints>
                     </view>
                     <connections>

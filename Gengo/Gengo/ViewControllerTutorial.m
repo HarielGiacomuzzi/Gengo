@@ -24,6 +24,10 @@
 
 @implementation ViewControllerTutorial
 
+- (IBAction)backBTN:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -52,9 +56,9 @@
     
     firstViewUIView.frame = CGRectMake(0, 0, firstViewUIView.frame.size.width, firstViewUIView.frame.size.height);
     
-    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
+    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
     
-    thirdViewUIView.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, thirdViewUIView.frame.size.width, thirdViewUIView.frame.size.height);
+    thirdViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, thirdViewUIView.frame.size.width, thirdViewUIView.frame.size.height);
     
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*3, self.scrollView.frame.size.height)];
 }
