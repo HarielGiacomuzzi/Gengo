@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "ViewTutorial1.h"
 
 @interface ViewControllerTutorial : UIViewController <UIScrollViewDelegate>
 

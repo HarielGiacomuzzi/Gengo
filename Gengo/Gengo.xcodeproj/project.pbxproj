@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */; };
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44E03D361AC5ECDF006CDB27 /* ViewTutorial1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTutorial1.h; sourceTree = "<group>"; };
+		44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTutorial1.m; sourceTree = "<group>"; };
 		5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
 		5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
 		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */,
 				DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */,
 				DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */,
+				44E03D361AC5ECDF006CDB27 /* ViewTutorial1.h */,
+				44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
 				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,
 				DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */,
+				44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
