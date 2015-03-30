@@ -28,7 +28,10 @@
     [super viewDidLoad];
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
-    firstViewUIView.imageLetter.image = [UIImage imageNamed:@"a.png"];
+    firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
+    UITapGestureRecognizer *touch = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ClickEventOnImage:)];
+    [firstViewUIView.ImageLetter addGestureRecognizer : touch];
+    firstViewUIView.ImageInfo.text = @"a";
     [self.scrollView addSubview:firstViewUIView];
     
     
@@ -125,50 +128,37 @@
 }
 
 - (IBAction)letterChosed:(id)sender {
-//    switch (self.lessonControl.selectedSegmentIndex) {
-//        case 0:
-//            self.lessonImageView.image = [UIImage imageNamed:@"a.png"];
-//            break;
-//            
-//        case 1:
-//            self.lessonImageView.image = [UIImage imageNamed:@"i.png"];
-//            break;
-//            
-//        case 2:
-//            self.lessonImageView.image = [UIImage imageNamed:@"u.png"];
-//            break;
-//            
-//        case 3:
-//            self.lessonImageView.image = [UIImage imageNamed:@"e.png"];
-//            break;
-//            
-//        case 4:
-//            self.lessonImageView.image = [UIImage imageNamed:@"o.png"];
-//            break;
-//            
-//        default:
-//            break;
-//    }
+    switch (self.lessonControl.selectedSegmentIndex) {
+        case 0:
+            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
+            firstViewUIView.ImageInfo.text = @"a";
+            break;
+        case 1:
+            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"i.png"];
+            firstViewUIView.ImageInfo.text = @"i";
+            break;
+        case 2:
+            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"u.png"];
+            firstViewUIView.ImageInfo.text = @"u";
+            break;
+        case 3:
+            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"e.png"];
+            firstViewUIView.ImageInfo.text = @"e";
+            break;
+        case 4:
+            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"o.png"];
+            firstViewUIView.ImageInfo.text = @"o";
+            break;
+            
+        default:
+            break;
+    }
     
 }
 
 
 
-//-(void)PerformAction:(UISwipeGestureRecognizer *)sender {
-//    if(sender.direction == UISwipeGestureRecognizerDirectionRight && self.pageControl.currentPage > 2 && self.pageControl.currentPage > 0) {
-//        self.pageControl.currentPage--;
-//    }
-//    
-//    if(sender.direction == UISwipeGestureRecognizerDirectionLeft && self.pageControl.currentPage < 2) {
-//        self.pageControl.currentPage++;
-//    }
-//}
-//- (IBAction)pageChenged:(UIPageControl *)sender {
-//    NSLog(@"Page Changed");
-//}
 
-//-(void)viewWillAppear:(BOOL)animated{
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

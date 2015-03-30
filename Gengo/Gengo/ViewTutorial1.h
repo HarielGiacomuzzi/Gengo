@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewTutorial1 : UIView
-@property (weak, nonatomic) IBOutlet UIImageView *imageLetter;
+
+@property (weak, nonatomic) IBOutlet UIImageView *ImageLetter;
+@property (weak, nonatomic) IBOutlet UITextView *ImageInfo;
 
 @end

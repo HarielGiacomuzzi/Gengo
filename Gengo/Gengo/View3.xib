@@ -17,7 +17,6 @@
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="Ews-Sp-n6V" secondAttribute="centerX" id="bXL-tE-bXA"/>
                 <constraint firstAttribute="centerY" secondItem="Ews-Sp-n6V" secondAttribute="centerY" id="zVG-uP-qbY"/>
