@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QqO-ME-gNL">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -704,8 +705,8 @@
                                                         </mask>
                                                     </variation>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-RH-0Q0">
-                                                    <rect key="frame" x="394" y="53" width="101" height="122"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-RH-0Q0">
+                                                    <rect key="frame" x="394" y="53" width="100" height="122"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="FKN-RH-0Q0" secondAttribute="height" multiplier="50:61" id="sCM-pl-hiw"/>
                                                     </constraints>
@@ -720,7 +721,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-kC-dcc">
-                                                    <rect key="frame" x="48" y="33" width="134" height="163"/>
+                                                    <rect key="frame" x="106" y="53" width="101" height="122"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="gnk-kC-dcc" secondAttribute="height" multiplier="50:61" id="LdW-SB-MJp"/>
                                                         <constraint firstAttribute="width" secondItem="gnk-kC-dcc" secondAttribute="height" multiplier="50:61" id="dbK-Eg-eJ4"/>
