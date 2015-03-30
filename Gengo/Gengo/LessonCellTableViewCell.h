@@ -11,5 +11,6 @@
 @interface LessonCellTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIButton *exerciseButton;
 @property (strong, nonatomic) IBOutlet UIButton *testButton;
+@property (strong, nonatomic) IBOutlet UIButton *lessonButton;
 
 @end

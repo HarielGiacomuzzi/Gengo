@@ -26,38 +26,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    //adding swipe gesture to the view.
-//    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformAction:)];
-//    left.direction = UISwipeGestureRecognizerDirectionLeft ;
-//    [self.view addGestureRecognizer:left];
-//    
-//    //adding swipe gesture to the view.
-//    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformAction:)];
-//    right.direction = UISwipeGestureRecognizerDirectionRight ;
-//    [self.view addGestureRecognizer:right];
-//    
-//    //Setting the image touch action.
-//    UITapGestureRecognizer *imageTouched = [[UITapGestureRecognizer alloc]
-//                                             initWithTarget:self action:@selector(ClickEventOnImage:)];
-//    [imageTouched setNumberOfTouchesRequired:1];
-//    [imageTouched setDelegate:self];
-//     self.lessonImageView.userInteractionEnabled = YES;
-//    [self.lessonImageView addGestureRecognizer:imageTouched];
-//    
-//    self.lessonImageView.image = [UIImage imageNamed:@"a.png"];
-    
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
     firstViewUIView.imageLetter.image = [UIImage imageNamed:@"a.png"];
     [self.scrollView addSubview:firstViewUIView];
-
+    
     
     secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
     [self.scrollView addSubview:secondViewUIView];
+    
+    //secondViewUIView = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
+    //[self addChildViewController:secondViewUIView];
+    //[self.scrollView addSubview:secondViewUIView.view];
+    //UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
+
+    
+    //[self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
-    [self.scrollView addSubview:secondViewUIView];
+    [self.scrollView addSubview:thirdViewUIView];
 }
 
 

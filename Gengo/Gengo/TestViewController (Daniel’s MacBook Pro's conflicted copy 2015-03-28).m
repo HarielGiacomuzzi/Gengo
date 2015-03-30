@@ -53,6 +53,7 @@
         
     } else {
         [self playAnimation:NO];
+
         self.wrongAnswers = self.wrongAnswers + 1;
         [self updateNextQuestion];
         
@@ -68,7 +69,6 @@
             self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
         }
         [self dismissViewControllerAnimated:YES completion:nil];
-        [self endTest];
         
     } else {
         self.questionLabel.text = self.questions[self.currentQuestion];
@@ -81,6 +81,21 @@
     }
 }
 
+-(void)alertWithResult:(BOOL)correct andAnswer:(NSString *)answer {
+    NSString *result;
+    if (correct) {
+        result = @"Correto";
+    } else {
+        result = @"Errado";
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:result
+                                                    message:[NSString stringWithFormat:@"a resposta correta era %@", answer]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 -(void)playAnimation:(BOOL)correct {
     UIColor *color;
     if (correct) {
@@ -88,10 +103,6 @@
     } else {
         color = [UIColor redColor];
     }
-    UIColor *backgroundDefault = [UIColor colorWithRed:253.0/255.0
-                                                green:185.0/255.0
-                                                 blue:100.0/255.0
-                                                alpha:1.0];
     [UIView animateWithDuration:0.5
                      animations:^{
                          [self.backgroundView setBackgroundColor:color];
@@ -99,7 +110,7 @@
                      completion:^(BOOL finished){
                          [UIView animateWithDuration:0.5
                                           animations:^{
-                                              [self.backgroundView setBackgroundColor:backgroundDefault];
+                                              [self.backgroundView setBackgroundColor:[UIColor whiteColor]];
                                               
                                           }
                                           completion:^(BOOL finished){
@@ -107,13 +118,6 @@
                                           }];
                      }];
     
-}
-
--(void)endTest {
-    NSString *message = [NSString stringWithFormat:@"Você acertou %ld palavras", self.rightAnswers];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fim do Teste" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-
 }
 
 

@@ -10,4 +10,15 @@
 
 @implementation Item
 
+-(id)initWithName:(NSString *)name desc:(NSString *)desc image:(NSString *)image andPrice:(NSInteger)price {
+    self = [super init];
+    if( self ){
+        _name = name;
+        _desc = desc;
+        _image = image;
+        _price = price;
+    }
+    return self;
+}
+
 @end
