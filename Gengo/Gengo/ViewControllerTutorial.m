@@ -11,7 +11,7 @@
 @interface ViewControllerTutorial ()
 {
     UIView *firstViewUIView;
-    UIViewController *secondViewUIView;
+    UIView *secondViewUIView;
     UIView *thirdViewUIView;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -26,37 +26,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    //adding swipe gesture to the view.
-//    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformAction:)];
-//    left.direction = UISwipeGestureRecognizerDirectionLeft ;
-//    [self.view addGestureRecognizer:left];
-//    
-//    //adding swipe gesture to the view.
-//    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(PerformAction:)];
-//    right.direction = UISwipeGestureRecognizerDirectionRight ;
-//    [self.view addGestureRecognizer:right];
-//    
-//    //Setting the image touch action.
-//    UITapGestureRecognizer *imageTouched = [[UITapGestureRecognizer alloc]
-//                                             initWithTarget:self action:@selector(ClickEventOnImage:)];
-//    [imageTouched setNumberOfTouchesRequired:1];
-//    [imageTouched setDelegate:self];
-//     self.lessonImageView.userInteractionEnabled = YES;
-//    [self.lessonImageView addGestureRecognizer:imageTouched];
-//    
-//    self.lessonImageView.image = [UIImage imageNamed:@"a.png"];
-    
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
     [self.scrollView addSubview:firstViewUIView];
     
     
-
+    secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
+    [self.scrollView addSubview:secondViewUIView];
     
-    secondViewUIView = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
-    [self addChildViewController:secondViewUIView];
-    [self.scrollView addSubview:secondViewUIView.view];
+    //secondViewUIView = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
+    //[self addChildViewController:secondViewUIView];
+    //[self.scrollView addSubview:secondViewUIView.view];
     //UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewDesenhaLetra"];
 
     
@@ -90,7 +70,7 @@
     
     firstViewUIView.frame = CGRectMake(0, 0, firstViewUIView.frame.size.width, firstViewUIView.frame.size.height);
     
-    secondViewUIView.view.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.view.frame.size.width, secondViewUIView.view.frame.size.height);
+    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
     
     thirdViewUIView.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, thirdViewUIView.frame.size.width, thirdViewUIView.frame.size.height);
     

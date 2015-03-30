@@ -9,16 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TutorialDrawView : UIView{
-    CGPoint lastPoint;
-    CGFloat red;
-    CGFloat green;
-    CGFloat blue;
-    CGFloat brush;
-    CGFloat opacity;
-    BOOL mouseSwiped;
 }
-
-@property (weak, nonatomic) IBOutlet UIImageView *letter;
-@property UIImage *draw;
 
 @end

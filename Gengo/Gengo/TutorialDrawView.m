@@ -16,66 +16,8 @@
     // Drawing code
 }
 */
-
-- (void)drawRect:(CGRect)rect {
+- (IBAction)ButtonTouched:(id)sender {
+     NSLog(@"Botão Pressionado.");
 }
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    mouseSwiped = NO;
-    UITouch *touch = [touches anyObject];
-    lastPoint = [touch locationInView:self];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    mouseSwiped = YES;
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self];
-    
-    UIGraphicsBeginImageContext(self.frame.size);
-    [self.letter.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush );
-    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, 1.0);
-    CGContextSetBlendMode(UIGraphicsGetCurrentContext(),kCGBlendModeNormal);
-    
-    CGContextStrokePath(UIGraphicsGetCurrentContext());
-    self.letter.image = UIGraphicsGetImageFromCurrentImageContext();
-    [self.letter setAlpha:opacity];
-    UIGraphicsEndImageContext();
-    
-    lastPoint = currentPoint;
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if(!mouseSwiped) {
-        UIGraphicsBeginImageContext(self.frame.size);
-        [self.letter.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
-        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, opacity);
-        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-        CGContextStrokePath(UIGraphicsGetCurrentContext());
-        CGContextFlush(UIGraphicsGetCurrentContext());
-        self.letter.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-    }
-    
-    UIGraphicsBeginImageContext(self.letter.frame.size);
-    [self.letter.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
-    [self.letter.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
-    
-    [self.draw drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
-    //self.mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
-    //self.mainImage.image = nil;
-    UIGraphicsEndImageContext();
-}
-
-
 
 @end

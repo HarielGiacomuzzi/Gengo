@@ -265,11 +265,12 @@
                         <outlet property="lessonControl" destination="E8P-tW-UcD" id="qJr-hK-PWF"/>
                         <outlet property="pageControl" destination="OP0-u4-EDC" id="XAG-sL-vUX"/>
                         <outlet property="scrollView" destination="dyL-dt-kat" id="MKH-VY-ixK"/>
+                        <segue destination="AGG-wN-ftj" kind="presentation" id="LOd-FE-pcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqh-Vu-faC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792" y="2794"/>
+            <point key="canvasLocation" x="1846" y="2894"/>
         </scene>
         <!--View Controller Desenha Letra-->
         <scene sceneID="SPm-Dq-t5M">
@@ -309,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBV-et-jBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="3584"/>
+            <point key="canvasLocation" x="2726" y="2894"/>
         </scene>
         <!--Puzzle-->
         <scene sceneID="e3Z-mz-D8B">
@@ -358,7 +359,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-gF-MMQ">
                                                     <rect key="frame" x="139" y="8" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFB-gd-zoD">
@@ -384,7 +385,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqZ-8g-FiF">
                                 <rect key="frame" x="16" y="28" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
