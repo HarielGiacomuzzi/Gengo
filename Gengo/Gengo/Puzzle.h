@@ -17,5 +17,13 @@
 @property NSString *history;
 @property NSString *soundLocation;
 @property Byte piecesUnlocked;
+@property NSString* nome;
+
+-(id) initWithpiece: (Byte) pieces
+               name: (NSString *) nome
+            History: (NSString*) historia img1: (NSString *) im1
+               img2: (NSString *) im2
+               img3: (NSString*) im3
+            andImg4: (NSString *) im4;
 
 @end

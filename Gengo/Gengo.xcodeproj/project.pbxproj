@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		266354581AC9C62D00107689 /* PuzzleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 266354571AC9C62D00107689 /* PuzzleCell.m */; };
+		2663545B1AC9D76D00107689 /* SelectedPuzzleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */; };
+		26E4E7F81AC9B0D3002C9E78 /* PuzzleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */; };
 		44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */; };
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
@@ -70,6 +73,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		266354561AC9C62D00107689 /* PuzzleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleCell.h; sourceTree = "<group>"; };
+		266354571AC9C62D00107689 /* PuzzleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleCell.m; sourceTree = "<group>"; };
+		266354591AC9D76D00107689 /* SelectedPuzzleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedPuzzleView.h; sourceTree = "<group>"; };
+		2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedPuzzleView.m; sourceTree = "<group>"; };
+		26E4E7F61AC9B0D3002C9E78 /* PuzzleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleView.h; sourceTree = "<group>"; };
+		26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleView.m; sourceTree = "<group>"; };
 		44E03D361AC5ECDF006CDB27 /* ViewTutorial1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTutorial1.h; sourceTree = "<group>"; };
 		44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTutorial1.m; sourceTree = "<group>"; };
 		5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
@@ -210,6 +219,12 @@
 				5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */,
 				5E7091481AC8B01200CF559B /* UserViewController.h */,
 				5E7091491AC8B01200CF559B /* UserViewController.m */,
+				26E4E7F61AC9B0D3002C9E78 /* PuzzleView.h */,
+				26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */,
+				266354561AC9C62D00107689 /* PuzzleCell.h */,
+				266354571AC9C62D00107689 /* PuzzleCell.m */,
+				266354591AC9D76D00107689 /* SelectedPuzzleView.h */,
+				2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -465,6 +480,7 @@
 				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
 				DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */,
 				5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */,
+				26E4E7F81AC9B0D3002C9E78 /* PuzzleView.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
@@ -472,6 +488,8 @@
 				DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */,
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
 				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,
+				266354581AC9C62D00107689 /* PuzzleCell.m in Sources */,
+				2663545B1AC9D76D00107689 /* SelectedPuzzleView.m in Sources */,
 				DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */,
 				44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,
