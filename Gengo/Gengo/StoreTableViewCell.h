@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *itemImage;
 @property (strong, nonatomic) IBOutlet UILabel *itemName;
 @property (strong, nonatomic) IBOutlet UIButton *buyButton;
+@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
