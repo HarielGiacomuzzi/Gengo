@@ -20,7 +20,6 @@
     self.items = [[NSMutableArray alloc] initWithObjects:item1,nil];
     self.user = [User loadUser];
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
-    NSLog(@"%@",self.user.nome);
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -64,11 +63,12 @@
     
     if (self.user.money < item.price) {
         [self noMoneyWarning];
-    } else if ([self.user.items containsObject:item]) {
+    } else if ([self.user.items[idxPath.row] integerValue] == 1) {
         [self alreadyHasItemWarning];
     } else {
         self.user.money = self.user.money - item.price;
-        [self.user.items addObject:item];
+        [self.user.items replaceObjectAtIndex:idxPath.row withObject:@1];
+        [SaveUtility SyncUser];
     }
     
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
