@@ -25,6 +25,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
+    [self.tableView reloadData];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -264,6 +264,12 @@
                                 <items>
                                     <navigationItem id="Ev2-U4-UqT">
                                         <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="F7n-gA-j86">
+                                            <color key="tintColor" red="0.99215686270000003" green="0.67450980390000004" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="closeTestButtonPressed:" destination="8iI-UW-tVo" id="hFp-zO-wWj"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -797,10 +803,10 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-02-oI2">
-                                <rect key="frame" x="364" y="66" width="220" height="373"/>
+                                <rect key="frame" x="428" y="66" width="156" height="286"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="M4G-Qu-0av"/>
-                                    <constraint firstAttribute="height" constant="373" id="hby-1m-3vg"/>
+                                    <constraint firstAttribute="width" constant="156" id="M4G-Qu-0av"/>
+                                    <constraint firstAttribute="height" constant="286" id="hby-1m-3vg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAI-m8-7lb">
@@ -816,8 +822,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aXy-a0-zBg">
-                                <rect key="frame" x="16" y="123" width="300" height="420"/>
+                                <rect key="frame" x="16" y="123" width="386" height="420"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="d7D-ry-3ih">
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="SAX-W2-ySi">
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="111" id="PWj-jW-qol" customClass="UserTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
@@ -880,7 +894,7 @@
                             <constraint firstItem="IZO-02-oI2" firstAttribute="trailing" secondItem="jh8-AG-Aiz" secondAttribute="trailingMargin" id="Z0q-gX-ZkG"/>
                             <constraint firstItem="mAI-m8-7lb" firstAttribute="top" secondItem="zkF-a1-h41" secondAttribute="bottom" constant="11" id="ijN-I5-f3h"/>
                             <constraint firstItem="zkF-a1-h41" firstAttribute="top" secondItem="by2-MD-Hr5" secondAttribute="bottom" constant="-20" id="wlE-XV-nzm"/>
-                            <constraint firstItem="IZO-02-oI2" firstAttribute="leading" secondItem="aXy-a0-zBg" secondAttribute="trailing" constant="48" id="ysA-zb-3h5"/>
+                            <constraint firstItem="IZO-02-oI2" firstAttribute="leading" secondItem="aXy-a0-zBg" secondAttribute="trailing" constant="26" id="ysA-zb-3h5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="profile" id="jmR-uu-cYW"/>

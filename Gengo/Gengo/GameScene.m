@@ -65,6 +65,9 @@ const uint32_t WALL = 0x1 << 1;
         } else if ([child.name isEqualToString:@"uLabel"]) {
             self.uLabel = (SKLabelNode *)child;
             
+        } else if ([child.name isEqualToString:@"exitLabel"]) {
+            self.exitLabel = (SKLabelNode *)child;
+            
         }
     }
     
@@ -133,6 +136,9 @@ const uint32_t WALL = 0x1 << 1;
     SKNode *nodeTouched = [self nodeAtPoint:touchPosition];
     CGPoint point;
     SKLabelNode *labelTouched;
+    if ([nodeTouched.name isEqualToString:@"exitLabel"]) {
+        [self.viewController dismissViewControllerAnimated:YES completion:nil];
+    }
     if (self.canMove) {
         if ([nodeTouched.name isEqualToString:@"aButton"] || [nodeTouched.name isEqualToString:@"aLabel"]) {
             labelTouched = self.aLabel;
