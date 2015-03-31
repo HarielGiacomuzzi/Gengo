@@ -22,10 +22,7 @@
     Item *item4 = [[Item alloc] initWithName:@"Bandana do Naruto" desc:@"Pros otaku comprar" image:@"image1" andPrice:200];
     self.items = [[NSMutableArray alloc] initWithObjects:item1,item2,item3,item4, nil];
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
-    [self.tableView setBackgroundColor:[UIColor colorWithRed:253/255.0
-                                                       green:187/255.0
-                                                        blue:91/255.0
-                                                       alpha:1.0]];
+    //[self.tableView setBackgroundColor:[UIColor colorWithRed:253/255.0 green:187/255.0 blue:91/255.0 alpha:1.0]];
     NSLog(@"%@",self.user.nome);
 }
 

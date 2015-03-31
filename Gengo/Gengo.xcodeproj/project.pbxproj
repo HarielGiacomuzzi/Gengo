@@ -55,6 +55,7 @@
 		DB7119C91ABCA96800ACDD71 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C81ABCA96800ACDD71 /* Bolts.framework */; };
 		DB7211891AC58D5500D20D01 /* simple-drum-beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */; };
 		DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8149AA1AC3274900D65332 /* AsyncImageView.m */; };
+		DB850B101ACACFA400AA093B /* xibAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB850B0F1ACACFA400AA093B /* xibAnimation.m */; };
 		DB92D3601AC5A10A002DE928 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D35F1AC5A10A002DE928 /* View1.xib */; };
 		DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3611AC5A3A1002DE928 /* View2.xib */; };
 		DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3631AC5BFBC002DE928 /* View3.xib */; };
@@ -149,6 +150,8 @@
 		DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "simple-drum-beat.wav"; sourceTree = "<group>"; };
 		DB8149A91AC3274900D65332 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		DB8149AA1AC3274900D65332 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		DB850B0E1ACACFA400AA093B /* xibAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xibAnimation.h; sourceTree = "<group>"; };
+		DB850B0F1ACACFA400AA093B /* xibAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xibAnimation.m; sourceTree = "<group>"; };
 		DB92D35F1AC5A10A002DE928 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
 		DB92D3611AC5A3A1002DE928 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
 		DB92D3631AC5BFBC002DE928 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */,
 				5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */,
 				5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */,
+				DB850B0E1ACACFA400AA093B /* xibAnimation.h */,
+				DB850B0F1ACACFA400AA093B /* xibAnimation.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB850B101ACACFA400AA093B /* xibAnimation.m in Sources */,
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
 				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
