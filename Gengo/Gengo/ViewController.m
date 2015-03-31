@@ -27,7 +27,9 @@
     _imgPortaEsquerda.image = [[UIImage alloc] initWithContentsOfFile:@"porta esqu"];
     
     FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
-    loginView.center = self.view.center;
+    CGPoint p = self.view.center;
+    p.y = p.y - p.y/2;
+    loginView.center = p;
     loginView.delegate = self;
     [self.view addSubview:loginView];
 }
