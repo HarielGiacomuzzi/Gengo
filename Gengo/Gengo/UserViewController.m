@@ -40,13 +40,15 @@
     UserTableViewCell *cell = (UserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"userCell"];
     Lesson *l = self.user.licoes[0];
     cell.lessonNumberLabel.text = @"Lição 1";
-    cell.gameScoreLabel.text = [NSString stringWithFormat:@"%ld", l.highScore ];
-    cell.testScoreLabel.text = [NSString stringWithFormat:@"%@", l.grade];
+    cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %ld", l.highScore ];
+    cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", l.grade];
 
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;
 }
+
+
 
 
 

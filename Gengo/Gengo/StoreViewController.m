@@ -42,7 +42,7 @@
     StoreTableViewCell *cell = (StoreTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"storeCell"];
     Item * item = [self.items objectAtIndex:indexPath.row];
     cell.itemName.text = item.name;
-    cell.descriptionLabel.text = item.desc;
+    cell.descriptionTextView.text = item.desc;
     cell.priceLabel.text = [NSString stringWithFormat:@"%ld N$", item.price];
     
     [cell.buyButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -65,11 +65,19 @@
     
     NSIndexPath *idxPath = [self.tableView indexPathForCell:(UITableViewCell *)foundSuperView];
     Item *item = [self.items objectAtIndex:idxPath.row];
-    if (![self.user.items containsObject:item] && self.user.money >= item.price) {
+    NSLog(@"Item do indice: %@",item.name);
+    NSLog(@"Preço do item: %ld",item.price);
+    
+    if (self.user.money < item.price) {
+        [self noMoneyWarning];
+    } else if ([self.user.items containsObject:item]) {
+        [self alreadyHasItemWarning];
+    } else {
         self.user.money = self.user.money - item.price;
         [self.user.items addObject:item];
-        
     }
+    
+    
     NSLog(@"%ld", self.user.money);
     NSLog(@"items:");
     for (Item *i in self.user.items) {
@@ -77,6 +85,16 @@
     }
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
     
+}
+
+-(void)noMoneyWarning {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ops..." message:@"Você não tem dinheiro o suficiente." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+-(void)alreadyHasItemWarning {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ops..." message:@"Você já tem este item." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 
