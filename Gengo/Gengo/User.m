@@ -36,7 +36,7 @@ NSArray *returnedItems;
         sharedUser.lessonGrade = [object objectForKey:@"lessonGrade"];
         sharedUser.gameScore = [object objectForKey:@"gameScore"];
         sharedUser.puzzles = [object objectForKey:@"puzzles"];
-        sharedUser.sexo = 'M';
+        sharedUser.sexo = [((NSNumber *)[object objectForKey:@"sexo"]) intValue];
         sharedUser.money = [((NSNumber *)[object objectForKey:@"money"]) intValue];
         
     } else if (returnedItems.count == 0) {
@@ -53,8 +53,11 @@ NSArray *returnedItems;
         usuario.gameScore = [[NSMutableArray alloc] init];
         usuario.money = 100;
         NSString *s = [user objectForKey:@"gender"];
-        const char *c = [s UTF8String];
-        usuario.sexo = c[0];
+        if ([s isEqualToString:@"male"]) {
+            usuario.sexo = 1;
+        }else{
+            usuario.sexo = 0;
+        }
         
         
         PFObject *newUser = [PFObject objectWithClassName:@"User"];
@@ -82,25 +85,6 @@ NSArray *returnedItems;
         return YES;
     }
     return NO;
-}
-
-+(NSMutableArray *)processUserLessons:(NSMutableArray *) array{
-    NSMutableArray *temp = [[NSMutableArray alloc] init];
-    for (PFObject *obj in array) {
-        NSLog(@"ObjectId : %@",[obj objectForKey:@"objectId"]);
-        NSLog(@"Grade : %@",[obj objectForKey:@"grade"]);
-        NSLog(@"HighScore : %@",[obj objectForKey:@"highScore"]);
-        
-        Lesson *aux = [[Lesson alloc] init];
-        aux.grade = [obj objectForKey:@"grade"];
-        aux.highScore = [((NSNumber *)[obj objectForKey:@"highScore"]) integerValue];
-        
-       
-        
-        [temp addObject:aux];
-    }
-    
-    return temp;
 }
 
 @end

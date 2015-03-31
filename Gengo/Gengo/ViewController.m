@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgPortaDireita;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPortaEsquerda;
 
+@property BOOL isLogged;
 
 @end
 
@@ -21,13 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isLogged = NO;
     //[_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
     
     _imgPortaDireita.image = [[UIImage alloc] initWithContentsOfFile:@"porta dir"];
     _imgPortaEsquerda.image = [[UIImage alloc] initWithContentsOfFile:@"porta esqu"];
     
     FBLoginView *loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile",@"email"]];
-    loginView.center = self.view.center;
+    CGPoint p = self.view.center;
+    p.y = p.y - p.y/2;
+    loginView.center = p;
     loginView.delegate = self;
     [self.view addSubview:loginView];
 }
@@ -40,9 +44,10 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user{
     
-    if (FBSession.activeSession.state == FBSessionStateOpen) {
+    if (FBSession.activeSession.state == FBSessionStateOpen && self.isLogged == NO) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
         [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+        self.isLogged = YES;
     }
 }
 
@@ -60,20 +65,15 @@
     
 }
 
-//código temporario enquanto o parse nao ta pronto
+//coloca a mesma lesson pras duas view controllers
+//falta colocar os dados do user nela, precisa do sync user funcionando pra fazer as tretas
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UITabBarController *tabBar = segue.destinationViewController;
-    User *user = [[User alloc] init];
-    user.nome = @"Neko Sensei";
-    user.money = 100;
-    //user.licoes = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
-    user.items = [[NSMutableArray alloc] init];
-    UserViewController *uservc = [tabBar.viewControllers objectAtIndex:0];
-    uservc.user = user;
-    LessonTableViewController *lessonvc = [tabBar.viewControllers objectAtIndex:1];
-    lessonvc.user = user;
-    StoreViewController *storevc =  [tabBar.viewControllers objectAtIndex:2];
-    storevc.user = user;
+    NSMutableArray *lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+    LessonTableViewController *lessonvc = [tabBar.viewControllers objectAtIndex:0];
+    lessonvc.lessonArray = lessonArray;
+    UserViewController *uservc = [tabBar.viewControllers objectAtIndex:1];
+    uservc.lessonArray = lessonArray;
     
 }
 

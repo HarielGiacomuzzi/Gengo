@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SaveUtility.h"
 
 @interface StoreTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *itemImage;

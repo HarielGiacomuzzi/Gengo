@@ -16,13 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Item *item1 = [[Item alloc] initWithName:@"Neko Sensei Claws" desc:@"Garras afiadas para degolar seus inimigos" image:@"image1" andPrice:50];
-    Item *item2 = [[Item alloc] initWithName:@"Katana Maligna" desc:@"Uma espada do mal" image:@"image1" andPrice:100];
-    Item *item3 = [[Item alloc] initWithName:@"Chapeu de Samurai" desc:@"Chapeu descolado da moda samurai" image:@"image1" andPrice:20];
-    Item *item4 = [[Item alloc] initWithName:@"Bandana do Naruto" desc:@"Pros otaku comprar" image:@"image1" andPrice:200];
-    self.items = [[NSMutableArray alloc] initWithObjects:item1,item2,item3,item4, nil];
+    Item *item1 = [[Item alloc] initWithName:@"Neko Sensei Shirt" desc:@"camisa do Neko Sensei" image:@"neko body" andPrice:50];
+    self.items = [[NSMutableArray alloc] initWithObjects:item1,nil];
+    self.user = [User loadUser];
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
-    //[self.tableView setBackgroundColor:[UIColor colorWithRed:253/255.0 green:187/255.0 blue:91/255.0 alpha:1.0]];
     NSLog(@"%@",self.user.nome);
 }
 
@@ -41,6 +38,7 @@
     cell.itemName.text = item.name;
     cell.descriptionTextView.text = item.desc;
     cell.priceLabel.text = [NSString stringWithFormat:@"%ld N$", item.price];
+    cell.itemImage.image = [UIImage imageNamed:item.image];
     
     [cell.buyButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -63,8 +61,6 @@
     
     NSIndexPath *idxPath = [self.tableView indexPathForCell:(UITableViewCell *)foundSuperView];
     Item *item = [self.items objectAtIndex:idxPath.row];
-    NSLog(@"Item do indice: %@",item.name);
-    NSLog(@"Preço do item: %ld",item.price);
     
     if (self.user.money < item.price) {
         [self noMoneyWarning];
@@ -75,13 +71,8 @@
         [self.user.items addObject:item];
     }
     
-    
-    NSLog(@"%ld", self.user.money);
-    NSLog(@"items:");
-    for (Item *i in self.user.items) {
-        NSLog(@"%@",i.name);
-    }
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
+    [SaveUtility SyncUser];
     
 }
 

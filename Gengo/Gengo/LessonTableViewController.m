@@ -17,20 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.user = [User loadUser];
+    if (self.user.lessonGrade.count == 0) {
+        [self.user.lessonGrade addObject:@0];
+    }
+    if (self.user.gameScore.count == 0) {
+        [self.user.gameScore addObject:@0];
+    }
+    Lesson *l = self.lessonArray[0];
+    l.grade = self.user.lessonGrade[0];
+    l.highScore = self.user.gameScore[0];
     
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    //NSLog(@"%@", self.user.email);
-    //self.user.nivel = 100;
-    //[self.user.licoes addObject:self.lesson];
-    //[SaveUtility SyncUser];
-    //Lesson *lesson = self.user.licoes[0];
-    //NSLog(@"MELHOR NOTA %@", lesson.grade);
-    //NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)lesson.highScore);
-    NSLog(@"%@", self.user.nome);
-    //NSLog(@"%ld",self.user.nivel);
+    Lesson *l = self.lessonArray[0];
+    self.user.lessonGrade[0] = l.grade;
+    self.user.gameScore[0] = l.highScore;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -39,7 +43,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    return self.lessonArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -72,11 +76,11 @@
     
     if ([segue.identifier isEqualToString:@"goToTest"]) {
         TestViewController *test = (TestViewController *)segue.destinationViewController;
-        //test.lesson = self.user.licoes[0];
+        test.lesson = self.lessonArray[0];
         
     } else if ([segue.identifier isEqualToString:@"goToGame"]){
         GameViewController *game = (GameViewController *)segue.destinationViewController;
-        //game.lesson = self.user.licoes[0];
+        game.lesson = self.lessonArray[0];
         
     }
 }

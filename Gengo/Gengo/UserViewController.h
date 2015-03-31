@@ -10,13 +10,16 @@
 #import "User.h"
 #import "UserTableViewCell.h"
 #import "Lesson.h"
+#import "SaveUtility.h"
 
 @interface UserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) User *user;
+@property (nonatomic) NSMutableArray *lessonArray;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *moneyLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *userImage;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIImageView *headImage;
+@property (strong, nonatomic) IBOutlet UIImageView *bodyImage;
 
 @end

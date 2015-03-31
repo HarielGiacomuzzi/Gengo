@@ -15,7 +15,7 @@
     if( self ){
         _dictionary = [[CharacterDictionary alloc] init];
         _grade = @0;
-        _highScore = 0;
+        _highScore = @0;
     }
     return self;
 }
