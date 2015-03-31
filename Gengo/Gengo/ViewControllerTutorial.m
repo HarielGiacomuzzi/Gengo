@@ -74,28 +74,32 @@
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*3, self.scrollView.frame.size.height)];
 }
 
+-(void)gotoView: (id) sender{
+    [self performSegueWithIdentifier:@"gotoDrawView" sender:nil];
+}
+
 -(void) ClickEventOnImage:(id) sender
 {
         NSString *audioName = [[NSString alloc] init];
     
         switch (self.lessonControl.selectedSegmentIndex) {
-            case 1:
+            case 0:
                 audioName = @"A";
                 break;
             
-            case 2:
+            case 1:
                 audioName = @"I";
                 break;
             
-            case 3:
+            case 2:
                 audioName = @"U";
                 break;
             
-            case 4:
+            case 3:
                 audioName = @"E";
                 break;
             
-            case 5:
+            case 4:
                 audioName = @"O";
                 break;
             
