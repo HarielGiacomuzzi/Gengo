@@ -37,11 +37,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    animationA = @[[UIImage imageNamed:@"a.png"],[UIImage imageNamed:@"a--.png"]];
-    animationI = @[[UIImage imageNamed:@"i.png"],[UIImage imageNamed:@"i--.png"]];
-    animationU = @[[UIImage imageNamed:@"u.png"],[UIImage imageNamed:@"u--.png"]];
-    animationE = @[[UIImage imageNamed:@"e.png"],[UIImage imageNamed:@"e--.png"]];
-    animationO = @[[UIImage imageNamed:@"o.png"],[UIImage imageNamed:@"o--.png"]];
+    animationA = @[[UIImage imageNamed:@"a1.png"],[UIImage imageNamed:@"a2.png"],[UIImage imageNamed:@"a3.png"],[UIImage imageNamed:@"a4.png"]];
+    animationI = @[[UIImage imageNamed:@"i1.png"],[UIImage imageNamed:@"i2.png"],[UIImage imageNamed:@"i3.png"]];
+    animationU = @[[UIImage imageNamed:@"u1.png"],[UIImage imageNamed:@"u2.png"],[UIImage imageNamed:@"u3.png"]];
+    animationE = @[[UIImage imageNamed:@"e1.png"],[UIImage imageNamed:@"e2.png"],[UIImage imageNamed:@"e3.png"]];
+    animationO = @[[UIImage imageNamed:@"o1.png"],[UIImage imageNamed:@"o2.png"],[UIImage imageNamed:@"o3.png"],[UIImage imageNamed:@"o4.png"]];
     
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
@@ -57,7 +57,7 @@
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
     thirdViewUIView.imageAnimation.animationImages = animationA;
-    thirdViewUIView.imageAnimation.animationDuration = 0.6;
+    thirdViewUIView.imageAnimation.animationDuration = 1.3;
     [thirdViewUIView.imageAnimation startAnimating];
     [self.scrollView addSubview:thirdViewUIView];
 }
@@ -126,35 +126,35 @@
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
             firstViewUIView.ImageInfo.text = @"a";
             thirdViewUIView.imageAnimation.animationImages = animationA;
-            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 1:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"i.png"];
             firstViewUIView.ImageInfo.text = @"i";
             thirdViewUIView.imageAnimation.animationImages = animationI;
-            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 2:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"u.png"];
             firstViewUIView.ImageInfo.text = @"u";
             thirdViewUIView.imageAnimation.animationImages = animationU;
-            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 3:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"e.png"];
             firstViewUIView.ImageInfo.text = @"e";
             thirdViewUIView.imageAnimation.animationImages = animationE;
-            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 4:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"o.png"];
             firstViewUIView.ImageInfo.text = @"o";
             thirdViewUIView.imageAnimation.animationImages = animationO;
-            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
             

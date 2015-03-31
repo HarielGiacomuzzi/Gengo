@@ -21,7 +21,6 @@
 @property NSMutableArray *items;
 @property char sexo;
 @property NSMutableArray *licoes;
-@property NSMutableArray *returnedItems;
 @property NSMutableArray *puzzles;
 @property NSString *email;
 @property User *SharedUser;
