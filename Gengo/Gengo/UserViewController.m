@@ -29,10 +29,11 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
-    [self.tableView reloadData];
-    if (self.user.items.count > 0) {
+    if ([self.user.items[0] integerValue] == 1) {
         self.bodyImage.image = [UIImage imageNamed:@"neko body"];
     }
+    [self.tableView reloadData];
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
