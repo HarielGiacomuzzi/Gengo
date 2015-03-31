@@ -563,7 +563,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDi-t2-PIj">
-                                <rect key="frame" x="26" y="65" width="548" height="462.5"/>
+                                <rect key="frame" x="26" y="65" width="548" height="463"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GDi-t2-PIj" secondAttribute="height" multiplier="499:421" id="7u1-X1-H3z"/>
                                 </constraints>
