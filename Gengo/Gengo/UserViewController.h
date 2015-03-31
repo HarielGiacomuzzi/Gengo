@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "UserTableViewCell.h"
+#import "Lesson.h"
 
-@interface UserViewController : UIViewController
+@interface UserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) User *user;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *userImage;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

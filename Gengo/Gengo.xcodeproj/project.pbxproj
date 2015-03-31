@@ -20,6 +20,7 @@
 		5E6D96E51AC5E14E0063E962 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */; };
 		5E70914A1AC8B01200CF559B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7091491AC8B01200CF559B /* UserViewController.m */; };
 		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
+		5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
 		5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6791ABC810F00905BC5 /* AppDelegate.m */; };
 		5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E67C1ABC810F00905BC5 /* ViewController.m */; };
@@ -98,6 +99,8 @@
 		5E7091491AC8B01200CF559B /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDictionary.h; sourceTree = "<group>"; };
 		5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDictionary.m; sourceTree = "<group>"; };
+		5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		5ED9E6711ABC810F00905BC5 /* Gengo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gengo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E6751ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6761ABC810F00905BC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				266354571AC9C62D00107689 /* PuzzleCell.m */,
 				266354591AC9D76D00107689 /* SelectedPuzzleView.h */,
 				2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */,
+				5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */,
+				5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 			files = (
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
+				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
 				DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */,
