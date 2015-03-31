@@ -67,7 +67,6 @@
         if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
             self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
         }
-        [self dismissViewControllerAnimated:YES completion:nil];
         [self endTest];
         
     } else {
@@ -113,7 +112,11 @@
     NSString *message = [NSString stringWithFormat:@"Você acertou %ld palavras", self.rightAnswers];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fim do Teste" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
+    [self dismissViewControllerAnimated:YES completion:nil];
 
+}
+- (IBAction)closeTestButtonPressed:(UIBarButtonItem *)sender {
+    [self endTest];
 }
 
 

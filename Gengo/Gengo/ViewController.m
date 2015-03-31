@@ -60,4 +60,21 @@
     
 }
 
+//código temporario enquanto o parse nao ta pronto
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UITabBarController *tabBar = segue.destinationViewController;
+    User *user = [[User alloc] init];
+    user.nome = @"Neko Sensei";
+    user.money = 100;
+    user.licoes = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+    user.items = [[NSMutableArray alloc] init];
+    UserViewController *uservc = [tabBar.viewControllers objectAtIndex:0];
+    uservc.user = user;
+    LessonTableViewController *lessonvc = [tabBar.viewControllers objectAtIndex:1];
+    lessonvc.user = user;
+    StoreViewController *storevc =  [tabBar.viewControllers objectAtIndex:2];
+    storevc.user = user;
+    
+}
+
 @end

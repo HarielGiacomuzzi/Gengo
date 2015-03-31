@@ -11,6 +11,9 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "User.h"
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "UserViewController.h"
+#import "StoreViewController.h"
+#import "LessonTableViewController.h"
 
 @interface ViewController : UIViewController <FBLoginViewDelegate>
 
