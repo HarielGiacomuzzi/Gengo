@@ -43,6 +43,7 @@
     cell.priceLabel.text = [NSString stringWithFormat:@"%ld N$", item.price];
     
     [cell.buyButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;
 }
