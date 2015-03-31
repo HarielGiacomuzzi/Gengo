@@ -11,25 +11,26 @@
 @implementation SaveUtility
 
 +(void)SyncUser{
+    NSArray *temp;
     User *u = (User *)[User loadUser];
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:u.email];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error && objects.count ==1) {
-            PFObject *object = (PFObject *)objects[0];
+    temp = [query findObjects];
+    if (temp.count ==1) {
+            PFObject *object = (PFObject *)temp[0];
             object[@"nivel"] = @(u.nivel);
             object[@"xp"] = @(u.xp);
-            object[@"items"] = [SaveUtility processUserItems];
-            object[@"puzzles"] = [SaveUtility processUserPuzzles];
-            
+            //object[@"items"] = [SaveUtility processUserItems];
+            //object[@"puzzles"] = [SaveUtility processUserPuzzles];
+            object[@"lessonGrade"] = u.lessonGrade;
+            object[@"gameScore"] = u.gameScore;
+            object[@"money"] = @(u.money);
+
             [object save];
             
-        } else if (!error) {
-            NSLog(@"Looks Like your user does not exists on our database :-/ ");
-        }else {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    }else{
+        NSLog(@"The user Can't be found");
+    }
     
 }
 
