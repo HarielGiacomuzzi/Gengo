@@ -81,6 +81,20 @@
 		2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedPuzzleView.m; sourceTree = "<group>"; };
 		26E4E7F61AC9B0D3002C9E78 /* PuzzleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleView.h; sourceTree = "<group>"; };
 		26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleView.m; sourceTree = "<group>"; };
+		445367BB1ACAE76A00B0D2C7 /* A.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = A.m4a; sourceTree = "<group>"; };
+		445367BC1ACAE76A00B0D2C7 /* Ai=amor.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ai=amor.m4a"; sourceTree = "<group>"; };
+		445367BD1ACAE76A00B0D2C7 /* Aoi = Azul.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aoi = Azul.m4a"; sourceTree = "<group>"; };
+		445367BE1ACAE76A00B0D2C7 /* E = Desenho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "E = Desenho.m4a"; sourceTree = "<group>"; };
+		445367BF1ACAE76A00B0D2C7 /* E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = E.m4a; sourceTree = "<group>"; };
+		445367C01ACAE76A00B0D2C7 /* EE = Bom.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EE = Bom.m4a"; sourceTree = "<group>"; };
+		445367C11ACAE76A00B0D2C7 /* I.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.m4a; sourceTree = "<group>"; };
+		445367C21ACAE76A00B0D2C7 /* Iie-não.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Iie-não.m4a"; sourceTree = "<group>"; };
+		445367C31ACAE76A00B0D2C7 /* iu = Dizer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iu = Dizer.m4a"; sourceTree = "<group>"; };
+		445367C41ACAE76A00B0D2C7 /* MiyamotoMusashi.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = MiyamotoMusashi.m4a; sourceTree = "<group>"; };
+		445367C51ACAE76A00B0D2C7 /* O.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = O.m4a; sourceTree = "<group>"; };
+		445367C61ACAE76A00B0D2C7 /* Oi - Sobrinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oi - Sobrinho.m4a"; sourceTree = "<group>"; };
+		445367C71ACAE76A00B0D2C7 /* Ou=rei.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ou=rei.m4a"; sourceTree = "<group>"; };
+		445367C81ACAE76A00B0D2C7 /* U.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = U.m4a; sourceTree = "<group>"; };
 		44E03D361AC5ECDF006CDB27 /* ViewTutorial1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTutorial1.h; sourceTree = "<group>"; };
 		44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTutorial1.m; sourceTree = "<group>"; };
 		5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
@@ -199,6 +213,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		445367BA1ACAE74A00B0D2C7 /* audios */ = {
+			isa = PBXGroup;
+			children = (
+				445367BB1ACAE76A00B0D2C7 /* A.m4a */,
+				445367BC1ACAE76A00B0D2C7 /* Ai=amor.m4a */,
+				445367BD1ACAE76A00B0D2C7 /* Aoi = Azul.m4a */,
+				445367BE1ACAE76A00B0D2C7 /* E = Desenho.m4a */,
+				445367BF1ACAE76A00B0D2C7 /* E.m4a */,
+				445367C01ACAE76A00B0D2C7 /* EE = Bom.m4a */,
+				445367C11ACAE76A00B0D2C7 /* I.m4a */,
+				445367C21ACAE76A00B0D2C7 /* Iie-não.m4a */,
+				445367C31ACAE76A00B0D2C7 /* iu = Dizer.m4a */,
+				445367C41ACAE76A00B0D2C7 /* MiyamotoMusashi.m4a */,
+				445367C51ACAE76A00B0D2C7 /* O.m4a */,
+				445367C61ACAE76A00B0D2C7 /* Oi - Sobrinho.m4a */,
+				445367C71ACAE76A00B0D2C7 /* Ou=rei.m4a */,
+				445367C81ACAE76A00B0D2C7 /* U.m4a */,
+			);
+			name = audios;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5E7075AB1AC1EE43009B6B4C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +249,7 @@
 				DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */,
 				DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */,
 				DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */,
+				445367BA1ACAE74A00B0D2C7 /* audios */,
 				44E03D361AC5ECDF006CDB27 /* ViewTutorial1.h */,
 				44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */,
 				DBA17E8D1AC5D08300E807F7 /* TutorialDrawView.h */,
