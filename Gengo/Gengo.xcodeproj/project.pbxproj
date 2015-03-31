@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		266354581AC9C62D00107689 /* PuzzleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 266354571AC9C62D00107689 /* PuzzleCell.m */; };
+		2663545B1AC9D76D00107689 /* SelectedPuzzleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */; };
+		26E4E7F81AC9B0D3002C9E78 /* PuzzleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */; };
 		44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */; };
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
@@ -17,6 +20,7 @@
 		5E6D96E51AC5E14E0063E962 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */; };
 		5E70914A1AC8B01200CF559B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7091491AC8B01200CF559B /* UserViewController.m */; };
 		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
+		5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
 		5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6791ABC810F00905BC5 /* AppDelegate.m */; };
 		5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E67C1ABC810F00905BC5 /* ViewController.m */; };
@@ -51,6 +55,7 @@
 		DB7119C91ABCA96800ACDD71 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7119C81ABCA96800ACDD71 /* Bolts.framework */; };
 		DB7211891AC58D5500D20D01 /* simple-drum-beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */; };
 		DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8149AA1AC3274900D65332 /* AsyncImageView.m */; };
+		DB850B101ACACFA400AA093B /* xibAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB850B0F1ACACFA400AA093B /* xibAnimation.m */; };
 		DB92D3601AC5A10A002DE928 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D35F1AC5A10A002DE928 /* View1.xib */; };
 		DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3611AC5A3A1002DE928 /* View2.xib */; };
 		DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3631AC5BFBC002DE928 /* View3.xib */; };
@@ -70,6 +75,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		266354561AC9C62D00107689 /* PuzzleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleCell.h; sourceTree = "<group>"; };
+		266354571AC9C62D00107689 /* PuzzleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleCell.m; sourceTree = "<group>"; };
+		266354591AC9D76D00107689 /* SelectedPuzzleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedPuzzleView.h; sourceTree = "<group>"; };
+		2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedPuzzleView.m; sourceTree = "<group>"; };
+		26E4E7F61AC9B0D3002C9E78 /* PuzzleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleView.h; sourceTree = "<group>"; };
+		26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleView.m; sourceTree = "<group>"; };
 		44E03D361AC5ECDF006CDB27 /* ViewTutorial1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTutorial1.h; sourceTree = "<group>"; };
 		44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTutorial1.m; sourceTree = "<group>"; };
 		5E1D57EE1AC1AED500EC1379 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
@@ -89,6 +100,8 @@
 		5E7091491AC8B01200CF559B /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDictionary.h; sourceTree = "<group>"; };
 		5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDictionary.m; sourceTree = "<group>"; };
+		5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		5ED9E6711ABC810F00905BC5 /* Gengo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gengo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E6751ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6761ABC810F00905BC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +150,8 @@
 		DB7211881AC58D5500D20D01 /* simple-drum-beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "simple-drum-beat.wav"; sourceTree = "<group>"; };
 		DB8149A91AC3274900D65332 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		DB8149AA1AC3274900D65332 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		DB850B0E1ACACFA400AA093B /* xibAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xibAnimation.h; sourceTree = "<group>"; };
+		DB850B0F1ACACFA400AA093B /* xibAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xibAnimation.m; sourceTree = "<group>"; };
 		DB92D35F1AC5A10A002DE928 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
 		DB92D3611AC5A3A1002DE928 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
 		DB92D3631AC5BFBC002DE928 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
@@ -210,6 +225,16 @@
 				5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */,
 				5E7091481AC8B01200CF559B /* UserViewController.h */,
 				5E7091491AC8B01200CF559B /* UserViewController.m */,
+				26E4E7F61AC9B0D3002C9E78 /* PuzzleView.h */,
+				26E4E7F71AC9B0D3002C9E78 /* PuzzleView.m */,
+				266354561AC9C62D00107689 /* PuzzleCell.h */,
+				266354571AC9C62D00107689 /* PuzzleCell.m */,
+				266354591AC9D76D00107689 /* SelectedPuzzleView.h */,
+				2663545A1AC9D76D00107689 /* SelectedPuzzleView.m */,
+				5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */,
+				5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */,
+				DB850B0E1ACACFA400AA093B /* xibAnimation.h */,
+				DB850B0F1ACACFA400AA093B /* xibAnimation.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -395,11 +420,11 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = F82285SQ6R;
+						DevelopmentTeam = DVXNNDG4U4;
 					};
 					5ED9E6891ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = ZX7GUMJ35C;
+						DevelopmentTeam = DVXNNDG4U4;
 						TestTargetID = 5ED9E6701ABC810F00905BC5;
 					};
 				};
@@ -453,8 +478,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB850B101ACACFA400AA093B /* xibAnimation.m in Sources */,
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
+				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
 				DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */,
@@ -465,6 +492,7 @@
 				5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */,
 				DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */,
 				5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */,
+				26E4E7F81AC9B0D3002C9E78 /* PuzzleView.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
@@ -472,6 +500,8 @@
 				DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */,
 				5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */,
 				5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */,
+				266354581AC9C62D00107689 /* PuzzleCell.m in Sources */,
+				2663545B1AC9D76D00107689 /* SelectedPuzzleView.m in Sources */,
 				DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */,
 				44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */,
 				DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */,

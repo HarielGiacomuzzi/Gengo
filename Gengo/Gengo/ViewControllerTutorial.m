@@ -13,7 +13,13 @@
 
     ViewTutorial1 *firstViewUIView;
     TutorialDrawView *secondViewUIView;
-    UIView *thirdViewUIView;
+    xibAnimation *thirdViewUIView;
+    
+    NSArray *animationA;
+    NSArray *animationI;
+    NSArray *animationU;
+    NSArray *animationE;
+    NSArray *animationO;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lessonControl;
@@ -24,8 +30,19 @@
 
 @implementation ViewControllerTutorial
 
+- (IBAction)backBTN:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    animationA = @[[UIImage imageNamed:@"a.png"],[UIImage imageNamed:@"a--.png"]];
+    animationI = @[[UIImage imageNamed:@"i.png"],[UIImage imageNamed:@"i--.png"]];
+    animationU = @[[UIImage imageNamed:@"u.png"],[UIImage imageNamed:@"u--.png"]];
+    animationE = @[[UIImage imageNamed:@"e.png"],[UIImage imageNamed:@"e--.png"]];
+    animationO = @[[UIImage imageNamed:@"o.png"],[UIImage imageNamed:@"o--.png"]];
+    
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
     firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
@@ -39,12 +56,10 @@
     [self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
+    thirdViewUIView.imageAnimation.animationImages = animationA;
+    thirdViewUIView.imageAnimation.animationDuration = 0.6;
+    [thirdViewUIView.imageAnimation startAnimating];
     [self.scrollView addSubview:thirdViewUIView];
-}
-
-
--(void)viewWillAppear:(BOOL)animated{
-    
 }
 
 -(void)viewDidLayoutSubviews
@@ -52,9 +67,9 @@
     
     firstViewUIView.frame = CGRectMake(0, 0, firstViewUIView.frame.size.width, firstViewUIView.frame.size.height);
     
-    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
+    secondViewUIView.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, secondViewUIView.frame.size.width, secondViewUIView.frame.size.height);
     
-    thirdViewUIView.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, thirdViewUIView.frame.size.width, thirdViewUIView.frame.size.height);
+    thirdViewUIView.frame = CGRectMake(self.scrollView.frame.size.width, 0, thirdViewUIView.frame.size.width, thirdViewUIView.frame.size.height);
     
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*3, self.scrollView.frame.size.height)];
 }
@@ -110,22 +125,37 @@
         case 0:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
             firstViewUIView.ImageInfo.text = @"a";
+            thirdViewUIView.imageAnimation.animationImages = animationA;
+            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 1:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"i.png"];
             firstViewUIView.ImageInfo.text = @"i";
+            thirdViewUIView.imageAnimation.animationImages = animationI;
+            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 2:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"u.png"];
             firstViewUIView.ImageInfo.text = @"u";
+            thirdViewUIView.imageAnimation.animationImages = animationU;
+            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 3:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"e.png"];
             firstViewUIView.ImageInfo.text = @"e";
+            thirdViewUIView.imageAnimation.animationImages = animationE;
+            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 4:
             firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"o.png"];
             firstViewUIView.ImageInfo.text = @"o";
+            thirdViewUIView.imageAnimation.animationImages = animationO;
+            thirdViewUIView.imageAnimation.animationDuration = 0.5;
+            [thirdViewUIView.imageAnimation startAnimating];
             break;
             
         default:

@@ -28,6 +28,7 @@
 @property (nonatomic) SKLabelNode *iLabel;
 @property (nonatomic) SKLabelNode *oLabel;
 @property (nonatomic) SKLabelNode *uLabel;
+@property (nonatomic) SKLabelNode *exitLabel;
 
 //control
 @property (nonatomic) CGFloat yObstacle;

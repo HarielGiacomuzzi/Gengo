@@ -17,13 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.user = (User *)[User loadUser];
-    self.lessonArray = [[NSMutableArray alloc] init];
-    [self.lessonArray addObject:[[Lesson alloc] init]];
-    //if (self.user.licoes.count == 0) {
-    //    [self.user.licoes addObject:[[Lesson alloc] init]];
-   // }
-   // self.lesson = self.user.licoes[0];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -32,10 +26,10 @@
     //self.user.nivel = 100;
     //[self.user.licoes addObject:self.lesson];
     //[SaveUtility SyncUser];
-    Lesson *lesson = self.lessonArray[0];
-    NSLog(@"MELHOR NOTA %@", lesson.grade);
-    NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)lesson.highScore);
-    //NSLog(@"%@", self.user.nome);
+    //Lesson *lesson = self.user.licoes[0];
+    //NSLog(@"MELHOR NOTA %@", lesson.grade);
+    //NSLog(@"MELHOR PONTUAÇAO NO GAME %ld", (long)lesson.highScore);
+    NSLog(@"%@", self.user.nome);
     //NSLog(@"%ld",self.user.nivel);
 }
 
@@ -45,7 +39,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.lessonArray.count;
+    return self.user.licoes.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -77,11 +71,11 @@
     
     if ([segue.identifier isEqualToString:@"goToTest"]) {
         TestViewController *test = (TestViewController *)segue.destinationViewController;
-        test.lesson = self.lessonArray[0];
+        test.lesson = self.user.licoes[0];
         
     } else if ([segue.identifier isEqualToString:@"goToGame"]){
         GameViewController *game = (GameViewController *)segue.destinationViewController;
-        game.lesson = self.lessonArray[0];
+        game.lesson = self.user.licoes[0];
         
     }
 }

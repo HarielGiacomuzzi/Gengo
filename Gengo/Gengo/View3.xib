@@ -6,10 +6,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="xibAnimation">
             <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEV-BI-fxH">
+                    <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tEV-BI-fxH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5g7-mq-igG"/>
+                <constraint firstItem="tEV-BI-fxH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="T4K-qG-XjU"/>
+                <constraint firstAttribute="trailing" secondItem="tEV-BI-fxH" secondAttribute="trailing" id="f2E-Lf-ycr"/>
+                <constraint firstAttribute="bottom" secondItem="tEV-BI-fxH" secondAttribute="bottom" id="nQb-Gr-LVN"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageAnimation" destination="tEV-BI-fxH" id="Chs-Ux-Enp"/>
+            </connections>
         </view>
     </objects>
 </document>

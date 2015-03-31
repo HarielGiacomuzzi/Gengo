@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "ViewTutorial1.h"
 #import "ViewControllerDesenhaLetra.h"
+#import "xibAnimation.h"
 
 @interface ViewControllerTutorial : UIViewController <UIScrollViewDelegate>
 
