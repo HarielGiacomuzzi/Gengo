@@ -73,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gengo/LessonTableViewController.m"
-            timestampString = "449073504.733449"
+            filePath = "Gengo/User.m"
+            timestampString = "449513039.329152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "+lodUserWithEmail:andUser:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

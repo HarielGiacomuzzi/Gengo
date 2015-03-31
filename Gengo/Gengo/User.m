@@ -33,10 +33,10 @@ NSArray *returnedItems;
         sharedUser.nivel = [((NSNumber *)[object objectForKey:@"nivel"]) intValue];
         sharedUser.xp = [((NSNumber *)[object objectForKey:@"xp"]) intValue];
         sharedUser.items = [object objectForKey:@"items"];
-        sharedUser.lessonGrade = [self processUserLessons:[object objectForKey:@"lessonGrade"]];
-        sharedUser.gameScore = [self processUserLessons:[object objectForKey:@"gameScore"]];
+        sharedUser.lessonGrade = [object objectForKey:@"lessonGrade"];
+        sharedUser.gameScore = [object objectForKey:@"gameScore"];
         sharedUser.puzzles = [object objectForKey:@"puzzles"];
-        sharedUser.sexo = [((NSString*)[object objectForKey:@"sexo"]) UTF8String][0];
+        sharedUser.sexo = 'M';
         sharedUser.money = [((NSNumber *)[object objectForKey:@"money"]) intValue];
         
     } else if (returnedItems.count == 0) {

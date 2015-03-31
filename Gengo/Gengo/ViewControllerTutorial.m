@@ -84,19 +84,19 @@
                 break;
             
             case 2:
-                audioName = @"simple-drum-beat";
+                audioName = @"I";
                 break;
             
             case 3:
-                audioName = @"simple-drum-beat";
+                audioName = @"U";
                 break;
             
             case 4:
-                audioName = @"simple-drum-beat";
+                audioName = @"E";
                 break;
             
             case 5:
-                audioName = @"simple-drum-beat";
+                audioName = @"O";
                 break;
             
             default:
@@ -108,7 +108,7 @@
         
         NSBundle* bundle = [NSBundle mainBundle];
         
-        NSURL *url = [NSURL URLWithString:[bundle pathForResource:audioName ofType:@"m4a"]];
+        NSURL *url = [NSURL URLWithString:[bundle pathForResource:audioName ofType:@"wav"]];
     
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 

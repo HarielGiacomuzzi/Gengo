@@ -62,6 +62,13 @@
 		DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */; };
 		DBA32FE31AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */; };
 		DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */; };
+		DBF6DB4E1ACB056400AB6ADF /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DACE1ACB056300AB6ADF /* A.wav */; };
+		DBF6DB4F1ACB056400AB6ADF /* Ai=amor.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DACF1ACB056300AB6ADF /* Ai=amor.wav */; };
+		DBF6DB501ACB056400AB6ADF /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DAD01ACB056300AB6ADF /* E.wav */; };
+		DBF6DB831ACB056400AB6ADF /* I.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DB4A1ACB056400AB6ADF /* I.wav */; };
+		DBF6DB841ACB056400AB6ADF /* MiyamotoMusashi.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */; };
+		DBF6DB851ACB056400AB6ADF /* O.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DB4C1ACB056400AB6ADF /* O.wav */; };
+		DBF6DB861ACB056400AB6ADF /* U.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DB4D1ACB056400AB6ADF /* U.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +182,13 @@
 		DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDesenhaLetra.m; sourceTree = "<group>"; };
 		DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTutorial.h; sourceTree = "<group>"; };
 		DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTutorial.m; sourceTree = "<group>"; };
+		DBF6DACE1ACB056300AB6ADF /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
+		DBF6DACF1ACB056300AB6ADF /* Ai=amor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Ai=amor.wav"; sourceTree = "<group>"; };
+		DBF6DAD01ACB056300AB6ADF /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
+		DBF6DB4A1ACB056400AB6ADF /* I.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = I.wav; sourceTree = "<group>"; };
+		DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MiyamotoMusashi.wav; sourceTree = "<group>"; };
+		DBF6DB4C1ACB056400AB6ADF /* O.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = O.wav; sourceTree = "<group>"; };
+		DBF6DB4D1ACB056400AB6ADF /* U.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = U.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +230,13 @@
 		445367BA1ACAE74A00B0D2C7 /* audios */ = {
 			isa = PBXGroup;
 			children = (
+				DBF6DACE1ACB056300AB6ADF /* A.wav */,
+				DBF6DACF1ACB056300AB6ADF /* Ai=amor.wav */,
+				DBF6DAD01ACB056300AB6ADF /* E.wav */,
+				DBF6DB4A1ACB056400AB6ADF /* I.wav */,
+				DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */,
+				DBF6DB4C1ACB056400AB6ADF /* O.wav */,
+				DBF6DB4D1ACB056400AB6ADF /* U.wav */,
 				445367BB1ACAE76A00B0D2C7 /* A.m4a */,
 				445367BC1ACAE76A00B0D2C7 /* Ai=amor.m4a */,
 				445367BD1ACAE76A00B0D2C7 /* Aoi = Azul.m4a */,
@@ -490,14 +511,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF6DB501ACB056400AB6ADF /* E.wav in Resources */,
+				DBF6DB4E1ACB056400AB6ADF /* A.wav in Resources */,
+				DBF6DB851ACB056400AB6ADF /* O.wav in Resources */,
 				DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */,
 				DB7211891AC58D5500D20D01 /* simple-drum-beat.wav in Resources */,
+				DBF6DB831ACB056400AB6ADF /* I.wav in Resources */,
+				DBF6DB4F1ACB056400AB6ADF /* Ai=amor.wav in Resources */,
 				DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */,
 				5E6C3FE21AC12E5700B57FD1 /* GameScene.sks in Resources */,
+				DBF6DB861ACB056400AB6ADF /* U.wav in Resources */,
 				5ED9E6801ABC810F00905BC5 /* Main.storyboard in Resources */,
 				5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */,
 				5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */,
 				DB92D3601AC5A10A002DE928 /* View1.xib in Resources */,
+				DBF6DB841ACB056400AB6ADF /* MiyamotoMusashi.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
