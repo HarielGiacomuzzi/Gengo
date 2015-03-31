@@ -20,7 +20,7 @@
             PFObject *object = (PFObject *)temp[0];
             object[@"nivel"] = @(u.nivel);
             object[@"xp"] = @(u.xp);
-            //object[@"items"] = [SaveUtility processUserItems];
+            object[@"items"] = u.items;
             //object[@"puzzles"] = [SaveUtility processUserPuzzles];
             object[@"lessonGrade"] = u.lessonGrade;
             object[@"gameScore"] = u.gameScore;
@@ -34,20 +34,6 @@
     
 }
 
-+(NSMutableArray *)processUserItems{
-    User *u = (User *)[User loadUser];
-    NSMutableArray *temp = [[NSMutableArray alloc] init];
-    for (Item *object in u.items) {
-        PFObject *aux = [PFObject objectWithClassName:@"Item"];
-        aux[@"name"] = object.name;
-        aux[@"desc"] = object.desc;
-        aux[@"image"] = object.image;
-        aux[@"price"] = @(object.price);
-        [temp addObject:aux];
-    }
-    
-    return temp;
-}
 
 +(NSMutableArray *)processUserPuzzles{
     User *u = (User *)[User loadUser];

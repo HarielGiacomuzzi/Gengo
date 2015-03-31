@@ -16,6 +16,5 @@
 @interface SaveUtility : NSObject
 
 +(void)SyncUser;
-+(NSMutableArray *)processUserItems;
 
 @end
