@@ -23,12 +23,16 @@
     if (self.user.sexo == 0) {
         self.headImage.image = [UIImage imageNamed:@"girl head"];
     }
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
     [self.tableView reloadData];
+    if (self.user.items.count > 0) {
+        self.bodyImage.image = [UIImage imageNamed:@"neko body"];
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
