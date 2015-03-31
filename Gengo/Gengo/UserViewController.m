@@ -20,6 +20,7 @@
     NSLog(@"%@",self.user.nome);
     self.nameLabel.text = self.user.nome;
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
+    self.userImage.image = [UIImage imageNamed:@"body"];
     // Do any additional setup after loading the view.
 }
 
