@@ -60,20 +60,15 @@
     
 }
 
-//código temporario enquanto o parse nao ta pronto
+//coloca a mesma lesson pras duas view controllers
+//falta colocar os dados do user nela, precisa do sync user funcionando pra fazer as tretas
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UITabBarController *tabBar = segue.destinationViewController;
-    User *user = [[User alloc] init];
-    user.nome = @"Neko Sensei";
-    user.money = 100;
-    //user.licoes = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
-    user.items = [[NSMutableArray alloc] init];
-    UserViewController *uservc = [tabBar.viewControllers objectAtIndex:0];
-    uservc.user = user;
-    LessonTableViewController *lessonvc = [tabBar.viewControllers objectAtIndex:1];
-    lessonvc.user = user;
-    StoreViewController *storevc =  [tabBar.viewControllers objectAtIndex:2];
-    storevc.user = user;
+    NSMutableArray *lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+    LessonTableViewController *lessonvc = [tabBar.viewControllers objectAtIndex:0];
+    lessonvc.lessonArray = lessonArray;
+    UserViewController *uservc = [tabBar.viewControllers objectAtIndex:1];
+    uservc.lessonArray = lessonArray;
     
 }
 
