@@ -18,11 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.user = [User loadUser];
+    Lesson *l = self.lessonArray[0];
+    l.grade = self.user.lessonGrade[0];
+    l.highScore = self.user.gameScore[0];
     
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    Lesson *l = self.lessonArray[0];
+    self.user.lessonGrade[0] = l.grade;
+    self.user.gameScore[0] = l.highScore;
 
 }
 
