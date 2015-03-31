@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,21 +11,36 @@
             <rect key="frame" x="0.0" y="0.0" width="518" height="471"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tge-2w-mRe">
-                    <rect key="frame" x="144" y="221" width="231" height="30"/>
-                    <state key="normal" title="Ajude o Neko Sensei a  escrever !">
+                <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tge-2w-mRe">
+                    <rect key="frame" x="8" y="8" width="500" height="500"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="tge-2w-mRe" secondAttribute="height" multiplier="1:1" id="Hiv-cg-8Xf"/>
+                        <constraint firstAttribute="width" secondItem="tge-2w-mRe" secondAttribute="height" multiplier="1952:471" id="uYQ-hJ-iDb"/>
+                    </constraints>
+                    <state key="normal" title="Ajude o Neko Sensei a  escrever !" backgroundImage="neko pencil">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="uYQ-hJ-iDb"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="ButtonTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="oEM-TO-EtE"/>
                     </connections>
                 </button>
             </subviews>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="tge-2w-mRe" secondAttribute="centerY" id="MDg-Du-tDg"/>
-                <constraint firstAttribute="centerX" secondItem="tge-2w-mRe" secondAttribute="centerX" id="luQ-nD-zta"/>
+                <constraint firstItem="tge-2w-mRe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="Dgs-tf-HIv"/>
+                <constraint firstAttribute="centerY" secondItem="tge-2w-mRe" secondAttribute="centerY" id="VGP-aW-L6e"/>
+                <constraint firstAttribute="centerX" secondItem="tge-2w-mRe" secondAttribute="centerX" id="kj9-Ev-yq8"/>
+                <constraint firstAttribute="trailing" secondItem="tge-2w-mRe" secondAttribute="trailing" constant="5" id="vWH-oD-KPN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="419" y="641.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="neko pencil" width="1952" height="1678"/>
+    </resources>
 </document>

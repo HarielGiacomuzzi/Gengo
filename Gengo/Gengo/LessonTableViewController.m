@@ -30,7 +30,6 @@
     self.user.lessonGrade[0] = l.grade;
     self.user.gameScore[0] = l.highScore;
     [SaveUtility SyncUser];
-
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
