@@ -20,6 +20,7 @@
     NSLog(@"%@",self.user.nome);
     self.nameLabel.text = self.user.nome;
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
+    self.userImage.image = [UIImage imageNamed:@"body"];
     // Do any additional setup after loading the view.
 }
 
@@ -27,6 +28,7 @@
     [super viewDidAppear:animated];
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
     [self.tableView reloadData];
+    [SaveUtility SyncUser];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -40,10 +42,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UserTableViewCell *cell = (UserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"userCell"];
-    Lesson *l = self.lessonArray[indexPath.row];
     cell.lessonNumberLabel.text = @"Lição 1";
-    cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %ld", l.highScore ];
-    cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", l.grade];
+    cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %@", self.user.gameScore[indexPath.row] ];
+    cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", self.user.lessonGrade[indexPath.row]];
 
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     

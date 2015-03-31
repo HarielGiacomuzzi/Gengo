@@ -851,7 +851,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-02-oI2">
-                                <rect key="frame" x="428" y="66" width="156" height="286"/>
+                                <rect key="frame" x="428" y="196" width="156" height="286"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="M4G-Qu-0av"/>
                                     <constraint firstAttribute="height" constant="286" id="hby-1m-3vg"/>
@@ -934,7 +934,7 @@
                             <constraint firstItem="aXy-a0-zBg" firstAttribute="leading" secondItem="jh8-AG-Aiz" secondAttribute="leadingMargin" id="1J1-lg-FDB"/>
                             <constraint firstItem="zkF-a1-h41" firstAttribute="leading" secondItem="jh8-AG-Aiz" secondAttribute="leadingMargin" constant="-16" id="3Um-sA-MeI"/>
                             <constraint firstItem="mZs-hg-azf" firstAttribute="leading" secondItem="jh8-AG-Aiz" secondAttribute="leadingMargin" id="4SD-Ub-iSn"/>
-                            <constraint firstItem="IZO-02-oI2" firstAttribute="top" secondItem="zkF-a1-h41" secondAttribute="bottom" constant="11" id="4tK-Ob-INb"/>
+                            <constraint firstItem="IZO-02-oI2" firstAttribute="top" secondItem="zkF-a1-h41" secondAttribute="bottom" constant="141" id="4tK-Ob-INb"/>
                             <constraint firstItem="mZs-hg-azf" firstAttribute="top" secondItem="mAI-m8-7lb" secondAttribute="bottom" constant="8" id="5dh-dz-ln0"/>
                             <constraint firstItem="aXy-a0-zBg" firstAttribute="top" secondItem="mZs-hg-azf" secondAttribute="bottom" constant="8" id="Doi-OC-bZW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zkF-a1-h41" secondAttribute="trailing" constant="-16" id="HUB-8U-bl0"/>
