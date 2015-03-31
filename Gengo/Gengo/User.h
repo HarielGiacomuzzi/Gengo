@@ -20,7 +20,8 @@
 @property NSInteger xp;
 @property NSMutableArray *items;
 @property char sexo;
-@property NSMutableArray *licoes;
+@property NSMutableArray *lessonGrade;
+@property NSMutableArray *gameScore;
 @property NSMutableArray *puzzles;
 @property NSString *email;
 @property User *SharedUser;

@@ -80,7 +80,7 @@
     
         switch (self.lessonControl.selectedSegmentIndex) {
             case 1:
-                audioName = @"simple-drum-beat";
+                audioName = @"A";
                 break;
             
             case 2:
@@ -108,7 +108,7 @@
         
         NSBundle* bundle = [NSBundle mainBundle];
         
-        NSURL *url = [NSURL URLWithString:[bundle pathForResource:audioName ofType:@"wav"]];
+        NSURL *url = [NSURL URLWithString:[bundle pathForResource:audioName ofType:@"m4a"]];
     
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 
