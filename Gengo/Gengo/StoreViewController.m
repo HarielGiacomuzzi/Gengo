@@ -61,8 +61,6 @@
     
     NSIndexPath *idxPath = [self.tableView indexPathForCell:(UITableViewCell *)foundSuperView];
     Item *item = [self.items objectAtIndex:idxPath.row];
-    NSLog(@"Item do indice: %@",item.name);
-    NSLog(@"Preço do item: %ld",item.price);
     
     if (self.user.money < item.price) {
         [self noMoneyWarning];
@@ -73,13 +71,8 @@
         [self.user.items addObject:item];
     }
     
-    
-    NSLog(@"%ld", self.user.money);
-    NSLog(@"items:");
-    for (Item *i in self.user.items) {
-        NSLog(@"%@",i.name);
-    }
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
+    [SaveUtility SyncUser];
     
 }
 

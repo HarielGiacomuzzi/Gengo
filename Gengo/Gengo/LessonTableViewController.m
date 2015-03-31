@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.user = [User loadUser];
+    if (self.user.lessonGrade.count == 0) {
+        [self.user.lessonGrade addObject:@0];
+    }
+    if (self.user.gameScore.count == 0) {
+        [self.user.gameScore addObject:@0];
+    }
     Lesson *l = self.lessonArray[0];
     l.grade = self.user.lessonGrade[0];
     l.highScore = self.user.gameScore[0];
@@ -29,8 +35,6 @@
     Lesson *l = self.lessonArray[0];
     self.user.lessonGrade[0] = l.grade;
     self.user.gameScore[0] = l.highScore;
-    [SaveUtility SyncUser];
-
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
