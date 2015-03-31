@@ -19,7 +19,7 @@
 @property NSInteger nivel;
 @property NSInteger xp;
 @property NSMutableArray *items;
-@property Byte sexo;
+@property int sexo;
 @property NSMutableArray *lessonGrade;
 @property NSMutableArray *gameScore;
 @property NSMutableArray *puzzles;

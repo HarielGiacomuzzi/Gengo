@@ -36,7 +36,7 @@ NSArray *returnedItems;
         sharedUser.lessonGrade = [object objectForKey:@"lessonGrade"];
         sharedUser.gameScore = [object objectForKey:@"gameScore"];
         sharedUser.puzzles = [object objectForKey:@"puzzles"];
-        sharedUser.sexo = (Byte)[object objectForKey:@"sexo"];
+        sharedUser.sexo = [((NSNumber *)[object objectForKey:@"sexo"]) intValue];
         sharedUser.money = [((NSNumber *)[object objectForKey:@"money"]) intValue];
         
     } else if (returnedItems.count == 0) {

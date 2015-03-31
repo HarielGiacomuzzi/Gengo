@@ -850,12 +850,20 @@
                                     <navigationItem title="Perfil" id="lVW-Yl-PLc"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-02-oI2">
-                                <rect key="frame" x="428" y="196" width="156" height="286"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="body" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-02-oI2">
+                                <rect key="frame" x="444" y="175" width="156" height="176"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="7Hi-nJ-5X3"/>
                                     <constraint firstAttribute="width" constant="156" id="M4G-Qu-0av"/>
                                     <constraint firstAttribute="height" constant="286" id="hby-1m-3vg"/>
+                                    <constraint firstAttribute="height" constant="176" id="mm5-LF-RpI"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M4G-Qu-0av"/>
+                                        <exclude reference="hby-1m-3vg"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAI-m8-7lb">
                                 <rect key="frame" x="16" y="66" width="42" height="20.5"/>
@@ -927,6 +935,13 @@
                                     <outlet property="delegate" destination="rLt-ad-ggJ" id="blM-ev-P2F"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy head" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-cc-PaQ">
+                                <rect key="frame" x="457" y="70" width="130" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="4kM-7L-e3c"/>
+                                    <constraint firstAttribute="height" constant="128" id="NDn-Cm-v32"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -936,21 +951,34 @@
                             <constraint firstItem="mZs-hg-azf" firstAttribute="leading" secondItem="jh8-AG-Aiz" secondAttribute="leadingMargin" id="4SD-Ub-iSn"/>
                             <constraint firstItem="IZO-02-oI2" firstAttribute="top" secondItem="zkF-a1-h41" secondAttribute="bottom" constant="141" id="4tK-Ob-INb"/>
                             <constraint firstItem="mZs-hg-azf" firstAttribute="top" secondItem="mAI-m8-7lb" secondAttribute="bottom" constant="8" id="5dh-dz-ln0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IZO-02-oI2" secondAttribute="trailing" constant="-16" id="8eN-0M-Khm"/>
                             <constraint firstItem="aXy-a0-zBg" firstAttribute="top" secondItem="mZs-hg-azf" secondAttribute="bottom" constant="8" id="Doi-OC-bZW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zkF-a1-h41" secondAttribute="trailing" constant="-16" id="HUB-8U-bl0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zpe-cc-PaQ" secondAttribute="trailing" constant="-3" id="JBP-Qp-Tpu"/>
+                            <constraint firstItem="IZO-02-oI2" firstAttribute="leading" secondItem="aXy-a0-zBg" secondAttribute="trailing" constant="42" id="Muo-Gd-xyk"/>
                             <constraint firstItem="CTh-hv-n4j" firstAttribute="top" secondItem="aXy-a0-zBg" secondAttribute="bottom" constant="8" id="WvO-Ls-YsE"/>
                             <constraint firstItem="IZO-02-oI2" firstAttribute="trailing" secondItem="jh8-AG-Aiz" secondAttribute="trailingMargin" id="Z0q-gX-ZkG"/>
                             <constraint firstItem="mAI-m8-7lb" firstAttribute="top" secondItem="zkF-a1-h41" secondAttribute="bottom" constant="11" id="ijN-I5-f3h"/>
+                            <constraint firstItem="zpe-cc-PaQ" firstAttribute="top" secondItem="by2-MD-Hr5" secondAttribute="bottom" constant="50" id="kfs-a5-x5o"/>
+                            <constraint firstItem="IZO-02-oI2" firstAttribute="top" secondItem="zpe-cc-PaQ" secondAttribute="bottom" constant="-23" id="tS0-6W-U9w"/>
                             <constraint firstItem="zkF-a1-h41" firstAttribute="top" secondItem="by2-MD-Hr5" secondAttribute="bottom" constant="-20" id="wlE-XV-nzm"/>
                             <constraint firstItem="IZO-02-oI2" firstAttribute="leading" secondItem="aXy-a0-zBg" secondAttribute="trailing" constant="26" id="ysA-zb-3h5"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4tK-Ob-INb"/>
+                                <exclude reference="Z0q-gX-ZkG"/>
+                                <exclude reference="ysA-zb-3h5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="profile" id="jmR-uu-cYW"/>
                     <connections>
+                        <outlet property="bodyImage" destination="IZO-02-oI2" id="XME-l4-uiT"/>
+                        <outlet property="headImage" destination="zpe-cc-PaQ" id="TbL-PF-hee"/>
                         <outlet property="moneyLabel" destination="mZs-hg-azf" id="5fq-9B-N0z"/>
                         <outlet property="nameLabel" destination="mAI-m8-7lb" id="8uo-Bw-Zcr"/>
                         <outlet property="tableView" destination="aXy-a0-zBg" id="If4-ig-kJb"/>
-                        <outlet property="userImage" destination="IZO-02-oI2" id="UEj-is-wcr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibN-6r-3lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1149,6 +1177,8 @@
     </scenes>
     <resources>
         <image name="Landscape - Retina" width="375" height="667"/>
+        <image name="body" width="77" height="89"/>
+        <image name="boy head" width="77" height="59"/>
         <image name="chao" width="1025" height="286"/>
         <image name="exercicio icon" width="148" height="122"/>
         <image name="lessons" width="25" height="25"/>
