@@ -40,6 +40,8 @@
     
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
+   // [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
