@@ -21,14 +21,12 @@
     Item *item3 = [[Item alloc] initWithName:@"Chapeu de Samurai" desc:@"Chapeu descolado da moda samurai" image:@"image1" andPrice:20];
     Item *item4 = [[Item alloc] initWithName:@"Bandana do Naruto" desc:@"Pros otaku comprar" image:@"image1" andPrice:200];
     self.items = [[NSMutableArray alloc] initWithObjects:item1,item2,item3,item4, nil];
-    self.user = [[User alloc] init];
-    self.user.money = 1000;
-    self.user.items = [[NSMutableArray alloc] init];
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
     [self.tableView setBackgroundColor:[UIColor colorWithRed:253/255.0
                                                        green:187/255.0
                                                         blue:91/255.0
                                                        alpha:1.0]];
+    NSLog(@"%@",self.user.nome);
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
