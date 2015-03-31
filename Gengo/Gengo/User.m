@@ -22,6 +22,7 @@ static User *sharedUser = nil;
     [query whereKey:@"email" equalTo:email];
     
     //loads the results into an array
+    //returnedItems = [query findObjects];
     //returnedItems = [query findObjects]
     //array = query.findObjects;
     
