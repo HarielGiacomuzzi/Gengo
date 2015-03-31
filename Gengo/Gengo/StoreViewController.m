@@ -95,6 +95,10 @@
     [alert show];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 
 
 @end

@@ -84,5 +84,9 @@
     newView.myPuzzle = [_puzzlesArray objectAtIndex: ((NSIndexPath * )sender).row ];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 
 @end

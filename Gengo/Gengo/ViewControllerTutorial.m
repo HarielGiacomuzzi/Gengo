@@ -214,4 +214,8 @@
     self.pageControl.currentPage = page;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 @end

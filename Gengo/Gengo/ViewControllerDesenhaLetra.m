@@ -95,5 +95,9 @@
     UIGraphicsEndImageContext();
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 
 @end
