@@ -72,7 +72,6 @@
     }
     
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
-    [SaveUtility SyncUser];
     
 }
 

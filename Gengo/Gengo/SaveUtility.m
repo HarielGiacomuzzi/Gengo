@@ -20,7 +20,7 @@
             PFObject *object = (PFObject *)temp[0];
             object[@"nivel"] = @(u.nivel);
             object[@"xp"] = @(u.xp);
-            //object[@"items"] = u.items;
+            object[@"items"] = u.items;
             //object[@"puzzles"] = [SaveUtility processUserPuzzles];
             object[@"lessonGrade"] = u.lessonGrade;
             object[@"gameScore"] = u.gameScore;
