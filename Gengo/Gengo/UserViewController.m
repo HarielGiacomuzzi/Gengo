@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.user = [User loadUser];
     NSLog(@"%@",self.user.nome);
     self.nameLabel.text = self.user.nome;
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
@@ -33,16 +34,16 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return self.lessonArray.count;
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UserTableViewCell *cell = (UserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"userCell"];
-    //Lesson *l = self.user.licoes[0];
-    //cell.lessonNumberLabel.text = @"Lição 1";
-    //cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %ld", l.highScore ];
-    //cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", l.grade];
+    Lesson *l = self.lessonArray[indexPath.row];
+    cell.lessonNumberLabel.text = @"Lição 1";
+    cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %ld", l.highScore ];
+    cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", l.grade];
 
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
