@@ -410,11 +410,11 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = F82285SQ6R;
+						DevelopmentTeam = DVXNNDG4U4;
 					};
 					5ED9E6891ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = ZX7GUMJ35C;
+						DevelopmentTeam = DVXNNDG4U4;
 						TestTargetID = 5ED9E6701ABC810F00905BC5;
 					};
 				};
