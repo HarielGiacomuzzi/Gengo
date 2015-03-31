@@ -29,6 +29,7 @@
     Lesson *l = self.lessonArray[0];
     self.user.lessonGrade[0] = l.grade;
     self.user.gameScore[0] = l.highScore;
+    [SaveUtility SyncUser];
 
 }
 
