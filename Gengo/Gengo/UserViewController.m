@@ -33,16 +33,16 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.user.licoes.count;
+    return 1;
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UserTableViewCell *cell = (UserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"userCell"];
-    Lesson *l = self.user.licoes[0];
-    cell.lessonNumberLabel.text = @"Lição 1";
-    cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %ld", l.highScore ];
-    cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", l.grade];
+    //Lesson *l = self.user.licoes[0];
+    //cell.lessonNumberLabel.text = @"Lição 1";
+    //cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %ld", l.highScore ];
+    //cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", l.grade];
 
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     

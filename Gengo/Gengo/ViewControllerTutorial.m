@@ -80,23 +80,23 @@
     
         switch (self.lessonControl.selectedSegmentIndex) {
             case 1:
-                audioName = @"simple-drum-beat";
+                audioName = @"A";
                 break;
             
             case 2:
-                audioName = @"simple-drum-beat";
+                audioName = @"I";
                 break;
             
             case 3:
-                audioName = @"simple-drum-beat";
+                audioName = @"U";
                 break;
             
             case 4:
-                audioName = @"simple-drum-beat";
+                audioName = @"E";
                 break;
             
             case 5:
-                audioName = @"simple-drum-beat";
+                audioName = @"O";
                 break;
             
             default:

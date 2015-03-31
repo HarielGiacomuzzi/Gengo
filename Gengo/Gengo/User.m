@@ -19,6 +19,7 @@ NSArray *returnedItems;
 
 +(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user{
     //creates the query
+
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:email];
     
@@ -32,10 +33,11 @@ NSArray *returnedItems;
         sharedUser.nivel = [((NSNumber *)[object objectForKey:@"nivel"]) intValue];
         sharedUser.xp = [((NSNumber *)[object objectForKey:@"xp"]) intValue];
         sharedUser.items = [object objectForKey:@"items"];
-        sharedUser.licoes = [self processUserLessons:[object objectForKey:@"licoes"]];
+        sharedUser.lessonGrade = [object objectForKey:@"lessonGrade"];
+        sharedUser.gameScore = [object objectForKey:@"gameScore"];
         sharedUser.puzzles = [object objectForKey:@"puzzles"];
-        sharedUser.sexo = [((NSString*)[object objectForKey:@"sexo"]) UTF8String][0];
-        //sharedUser.money = *((NSInteger *)[object objectForKey:@"money"]);
+        sharedUser.sexo = 'M';
+        sharedUser.money = [((NSNumber *)[object objectForKey:@"money"]) intValue];
         
     } else if (returnedItems.count == 0) {
         // if the user does not exists we'll create it
@@ -46,8 +48,10 @@ NSArray *returnedItems;
         usuario.nivel = 0;
         usuario.xp = 0;
         usuario.items = [[NSMutableArray alloc] init];
-        usuario.licoes = [[NSMutableArray alloc] init];
         usuario.puzzles = [[NSMutableArray alloc] init];
+        usuario.lessonGrade = [[NSMutableArray alloc] init];
+        usuario.gameScore = [[NSMutableArray alloc] init];
+        usuario.money = 100;
         NSString *s = [user objectForKey:@"gender"];
         const char *c = [s UTF8String];
         usuario.sexo = c[0];
@@ -59,7 +63,9 @@ NSArray *returnedItems;
         newUser[@"nivel"] = @(usuario.nivel);
         newUser[@"xp"] = @(usuario.xp);
         newUser[@"items"] = usuario.items;
-        newUser[@"licoes"] = usuario.licoes;
+        newUser[@"money"] = @(usuario.money);
+        newUser[@"lessonGrade"] = usuario.lessonGrade;
+        newUser[@"gameScore"] = usuario.gameScore;
         newUser[@"puzzles"] = usuario.puzzles;
         newUser[@"sexo"] = @(usuario.sexo);
         

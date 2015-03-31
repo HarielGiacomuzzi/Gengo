@@ -20,7 +20,6 @@
             object[@"nivel"] = @(u.nivel);
             object[@"xp"] = @(u.xp);
             object[@"items"] = [SaveUtility processUserItems];
-            object[@"licoes"] = [SaveUtility processUserLessons];
             object[@"puzzles"] = [SaveUtility processUserPuzzles];
             
             [object save];
@@ -61,19 +60,6 @@
         aux[@"history"] = object.history;
         aux[@"soundLocation"] = object.soundLocation;
         aux[@"piecesUnlocked"] = @(object.piecesUnlocked);
-        [temp addObject:aux];
-    }
-    
-    return temp;
-}
-
-+(NSMutableArray *)processUserLessons{
-    User *u = (User *)[User loadUser];
-    NSMutableArray *temp = u.licoes;
-    for (Lesson *object in u.licoes) {
-        PFObject *aux = [PFObject objectWithClassName:@"Lesson"];
-        aux[@"grade"] = object.grade;
-        aux[@"highScore"] = @(object.highScore);
         [temp addObject:aux];
     }
     

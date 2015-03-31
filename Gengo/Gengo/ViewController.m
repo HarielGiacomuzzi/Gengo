@@ -66,7 +66,7 @@
     User *user = [[User alloc] init];
     user.nome = @"Neko Sensei";
     user.money = 100;
-    user.licoes = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+    //user.licoes = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
     user.items = [[NSMutableArray alloc] init];
     UserViewController *uservc = [tabBar.viewControllers objectAtIndex:0];
     uservc.user = user;
