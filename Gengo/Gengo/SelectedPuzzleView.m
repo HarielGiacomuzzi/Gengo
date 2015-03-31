@@ -26,11 +26,15 @@
             [_puzzleImage setImage:[UIImage imageNamed: _myPuzzle.image3]];
             break;
         case 0100:
-            [_puzzleImage setImage:[UIImage imageNamed: _myPuzzle.image3]];
+            [_puzzleImage setImage:[UIImage imageNamed: _myPuzzle.image4]];
             break;
         default:
             break;
     }
+    
+    [_puzzleText setBackgroundColor:[UIColor clearColor]]; //clear background
+  
+    _puzzleText.text = _myPuzzle.history;
 }
 
 - (IBAction)voltar:(id)sender {

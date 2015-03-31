@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *puzzleImage;
 @property Puzzle* myPuzzle;
+@property (weak, nonatomic) IBOutlet UITextView *puzzleText;
 
 @end
