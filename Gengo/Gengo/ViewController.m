@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgPortaDireita;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPortaEsquerda;
 
+@property BOOL isLogged;
 
 @end
 
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isLogged = NO;
     //[_imgButton setBackgroundImage:[UIImage imageNamed:@"facebookbutton"] forState:UIControlStateNormal];
     
     _imgPortaDireita.image = [[UIImage alloc] initWithContentsOfFile:@"porta dir"];
@@ -42,9 +44,10 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user{
     
-    if (FBSession.activeSession.state == FBSessionStateOpen) {
+    if (FBSession.activeSession.state == FBSessionStateOpen && self.isLogged == NO) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
         [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+        self.isLogged = YES;
     }
 }
 

@@ -26,7 +26,7 @@
             object[@"gameScore"] = u.gameScore;
             object[@"money"] = @(u.money);
 
-            [object save];
+            [object saveInBackground];
             
     }else{
         NSLog(@"The user Can't be found");
