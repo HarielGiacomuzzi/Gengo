@@ -47,7 +47,7 @@ NSArray *returnedItems;
         usuario.email = [user objectForKey:@"email"];
         usuario.nivel = 0;
         usuario.xp = 0;
-        usuario.items = [[NSMutableArray alloc] init];
+        usuario.items = [[NSMutableArray alloc] initWithObjects:@0, nil];
         usuario.puzzles = [[NSMutableArray alloc] init];
         usuario.lessonGrade = [[NSMutableArray alloc] initWithObjects:@0, nil];
         usuario.gameScore = [[NSMutableArray alloc] initWithObjects:@0, nil];
