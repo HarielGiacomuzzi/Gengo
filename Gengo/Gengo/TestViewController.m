@@ -64,9 +64,6 @@
     self.currentQuestion = self.currentQuestion + 1;
     //if last question
     if (self.currentQuestion == self.questions.count) {
-        if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
-            self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
-        }
         [self endTest];
         
     } else {
@@ -87,7 +84,7 @@
     } else {
         color = [UIColor redColor];
     }
-    //UIColor *backgroundDefault = [UIColor colorWithRed:253.0/255.0 green:185.0/255.0 blue:100.0/255.0 alpha:1.0];
+
     UIColor *backgroundDefault = [UIColor whiteColor];
     
     [UIView animateWithDuration:0.5
@@ -108,6 +105,9 @@
 }
 
 -(void)endTest {
+    if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
+        self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
+    }
     NSString *message = [NSString stringWithFormat:@"Você acertou %ld palavras", self.rightAnswers];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fim do Teste" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

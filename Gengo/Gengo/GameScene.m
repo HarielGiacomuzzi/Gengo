@@ -137,6 +137,9 @@ const uint32_t WALL = 0x1 << 1;
     CGPoint point;
     SKLabelNode *labelTouched;
     if ([nodeTouched.name isEqualToString:@"exitLabel"]) {
+        if ([NSNumber numberWithInteger:self.points] > self.viewController.lesson.highScore) {
+            self.viewController.lesson.highScore = [NSNumber numberWithInteger:self.points];
+        }
         [self.viewController dismissViewControllerAnimated:YES completion:nil];
     }
     if (self.canMove) {

@@ -358,7 +358,7 @@
                                 <rect key="frame" x="0.0" y="11" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Lição" id="0nW-dJ-BID">
-                                        <barButtonItem key="leftBarButtonItem" title="X" id="ik9-dd-0ub">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ik9-dd-0ub">
                                             <connections>
                                                 <action selector="backBTN:" destination="QqO-ME-gNL" id="4Jy-jJ-6yY"/>
                                             </connections>
@@ -575,18 +575,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="PuzzleName" id="uwF-G5-qsi">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="CPW-kV-bmB">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5xl-r2-piW">
-                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt;&lt;">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="voltar:" destination="1XR-5Z-f7t" eventType="touchUpInside" id="wox-cD-7qz"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="CPW-kV-bmB"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
