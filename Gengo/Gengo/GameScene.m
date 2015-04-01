@@ -15,6 +15,25 @@ const uint32_t WALL = 0x1 << 1;
 
 //vc lifecycle
 -(void)didMoveToView:(SKView *)view {
+    //setup song
+    
+    NSError *error;
+    
+    NSBundle* bundle = [NSBundle mainBundle];
+    
+    NSURL *url = [NSURL URLWithString:[bundle pathForResource:@"gamesong" ofType:@"mp3"]];
+    
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    
+    self.audioPlayer.numberOfLoops = 0;
+    
+    if (self.audioPlayer != nil)
+    {
+        [self.audioPlayer play];
+    }
+
+    
+    
     /* Setup your scene here */
     self.dictionary = [[CharacterDictionary alloc] init];
     self.title.text = @"Neko Sensei saves the world";
@@ -89,6 +108,10 @@ const uint32_t WALL = 0x1 << 1;
     self.player.physicsBody.usesPreciseCollisionDetection = YES;
     self.obstacle.physicsBody.categoryBitMask = WALL;
     self.obstacle.physicsBody.collisionBitMask = WALL;
+}
+
+-(void)willMoveFromView:(SKView *)view {
+    [self.audioPlayer stop];
 }
 
 -(void)runObstacles {

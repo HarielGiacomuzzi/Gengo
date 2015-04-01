@@ -17,6 +17,7 @@
 		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
 		5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E11AC5E1340063E962 /* StoreViewController.m */; };
 		5E6D96E51AC5E14E0063E962 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */; };
+		5E6F153B1ACC2C3000848A27 /* gamesong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E6F153A1ACC2C3000848A27 /* gamesong.mp3 */; };
 		5E70914A1AC8B01200CF559B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7091491AC8B01200CF559B /* UserViewController.m */; };
 		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
 		5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */; };
@@ -116,6 +117,7 @@
 		5E6D96E11AC5E1340063E962 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		5E6D96E31AC5E14E0063E962 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
 		5E6D96E41AC5E14E0063E962 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
+		5E6F153A1ACC2C3000848A27 /* gamesong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gamesong.mp3; sourceTree = SOURCE_ROOT; };
 		5E7091481AC8B01200CF559B /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		5E7091491AC8B01200CF559B /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDictionary.h; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		445367BA1ACAE74A00B0D2C7 /* audios */ = {
 			isa = PBXGroup;
 			children = (
+				5E6F153A1ACC2C3000848A27 /* gamesong.mp3 */,
 				DBF6DACE1ACB056300AB6ADF /* A.wav */,
 				DBF6DACF1ACB056300AB6ADF /* Ai=amor.wav */,
 				DBF6DAD01ACB056300AB6ADF /* E.wav */,
@@ -478,11 +481,11 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = F82285SQ6R;
+						DevelopmentTeam = ZX7GUMJ35C;
 					};
 					5ED9E6891ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = F82285SQ6R;
+						DevelopmentTeam = ZX7GUMJ35C;
 						TestTargetID = 5ED9E6701ABC810F00905BC5;
 					};
 				};
@@ -522,6 +525,7 @@
 				DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */,
 				DBF6DB861ACB056400AB6ADF /* U.wav in Resources */,
 				5ED9E6801ABC810F00905BC5 /* Main.storyboard in Resources */,
+				5E6F153B1ACC2C3000848A27 /* gamesong.mp3 in Resources */,
 				5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */,
 				5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */,
 				DB92D3601AC5A10A002DE928 /* View1.xib in Resources */,
