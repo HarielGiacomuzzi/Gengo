@@ -575,7 +575,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="PuzzleName" id="uwF-G5-qsi">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="CPW-kV-bmB"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="CPW-kV-bmB">
+                                            <connections>
+                                                <action selector="voltar:" destination="1XR-5Z-f7t" id="e4D-MD-nYx"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
