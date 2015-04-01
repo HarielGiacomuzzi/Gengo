@@ -13,7 +13,6 @@
 		44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */; };
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
-		5E4391291ACB912C0023AD24 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E4391281ACB912C0023AD24 /* GameScene.sks */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
 		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
 		5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E11AC5E1340063E962 /* StoreViewController.m */; };
@@ -28,6 +27,7 @@
 		5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6811ABC810F00905BC5 /* Images.xcassets */; };
 		5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9E6831ABC810F00905BC5 /* LaunchScreen.xib */; };
 		5ED9E6911ABC810F00905BC5 /* GengoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6901ABC810F00905BC5 /* GengoTests.m */; };
+		5EDF2C261ACC271700162205 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5EDF2C251ACC271700162205 /* GameScene.sks */; };
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
 		DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119971ABCA7F200ACDD71 /* Item.m */; };
@@ -108,7 +108,6 @@
 		5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
 		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
 		5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCellTableViewCell.m; sourceTree = "<group>"; };
-		5E4391281ACB912C0023AD24 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../../../../Dropbox/BEPiD/Gengo/Gengo/Gengo/GameScene.sks; sourceTree = "<group>"; };
 		5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		5ED9E68A1ABC810F00905BC5 /* GengoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GengoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E68F1ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6901ABC810F00905BC5 /* GengoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GengoTests.m; sourceTree = "<group>"; };
+		5EDF2C251ACC271700162205 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		DB7119931ABCA7E100ACDD71 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievement.h; sourceTree = "<group>"; };
@@ -364,9 +364,9 @@
 		5EEA0D131AC07C6700D1EF3A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				5EDF2C251ACC271700162205 /* GameScene.sks */,
 				5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */,
 				5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */,
-				5E4391281ACB912C0023AD24 /* GameScene.sks */,
 				5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */,
 				5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */,
 			);
@@ -512,10 +512,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF6DB501ACB056400AB6ADF /* E.wav in Resources */,
+				5EDF2C261ACC271700162205 /* GameScene.sks in Resources */,
 				DBF6DB4E1ACB056400AB6ADF /* A.wav in Resources */,
 				DBF6DB851ACB056400AB6ADF /* O.wav in Resources */,
 				DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */,
-				5E4391291ACB912C0023AD24 /* GameScene.sks in Resources */,
 				DB7211891AC58D5500D20D01 /* simple-drum-beat.wav in Resources */,
 				DBF6DB831ACB056400AB6ADF /* I.wav in Resources */,
 				DBF6DB4F1ACB056400AB6ADF /* Ai=amor.wav in Resources */,
