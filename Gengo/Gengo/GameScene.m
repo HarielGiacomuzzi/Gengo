@@ -15,24 +15,7 @@ const uint32_t WALL = 0x1 << 1;
 
 //vc lifecycle
 -(void)didMoveToView:(SKView *)view {
-    //setup song
-    
-    NSError *error;
-    
-    NSBundle* bundle = [NSBundle mainBundle];
-    
-    NSURL *url = [NSURL URLWithString:[bundle pathForResource:@"gamesong" ofType:@"mp3"]];
-    
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    
-    self.audioPlayer.numberOfLoops = 0;
-    
-    if (self.audioPlayer != nil)
-    {
-        [self.audioPlayer play];
-    }
 
-    
     
     /* Setup your scene here */
     self.dictionary = [[CharacterDictionary alloc] init];
@@ -110,9 +93,7 @@ const uint32_t WALL = 0x1 << 1;
     self.obstacle.physicsBody.collisionBitMask = WALL;
 }
 
--(void)willMoveFromView:(SKView *)view {
-    [self.audioPlayer stop];
-}
+
 
 -(void)runObstacles {
     int lane = arc4random_uniform(2);
@@ -163,6 +144,7 @@ const uint32_t WALL = 0x1 << 1;
         if ([NSNumber numberWithInteger:self.points] > self.viewController.lesson.highScore) {
             self.viewController.lesson.highScore = [NSNumber numberWithInteger:self.points];
         }
+
         [self.viewController dismissViewControllerAnimated:YES completion:nil];
     }
     if (self.canMove) {
@@ -215,6 +197,7 @@ const uint32_t WALL = 0x1 << 1;
             self.viewController.lesson.highScore = [NSNumber numberWithInteger:self.points];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"loadScene" object:nil];
+    
         [self.viewController dismissViewControllerAnimated:YES completion:nil];
         
     }

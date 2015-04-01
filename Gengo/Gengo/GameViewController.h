@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "Lesson.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface GameViewController : UIViewController
 
 @property (nonatomic, weak) Lesson *lesson;
+@property(nonatomic) AVAudioPlayer *audioPlayer;
 
 - (void)createScene;
 

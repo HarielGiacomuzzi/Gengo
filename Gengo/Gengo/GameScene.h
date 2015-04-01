@@ -9,7 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 #import "CharacterDictionary.h"
 #import "GameViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 
@@ -54,7 +53,6 @@
 
 @property (nonatomic) BOOL endGame;
 
-@property(nonatomic) AVAudioPlayer *audioPlayer;
 
 
 

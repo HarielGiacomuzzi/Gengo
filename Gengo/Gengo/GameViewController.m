@@ -84,4 +84,28 @@
     return YES;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //setup song
+    
+    NSError *error;
+    
+    NSBundle* bundle = [NSBundle mainBundle];
+    
+    NSURL *url = [NSURL URLWithString:[bundle pathForResource:@"gamesong" ofType:@"mp3"]];
+    
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    
+    self.audioPlayer.numberOfLoops = 0;
+    
+    if (self.audioPlayer != nil)
+    {
+        [self.audioPlayer play];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.audioPlayer stop];
+}
+
 @end
