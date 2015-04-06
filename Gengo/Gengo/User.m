@@ -59,6 +59,8 @@ NSArray *returnedItems;
             usuario.sexo = 0;
         }
         
+        sharedUser = usuario;
+        
         
         PFObject *newUser = [PFObject objectWithClassName:@"User"];
         newUser[@"nome"] = usuario.nome;

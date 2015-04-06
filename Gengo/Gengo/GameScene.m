@@ -70,6 +70,9 @@ const uint32_t WALL = 0x1 << 1;
         } else if ([child.name isEqualToString:@"exitLabel"]) {
             self.exitLabel = (SKLabelNode *)child;
             
+        } else if ([child.name isEqualToString:@"touch"]) {
+            self.pressStart = (SKLabelNode *)child;
+            
         }
     }
     
@@ -77,6 +80,7 @@ const uint32_t WALL = 0x1 << 1;
     self.laneLeft = self.aLabel.position.x;
     self.laneRight = self.oLabel.position.x;
     self.title.alpha = 1;
+    self.pressStart.alpha = 1;
     
     NSArray *chars = [self.dictionary getPairOfKeys];
     self.japLeft.text = chars[0];
@@ -189,6 +193,7 @@ const uint32_t WALL = 0x1 << 1;
             child.alpha = 1;
         }
         self.title.alpha = 0;
+        self.pressStart.alpha = 0;
         self.gameState = @"playing";
         [self runObstacles];
         
