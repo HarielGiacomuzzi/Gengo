@@ -22,8 +22,15 @@
             object[@"xp"] = @(u.xp);
             object[@"items"] = u.items;
             //object[@"puzzles"] = [SaveUtility processUserPuzzles];
-            object[@"lessonGrade"] = u.lessonGrade;
-            object[@"gameScore"] = u.gameScore;
+            NSMutableArray *grades = [[NSMutableArray alloc] init];
+            NSMutableArray *scores = [[NSMutableArray alloc] init];
+            for (Lesson *lesson in u.lessonArray) {
+                [grades addObject:lesson.grade];
+                [scores addObject:lesson.highScore];
+            }
+            object[@"lessonGrade"] = grades;
+            object[@"gameScore"] = scores;
+        
             object[@"money"] = @(u.money);
 
             [object saveInBackground];

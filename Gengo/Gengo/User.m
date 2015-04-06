@@ -33,8 +33,17 @@ NSArray *returnedItems;
         sharedUser.nivel = [((NSNumber *)[object objectForKey:@"nivel"]) intValue];
         sharedUser.xp = [((NSNumber *)[object objectForKey:@"xp"]) intValue];
         sharedUser.items = [object objectForKey:@"items"];
-        sharedUser.lessonGrade = [object objectForKey:@"lessonGrade"];
-        sharedUser.gameScore = [object objectForKey:@"gameScore"];
+        
+        NSMutableArray *grades = [object objectForKey:@"lessonGrade"];
+        NSMutableArray *scores = [object objectForKey:@"gameScore"];
+        sharedUser.lessonArray = [[NSMutableArray alloc] init];
+        for (int i = 0; i < grades.count; i++) {
+            Lesson *lesson = [[Lesson alloc] init];
+            lesson.grade = grades[i];
+            lesson.highScore = scores[i];
+            [sharedUser.lessonArray addObject:lesson];
+        }
+        
         sharedUser.puzzles = [object objectForKey:@"puzzles"];
         sharedUser.sexo = [((NSNumber *)[object objectForKey:@"sexo"]) intValue];
         sharedUser.money = [((NSNumber *)[object objectForKey:@"money"]) intValue];
@@ -49,8 +58,7 @@ NSArray *returnedItems;
         usuario.xp = 0;
         usuario.items = [[NSMutableArray alloc] initWithObjects:@0, nil];
         usuario.puzzles = [[NSMutableArray alloc] init];
-        usuario.lessonGrade = [[NSMutableArray alloc] initWithObjects:@0, nil];
-        usuario.gameScore = [[NSMutableArray alloc] initWithObjects:@0, nil];
+        usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
         usuario.money = 100;
         NSString *s = [user objectForKey:@"gender"];
         if ([s isEqualToString:@"male"]) {
@@ -69,8 +77,8 @@ NSArray *returnedItems;
         newUser[@"xp"] = @(usuario.xp);
         newUser[@"items"] = usuario.items;
         newUser[@"money"] = @(usuario.money);
-        newUser[@"lessonGrade"] = usuario.lessonGrade;
-        newUser[@"gameScore"] = usuario.gameScore;
+        newUser[@"lessonGrade"] = [[NSMutableArray alloc] initWithObjects:@0, nil];
+        newUser[@"gameScore"] = [[NSMutableArray alloc] initWithObjects:@0, nil];
         newUser[@"puzzles"] = usuario.puzzles;
         newUser[@"sexo"] = @(usuario.sexo);
         

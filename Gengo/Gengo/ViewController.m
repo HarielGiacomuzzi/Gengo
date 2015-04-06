@@ -65,17 +65,6 @@
     
 }
 
-//coloca a mesma lesson pras duas view controllers
-//falta colocar os dados do user nela, precisa do sync user funcionando pra fazer as tretas
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UITabBarController *tabBar = segue.destinationViewController;
-    NSMutableArray *lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
-    LessonTableViewController *lessonvc = [tabBar.viewControllers objectAtIndex:0];
-    lessonvc.lessonArray = lessonArray;
-    UserViewController *uservc = [tabBar.viewControllers objectAtIndex:1];
-    uservc.lessonArray = lessonArray;
-    
-}
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;

@@ -18,17 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.user = [User loadUser];
-    Lesson *l = self.lessonArray[0];
-    l.grade = self.user.lessonGrade[0];
-    l.highScore = self.user.gameScore[0];
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    Lesson *l = self.lessonArray[0];
-    self.user.lessonGrade[0] = l.grade;
-    self.user.gameScore[0] = l.highScore;
+    Lesson *l = self.user.lessonArray[0];
+    NSLog(@"%@",l.highScore);
     [SaveUtility SyncUser];
 }
 
@@ -38,7 +33,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.lessonArray.count;
+    return self.user.lessonArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -71,11 +66,11 @@
     
     if ([segue.identifier isEqualToString:@"goToTest"]) {
         TestViewController *test = (TestViewController *)segue.destinationViewController;
-        test.lesson = self.lessonArray[0];
+        test.lesson = self.user.lessonArray[0];
         
     } else if ([segue.identifier isEqualToString:@"goToGame"]){
         GameViewController *game = (GameViewController *)segue.destinationViewController;
-        game.lesson = self.lessonArray[0];
+        game.lesson = self.user.lessonArray[0];
         
     }
 }
