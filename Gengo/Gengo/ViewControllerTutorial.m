@@ -15,6 +15,7 @@
     TutorialDrawView *secondViewUIView;
     xibAnimation *thirdViewUIView;
     
+    
     NSArray *animationA;
     NSArray *animationI;
     NSArray *animationU;
