@@ -41,6 +41,7 @@ NSArray *returnedItems;
             Lesson *lesson = [[Lesson alloc] init];
             lesson.grade = grades[i];
             lesson.highScore = scores[i];
+            lesson.lessonNumber = i + 1;
             [sharedUser.lessonArray addObject:lesson];
         }
         

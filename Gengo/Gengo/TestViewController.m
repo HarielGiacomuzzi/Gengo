@@ -47,14 +47,14 @@
         if (self.currentLetterIndex == self.currentWord.length) {
             [self playAnimation:YES];
             self.rightAnswers = self.rightAnswers + 1;
-            [self updateNextQuestion];
+           // [self updateNextQuestion];
             
         }
         
     } else {
         [self playAnimation:NO];
         self.wrongAnswers = self.wrongAnswers + 1;
-        [self updateNextQuestion];
+        //[self updateNextQuestion];
         
     }
     
@@ -99,6 +99,7 @@
                                           }
                                           completion:^(BOOL finished){
                                               self.currentAnswerLabel.text = @"";
+                                              [self updateNextQuestion];
                                           }];
                      }];
     
