@@ -58,7 +58,7 @@ NSArray *returnedItems;
         usuario.xp = 0;
         usuario.items = [[NSMutableArray alloc] initWithObjects:@0, nil];
         usuario.puzzles = [[NSMutableArray alloc] init];
-        usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+        usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
         usuario.money = 100;
         NSString *s = [user objectForKey:@"gender"];
         if ([s isEqualToString:@"male"]) {

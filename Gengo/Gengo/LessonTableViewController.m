@@ -22,8 +22,9 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    Lesson *l = self.user.lessonArray[0];
-    NSLog(@"%@",l.highScore);
+    //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+    [self.tableView reloadData];
+    
     [SaveUtility SyncUser];
 }
 
@@ -38,39 +39,53 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LessonCellTableViewCell *cell = (LessonCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"lessonCell"];
+    Lesson *lesson = self.user.lessonArray[indexPath.row];
     
+    cell.titleLabel.text = [NSString stringWithFormat:@"Lição %ld",lesson.lessonNumber];
     [cell.testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.exerciseButton addTarget:self action:@selector(exerciseButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.lessonButton addTarget:self action:@selector(lessonButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
- 
-    
     return cell;
 }
 
 -(void)testButtonClicked:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"goToTest" sender:self];
+    [self performSegueWithIdentifier:@"goToTest" sender:sender];
 }
 
 -(void)exerciseButtonClicked:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"goToGame" sender:self];
+    [self performSegueWithIdentifier:@"goToGame" sender:sender];
 
 }
 
 -(void)lessonButtonClicked:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"goToTutorial" sender:self];
+    [self performSegueWithIdentifier:@"goToTutorial" sender:sender];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender {
     
+    UIView *superView = sender.superview;
+    UIView *foundSuperView = nil;
+    
+    while (nil != superView && nil == foundSuperView) {
+        if ([superView isKindOfClass:[UITableViewCell class]]) {
+            foundSuperView = superView;
+        } else {
+            superView = superView.superview;
+        }
+    }
+    
+    NSIndexPath *idxPath = [self.tableView indexPathForCell:(UITableViewCell *)foundSuperView];
+
+    
     if ([segue.identifier isEqualToString:@"goToTest"]) {
         TestViewController *test = (TestViewController *)segue.destinationViewController;
-        test.lesson = self.user.lessonArray[0];
+        test.lesson = self.user.lessonArray[idxPath.row];
         
     } else if ([segue.identifier isEqualToString:@"goToGame"]){
         GameViewController *game = (GameViewController *)segue.destinationViewController;
-        game.lesson = self.user.lessonArray[0];
+        game.lesson = self.user.lessonArray[idxPath.row];
         
     }
 }

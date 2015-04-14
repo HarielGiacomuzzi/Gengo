@@ -47,7 +47,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UserTableViewCell *cell = (UserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"userCell"];
     Lesson *lesson = self.user.lessonArray[indexPath.row];
-    cell.lessonNumberLabel.text = @"Lição 1";
+    cell.lessonNumberLabel.text = [NSString stringWithFormat:@"Lição %ld",lesson.lessonNumber];
     cell.gameScoreLabel.text = [NSString stringWithFormat:@"HighScore: %@", lesson.highScore];
     cell.testScoreLabel.text = [NSString stringWithFormat:@"Melhor Nota: %@", lesson.grade];
 

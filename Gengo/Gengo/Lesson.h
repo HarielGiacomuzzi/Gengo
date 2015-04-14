@@ -13,9 +13,11 @@
 
 @property (nonatomic) NSNumber *grade;
 @property (nonatomic) NSNumber *highScore;
+@property(nonatomic) NSInteger lessonNumber;
 @property (nonatomic) CharacterDictionary *dictionary;
 
 -(id)init;
+- (id)initWithNumber:(NSInteger)number;
 
 
 @end

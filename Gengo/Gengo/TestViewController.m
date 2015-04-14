@@ -107,6 +107,10 @@
 -(void)endTest {
     if([NSNumber numberWithInteger:self.rightAnswers] > self.lesson.grade) {
         self.lesson.grade = [NSNumber numberWithInteger:self.rightAnswers];
+        if (self.lesson.grade > [NSNumber numberWithInt:8]) {
+            [self passedTest];
+            
+        }
     }
     NSString *message = [NSString stringWithFormat:@"Você acertou %ld palavras", self.rightAnswers];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fim do Teste" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -120,6 +124,17 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+-(void)passedTest {
+    User *user = [User loadUser];
+    Lesson *lastLesson = [user.lessonArray lastObject];
+    if ([lastLesson isEqual:self.lesson]) {
+        Lesson *l = [[Lesson alloc] initWithNumber:lastLesson.lessonNumber + 1];
+        [user.lessonArray addObject:l];
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Parabéns" message:@"Você passou de nível." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 

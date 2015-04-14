@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CharacterDictionary.h"
 #import "Lesson.h"
+#import "User.h"
 
 @interface TestViewController : UIViewController
 @property (nonatomic) CharacterDictionary *dictionary;

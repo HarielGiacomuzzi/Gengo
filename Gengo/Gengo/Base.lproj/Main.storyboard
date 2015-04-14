@@ -1105,6 +1105,7 @@
                                             <outlet property="exerciseButton" destination="cbB-ns-vzd" id="KWw-NG-gT0"/>
                                             <outlet property="lessonButton" destination="gnk-kC-dcc" id="soS-VI-S7s"/>
                                             <outlet property="testButton" destination="FKN-RH-0Q0" id="OAg-22-qim"/>
+                                            <outlet property="titleLabel" destination="Cwc-dW-Mro" id="J74-1Y-BGS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -16,6 +16,18 @@
         _dictionary = [[CharacterDictionary alloc] init];
         _grade = @0;
         _highScore = @0;
+        _lessonNumber = 1;
+    }
+    return self;
+}
+
+- (id)initWithNumber:(NSInteger)number {
+    self = [super init];
+    if( self ){
+        _dictionary = [[CharacterDictionary alloc] init];
+        _grade = @0;
+        _highScore = @0;
+        _lessonNumber = number;
     }
     return self;
 }
