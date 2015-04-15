@@ -76,6 +76,7 @@
 		5EDF2C261ACC271700162205 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5EDF2C251ACC271700162205 /* GameScene.sks */; };
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		5EEAAED41ADDC59A0089156C /* GameDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEAAED31ADDC59A0089156C /* GameDictionary.plist */; };
+		DB2791171ADD941C00661EA0 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2791161ADD941C00661EA0 /* Data.plist */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
 		DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119971ABCA7F200ACDD71 /* Item.m */; };
 		DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119991ABCA7F200ACDD71 /* Lesson.m */; };
@@ -211,6 +212,7 @@
 		5EEA8EF91ABC8C4E00D141B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5EEAAED31ADDC59A0089156C /* GameDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameDictionary.plist; sourceTree = "<group>"; };
+		DB2791161ADD941C00661EA0 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		DB7119931ABCA7E100ACDD71 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievement.h; sourceTree = "<group>"; };
 		DB7119941ABCA7E100ACDD71 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Achievement.m; sourceTree = "<group>"; };
 		DB7119961ABCA7F200ACDD71 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				5ED9E6751ABC810F00905BC5 /* Info.plist */,
 				5EEAAED31ADDC59A0089156C /* GameDictionary.plist */,
 				5ED9E6761ABC810F00905BC5 /* main.m */,
+				DB2791161ADD941C00661EA0 /* Data.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				44C99E311ADC9D3C0039CC6B /* ku.wav in Resources */,
 				44C99E431ADC9D3C0039CC6B /* sa.wav in Resources */,
 				44C99E4F1ADC9D3C0039CC6B /* yo.wav in Resources */,
+				DB2791171ADD941C00661EA0 /* Data.plist in Resources */,
 				44C99E461ADC9D3C0039CC6B /* so.wav in Resources */,
 				44C99E2B1ADC9D3C0039CC6B /* ho.wav in Resources */,
 				5ED9E6821ABC810F00905BC5 /* Images.xcassets in Resources */,
