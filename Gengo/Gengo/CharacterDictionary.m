@@ -54,35 +54,39 @@
     return [self.characters allValues];
 }
 
--(NSMutableArray *)getCharactersFromWord:(NSString *)word {
+-(NSMutableSet *)getCharactersFromWord:(NSString *)word {
     NSRange range;
     range.length = 1;
     range.location = 0;
-    NSMutableArray *array = [[NSMutableArray alloc] init];
+    NSMutableSet *set = [[NSMutableSet alloc] init];
     for (int i = 0; i < word.length; i++) {
-        [array addObject:[word substringWithRange:range]];
+        [set addObject:[word substringWithRange:range]];
         range.location++;
     }
-    return array;
+    return set;
 }
 
--(NSString *)getRandomCharacter{
-    NSArray *keys = [self.characters allKeys];
-    int size = (int)keys.count;
+-(NSString *)getRandomCharacterFromArray:(NSMutableArray *)array{
+    int size = (int)array.count;
     int i = arc4random() % size;
-    return keys[i];
+    NSString *lucky = array[i];
+    [array removeObjectAtIndex:i];
+    return lucky;
 }
 
 -(NSMutableArray *)getAnswerOptionsForWord:(NSString *)word {
     NSMutableArray *options = [[NSMutableArray alloc] init];
-    NSMutableArray *rightOptions = [self getCharactersFromWord:word];
-    [options addObjectsFromArray:rightOptions];
-    for (int i = (int)options.count; i <= 5; i++) {
-        NSString *character = [self getRandomCharacter];
-//        while ([options containsObject:character]) {
-//            NSLog(@"%@",character);
-//            character = [self getRandomCharacter];
-//        }
+    NSMutableSet *rightOptions = [self getCharactersFromWord:word];
+    NSArray *temp = [self.characters allKeys];
+    NSMutableArray* allCharacters = [temp mutableCopy];
+    for (NSString *string in rightOptions) {
+        [options addObject:string];
+        [allCharacters removeObject:string];
+    }
+    
+    for (int i = (int)options.count; i < 5; i++) {
+        NSLog(@"%@",allCharacters);
+        NSString *character = [self getRandomCharacterFromArray:allCharacters];
         [options addObject:character];
     }
     return options;
