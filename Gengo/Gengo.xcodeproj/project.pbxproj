@@ -58,6 +58,7 @@
 		44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */; };
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
+		5E55DF751ADE8EFD00293FD7 /* TestDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
 		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
 		5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E11AC5E1340063E962 /* StoreViewController.m */; };
@@ -180,6 +181,7 @@
 		5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
 		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
 		5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCellTableViewCell.m; sourceTree = "<group>"; };
+		5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestDictionary.plist; sourceTree = "<group>"; };
 		5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				5EEAAED31ADDC59A0089156C /* GameDictionary.plist */,
 				5ED9E6761ABC810F00905BC5 /* main.m */,
 				DB2791161ADD941C00661EA0 /* Data.plist */,
+				5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				DBF6DB841ACB056400AB6ADF /* MiyamotoMusashi.wav in Resources */,
 				44C99E3F1ADC9D3C0039CC6B /* re.wav in Resources */,
 				44C99E441ADC9D3C0039CC6B /* se.wav in Resources */,
+				5E55DF751ADE8EFD00293FD7 /* TestDictionary.plist in Resources */,
 				44C99E3C1ADC9D3C0039CC6B /* nu.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

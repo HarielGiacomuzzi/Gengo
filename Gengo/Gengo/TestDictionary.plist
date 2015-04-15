@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+        <dict>
+            <key>amor</key>
+            <string>あい</string>
+            <key>não</key>
+            <string>いいえ</string>
+            <key>dizer</key>
+            <string>いう</string>
+            <key>tudo certo</key>
+            <string>う</string>
+            <key>bom</key>
+            <string>ええ</string>
+            <key>desenho</key>
+            <string>え</string>
+            <key>sobrinho</key>
+            <string>おい</string>
+            <key>rei</key>
+            <string>おう</string>
+            <key>azul</key>
+            <string>あおい</string>
+        </dict>
+        <dict>
+            <key>あい</key>
+            <string>ai</string>
+            <key>いいえ</key>
+            <string>iie</string>
+            <key>いう</key>
+            <string>iu</string>
+            <key>う</key>
+            <string>u</string>
+            <key>ええ</key>
+            <string>ee</string>
+            <key>え</key>
+            <string>e</string>
+            <key>おい</key>
+            <string>oi</string>
+            <key>おう</key>
+            <string>ou</string>
+            <key>あおい</key>
+            <string>aoi</string>
+        </dict>
+    </array>
+</array>
+</plist>

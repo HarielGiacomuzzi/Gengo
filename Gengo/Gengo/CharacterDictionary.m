@@ -15,13 +15,17 @@
 -(id)initWithLevel:(NSInteger)level {
     self = [super init];
     if( self ){
-        [self setLevelOneCharacters];
         NSString *plistGamePath = [[NSBundle mainBundle] pathForResource:@"GameDictionary" ofType:@"plist"];
         NSArray *lessonsArray = [[NSArray alloc] initWithContentsOfFile:plistGamePath];
         NSArray *thisLesson = lessonsArray[level - 1];
         _gameCharacters = thisLesson[0];
         _characters = thisLesson[0];
         _gameButtonLetters = thisLesson[1];
+        plistGamePath =[[NSBundle mainBundle] pathForResource:@"TestDictionary" ofType:@"plist"];
+        lessonsArray = [[NSArray alloc] initWithContentsOfFile:plistGamePath];
+        thisLesson = lessonsArray[0];
+        _words = thisLesson[0];
+        _toRomanji = thisLesson[1];
     }
     return self;
 }
@@ -99,31 +103,7 @@
     return @[keys[i], keys[j]];
 }
 
-#pragma generation of characters
 
--(void)setLevelOneCharacters {
-    
-    _words = @{@"azul" : @"あおい",
-               @"amor" : @"あい",
-               @"não"  : @"いいえ",
-               @"dizer" : @"いう",
-               @"tudo certo" : @"う",
-               @"bom" : @"ええ",
-               @"desenho" : @"え",
-               @"sobrinho": @"おい",
-               @"rei" : @"おう"
-               };
-    _toRomanji = @{@"あおい" : @"aoi",
-                   @"あい" : @"ai",
-                   @"いいえ" : @"iie",
-                   @"いう" : @"iu",
-                   @"う" : @"u",
-                   @"ええ" : @"ee",
-                   @"え" : @"e",
-                   @"おい" : @"oi",
-                   @"おう" : @"ou"
-                   };
-}
 
 
 
