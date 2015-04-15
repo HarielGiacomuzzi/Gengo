@@ -17,6 +17,6 @@
 @interface LessonTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) User *user;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

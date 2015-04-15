@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LessonCellTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIButton *exerciseButton;
-@property (strong, nonatomic) IBOutlet UIButton *testButton;
-@property (strong, nonatomic) IBOutlet UIButton *lessonButton;
+@property (weak, nonatomic) IBOutlet UIButton *exerciseButton;
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (weak, nonatomic) IBOutlet UIButton *lessonButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

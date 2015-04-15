@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UserTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *lessonNumberLabel;
-@property (strong, nonatomic) IBOutlet UILabel *gameScoreLabel;
-@property (strong, nonatomic) IBOutlet UILabel *testScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lessonNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gameScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *testScoreLabel;
 
 @end

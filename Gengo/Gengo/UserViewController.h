@@ -15,10 +15,10 @@
 @interface UserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) User *user;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *moneyLabel;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) IBOutlet UIImageView *headImage;
-@property (strong, nonatomic) IBOutlet UIImageView *bodyImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UIImageView *bodyImage;
 
 @end

@@ -21,13 +21,13 @@
 @property (nonatomic) NSInteger currentQuestion;
 @property (nonatomic) NSString *currentWord;
 @property (nonatomic) NSInteger currentLetterIndex;
-@property (strong, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
-@property (strong, nonatomic) IBOutlet UILabel *currentAnswerLabel;
-@property (strong, nonatomic) IBOutlet UILabel *romanjiLabel;
-@property (strong, nonatomic) IBOutlet UINavigationItem *navBarTitle;
+@property (weak, nonatomic) IBOutlet UILabel *currentAnswerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *romanjiLabel;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBarTitle;
 
-@property (strong, nonatomic) IBOutlet UIView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
 
 @end
