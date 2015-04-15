@@ -10,55 +10,25 @@
 
 @implementation CharacterDictionary
 
-- (id)init {
+
+
+-(id)initWithLevel:(NSInteger)level {
     self = [super init];
     if( self ){
-        _characters = @{ @"あ" : @"a",
-                         @"い" : @"i",
-                         @"う" : @"u",
-                         @"え" : @"e",
-                         @"お" : @"o",
-                         };
-        
-        _words = @{@"azul" : @"あおい",
-                   @"amor" : @"あい",
-                   @"não"  : @"いいえ",
-                   @"dizer" : @"いう",
-                   @"tudo certo" : @"う",
-                   @"bom" : @"ええ",
-                   @"desenho" : @"え",
-                   @"sobrinho": @"おい",
-                   @"rei" : @"おう"
-                   };
-        _toRomanji = @{@"あおい" : @"aoi",
-                       @"あい" : @"ai",
-                       @"いいえ" : @"iie",
-                       @"いう" : @"iu",
-                       @"う" : @"u",
-                       @"ええ" : @"ee",
-                       @"え" : @"e",
-                       @"おい" : @"oi",
-                       @"おう" : @"ou"
-                       };
+        [self setLevelOneCharacters];
+        NSString *plistGamePath = [[NSBundle mainBundle] pathForResource:@"GameDictionary" ofType:@"plist"];
+        NSArray *lessonsArray = [[NSArray alloc] initWithContentsOfFile:plistGamePath];
+        NSArray *thisLesson = lessonsArray[level - 1];
+        _gameCharacters = thisLesson[0];
+        _characters = thisLesson[0];
+        _gameButtonLetters = thisLesson[1];
     }
     return self;
 }
 
--(NSMutableArray *)getKeysAtRandomOrder {
-    NSMutableArray *keys = [[NSMutableArray alloc] init];
-    NSMutableArray *rearrangedKeys = [[NSMutableArray alloc] init];
-    for (NSString *key in self.characters) {
-        [keys addObject:key];
-    }
-    while (keys.count > 0) {
-        int size = (int)keys.count;
-        int i = arc4random() % size;
-        [rearrangedKeys addObject:keys[i]];
-        [keys removeObjectAtIndex:i];
-        
-    }
-    return rearrangedKeys;
-}
+//para o teste:
+//gerar o array de palavras random ate aqui
+//gerar 5 letras obrigatoriamente contendo as dessa palavra
 
 -(NSMutableArray *)getWordsAtRandomOrder {
     NSMutableArray *words = [[NSMutableArray alloc] init];
@@ -80,8 +50,46 @@
     return [self.characters allValues];
 }
 
--(NSArray *)getPairOfKeys {
+-(NSMutableArray *)getCharactersFromWord:(NSString *)word {
+    NSRange range;
+    range.length = 1;
+    range.location = 0;
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0; i < word.length; i++) {
+        [array addObject:[word substringWithRange:range]];
+        range.location++;
+    }
+    return array;
+}
+
+-(NSString *)getRandomCharacter{
     NSArray *keys = [self.characters allKeys];
+    int size = (int)keys.count;
+    int i = arc4random() % size;
+    return keys[i];
+}
+
+-(NSMutableArray *)getAnswerOptionsForWord:(NSString *)word {
+    NSMutableArray *options = [[NSMutableArray alloc] init];
+    NSMutableArray *rightOptions = [self getCharactersFromWord:word];
+    [options addObjectsFromArray:rightOptions];
+    for (int i = (int)options.count; i <= 5; i++) {
+        NSString *character = [self getRandomCharacter];
+//        while ([options containsObject:character]) {
+//            NSLog(@"%@",character);
+//            character = [self getRandomCharacter];
+//        }
+        [options addObject:character];
+    }
+    return options;
+    
+}
+
+
+#pragma game functions
+
+-(NSArray *)getPairOfKeys {
+    NSArray *keys = [self.gameCharacters allKeys];
     int size = (int)keys.count;
     int i = arc4random() % size;
     int j = i;
@@ -90,5 +98,33 @@
     }
     return @[keys[i], keys[j]];
 }
+
+#pragma generation of characters
+
+-(void)setLevelOneCharacters {
+    
+    _words = @{@"azul" : @"あおい",
+               @"amor" : @"あい",
+               @"não"  : @"いいえ",
+               @"dizer" : @"いう",
+               @"tudo certo" : @"う",
+               @"bom" : @"ええ",
+               @"desenho" : @"え",
+               @"sobrinho": @"おい",
+               @"rei" : @"おう"
+               };
+    _toRomanji = @{@"あおい" : @"aoi",
+                   @"あい" : @"ai",
+                   @"いいえ" : @"iie",
+                   @"いう" : @"iu",
+                   @"う" : @"u",
+                   @"ええ" : @"ee",
+                   @"え" : @"e",
+                   @"おい" : @"oi",
+                   @"おう" : @"ou"
+                   };
+}
+
+
 
 @end

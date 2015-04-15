@@ -22,7 +22,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] init], nil];
+    //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
     [self.tableView reloadData];
     
     [SaveUtility SyncUser];

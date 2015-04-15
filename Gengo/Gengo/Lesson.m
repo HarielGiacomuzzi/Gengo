@@ -24,14 +24,13 @@
 - (id)initWithNumber:(NSInteger)number {
     self = [super init];
     if( self ){
-        _dictionary = [[CharacterDictionary alloc] init];
+        _dictionary = [[CharacterDictionary alloc] initWithLevel:number];
         _grade = @0;
         _highScore = @0;
         _lessonNumber = number;
     }
     return self;
 }
-
 
 
 @end

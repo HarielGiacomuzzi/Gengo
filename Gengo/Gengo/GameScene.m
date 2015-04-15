@@ -18,7 +18,6 @@ const uint32_t WALL = 0x1 << 1;
 
     
     /* Setup your scene here */
-    self.dictionary = [[CharacterDictionary alloc] init];
     self.title.text = @"Neko Sensei saves the world";
     self.deviceSize = [[UIScreen mainScreen] bounds];
     self.width = self.deviceSize.size.width * 2;
@@ -29,6 +28,8 @@ const uint32_t WALL = 0x1 << 1;
     self.gameState = @"mainScreen";
     self.colided  = NO;
     self.duration = @4;
+    
+    NSArray *valuesArray = [self.dictionary.gameCharacters allValues];
     
     //find actors
     for (SKNode *child in self.children) {
@@ -54,18 +55,23 @@ const uint32_t WALL = 0x1 << 1;
             
         } else if ([child.name isEqualToString:@"aLabel"]) {
             self.aLabel = (SKLabelNode *)child;
+            self.aLabel.text = self.dictionary.gameButtonLetters[0];
             
         } else if ([child.name isEqualToString:@"eLabel"]) {
             self.eLabel = (SKLabelNode *)child;
+            self.eLabel.text = self.dictionary.gameButtonLetters[3];
             
         } else if ([child.name isEqualToString:@"iLabel"]) {
             self.iLabel = (SKLabelNode *)child;
+            self.iLabel.text = self.dictionary.gameButtonLetters[1];
             
         } else if ([child.name isEqualToString:@"oLabel"]) {
             self.oLabel = (SKLabelNode *)child;
+            self.oLabel.text = self.dictionary.gameButtonLetters[4];
             
         } else if ([child.name isEqualToString:@"uLabel"]) {
             self.uLabel = (SKLabelNode *)child;
+            self.uLabel.text = self.dictionary.gameButtonLetters[2];
             
         } else if ([child.name isEqualToString:@"exitLabel"]) {
             self.exitLabel = (SKLabelNode *)child;
@@ -166,14 +172,14 @@ const uint32_t WALL = 0x1 << 1;
         
         [labelTouched setFontColor:[UIColor redColor]];
         
-        if ([[self.dictionary.characters objectForKey:self.japLeft.text] isEqualToString: labelTouched.text]) {
+        if ([[self.dictionary.gameCharacters objectForKey:self.japLeft.text] isEqualToString: labelTouched.text]) {
             CGPoint point;
             point.x = self.laneLeft;
             point.y = self.player.position.y;
             self.player.position = point;
             self.canMove = NO;
             [labelTouched setFontColor:[UIColor greenColor]];
-        } else if ([[self.dictionary.characters objectForKey:self.japRight.text] isEqualToString: labelTouched.text]) {
+        } else if ([[self.dictionary.gameCharacters objectForKey:self.japRight.text] isEqualToString: labelTouched.text]) {
             point.x = self.laneRight;
             point.y = self.player.position.y;
             self.player.position = point;

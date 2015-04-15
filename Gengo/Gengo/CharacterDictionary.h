@@ -10,14 +10,15 @@
 
 @interface CharacterDictionary : NSObject
 @property (nonatomic) NSDictionary *characters;
+@property (nonatomic) NSDictionary *gameCharacters;
+@property (nonatomic) NSArray *gameButtonLetters;
 @property (nonatomic) NSDictionary *words;
 @property (nonatomic) NSDictionary *toRomanji;
 
--(id)init;
-
--(NSMutableArray *)getKeysAtRandomOrder;
+-(id)initWithLevel:(NSInteger)level;
 -(NSArray *)getValues;
 -(NSArray *)getPairOfKeys;
 -(NSMutableArray *)getWordsAtRandomOrder;
+-(NSMutableArray *)getAnswerOptionsForWord:(NSString *)word;
 
 @end

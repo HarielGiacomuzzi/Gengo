@@ -13,7 +13,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.navBarTitle.title = @"Question 1";
-    self.dictionary = [[CharacterDictionary alloc] init];
+    self.dictionary = self.lesson.dictionary;
     self.questions = [self.dictionary getWordsAtRandomOrder];
     self.questionLabel.text = self.questions[0];
     self.currentWord = [self.dictionary.words valueForKey:self.questionLabel.text];
@@ -23,7 +23,7 @@
     NSLog(@"palavra completa %@", self.currentWord);
     self.currentAnswerLabel.text = @"";
     
-    NSArray *answers = [self.dictionary.characters allKeys];
+    NSArray *answers = [self.dictionary getAnswerOptionsForWord:self.currentWord];
     for (int i = 0; i < 5; i++) {
         [self.answerButtons[i] setTitle:answers[i] forState:UIControlStateNormal];
     }
@@ -47,14 +47,12 @@
         if (self.currentLetterIndex == self.currentWord.length) {
             [self playAnimation:YES];
             self.rightAnswers = self.rightAnswers + 1;
-           // [self updateNextQuestion];
             
         }
         
     } else {
         [self playAnimation:NO];
         self.wrongAnswers = self.wrongAnswers + 1;
-        //[self updateNextQuestion];
         
     }
     
@@ -73,6 +71,10 @@
         self.navBarTitle.title = [NSString stringWithFormat:@"Question: %ld", (long)self.currentQuestion + 1];
         self.currentLetterIndex = 0;
         NSLog(@"palavra completa %@", self.currentWord);
+        NSArray *answers = [self.dictionary getAnswerOptionsForWord:self.currentWord];
+        for (int i = 0; i < 5; i++) {
+            [self.answerButtons[i] setTitle:answers[i] forState:UIControlStateNormal];
+        }
         
     }
 }

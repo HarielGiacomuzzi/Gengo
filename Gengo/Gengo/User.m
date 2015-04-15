@@ -38,10 +38,9 @@ NSArray *returnedItems;
         NSMutableArray *scores = [object objectForKey:@"gameScore"];
         sharedUser.lessonArray = [[NSMutableArray alloc] init];
         for (int i = 0; i < grades.count; i++) {
-            Lesson *lesson = [[Lesson alloc] init];
+            Lesson *lesson = [[Lesson alloc] initWithNumber:i + 1];
             lesson.grade = grades[i];
             lesson.highScore = scores[i];
-            lesson.lessonNumber = i + 1;
             [sharedUser.lessonArray addObject:lesson];
         }
         

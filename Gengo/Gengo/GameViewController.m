@@ -34,6 +34,7 @@
     //load file
     GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
     scene.viewController = self;
+    scene.dictionary = self.lesson.dictionary;
     
     //configure the view
     SKView * skView = (SKView *)self.view;
