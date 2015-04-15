@@ -24,8 +24,9 @@
     [super viewDidAppear:animated];
     //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
     [self.tableView reloadData];
-    
+    NSLog(@"antes do save utility");
     [SaveUtility SyncUser];
+    NSLog(@"depois do save utility");
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -87,6 +88,9 @@
         GameViewController *game = (GameViewController *)segue.destinationViewController;
         game.lesson = self.user.lessonArray[idxPath.row];
         
+    } else if ([segue.identifier isEqualToString:@"goToTutorial"]) {
+        ViewControllerTutorial *tutorial = (ViewControllerTutorial *)segue.destinationViewController;
+        tutorial.lesson = self.user.lessonArray[idxPath.row];
     }
 }
 

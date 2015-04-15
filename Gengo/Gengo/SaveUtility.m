@@ -11,13 +11,15 @@
 @implementation SaveUtility
 
 +(void)SyncUser{
-    NSArray *temp;
+//    NSArray *temp;
     User *u = (User *)[User loadUser];
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:u.email];
-    temp = [query findObjects];
-    if (temp.count ==1) {
-            PFObject *object = (PFObject *)temp[0];
+
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *object = objects[0];
             object[@"nivel"] = @(u.nivel);
             object[@"xp"] = @(u.xp);
             object[@"items"] = u.items;
@@ -30,15 +32,41 @@
             }
             object[@"lessonGrade"] = grades;
             object[@"gameScore"] = scores;
-        
-            object[@"money"] = @(u.money);
-
-            [object saveInBackground];
             
-    }else{
-        NSLog(@"The user Can't be found");
-    }
+            object[@"money"] = @(u.money);
+            
+            [object saveInBackground];
+        } else {
+            
+            NSLog(@"The user Can't be found");
+        }
+        
+    }];
     
+//    temp = [query findObjects];
+//    if (temp.count ==1) {
+//            PFObject *object = (PFObject *)temp[0];
+//            object[@"nivel"] = @(u.nivel);
+//            object[@"xp"] = @(u.xp);
+//            object[@"items"] = u.items;
+//            //object[@"puzzles"] = [SaveUtility processUserPuzzles];
+//            NSMutableArray *grades = [[NSMutableArray alloc] init];
+//            NSMutableArray *scores = [[NSMutableArray alloc] init];
+//            for (Lesson *lesson in u.lessonArray) {
+//                [grades addObject:lesson.grade];
+//                [scores addObject:lesson.highScore];
+//            }
+//            object[@"lessonGrade"] = grades;
+//            object[@"gameScore"] = scores;
+//        
+//            object[@"money"] = @(u.money);
+//
+//            [object saveInBackground];
+//            
+//    }else{
+//        NSLog(@"The user Can't be found");
+//    }
+//    
 }
 
 

@@ -28,6 +28,9 @@
         _grade = @0;
         _highScore = @0;
         _lessonNumber = number;
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+        _dataPlistDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+        
     }
     return self;
 }

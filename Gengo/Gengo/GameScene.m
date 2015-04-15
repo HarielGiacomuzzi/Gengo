@@ -29,8 +29,6 @@ const uint32_t WALL = 0x1 << 1;
     self.colided  = NO;
     self.duration = @4;
     
-    NSArray *valuesArray = [self.dictionary.gameCharacters allValues];
-    
     //find actors
     for (SKNode *child in self.children) {
         child.alpha = 0;

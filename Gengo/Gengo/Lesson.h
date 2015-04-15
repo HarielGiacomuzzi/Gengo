@@ -15,6 +15,7 @@
 @property (nonatomic) NSNumber *highScore;
 @property(nonatomic) NSInteger lessonNumber;
 @property (nonatomic) CharacterDictionary *dictionary;
+@property (nonatomic) NSMutableDictionary *dataPlistDictionary;
 
 -(id)init;
 - (id)initWithNumber:(NSInteger)number;

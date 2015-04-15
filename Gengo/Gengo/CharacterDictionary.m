@@ -23,7 +23,7 @@
         _gameButtonLetters = thisLesson[1];
         plistGamePath =[[NSBundle mainBundle] pathForResource:@"TestDictionary" ofType:@"plist"];
         lessonsArray = [[NSArray alloc] initWithContentsOfFile:plistGamePath];
-        thisLesson = lessonsArray[0];
+        thisLesson = lessonsArray[level - 1];
         _words = thisLesson[0];
         _toRomanji = thisLesson[1];
     }
@@ -85,7 +85,6 @@
     }
     
     for (int i = (int)options.count; i < 5; i++) {
-        NSLog(@"%@",allCharacters);
         NSString *character = [self getRandomCharacterFromArray:allCharacters];
         [options addObject:character];
     }

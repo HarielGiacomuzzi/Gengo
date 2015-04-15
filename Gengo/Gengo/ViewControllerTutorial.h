@@ -12,7 +12,10 @@
 #import "ViewTutorial1.h"
 #import "ViewControllerDesenhaLetra.h"
 #import "xibAnimation.h"
+#import "Lesson.h"
 
 @interface ViewControllerTutorial : UIViewController <UIScrollViewDelegate>
+
+@property (nonatomic) Lesson *lesson;
 
 @end
