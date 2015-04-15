@@ -149,5 +149,26 @@
             <string>mo</string>
         </array>
     </array>
+    <array>
+        <dict>
+            <key>ら</key>
+            <string>ra</string>
+            <key>り</key>
+            <string>ri</string>
+            <key>る</key>
+            <string>ru</string>
+            <key>れ</key>
+            <string>re</string>
+            <key>ろ</key>
+            <string>ro</string>
+        </dict>
+        <array>
+            <string>ra</string>
+            <string>ri</string>
+            <string>ruu</string>
+            <string>re</string>
+            <string>ro</string>
+        </array>
+    </array>
 </array>
 </plist>
