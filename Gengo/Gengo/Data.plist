@@ -112,212 +112,210 @@
 	<key>Lesson3</key>
 	<array>
 		<array>
-			<string>あ</string>
-			<string>い</string>
-			<string>う</string>
-			<string>え</string>
-			<string>お</string>
+			<string>さ</string>
+			<string>し</string>
+			<string>す</string>
+			<string>せ</string>
+			<string>そ</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>sa</string>
+			<string>shi</string>
+			<string>su</string>
+			<string>se</string>
+			<string>so</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>sa</string>
+			<string>shi</string>
+			<string>su</string>
+			<string>se</string>
+			<string>so</string>
 		</array>
 		<array>
 			<array>
-				<string>a1</string>
-				<string>a2</string>
-				<string>a3</string>
-				<string>a4</string>
+				<string>sa1</string>
+				<string>sa2</string>
+				<string>sa3</string>
+				<string>sa4</string>
 			</array>
 			<array>
-				<string>i1</string>
-				<string>i2</string>
-				<string>i3</string>
+				<string>shi1</string>
+				<string>shi2</string>
 			</array>
 			<array>
-				<string>u1</string>
-				<string>u2</string>
-				<string>u3</string>
+				<string>su1</string>
+				<string>su2</string>
+				<string>su3</string>
 			</array>
 			<array>
-				<string>e1</string>
-				<string>e2</string>
-				<string>e3</string>
+				<string>se1</string>
+				<string>se2</string>
+				<string>se3</string>
+				<string>se4</string>
 			</array>
 			<array>
-				<string>o1</string>
-				<string>o2</string>
-				<string>o3</string>
-				<string>o4</string>
+				<string>so1</string>
+				<string>so2</string>
+				<string>so3</string>
 			</array>
 		</array>
 	</array>
 	<key>Lesson4</key>
 	<array>
 		<array>
-			<string>あ</string>
-			<string>い</string>
-			<string>う</string>
-			<string>え</string>
-			<string>お</string>
+			<string>た</string>
+			<string>ち</string>
+			<string>つ</string>
+			<string>て</string>
+			<string>と</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>ta</string>
+			<string>chi</string>
+			<string>tsu</string>
+			<string>te</string>
+			<string>to</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>ta</string>
+			<string>chi</string>
+			<string>tsu</string>
+			<string>te</string>
+			<string>to</string>
 		</array>
 		<array>
 			<array>
-				<string>a1</string>
-				<string>a2</string>
-				<string>a3</string>
-				<string>a4</string>
+				<string>ta1</string>
+				<string>ta2</string>
+				<string>ta3</string>
+				<string>ta4</string>
+				<string>ta5</string>
 			</array>
 			<array>
-				<string>i1</string>
-				<string>i2</string>
-				<string>i3</string>
+				<string>chi1</string>
+				<string>chi2</string>
+				<string>chi3</string>
 			</array>
 			<array>
-				<string>u1</string>
-				<string>u2</string>
-				<string>u3</string>
+				<string>tsu1</string>
+				<string>tsu2</string>
 			</array>
 			<array>
-				<string>e1</string>
-				<string>e2</string>
-				<string>e3</string>
+				<string>te1</string>
+				<string>te2</string>
 			</array>
 			<array>
-				<string>o1</string>
-				<string>o2</string>
-				<string>o3</string>
-				<string>o4</string>
+				<string>to1</string>
+				<string>to2</string>
+				<string>to3</string>
 			</array>
 		</array>
 	</array>
 	<key>Lesson5</key>
 	<array>
 		<array>
-			<string>あ</string>
-			<string>い</string>
-			<string>う</string>
-			<string>え</string>
-			<string>お</string>
+			<string>な</string>
+			<string>に</string>
+			<string>ぬ</string>
+			<string>ね</string>
+			<string>の</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>na</string>
+			<string>ni</string>
+			<string>nu</string>
+			<string>ne</string>
+			<string>no</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>na</string>
+			<string>ni</string>
+			<string>nu</string>
+			<string>ne</string>
+			<string>no</string>
 		</array>
 		<array>
 			<array>
-				<string>a1</string>
-				<string>a2</string>
-				<string>a3</string>
-				<string>a4</string>
+				<string>na1</string>
+				<string>na2</string>
+				<string>na3</string>
+				<string>na4</string>
+				<string>na5</string>
 			</array>
 			<array>
-				<string>i1</string>
-				<string>i2</string>
-				<string>i3</string>
+				<string>ni1</string>
+				<string>ni2</string>
+				<string>ni3</string>
+				<string>ni4</string>
 			</array>
 			<array>
-				<string>u1</string>
-				<string>u2</string>
-				<string>u3</string>
+				<string>nu1</string>
+				<string>nu2</string>
+				<string>nu3</string>
 			</array>
 			<array>
-				<string>e1</string>
-				<string>e2</string>
-				<string>e3</string>
+				<string>ne1</string>
+				<string>ne2</string>
+				<string>ne3</string>
 			</array>
 			<array>
-				<string>o1</string>
-				<string>o2</string>
-				<string>o3</string>
-				<string>o4</string>
+				<string>no1</string>
+				<string>no2</string>
 			</array>
 		</array>
 	</array>
 	<key>Lesson6</key>
 	<array>
 		<array>
-			<string>あ</string>
-			<string>い</string>
-			<string>う</string>
-			<string>え</string>
-			<string>お</string>
+			<string>は</string>
+			<string>ひ</string>
+			<string>ふ</string>
+			<string>へ</string>
+			<string>ほ</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>ha</string>
+			<string>hi</string>
+			<string>fu</string>
+			<string>he</string>
+			<string>ho</string>
 		</array>
 		<array>
-			<string>a</string>
-			<string>i</string>
-			<string>u</string>
-			<string>e</string>
-			<string>o</string>
+			<string>ha</string>
+			<string>hi</string>
+			<string>fu</string>
+			<string>he</string>
+			<string>ho</string>
 		</array>
 		<array>
 			<array>
-				<string>a1</string>
-				<string>a2</string>
-				<string>a3</string>
-				<string>a4</string>
+				<string>ha1</string>
+				<string>ha2</string>
+				<string>ha3</string>
+				<string>ha4</string>
 			</array>
 			<array>
-				<string>i1</string>
-				<string>i2</string>
-				<string>i3</string>
+				<string>hi1</string>
+				<string>hi2</string>
 			</array>
 			<array>
-				<string>u1</string>
-				<string>u2</string>
-				<string>u3</string>
+				<string>fu1</string>
+				<string>fu2</string>
+				<string>fu3</string>
+				<string>fu4</string>
+				<string>fu5</string>
 			</array>
 			<array>
-				<string>e1</string>
-				<string>e2</string>
-				<string>e3</string>
+				<string>he1</string>
+				<string>he2</string>
 			</array>
 			<array>
-				<string>o1</string>
-				<string>o2</string>
-				<string>o3</string>
-				<string>o4</string>
+				<string>ho1</string>
+				<string>ho2</string>
+				<string>ho3</string>
+				<string>ho4</string>
+				<string>ho5</string>
 			</array>
 		</array>
 	</array>
