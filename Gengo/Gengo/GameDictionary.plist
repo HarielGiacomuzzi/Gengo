@@ -165,9 +165,30 @@
         <array>
             <string>ra</string>
             <string>ri</string>
-            <string>ruu</string>
+            <string>ru</string>
             <string>re</string>
             <string>ro</string>
+        </array>
+    </array>
+    <array>
+        <dict>
+            <key>や</key>
+            <string>ya</string>
+            <key>ゆ</key>
+            <string>yu</string>
+            <key>よ</key>
+            <string>yo</string>
+            <key>わ</key>
+            <string>wa</string>
+            <key>を</key>
+            <string>wo</string>
+        </dict>
+        <array>
+            <string>ya</string>
+            <string>yu</string>
+            <string>yo</string>
+            <string>wa</string>
+            <string>wo</string>
         </array>
     </array>
 </array>
