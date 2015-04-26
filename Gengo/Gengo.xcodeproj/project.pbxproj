@@ -67,6 +67,7 @@
 		5E70914A1AC8B01200CF559B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7091491AC8B01200CF559B /* UserViewController.m */; };
 		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
 		5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */; };
+		5EAB4FB61AEC9754002887EA /* LoginStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB4FB51AEC9754002887EA /* LoginStoryboardSegue.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
 		5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6791ABC810F00905BC5 /* AppDelegate.m */; };
 		5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E67C1ABC810F00905BC5 /* ViewController.m */; };
@@ -197,6 +198,8 @@
 		5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDictionary.m; sourceTree = "<group>"; };
 		5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		5EAB4FB41AEC9754002887EA /* LoginStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginStoryboardSegue.h; sourceTree = "<group>"; };
+		5EAB4FB51AEC9754002887EA /* LoginStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginStoryboardSegue.m; sourceTree = "<group>"; };
 		5ED9E6711ABC810F00905BC5 /* Gengo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gengo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED9E6751ABC810F00905BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED9E6761ABC810F00905BC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -426,6 +429,8 @@
 				5ED9E6781ABC810F00905BC5 /* AppDelegate.h */,
 				5ED9E6791ABC810F00905BC5 /* AppDelegate.m */,
 				5ED9E67E1ABC810F00905BC5 /* Main.storyboard */,
+				5EAB4FB41AEC9754002887EA /* LoginStoryboardSegue.h */,
+				5EAB4FB51AEC9754002887EA /* LoginStoryboardSegue.m */,
 				DB92D3631AC5BFBC002DE928 /* View3.xib */,
 				DB92D3611AC5A3A1002DE928 /* View2.xib */,
 				DB92D35F1AC5A10A002DE928 /* View1.xib */,
@@ -693,6 +698,7 @@
 			files = (
 				DB850B101ACACFA400AA093B /* xibAnimation.m in Sources */,
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
+				5EAB4FB61AEC9754002887EA /* LoginStoryboardSegue.m in Sources */,
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
 				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
 				DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */,

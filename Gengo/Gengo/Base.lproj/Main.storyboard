@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -25,29 +25,17 @@
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-Mr-SF6">
-                                <rect key="frame" x="296" y="0.0" width="240" height="600"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLs-jc-qgB">
-                                <rect key="frame" x="48" y="0.0" width="240" height="600"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PV6-Mr-SF6" secondAttribute="bottom" id="8P7-dX-0Iw"/>
-                            <constraint firstItem="PV6-Mr-SF6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8cW-uN-p2G"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CUg-Ra-o6z" secondAttribute="bottom" id="EMg-rN-Dr0"/>
                             <constraint firstItem="CUg-Ra-o6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nv3-9D-EJ8"/>
                             <constraint firstItem="CUg-Ra-o6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vj7-4K-zNN"/>
                             <constraint firstAttribute="trailing" secondItem="CUg-Ra-o6z" secondAttribute="trailing" id="dRa-bd-zXD"/>
-                            <constraint firstItem="QLs-jc-qgB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kNb-j6-zWd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QLs-jc-qgB" secondAttribute="bottom" id="zNy-VH-orW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imgPortaDireita" destination="PV6-Mr-SF6" id="Vpg-rB-xqX"/>
-                        <outlet property="imgPortaEsquerda" destination="QLs-jc-qgB" id="J3k-rP-xHg"/>
-                        <segue destination="wDy-6y-UhM" kind="show" identifier="loginSegue" id="cix-db-c4f"/>
+                        <segue destination="wDy-6y-UhM" kind="custom" identifier="loginSegue" customClass="LoginStoryboardSegue" id="cix-db-c4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

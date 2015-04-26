@@ -20,13 +20,41 @@
     self.user = [User loadUser];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self animateDoorsOpening];
+}
+
+-(void)animateDoorsOpening {
+    CGFloat viewHeight = self.view.bounds.size.height;
+    CGFloat viewWidth = self.view.bounds.size.width;
+    //creates rects
+    CGRect leftRectClosed = CGRectMake(0, 0, viewWidth / 2, viewHeight);
+    CGRect leftRectOpen = CGRectMake(- (viewWidth / 2), 0, viewWidth / 2, viewHeight);
+    CGRect rightRectClosed = CGRectMake(viewWidth / 2, 0, viewWidth / 2, viewHeight);
+    CGRect rightRectOpen = CGRectMake(viewWidth, 0, viewWidth / 2, viewHeight);
+    
+    //creates images
+    UIImageView *rightDoor = [[UIImageView alloc] initWithFrame:rightRectClosed];
+    UIImageView *leftDoor = [[UIImageView alloc] initWithFrame:leftRectClosed];
+    [rightDoor setImage:[UIImage imageNamed:@"curtain dir"]];
+    [leftDoor setImage:[UIImage imageNamed:@"curtain esq"]];
+    
+    //adds images to views
+    [self.view addSubview:rightDoor];
+    [self.view addSubview:leftDoor];
+    
+    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        rightDoor.frame = rightRectOpen;
+        leftDoor.frame = leftRectOpen;
+    } completion:nil];
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
     [self.tableView reloadData];
-    NSLog(@"antes do save utility");
     [SaveUtility SyncUser];
-    NSLog(@"depois do save utility");
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
