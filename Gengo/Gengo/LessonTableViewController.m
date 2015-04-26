@@ -17,11 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.user = [User loadUser];
+    //self.user = [User loadUser];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    self.user = [User loadUser];
     //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
     [self.tableView reloadData];
     [SaveUtility SyncUser];

@@ -45,9 +45,17 @@
                             user:(id<FBGraphUser>)user{
     
     if (FBSession.activeSession.state == FBSessionStateOpen && self.isLogged == NO) {
-        [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
-        self.isLogged = YES;
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+            [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+                self.isLogged = YES;
+            });
+        });
+        
+//        [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
+//        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+//        self.isLogged = YES;
     }
 }
 

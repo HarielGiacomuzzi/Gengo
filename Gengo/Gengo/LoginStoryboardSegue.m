@@ -13,8 +13,8 @@
 @implementation LoginStoryboardSegue
 
 -(void)perform {
-    ViewController *source = self.sourceViewController;
-    ViewController *destination = self.destinationViewController;
+    UIViewController *source = self.sourceViewController;
+    UIViewController *destination = self.destinationViewController;
     CGFloat viewHeight = source.view.bounds.size.height;
     CGFloat viewWidth = source.view.bounds.size.width;
     //creates rects
@@ -40,6 +40,7 @@
         leftDoor.frame = leftRectClosed;
     } completion:^(BOOL finished) {
         [source.view addSubview:destination.view];
+        destination.view.userInteractionEnabled = NO;
         [rightDoor removeFromSuperview];
         [leftDoor removeFromSuperview];
         [source.view addSubview:rightDoor];
@@ -50,6 +51,7 @@
         } completion:^(BOOL finished) {
             [rightDoor removeFromSuperview];
             [leftDoor removeFromSuperview];
+            destination.view.userInteractionEnabled = YES;
             [source presentViewController:destination animated:NO completion:nil];
         }];
         
