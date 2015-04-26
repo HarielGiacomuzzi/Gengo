@@ -46,7 +46,8 @@
     
     if (FBSession.activeSession.state == FBSessionStateOpen && self.isLogged == NO) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-        [self animateDoorsClosing];
+        //[self animateDoorsClosing];
+        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
         self.isLogged = YES;
     }
 }
@@ -68,38 +69,6 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-}
-
--(void)animateDoorsClosing {
-    CGFloat viewHeight = self.view.bounds.size.height;
-    CGFloat viewWidth = self.view.bounds.size.width;
-    //creates rects
-    CGRect leftRectClosed = CGRectMake(0, 0, viewWidth / 2, viewHeight);
-    CGRect leftRectOpen = CGRectMake(- (viewWidth / 2), 0, viewWidth / 2, viewHeight);
-    CGRect rightRectClosed = CGRectMake(viewWidth / 2, 0, viewWidth / 2, viewHeight);
-    CGRect rightRectOpen = CGRectMake(viewWidth, 0, viewWidth / 2, viewHeight);
-    
-    //creates images
-    UIImageView *rightDoor = [[UIImageView alloc] initWithFrame:rightRectOpen];
-    UIImageView *leftDoor = [[UIImageView alloc] initWithFrame:leftRectOpen];
-    [rightDoor setImage:[UIImage imageNamed:@"curtain dir"]];
-    [leftDoor setImage:[UIImage imageNamed:@"curtain esq"]];
-    
-    //adds images to views
-    [self.view addSubview:rightDoor];
-    [self.view addSubview:leftDoor];
-
-    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        rightDoor.frame = rightRectClosed;
-        leftDoor.frame = leftRectClosed;
-    } completion:^(BOOL finished) {
-        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
-    }];
-
 }
 
 @end
