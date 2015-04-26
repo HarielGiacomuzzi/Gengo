@@ -46,7 +46,6 @@
     
     if (FBSession.activeSession.state == FBSessionStateOpen && self.isLogged == NO) {
         [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-        //[self animateDoorsClosing];
         [self performSegueWithIdentifier:@"loginSegue" sender:nil];
         self.isLogged = YES;
     }
@@ -70,5 +69,6 @@
 -(UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
 
 @end

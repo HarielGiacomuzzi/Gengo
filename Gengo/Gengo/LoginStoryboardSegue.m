@@ -24,34 +24,32 @@
     CGRect rightRectOpen = CGRectMake(viewWidth, 0, viewWidth / 2, viewHeight);
     
     //creates images
-    UIImageView *rightDoorSource = [[UIImageView alloc] initWithFrame:rightRectOpen];
-    UIImageView *leftDoorSource = [[UIImageView alloc] initWithFrame:leftRectOpen];
-    [rightDoorSource setImage:[UIImage imageNamed:@"curtain dir"]];
-    [leftDoorSource setImage:[UIImage imageNamed:@"curtain esq"]];
-    UIImageView *rightDoorDest = [[UIImageView alloc] initWithFrame:rightRectClosed];
-    UIImageView *leftDoorDest = [[UIImageView alloc] initWithFrame:leftRectClosed];
-    [rightDoorDest setImage:[UIImage imageNamed:@"curtain dir"]];
-    [leftDoorDest setImage:[UIImage imageNamed:@"curtain esq"]];
+    UIImageView *rightDoor = [[UIImageView alloc] initWithFrame:rightRectOpen];
+    UIImageView *leftDoor = [[UIImageView alloc] initWithFrame:leftRectOpen];
+    [rightDoor setImage:[UIImage imageNamed:@"curtain dir"]];
+    [leftDoor setImage:[UIImage imageNamed:@"curtain esq"]];
     
     //adds images to views
 
-    [source.view addSubview:rightDoorSource];
-    [source.view addSubview:leftDoorSource];
+    [source.view addSubview:rightDoor];
+    [source.view addSubview:leftDoor];
     
     
     [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        rightDoorSource.frame = rightRectClosed;
-        leftDoorSource.frame = leftRectClosed;
+        rightDoor.frame = rightRectClosed;
+        leftDoor.frame = leftRectClosed;
     } completion:^(BOOL finished) {
         [source.view addSubview:destination.view];
-        [rightDoorSource removeFromSuperview];
-        [leftDoorSource removeFromSuperview];
-        [source.view addSubview:rightDoorSource];
-        [source.view addSubview:leftDoorSource];
+        [rightDoor removeFromSuperview];
+        [leftDoor removeFromSuperview];
+        [source.view addSubview:rightDoor];
+        [source.view addSubview:leftDoor];
         [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            rightDoorSource.frame = rightRectOpen;
-            leftDoorSource.frame = leftRectOpen;
+            rightDoor.frame = rightRectOpen;
+            leftDoor.frame = leftRectOpen;
         } completion:^(BOOL finished) {
+            [rightDoor removeFromSuperview];
+            [leftDoor removeFromSuperview];
             [source presentViewController:destination animated:NO completion:nil];
         }];
         

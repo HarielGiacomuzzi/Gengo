@@ -59,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-du-gH3" userLabel="Bottom View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-du-gH3" userLabel="Bottom View">
                                 <rect key="frame" x="16" y="466" width="568" height="77"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtJ-Wi-HRQ">
@@ -1138,7 +1138,7 @@
                     <tabBarItem key="tabBarItem" title="Lições" image="lessons" id="0kd-ti-c9K"/>
                     <connections>
                         <outlet property="tableView" destination="jyd-xX-bHQ" id="GRW-8E-jvJ"/>
-                        <segue destination="8iI-UW-tVo" kind="show" identifier="goToTest" id="hjs-ff-PyN"/>
+                        <segue destination="8iI-UW-tVo" kind="presentation" identifier="goToTest" id="hjs-ff-PyN"/>
                         <segue destination="hse-Ec-GjY" kind="show" identifier="goToGame" id="DQX-Qn-kcL"/>
                         <segue destination="QqO-ME-gNL" kind="show" identifier="goToTutorial" id="Pjg-Qx-tQS"/>
                     </connections>
