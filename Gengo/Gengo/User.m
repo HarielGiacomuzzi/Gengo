@@ -37,13 +37,18 @@ NSArray *returnedItems;
         NSMutableArray *grades = [object objectForKey:@"lessonGrade"];
         NSMutableArray *scores = [object objectForKey:@"gameScore"];
         sharedUser.lessonArray = [[NSMutableArray alloc] init];
-        for (int i = 0; i < grades.count; i++) {
+        int superideia;
+        if (grades.count > 9) {
+            superideia = 9;
+        } else {
+            superideia = grades.count;
+        }
+        for (int i = 0; i < superideia; i++) {
             Lesson *lesson = [[Lesson alloc] initWithNumber:i + 1];
             lesson.grade = grades[i];
             lesson.highScore = scores[i];
             [sharedUser.lessonArray addObject:lesson];
-        }
-        
+        }        
         sharedUser.puzzles = [object objectForKey:@"puzzles"];
         sharedUser.sexo = [((NSNumber *)[object objectForKey:@"sexo"]) intValue];
         sharedUser.money = [((NSNumber *)[object objectForKey:@"money"]) intValue];

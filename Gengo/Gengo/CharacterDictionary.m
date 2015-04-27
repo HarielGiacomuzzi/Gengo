@@ -30,10 +30,6 @@
     return self;
 }
 
-//para o teste:
-//gerar o array de palavras random ate aqui
-//gerar 5 letras obrigatoriamente contendo as dessa palavra
-
 -(NSMutableArray *)getWordsAtRandomOrder {
     NSMutableArray *words = [[NSMutableArray alloc] init];
     NSMutableArray *rearrangedWords = [[NSMutableArray alloc] init];

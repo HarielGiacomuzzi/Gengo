@@ -26,6 +26,7 @@
     //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
     [self.tableView reloadData];
     [SaveUtility SyncUser];
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
