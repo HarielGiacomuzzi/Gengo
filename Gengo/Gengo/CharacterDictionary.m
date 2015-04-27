@@ -84,8 +84,21 @@
         NSString *character = [self getRandomCharacterFromArray:allCharacters];
         [options addObject:character];
     }
-    return options;
     
+    return [self randomizeArray:options];
+    
+}
+
+-(NSMutableArray *)randomizeArray:(NSMutableArray *)array {
+    NSMutableArray *rearrangedArray = [[NSMutableArray alloc] init];
+    while (array.count > 0) {
+        int size = (int)array.count;
+        int i = arc4random() % size;
+        [rearrangedArray addObject:array[i]];
+        [array removeObjectAtIndex:i];
+        
+    }
+    return rearrangedArray;
 }
 
 
