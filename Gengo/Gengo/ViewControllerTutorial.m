@@ -14,13 +14,13 @@
     ViewTutorial1 *firstViewUIView;
     TutorialDrawView *secondViewUIView;
     xibAnimation *thirdViewUIView;
+    NSArray *lessonData;
     
-    
-    NSArray *animationA;
-    NSArray *animationI;
-    NSArray *animationU;
-    NSArray *animationE;
-    NSArray *animationO;
+    NSMutableArray *animation1;
+    NSMutableArray *animation2;
+    NSMutableArray *animation3;
+    NSMutableArray *animation4;
+    NSMutableArray *animation5;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lessonControl;
@@ -38,18 +38,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    animationA = @[[UIImage imageNamed:@"a1.png"],[UIImage imageNamed:@"a2.png"],[UIImage imageNamed:@"a3.png"],[UIImage imageNamed:@"a4.png"]];
-    animationI = @[[UIImage imageNamed:@"i1.png"],[UIImage imageNamed:@"i2.png"],[UIImage imageNamed:@"i3.png"]];
-    animationU = @[[UIImage imageNamed:@"u1.png"],[UIImage imageNamed:@"u2.png"],[UIImage imageNamed:@"u3.png"]];
-    animationE = @[[UIImage imageNamed:@"e1.png"],[UIImage imageNamed:@"e2.png"],[UIImage imageNamed:@"e3.png"]];
-    animationO = @[[UIImage imageNamed:@"o1.png"],[UIImage imageNamed:@"o2.png"],[UIImage imageNamed:@"o3.png"],[UIImage imageNamed:@"o4.png"]];
+    //creating arrays
+    animation1 = [[NSMutableArray alloc] init];
+    animation2 = [[NSMutableArray alloc] init];
+    animation3 = [[NSMutableArray alloc] init];
+    animation4 = [[NSMutableArray alloc] init];
+    animation5 = [[NSMutableArray alloc] init];
     
+    NSMutableString* lessonName = [NSMutableString stringWithFormat:@"Lesson%ld", (long)self.lesson.lessonNumber];
+    lessonData = (NSArray *)[self.lesson.dataPlistDictionary objectForKey:lessonName];
+    
+    //iterates over the first column of the data array and set the values of the segmented control
+    for (int i = 0; i < 5; i++) {
+        [self.lessonControl setTitle:(NSString *)lessonData[0][i] forSegmentAtIndex:i];
+    }
+    
+    
+    // now found the animation images
+    for(int i = 0; i < ((NSArray *)lessonData[3][0]).count ; i ++){
+        [animation1 addObject:[UIImage imageNamed:[((NSMutableString *)lessonData[3][0][i]) stringByAppendingString:@".png"] ]];
+    }
+    
+    for(int i = 0; i < ((NSArray *)lessonData[3][1]).count ; i ++){
+        [animation2 addObject:[UIImage imageNamed:[((NSMutableString *)lessonData[3][1][i]) stringByAppendingString:@".png"] ]];
+    }
+    
+    for(int i = 0; i < ((NSArray *)lessonData[3][2]).count ; i ++){
+        [animation3 addObject:[UIImage imageNamed:[((NSMutableString *)lessonData[3][2][i]) stringByAppendingString:@".png"] ]];
+    }
+    
+    for(int i = 0; i < ((NSArray *)lessonData[3][3]).count ; i ++){
+        [animation4 addObject:[UIImage imageNamed:[((NSMutableString *)lessonData[3][3][i]) stringByAppendingString:@".png"] ]];
+    }
+    
+    for(int i = 0; i < ((NSArray *)lessonData[3][4]).count ; i ++){
+        [animation5 addObject:[UIImage imageNamed:[((NSMutableString *)lessonData[3][4][i]) stringByAppendingString:@".png"] ]];
+    }
     
     firstViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View1" owner:nil options:nil] firstObject];
-    firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
+    firstViewUIView.ImageLetter.image = [UIImage imageNamed:[((NSMutableString *)lessonData[1][0]) stringByAppendingString:@".png"]];
     UITapGestureRecognizer *touch = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ClickEventOnImage:)];
     [firstViewUIView.ImageLetter addGestureRecognizer : touch];
-    firstViewUIView.ImageInfo.text = @"a";
+    firstViewUIView.ImageInfo.text = (NSString *)lessonData[1][0];
     [self.scrollView addSubview:firstViewUIView];
     
     secondViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View2" owner:nil options:nil] firstObject];
@@ -57,7 +87,7 @@
     [self.scrollView addSubview:secondViewUIView];
 
     thirdViewUIView = [[[NSBundle mainBundle] loadNibNamed:@"View3" owner:nil options:nil] firstObject];
-    thirdViewUIView.imageAnimation.animationImages = animationA;
+    thirdViewUIView.imageAnimation.animationImages = animation1;
     thirdViewUIView.imageAnimation.animationDuration = 1.3;
     [thirdViewUIView.imageAnimation startAnimating];
     [self.scrollView addSubview:thirdViewUIView];
@@ -83,31 +113,7 @@
 {
         NSString *audioName = [[NSString alloc] init];
     
-        switch (self.lessonControl.selectedSegmentIndex) {
-            case 0:
-                audioName = @"A";
-                break;
-            
-            case 1:
-                audioName = @"I";
-                break;
-            
-            case 2:
-                audioName = @"U";
-                break;
-            
-            case 3:
-                audioName = @"E";
-                break;
-            
-            case 4:
-                audioName = @"O";
-                break;
-            
-            default:
-                break;
-        }
-    
+        audioName = (NSString *)lessonData[1][self.lessonControl.selectedSegmentIndex];
     
         NSError *error;
         
@@ -126,39 +132,33 @@
 }
 
 - (IBAction)letterChosed:(id)sender {
+    
+    firstViewUIView.ImageLetter.image = [UIImage imageNamed:[((NSMutableString *)lessonData[1][self.lessonControl.selectedSegmentIndex]) stringByAppendingString:@".png"]];
+    firstViewUIView.ImageInfo.text = (NSString *)lessonData[1][self.lessonControl.selectedSegmentIndex];
+    
     switch (self.lessonControl.selectedSegmentIndex) {
         case 0:
-            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"a.png"];
-            firstViewUIView.ImageInfo.text = @"a";
-            thirdViewUIView.imageAnimation.animationImages = animationA;
+            thirdViewUIView.imageAnimation.animationImages = animation1;
             thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 1:
-            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"i.png"];
-            firstViewUIView.ImageInfo.text = @"i";
-            thirdViewUIView.imageAnimation.animationImages = animationI;
+            thirdViewUIView.imageAnimation.animationImages = animation2;
             thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 2:
-            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"u.png"];
-            firstViewUIView.ImageInfo.text = @"u";
-            thirdViewUIView.imageAnimation.animationImages = animationU;
+            thirdViewUIView.imageAnimation.animationImages = animation3;
             thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 3:
-            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"e.png"];
-            firstViewUIView.ImageInfo.text = @"e";
-            thirdViewUIView.imageAnimation.animationImages = animationE;
+            thirdViewUIView.imageAnimation.animationImages = animation4;
             thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
         case 4:
-            firstViewUIView.ImageLetter.image = [UIImage imageNamed:@"o.png"];
-            firstViewUIView.ImageInfo.text = @"o";
-            thirdViewUIView.imageAnimation.animationImages = animationO;
+            thirdViewUIView.imageAnimation.animationImages = animation5;
             thirdViewUIView.imageAnimation.animationDuration = 1.3;
             [thirdViewUIView.imageAnimation startAnimating];
             break;
@@ -183,31 +183,7 @@
         ViewControllerDesenhaLetra *view = (ViewControllerDesenhaLetra *)((UINavigationController*)segue.destinationViewController).topViewController;
         
         NSString *temp = [[NSString alloc] init];
-        
-            switch (self.lessonControl.selectedSegmentIndex) {
-                case 0:
-                    temp = @"a--.png";
-                    break;
-        
-                case 1:
-                    temp = @"i--.png";
-                    break;
-        
-                case 2:
-                    temp = @"u--.png";
-                    break;
-        
-                case 3:
-                    temp = @"e--.png";
-                    break;
-        
-                case 4:
-                    temp = @"o--.png";
-                    break;
-        
-                default:
-                    break;
-            }
+        temp = [((NSMutableString *)lessonData[1][self.lessonControl.selectedSegmentIndex]) stringByAppendingString:@"1.png"];
         
         view.imageName = temp;
     }

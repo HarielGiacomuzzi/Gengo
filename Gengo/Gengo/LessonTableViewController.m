@@ -68,6 +68,7 @@
     UIView *superView = sender.superview;
     UIView *foundSuperView = nil;
     
+    //WHY CARALEO !!!! MANDA A TABLEVIEW NO LUGAR DO BUTTON POHA
     while (nil != superView && nil == foundSuperView) {
         if ([superView isKindOfClass:[UITableViewCell class]]) {
             foundSuperView = superView;
