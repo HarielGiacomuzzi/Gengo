@@ -412,14 +412,11 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-9Q-Oak">
-                                <rect key="frame" x="1" y="80" width="598" height="452"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="452" id="O15-QT-LIQ"/>
-                                </constraints>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-9Q-Oak">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-X5-rJq">
-                                <rect key="frame" x="275" y="562" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-X5-rJq">
+                                <rect key="frame" x="274" y="543" width="50" height="30"/>
                                 <state key="normal" title="Apagar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -430,11 +427,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="centerX" secondItem="tJ8-X5-rJq" secondAttribute="centerX" id="4Og-rx-loJ"/>
-                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="top" secondItem="Rcy-gY-zei" secondAttribute="top" constant="80" id="PNH-91-2qn"/>
-                            <constraint firstItem="tJ8-X5-rJq" firstAttribute="top" secondItem="gdr-9Q-Oak" secondAttribute="bottom" constant="30" id="mez-fj-dxj"/>
-                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="leading" secondItem="Rcy-gY-zei" secondAttribute="leadingMargin" constant="-15" id="nUv-K1-dgw"/>
-                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="centerX" secondItem="Rcy-gY-zei" secondAttribute="centerX" id="tpO-6I-nzh"/>
+                            <constraint firstItem="tsY-1B-IK9" firstAttribute="top" secondItem="gdr-9Q-Oak" secondAttribute="bottom" id="0i3-Ou-wH3"/>
+                            <constraint firstAttribute="centerX" secondItem="tJ8-X5-rJq" secondAttribute="centerX" id="KYK-7X-27i"/>
+                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="leading" secondItem="Rcy-gY-zei" secondAttribute="leadingMargin" id="N2h-72-Q4z"/>
+                            <constraint firstItem="gdr-9Q-Oak" firstAttribute="top" secondItem="Rcy-gY-zei" secondAttribute="topMargin" id="YeF-Fh-nBY"/>
+                            <constraint firstItem="tsY-1B-IK9" firstAttribute="top" secondItem="tJ8-X5-rJq" secondAttribute="bottom" constant="27" id="pHQ-rH-zmu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gdr-9Q-Oak" secondAttribute="trailing" id="uVb-zg-s0U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tente Você! :D" id="QPa-J8-36J">
