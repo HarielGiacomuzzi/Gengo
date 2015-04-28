@@ -27,8 +27,13 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    NSLog(@"%@",self.user.items);
+    NSLog(@"%@",self.user.itemInUse);
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
-    if ([self.user.items[0] integerValue] == 1) {
+    if ([self.user.itemInUse integerValue] == 0) {
+        self.bodyImage.image = [UIImage imageNamed:@"body"];
+    }
+    if ([self.user.itemInUse integerValue] == 1) {
         self.bodyImage.image = [UIImage imageNamed:@"neko body"];
     }
     [self.tableView reloadData];

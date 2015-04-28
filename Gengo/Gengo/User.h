@@ -25,6 +25,7 @@
 @property NSString *email;
 @property User *SharedUser;
 @property NSInteger money;
+@property NSNumber *itemInUse;
 
 +(id) loadUser;
 +(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user;

@@ -30,6 +30,7 @@
                 [grades addObject:lesson.grade];
                 [scores addObject:lesson.highScore];
             }
+            object[@"itemInUse"] = u.itemInUse;
             object[@"lessonGrade"] = grades;
             object[@"gameScore"] = scores;
             

@@ -24,6 +24,9 @@
     [super viewDidAppear:animated];
     self.user = [User loadUser];
     //self.user.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
+    self.user.items = [[NSMutableArray alloc] initWithObjects:@1,@0, nil];
+    self.user.itemInUse = @0;
+//    self.user.money = 1000;
     [self.tableView reloadData];
     [SaveUtility SyncUser];
 
@@ -69,7 +72,6 @@
     UIView *superView = sender.superview;
     UIView *foundSuperView = nil;
     
-    //WHY CARALEO !!!! MANDA A TABLEVIEW NO LUGAR DO BUTTON POHA
     while (nil != superView && nil == foundSuperView) {
         if ([superView isKindOfClass:[UITableViewCell class]]) {
             foundSuperView = superView;

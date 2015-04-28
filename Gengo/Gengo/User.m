@@ -33,11 +33,12 @@ NSArray *returnedItems;
         sharedUser.nivel = [((NSNumber *)[object objectForKey:@"nivel"]) intValue];
         sharedUser.xp = [((NSNumber *)[object objectForKey:@"xp"]) intValue];
         sharedUser.items = [object objectForKey:@"items"];
+        sharedUser.itemInUse = [object objectForKey:@"itemInUse"];
         
         NSMutableArray *grades = [object objectForKey:@"lessonGrade"];
         NSMutableArray *scores = [object objectForKey:@"gameScore"];
         sharedUser.lessonArray = [[NSMutableArray alloc] init];
-        int superideia;
+        NSUInteger superideia;
         if (grades.count > 9) {
             superideia = 9;
         } else {
@@ -65,6 +66,7 @@ NSArray *returnedItems;
         usuario.puzzles = [[NSMutableArray alloc] init];
         usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
         usuario.money = 100;
+        usuario.itemInUse = @-1;
         NSString *s = [user objectForKey:@"gender"];
         if ([s isEqualToString:@"male"]) {
             usuario.sexo = 1;
@@ -86,6 +88,7 @@ NSArray *returnedItems;
         newUser[@"gameScore"] = [[NSMutableArray alloc] initWithObjects:@0, nil];
         newUser[@"puzzles"] = usuario.puzzles;
         newUser[@"sexo"] = @(usuario.sexo);
+        newUser[@"itemInUse"] = usuario.itemInUse;
         
         
         if ([newUser save]){
