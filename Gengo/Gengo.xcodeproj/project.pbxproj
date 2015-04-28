@@ -110,6 +110,7 @@
 		DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB92D3631AC5BFBC002DE928 /* View3.xib */; };
 		DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */; };
 		DBA32FE31AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */; };
+		DBC7E5DD1AEFEF3300F627DF /* wo.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBC7E5DC1AEFEF3300F627DF /* wo.wav */; };
 		DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */; };
 		DBF6DB841ACB056400AB6ADF /* MiyamotoMusashi.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */; };
 /* End PBXBuildFile section */
@@ -259,6 +260,7 @@
 		DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialDrawView.m; sourceTree = "<group>"; };
 		DBA32FE11AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDesenhaLetra.h; sourceTree = "<group>"; };
 		DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDesenhaLetra.m; sourceTree = "<group>"; };
+		DBC7E5DC1AEFEF3300F627DF /* wo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wo.wav; sourceTree = "<group>"; };
 		DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTutorial.h; sourceTree = "<group>"; };
 		DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTutorial.m; sourceTree = "<group>"; };
 		DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MiyamotoMusashi.wav; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				44C99DFE1ADC9D3C0039CC6B /* hi.wav */,
 				44C99DFF1ADC9D3C0039CC6B /* ho.wav */,
 				44C99E001ADC9D3C0039CC6B /* i.wav */,
+				DBC7E5DC1AEFEF3300F627DF /* wo.wav */,
 				44C99E011ADC9D3C0039CC6B /* ka.wav */,
 				44C99E021ADC9D3C0039CC6B /* ke.wav */,
 				44C99E031ADC9D3C0039CC6B /* ki.wav */,
@@ -641,6 +644,7 @@
 				44C99E321ADC9D3C0039CC6B /* ma.wav in Resources */,
 				44C99E371ADC9D3C0039CC6B /* n.wav in Resources */,
 				DB92D3621AC5A3A1002DE928 /* View2.xib in Resources */,
+				DBC7E5DD1AEFEF3300F627DF /* wo.wav in Resources */,
 				44C99E361ADC9D3C0039CC6B /* mu.wav in Resources */,
 				44C99E2C1ADC9D3C0039CC6B /* i.wav in Resources */,
 				44C99E381ADC9D3C0039CC6B /* na.wav in Resources */,
