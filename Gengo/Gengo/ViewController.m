@@ -48,15 +48,11 @@
         self.isLogged = YES;
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
             [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-            NSLog(@"hariel");
             dispatch_async(dispatch_get_main_queue(), ^(void){
                 [self performSegueWithIdentifier:@"loginSegue" sender:nil];
             });
         });
         
-//        [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
-//        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
-//        self.isLogged = YES;
     }
 }
 
