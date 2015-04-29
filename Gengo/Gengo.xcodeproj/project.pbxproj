@@ -66,6 +66,7 @@
 		5E6F153B1ACC2C3000848A27 /* gamesong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E6F153A1ACC2C3000848A27 /* gamesong.mp3 */; };
 		5E70914A1AC8B01200CF559B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7091491AC8B01200CF559B /* UserViewController.m */; };
 		5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */; };
+		5E9AD91A1AF063FA00D758F8 /* Items.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AD9191AF063FA00D758F8 /* Items.plist */; };
 		5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */; };
 		5EAB4FB61AEC9754002887EA /* LoginStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB4FB51AEC9754002887EA /* LoginStoryboardSegue.m */; };
 		5ED9E6771ABC810F00905BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9E6761ABC810F00905BC5 /* main.m */; };
@@ -197,6 +198,7 @@
 		5E7091491AC8B01200CF559B /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		5E7A97201AC1A6FA00FDDF65 /* CharacterDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDictionary.h; sourceTree = "<group>"; };
 		5E7A97211AC1A6FA00FDDF65 /* CharacterDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDictionary.m; sourceTree = "<group>"; };
+		5E9AD9191AF063FA00D758F8 /* Items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Items.plist; sourceTree = "<group>"; };
 		5EAACAD31ACA3ED700AA8177 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		5EAB4FB41AEC9754002887EA /* LoginStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginStoryboardSegue.h; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				5ED9E6761ABC810F00905BC5 /* main.m */,
 				DB2791161ADD941C00661EA0 /* Data.plist */,
 				5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */,
+				5E9AD9191AF063FA00D758F8 /* Items.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				5ED9E6851ABC810F00905BC5 /* LaunchScreen.xib in Resources */,
 				44C99E4A1ADC9D3C0039CC6B /* to.wav in Resources */,
 				44C99E311ADC9D3C0039CC6B /* ku.wav in Resources */,
+				5E9AD91A1AF063FA00D758F8 /* Items.plist in Resources */,
 				44C99E431ADC9D3C0039CC6B /* sa.wav in Resources */,
 				44C99E4F1ADC9D3C0039CC6B /* yo.wav in Resources */,
 				DB2791171ADD941C00661EA0 /* Data.plist in Resources */,

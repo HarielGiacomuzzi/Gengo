@@ -16,9 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Item *item1= [[Item alloc] initWithName:@"Regular Shirt" desc:@"camisa normal" image:@"body" andPrice:0];
-    Item *item2 = [[Item alloc] initWithName:@"Neko Sensei Shirt" desc:@"camisa do Neko Sensei" image:@"neko body" andPrice:50];
-    self.items = [[NSMutableArray alloc] initWithObjects:item1,item2,nil];
+    NSString *plistItemPath = [[NSBundle mainBundle] pathForResource:@"Items" ofType:@"plist"];
+    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistItemPath];
+    self.items = [[NSMutableArray alloc] init];
+    for (NSDictionary *dic in itemsArray) {
+        NSString *itemName = dic[@"name"];
+        NSString *itemDesc = dic[@"desc"];
+        NSString *itemImage = dic[@"image"];
+        NSNumber *itemPrice = dic[@"price"];
+        Item *item = [[Item alloc] initWithName:itemName desc:itemDesc image:itemImage andPrice:itemPrice];
+        [self.items addObject:item];
+    }
+
     self.user = [User loadUser];
     self.moneyLabel.text = [NSString stringWithFormat:@"Dinheiro Total: %ld N$", self.user.money];
 }
@@ -37,7 +46,7 @@
     Item * item = [self.items objectAtIndex:indexPath.row];
     cell.itemName.text = item.name;
     cell.descriptionTextView.text = item.desc;
-    cell.priceLabel.text = [NSString stringWithFormat:@"%ld N$", item.price];
+    cell.priceLabel.text = [NSString stringWithFormat:@"%@ N$", item.price];
     cell.itemImage.image = [UIImage imageNamed:item.image];
     if ([self.user.items[indexPath.row] integerValue] == 1) {
         [cell.buyButton setTitle:@"Vestir" forState:UIControlStateNormal];
@@ -52,7 +61,6 @@
 - (void)buttonPressed:(UIButton *)sender {
     
     NSIndexPath *idxPath = [self findIndexPathCorrespondentToButton:sender];
-    NSLog(@"Valor do item clicado: %@",self.user.items[idxPath.row]);
     if ([self.user.items[idxPath.row] integerValue] == 1) {
         [self wearButtonPressed:idxPath];
     } else {
@@ -83,10 +91,10 @@
 -(void)buyButtonPressed:(NSIndexPath *) idxPath {
     Item *item = [self.items objectAtIndex:idxPath.row];
     
-    if (self.user.money < item.price) {
+    if (self.user.money < [item.price integerValue]) {
         [self noMoneyWarning];
     } else {
-        self.user.money = self.user.money - item.price;
+        self.user.money = self.user.money - [item.price integerValue];
         [self.user.items replaceObjectAtIndex:idxPath.row withObject:@1];
     }
     

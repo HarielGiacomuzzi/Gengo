@@ -10,7 +10,7 @@
 
 @implementation Item
 
--(id)initWithName:(NSString *)name desc:(NSString *)desc image:(NSString *)image andPrice:(NSInteger)price {
+-(id)initWithName:(NSString *)name desc:(NSString *)desc image:(NSString *)image andPrice:(NSNumber *)price {
     self = [super init];
     if( self ){
         _name = name;

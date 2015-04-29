@@ -18,6 +18,11 @@ NSArray *returnedItems;
 }
 
 +(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user{
+    //get number of items
+    NSString *plistItemPath = [[NSBundle mainBundle] pathForResource:@"Items" ofType:@"plist"];
+    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistItemPath];
+    NSUInteger numberOfItems = itemsArray.count;
+    
     //creates the query
 
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
@@ -32,19 +37,17 @@ NSArray *returnedItems;
         sharedUser.email = [object objectForKey:@"email"];
         sharedUser.nivel = [((NSNumber *)[object objectForKey:@"nivel"]) intValue];
         sharedUser.xp = [((NSNumber *)[object objectForKey:@"xp"]) intValue];
+
         sharedUser.items = [object objectForKey:@"items"];
+        for (NSUInteger i = sharedUser.items.count; i < numberOfItems; i++) {
+            [sharedUser.items addObject:@0];
+        }
         sharedUser.itemInUse = [object objectForKey:@"itemInUse"];
         
         NSMutableArray *grades = [object objectForKey:@"lessonGrade"];
         NSMutableArray *scores = [object objectForKey:@"gameScore"];
         sharedUser.lessonArray = [[NSMutableArray alloc] init];
-        NSUInteger superideia;
-        if (grades.count > 9) {
-            superideia = 9;
-        } else {
-            superideia = grades.count;
-        }
-        for (int i = 0; i < superideia; i++) {
+        for (int i = 0; i < grades.count; i++) {
             Lesson *lesson = [[Lesson alloc] initWithNumber:i + 1];
             lesson.grade = grades[i];
             lesson.highScore = scores[i];
@@ -62,7 +65,10 @@ NSArray *returnedItems;
         usuario.email = [user objectForKey:@"email"];
         usuario.nivel = 0;
         usuario.xp = 0;
-        usuario.items = [[NSMutableArray alloc] initWithObjects:@0, nil];
+        usuario.items = [[NSMutableArray alloc] initWithObjects:@1, nil];
+        for (int i = 1; i < numberOfItems; i++) {
+            [usuario.items addObject:@0];
+        }
         usuario.puzzles = [[NSMutableArray alloc] init];
         usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
         usuario.money = 100;

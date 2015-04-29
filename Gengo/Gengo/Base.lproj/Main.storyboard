@@ -666,8 +666,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEt-uz-0Yq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="7bd-ls-gvX"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Loja" id="IyL-mh-tEc"/>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="stY-VI-dV9">
-                                <rect key="frame" x="0.0" y="109" width="600" height="511"/>
+                                <rect key="frame" x="0.0" y="110" width="600" height="441"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="MBp-fa-Tci">
@@ -752,26 +765,13 @@
                                     <outlet property="delegate" destination="nfF-6p-aH4" id="ax8-6G-8ZS"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEt-uz-0Yq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="7bd-ls-gvX"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Loja" id="IyL-mh-tEc"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.42352941179999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ahz-b8-gKz" firstAttribute="top" secondItem="IEt-uz-0Yq" secondAttribute="bottom" constant="26" id="EqH-xB-Jmz"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="stY-VI-dV9" secondAttribute="bottom" constant="-19.5" id="HQc-aq-lrn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="stY-VI-dV9" secondAttribute="bottom" constant="49" id="HQc-aq-lrn"/>
                             <constraint firstItem="stY-VI-dV9" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" constant="-16" id="NwV-mX-q5D"/>
-                            <constraint firstItem="stY-VI-dV9" firstAttribute="top" secondItem="UAN-ws-i8t" secondAttribute="bottom" constant="89" id="dch-lf-3nI"/>
+                            <constraint firstItem="stY-VI-dV9" firstAttribute="top" secondItem="UAN-ws-i8t" secondAttribute="bottom" constant="90" id="dch-lf-3nI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IEt-uz-0Yq" secondAttribute="trailing" constant="-16" id="gnh-oh-OYE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="stY-VI-dV9" secondAttribute="trailing" constant="-16" id="qCY-Yw-0mr"/>
                             <constraint firstItem="ahz-b8-gKz" firstAttribute="leading" secondItem="keC-is-Wjc" secondAttribute="leadingMargin" id="sAe-ei-s1E"/>
@@ -787,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4J-Ox-Jf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="1784"/>
+            <point key="canvasLocation" x="1191" y="1797"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tuW-OS-mwo">

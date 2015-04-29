@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Camisa Normal</string>
+		<key>desc</key>
+		<string>camisa inicial</string>
+		<key>image</key>
+		<string>body</string>
+		<key>price</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Camisa Neko</string>
+		<key>desc</key>
+		<string>camisa do Neko Sensei</string>
+		<key>image</key>
+		<string>neko body</string>
+		<key>price</key>
+		<integer>50</integer>
+	</dict>
+    <dict>
+        <key>name</key>
+        <string>Kimono</string>
+        <key>desc</key>
+        <string>Kimono</string>
+        <key>image</key>
+        <string>kimono</string>
+        <key>price</key>
+        <integer>100</integer>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Mafia</string>
+        <key>desc</key>
+        <string>Mafia</string>
+        <key>image</key>
+        <string>mafia</string>
+        <key>price</key>
+        <integer>100</integer>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>SchoolBoy</string>
+        <key>desc</key>
+        <string>camisa do Neko Sensei</string>
+        <key>image</key>
+        <string>schoolboy</string>
+        <key>price</key>
+        <integer>150</integer>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>SchoolGirl</string>
+        <key>desc</key>
+        <string>camisa do Neko Sensei</string>
+        <key>image</key>
+        <string>schoolgirl</string>
+        <key>price</key>
+        <integer>150</integer>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Super Sentai</string>
+        <key>desc</key>
+        <string>camisa do Neko Sensei</string>
+        <key>image</key>
+        <string>supersentai</string>
+        <key>price</key>
+        <integer>150</integer>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Magical Girl</string>
+        <key>desc</key>
+        <string>camisa do Neko Sensei</string>
+        <key>image</key>
+        <string>magicalgirl</string>
+        <key>price</key>
+        <integer>50</integer>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Visual Kei</string>
+        <key>desc</key>
+        <string>camisa do Neko Sensei</string>
+        <key>image</key>
+        <string>visualkey</string>
+        <key>price</key>
+        <integer>50</integer>
+    </dict>
+</array>
+</plist>

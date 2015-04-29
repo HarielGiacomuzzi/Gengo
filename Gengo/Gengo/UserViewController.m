@@ -30,6 +30,12 @@
     NSLog(@"%@",self.user.items);
     NSLog(@"%@",self.user.itemInUse);
     self.moneyLabel.text = [NSString stringWithFormat:@"%ld N$", self.user.money];
+    
+    NSString *plistItemPath = [[NSBundle mainBundle] pathForResource:@"Items" ofType:@"plist"];
+    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistItemPath];
+    NSDictionary *dic = itemsArray[[self.user.itemInUse integerValue]];
+    self.bodyImage.image = [UIImage imageNamed:dic[@"image"]];
+    
     if ([self.user.itemInUse integerValue] == 0) {
         self.bodyImage.image = [UIImage imageNamed:@"body"];
     }
