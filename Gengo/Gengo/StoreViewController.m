@@ -50,6 +50,8 @@
     cell.itemImage.image = [UIImage imageNamed:item.image];
     if ([self.user.items[indexPath.row] integerValue] == 1) {
         [cell.buyButton setTitle:@"Vestir" forState:UIControlStateNormal];
+    } else {
+        [cell.buyButton setTitle:@"Comprar" forState:UIControlStateNormal];
     }
     
     [cell.buyButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];

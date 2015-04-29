@@ -478,6 +478,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KW2-nk-CMY">
                                 <rect key="frame" x="0.0" y="55" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="7lJ-BG-x5g">
+                                    <rect key="frame" x="0.0" y="154" width="600" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PuzzleCell" rowHeight="132" id="L8U-X2-fyp" customClass="PuzzleCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -787,7 +792,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4J-Ox-Jf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="1797"/>
+            <point key="canvasLocation" x="1191" y="1784"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tuW-OS-mwo">

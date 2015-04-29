@@ -42,7 +42,14 @@ NSArray *returnedItems;
         for (NSUInteger i = sharedUser.items.count; i < numberOfItems; i++) {
             [sharedUser.items addObject:@0];
         }
-        sharedUser.itemInUse = [object objectForKey:@"itemInUse"];
+        
+        NSNumber *itemInUse = [object objectForKey:@"itemInUse"];
+        if (itemInUse < 0 || [itemInUse integerValue] >= numberOfItems) {
+            sharedUser.itemInUse = @0;
+        } else {
+            sharedUser.itemInUse = itemInUse;
+        }
+
         
         NSMutableArray *grades = [object objectForKey:@"lessonGrade"];
         NSMutableArray *scores = [object objectForKey:@"gameScore"];
@@ -72,7 +79,7 @@ NSArray *returnedItems;
         usuario.puzzles = [[NSMutableArray alloc] init];
         usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
         usuario.money = 100;
-        usuario.itemInUse = @-1;
+        usuario.itemInUse = @0;
         NSString *s = [user objectForKey:@"gender"];
         if ([s isEqualToString:@"male"]) {
             usuario.sexo = 1;
