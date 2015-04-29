@@ -135,7 +135,8 @@
     if ([lastLesson isEqual:self.lesson] && self.lesson.lessonNumber < 9) {
         Lesson *l = [[Lesson alloc] initWithNumber:lastLesson.lessonNumber + 1];
         [user.lessonArray addObject:l];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Parabéns" message:@"Você passou de nível." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        user.money = user.money + 100;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Parabéns" message:@"Você passou de nível e ganhou 100 moedas." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
 
