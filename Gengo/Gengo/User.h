@@ -28,7 +28,9 @@
 @property NSNumber *itemInUse;
 
 +(id) loadUser;
++(id) createNewUser: (NSString*)nome email: (NSString*)email andGender: (NSString*)gender;
 +(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user;
++(BOOL)lodUserWithObject: (PFObject*)user;
 
 
 @end

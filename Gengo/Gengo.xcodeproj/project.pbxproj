@@ -80,6 +80,8 @@
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		5EEAAED41ADDC59A0089156C /* GameDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEAAED31ADDC59A0089156C /* GameDictionary.plist */; };
 		DB2791171ADD941C00661EA0 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2791161ADD941C00661EA0 /* Data.plist */; };
+		DB6627D91B04E9BA00EA3FB3 /* VCCreateAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */; };
+		DB6627DC1B04F0EC00EA3FB3 /* VCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
 		DB71199A1ABCA7F200ACDD71 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119971ABCA7F200ACDD71 /* Item.m */; };
 		DB71199B1ABCA7F200ACDD71 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119991ABCA7F200ACDD71 /* Lesson.m */; };
@@ -221,6 +223,10 @@
 		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5EEAAED31ADDC59A0089156C /* GameDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameDictionary.plist; sourceTree = "<group>"; };
 		DB2791161ADD941C00661EA0 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		DB6627D71B04E9BA00EA3FB3 /* VCCreateAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCCreateAccount.h; sourceTree = "<group>"; };
+		DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCCreateAccount.m; sourceTree = "<group>"; };
+		DB6627DA1B04F0EC00EA3FB3 /* VCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLogin.h; sourceTree = "<group>"; };
+		DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLogin.m; sourceTree = "<group>"; };
 		DB7119931ABCA7E100ACDD71 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievement.h; sourceTree = "<group>"; };
 		DB7119941ABCA7E100ACDD71 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Achievement.m; sourceTree = "<group>"; };
 		DB7119961ABCA7F200ACDD71 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -251,6 +257,7 @@
 		DB7119C41ABCA8BB00ACDD71 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DB7119C61ABCA8C400ACDD71 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DB7119C81ABCA96800ACDD71 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DB7624BC1AF2BE9F00A81A86 /* iOSTeam_Provisioning_Profile_comnekosenseicorporationGengo.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = iOSTeam_Provisioning_Profile_comnekosenseicorporationGengo.mobileprovision; sourceTree = "<group>"; };
 		DB8149A91AC3274900D65332 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		DB8149AA1AC3274900D65332 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		DB850B0E1ACACFA400AA093B /* xibAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xibAnimation.h; sourceTree = "<group>"; };
@@ -403,6 +410,10 @@
 				5EAACAD41ACA3ED700AA8177 /* UserTableViewCell.m */,
 				DB850B0E1ACACFA400AA093B /* xibAnimation.h */,
 				DB850B0F1ACACFA400AA093B /* xibAnimation.m */,
+				DB6627D71B04E9BA00EA3FB3 /* VCCreateAccount.h */,
+				DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */,
+				DB6627DA1B04F0EC00EA3FB3 /* VCLogin.h */,
+				DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -454,6 +465,7 @@
 				5ED9E6751ABC810F00905BC5 /* Info.plist */,
 				5EEAAED31ADDC59A0089156C /* GameDictionary.plist */,
 				5ED9E6761ABC810F00905BC5 /* main.m */,
+				DB7624BC1AF2BE9F00A81A86 /* iOSTeam_Provisioning_Profile_comnekosenseicorporationGengo.mobileprovision */,
 				DB2791161ADD941C00661EA0 /* Data.plist */,
 				5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */,
 				5E9AD9191AF063FA00D758F8 /* Items.plist */,
@@ -595,6 +607,12 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = DVXNNDG4U4;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					5ED9E6891ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
@@ -705,6 +723,7 @@
 			files = (
 				DB850B101ACACFA400AA093B /* xibAnimation.m in Sources */,
 				5ED9E67D1ABC810F00905BC5 /* ViewController.m in Sources */,
+				DB6627D91B04E9BA00EA3FB3 /* VCCreateAccount.m in Sources */,
 				5EAB4FB61AEC9754002887EA /* LoginStoryboardSegue.m in Sources */,
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
 				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
@@ -719,6 +738,7 @@
 				DB8149AB1AC3274900D65332 /* AsyncImageView.m in Sources */,
 				5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */,
 				26E4E7F81AC9B0D3002C9E78 /* PuzzleView.m in Sources */,
+				DB6627DC1B04F0EC00EA3FB3 /* VCLogin.m in Sources */,
 				DB7119A11ABCA7FF00ACDD71 /* SaveUtility.m in Sources */,
 				DB7119A41ABCA80E00ACDD71 /* User.m in Sources */,
 				5ED9E6771ABC810F00905BC5 /* main.m in Sources */,
@@ -863,6 +883,7 @@
 					"$(PROJECT_DIR)/Gengo/FacebookSDK",
 				);
 				INFOPLIST_FILE = Gengo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -881,6 +902,7 @@
 					"$(PROJECT_DIR)/Gengo/FacebookSDK",
 				);
 				INFOPLIST_FILE = Gengo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

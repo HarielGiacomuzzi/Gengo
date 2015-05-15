@@ -17,6 +17,101 @@ NSArray *returnedItems;
         return sharedUser;
 }
 
++(BOOL)lodUserWithObject: (PFObject*)user{
+    NSString *plistItemPath = [[NSBundle mainBundle] pathForResource:@"Items" ofType:@"plist"];
+    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistItemPath];
+    NSUInteger numberOfItems = itemsArray.count;
+    
+    sharedUser = [[User alloc] init];
+    sharedUser.nome = [user objectForKey:@"nome"];
+    sharedUser.email = [user objectForKey:@"email"];
+    sharedUser.nivel = [((NSNumber *)[user objectForKey:@"nivel"]) intValue];
+    sharedUser.xp = [((NSNumber *)[user objectForKey:@"xp"]) intValue];
+    
+    sharedUser.items = [user objectForKey:@"items"];
+    for (NSUInteger i = sharedUser.items.count; i < numberOfItems; i++) {
+        [sharedUser.items addObject:@0];
+    }
+    
+    NSNumber *itemInUse = [user objectForKey:@"itemInUse"];
+    if (itemInUse < 0 || [itemInUse integerValue] >= numberOfItems) {
+        sharedUser.itemInUse = @0;
+    } else {
+        sharedUser.itemInUse = itemInUse;
+    }
+    
+    
+    NSMutableArray *grades = [user objectForKey:@"lessonGrade"];
+    NSMutableArray *scores = [user objectForKey:@"gameScore"];
+    sharedUser.lessonArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < grades.count; i++) {
+        Lesson *lesson = [[Lesson alloc] initWithNumber:i + 1];
+        lesson.grade = grades[i];
+        lesson.highScore = scores[i];
+        [sharedUser.lessonArray addObject:lesson];
+    }
+    sharedUser.puzzles = [user objectForKey:@"puzzles"];
+    sharedUser.sexo = [((NSNumber *)[user objectForKey:@"sexo"]) intValue];
+    sharedUser.money = [((NSNumber *)[user objectForKey:@"money"]) intValue];
+    
+    
+    return YES;
+}
+
++(id) createNewUser: (NSString*)nome email: (NSString*)email andGender: (NSString*)gender{
+    //NSLog(@"Vou criar o user !!!");
+    //get number of items
+    NSString *plistItemPath = [[NSBundle mainBundle] pathForResource:@"Items" ofType:@"plist"];
+    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistItemPath];
+    NSUInteger numberOfItems = itemsArray.count;
+    
+    //creating the user
+    User *usuario = [[User alloc] init];
+    usuario.nome = nome;
+    usuario.email = email;
+    usuario.nivel = 0;
+    usuario.xp = 0;
+    usuario.items = [[NSMutableArray alloc] initWithObjects:@1, nil];
+    for (int i = 1; i < numberOfItems; i++) {
+        [usuario.items addObject:@0];
+    }
+    usuario.puzzles = [[NSMutableArray alloc] init];
+    usuario.lessonArray = [[NSMutableArray alloc] initWithObjects:[[Lesson alloc] initWithNumber:1], nil];
+    usuario.money = 100;
+    usuario.itemInUse = @0;
+    NSString *s = gender;
+    if ([s isEqualToString:@"male"]) {
+        usuario.sexo = 1;
+    }else{
+        usuario.sexo = 0;
+    }
+    
+    sharedUser = usuario;
+    
+    
+    PFObject *newUser = [PFObject objectWithClassName:@"User"];
+    newUser[@"nome"] = usuario.nome;
+    newUser[@"email"] = usuario.email;
+    newUser[@"nivel"] = @(usuario.nivel);
+    newUser[@"xp"] = @(usuario.xp);
+    newUser[@"items"] = usuario.items;
+    newUser[@"money"] = @(usuario.money);
+    newUser[@"lessonGrade"] = [[NSMutableArray alloc] initWithObjects:@0, nil];
+    newUser[@"gameScore"] = [[NSMutableArray alloc] initWithObjects:@0, nil];
+    newUser[@"puzzles"] = usuario.puzzles;
+    newUser[@"sexo"] = @(usuario.sexo);
+    newUser[@"itemInUse"] = usuario.itemInUse;
+    
+    
+    if ([newUser save]){
+        NSLog(@"User Saved");
+        return newUser;
+    }else{
+        NSLog(@"Deu Ruin");
+        return nil;
+    }
+}
+
 +(BOOL)lodUserWithEmail: (NSString*)email andUser: (id<FBGraphUser>)user{
     //get number of items
     NSString *plistItemPath = [[NSBundle mainBundle] pathForResource:@"Items" ofType:@"plist"];
@@ -66,7 +161,7 @@ NSArray *returnedItems;
         
     } else if (returnedItems.count == 0) {
         // if the user does not exists we'll create it
-        NSLog(@"Vou criar o user !!!");
+        //NSLog(@"Vou criar o user !!!");
         User *usuario = [[User alloc] init];
         usuario.nome = [user name];
         usuario.email = [user objectForKey:@"email"];
