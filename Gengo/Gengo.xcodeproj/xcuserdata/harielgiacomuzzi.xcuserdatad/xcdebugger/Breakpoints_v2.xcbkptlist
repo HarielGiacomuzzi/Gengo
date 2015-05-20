@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gengo/VCLogin.m"
-            timestampString = "453403653.152583"
+            filePath = "Gengo/VCCreateAccount.m"
+            timestampString = "453839831.112829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-btnLogin:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-ValidateInfo"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
