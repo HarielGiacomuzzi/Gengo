@@ -26,7 +26,12 @@
     [self.fbLoginView initWithPermissions:@[@"public_profile",@"email"]];
     self.fbLoginView.delegate = self;
     // Do any additional setup after loading the view.
+    _txt_email.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"login" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+     _txt_password.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"senha" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
