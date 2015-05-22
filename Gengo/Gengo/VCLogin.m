@@ -25,6 +25,12 @@
     [super viewDidLoad];
     [self.fbLoginView initWithPermissions:@[@"public_profile",@"email"]];
     self.fbLoginView.delegate = self;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
 }
 
@@ -48,6 +54,7 @@
             }else{
                 UIAlertView *a = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Login Inválido" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [a show];
+                [self.loader stopAnimating];
             }
         });
     });
@@ -77,5 +84,11 @@
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue
 {
 }
+
+
+-(void)dismissKeyboard {
+    [self.view endEditing:YES];
+}
+
 
 @end

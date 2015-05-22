@@ -114,6 +114,14 @@
 		DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA17E8E1AC5D08300E807F7 /* TutorialDrawView.m */; };
 		DBA32FE31AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */; };
 		DBC7E5DD1AEFEF3300F627DF /* wo.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBC7E5DC1AEFEF3300F627DF /* wo.wav */; };
+		DBD765A31B0E5F4200FA08A2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD765A21B0E5F4200FA08A2 /* InterfaceController.swift */; };
+		DBD765A51B0E5F4200FA08A2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD765A41B0E5F4200FA08A2 /* NotificationController.swift */; };
+		DBD765A71B0E5F4200FA08A2 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD765A61B0E5F4200FA08A2 /* GlanceController.swift */; };
+		DBD765A91B0E5F4200FA08A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD765A81B0E5F4200FA08A2 /* Images.xcassets */; };
+		DBD765AD1B0E5F4200FA08A2 /* Gengo WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = DBD765AC1B0E5F4200FA08A2 /* Gengo WatchKit App.app */; };
+		DBD765B51B0E5F4200FA08A2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD765B31B0E5F4200FA08A2 /* Interface.storyboard */; };
+		DBD765B71B0E5F4200FA08A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD765B61B0E5F4200FA08A2 /* Images.xcassets */; };
+		DBD765BA1B0E5F4300FA08A2 /* Gengo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBD7659D1B0E5F4200FA08A2 /* Gengo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBDD2F241AC47B450043D23A /* ViewControllerTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */; };
 		DBF6DB841ACB056400AB6ADF /* MiyamotoMusashi.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */; };
 /* End PBXBuildFile section */
@@ -126,7 +134,35 @@
 			remoteGlobalIDString = 5ED9E6701ABC810F00905BC5;
 			remoteInfo = Gengo;
 		};
+		DBD765AE1B0E5F4200FA08A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ED9E6691ABC810F00905BC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBD765AB1B0E5F4200FA08A2;
+			remoteInfo = "Gengo WatchKit App";
+		};
+		DBD765B81B0E5F4300FA08A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ED9E6691ABC810F00905BC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBD7659C1B0E5F4200FA08A2;
+			remoteInfo = "Gengo WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBD765C11B0E5F4300FA08A2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBD765BA1B0E5F4300FA08A2 /* Gengo WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		266354561AC9C62D00107689 /* PuzzleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleCell.h; sourceTree = "<group>"; };
@@ -270,8 +306,20 @@
 		DBA32FE11AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDesenhaLetra.h; sourceTree = "<group>"; };
 		DBA32FE21AC5E7FF0099E5EC /* ViewControllerDesenhaLetra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDesenhaLetra.m; sourceTree = "<group>"; };
 		DBC7E5DC1AEFEF3300F627DF /* wo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wo.wav; sourceTree = "<group>"; };
+		DBD7659D1B0E5F4200FA08A2 /* Gengo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gengo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD765A01B0E5F4200FA08A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBD765A11B0E5F4200FA08A2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DBD765A21B0E5F4200FA08A2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DBD765A41B0E5F4200FA08A2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		DBD765A61B0E5F4200FA08A2 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		DBD765A81B0E5F4200FA08A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DBD765AC1B0E5F4200FA08A2 /* Gengo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gengo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD765B21B0E5F4200FA08A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBD765B41B0E5F4200FA08A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DBD765B61B0E5F4200FA08A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBDD2F221AC47B450043D23A /* ViewControllerTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTutorial.h; sourceTree = "<group>"; };
 		DBDD2F231AC47B450043D23A /* ViewControllerTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTutorial.m; sourceTree = "<group>"; };
+		DBE2CEEE1B0F9B5D00DF358A /* Gengo WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Gengo WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		DBF6DB4B1ACB056400AB6ADF /* MiyamotoMusashi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MiyamotoMusashi.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -302,6 +350,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5ED9E6871ABC810F00905BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD7659A1B0E5F4200FA08A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,6 +479,8 @@
 				449A3E4B1ADC9CA300300361 /* audio */,
 				5ED9E6731ABC810F00905BC5 /* Gengo */,
 				5ED9E68D1ABC810F00905BC5 /* GengoTests */,
+				DBD7659E1B0E5F4200FA08A2 /* Gengo WatchKit Extension */,
+				DBD765B01B0E5F4200FA08A2 /* Gengo WatchKit App */,
 				5ED9E6721ABC810F00905BC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -433,6 +490,8 @@
 			children = (
 				5ED9E6711ABC810F00905BC5 /* Gengo.app */,
 				5ED9E68A1ABC810F00905BC5 /* GengoTests.xctest */,
+				DBD7659D1B0E5F4200FA08A2 /* Gengo WatchKit Extension.appex */,
+				DBD765AC1B0E5F4200FA08A2 /* Gengo WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -558,6 +617,46 @@
 			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
+		DBD7659E1B0E5F4200FA08A2 /* Gengo WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DBE2CEEE1B0F9B5D00DF358A /* Gengo WatchKit Extension.entitlements */,
+				DBD765A21B0E5F4200FA08A2 /* InterfaceController.swift */,
+				DBD765A41B0E5F4200FA08A2 /* NotificationController.swift */,
+				DBD765A61B0E5F4200FA08A2 /* GlanceController.swift */,
+				DBD765A81B0E5F4200FA08A2 /* Images.xcassets */,
+				DBD7659F1B0E5F4200FA08A2 /* Supporting Files */,
+			);
+			path = "Gengo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DBD7659F1B0E5F4200FA08A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBD765A01B0E5F4200FA08A2 /* Info.plist */,
+				DBD765A11B0E5F4200FA08A2 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBD765B01B0E5F4200FA08A2 /* Gengo WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				DBD765B31B0E5F4200FA08A2 /* Interface.storyboard */,
+				DBD765B61B0E5F4200FA08A2 /* Images.xcassets */,
+				DBD765B11B0E5F4200FA08A2 /* Supporting Files */,
+			);
+			path = "Gengo WatchKit App";
+			sourceTree = "<group>";
+		};
+		DBD765B11B0E5F4200FA08A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBD765B21B0E5F4200FA08A2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -568,10 +667,12 @@
 				5ED9E66D1ABC810F00905BC5 /* Sources */,
 				5ED9E66E1ABC810F00905BC5 /* Frameworks */,
 				5ED9E66F1ABC810F00905BC5 /* Resources */,
+				DBD765C11B0E5F4300FA08A2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBD765B91B0E5F4300FA08A2 /* PBXTargetDependency */,
 			);
 			name = Gengo;
 			productName = Gengo;
@@ -596,6 +697,39 @@
 			productReference = 5ED9E68A1ABC810F00905BC5 /* GengoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DBD7659C1B0E5F4200FA08A2 /* Gengo WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBD765C01B0E5F4300FA08A2 /* Build configuration list for PBXNativeTarget "Gengo WatchKit Extension" */;
+			buildPhases = (
+				DBD765991B0E5F4200FA08A2 /* Sources */,
+				DBD7659A1B0E5F4200FA08A2 /* Frameworks */,
+				DBD7659B1B0E5F4200FA08A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBD765AF1B0E5F4200FA08A2 /* PBXTargetDependency */,
+			);
+			name = "Gengo WatchKit Extension";
+			productName = "Gengo WatchKit Extension";
+			productReference = DBD7659D1B0E5F4200FA08A2 /* Gengo WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		DBD765AB1B0E5F4200FA08A2 /* Gengo WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBD765BF1B0E5F4300FA08A2 /* Build configuration list for PBXNativeTarget "Gengo WatchKit App" */;
+			buildPhases = (
+				DBD765AA1B0E5F4200FA08A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gengo WatchKit App";
+			productName = "Gengo WatchKit App";
+			productReference = DBD765AC1B0E5F4200FA08A2 /* Gengo WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -619,6 +753,18 @@
 						DevelopmentTeam = ZX7GUMJ35C;
 						TestTargetID = 5ED9E6701ABC810F00905BC5;
 					};
+					DBD7659C1B0E5F4200FA08A2 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = DVXNNDG4U4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DBD765AB1B0E5F4200FA08A2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 				};
 			};
 			buildConfigurationList = 5ED9E66C1ABC810F00905BC5 /* Build configuration list for PBXProject "Gengo" */;
@@ -636,6 +782,8 @@
 			targets = (
 				5ED9E6701ABC810F00905BC5 /* Gengo */,
 				5ED9E6891ABC810F00905BC5 /* GengoTests */,
+				DBD7659C1B0E5F4200FA08A2 /* Gengo WatchKit Extension */,
+				DBD765AB1B0E5F4200FA08A2 /* Gengo WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -714,6 +862,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBD7659B1B0E5F4200FA08A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD765A91B0E5F4200FA08A2 /* Images.xcassets in Resources */,
+				DBD765AD1B0E5F4200FA08A2 /* Gengo WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD765AA1B0E5F4200FA08A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD765B51B0E5F4200FA08A2 /* Interface.storyboard in Resources */,
+				DBD765B71B0E5F4200FA08A2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -763,6 +929,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBD765991B0E5F4200FA08A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD765A51B0E5F4200FA08A2 /* NotificationController.swift in Sources */,
+				DBD765A31B0E5F4200FA08A2 /* InterfaceController.swift in Sources */,
+				DBD765A71B0E5F4200FA08A2 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -770,6 +946,16 @@
 			isa = PBXTargetDependency;
 			target = 5ED9E6701ABC810F00905BC5 /* Gengo */;
 			targetProxy = 5ED9E68B1ABC810F00905BC5 /* PBXContainerItemProxy */;
+		};
+		DBD765AF1B0E5F4200FA08A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBD765AB1B0E5F4200FA08A2 /* Gengo WatchKit App */;
+			targetProxy = DBD765AE1B0E5F4200FA08A2 /* PBXContainerItemProxy */;
+		};
+		DBD765B91B0E5F4300FA08A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBD7659C1B0E5F4200FA08A2 /* Gengo WatchKit Extension */;
+			targetProxy = DBD765B81B0E5F4300FA08A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -788,6 +974,14 @@
 				5ED9E6841ABC810F00905BC5 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		DBD765B31B0E5F4200FA08A2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBD765B41B0E5F4200FA08A2 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -943,6 +1137,81 @@
 			};
 			name = Release;
 		};
+		DBD765BB1B0E5F4300FA08A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Gengo WatchKit Extension/Gengo WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gengo WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBD765BC1B0E5F4300FA08A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Gengo WatchKit Extension/Gengo WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Gengo WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DBD765BD1B0E5F4300FA08A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Gengo_WatchKit_Extension;
+				INFOPLIST_FILE = "Gengo WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		DBD765BE1B0E5F4300FA08A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Gengo_WatchKit_Extension;
+				INFOPLIST_FILE = "Gengo WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -969,6 +1238,24 @@
 			buildConfigurations = (
 				5ED9E6981ABC810F00905BC5 /* Debug */,
 				5ED9E6991ABC810F00905BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBD765BF1B0E5F4300FA08A2 /* Build configuration list for PBXNativeTarget "Gengo WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD765BD1B0E5F4300FA08A2 /* Debug */,
+				DBD765BE1B0E5F4300FA08A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBD765C01B0E5F4300FA08A2 /* Build configuration list for PBXNativeTarget "Gengo WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD765BB1B0E5F4300FA08A2 /* Debug */,
+				DBD765BC1B0E5F4300FA08A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
