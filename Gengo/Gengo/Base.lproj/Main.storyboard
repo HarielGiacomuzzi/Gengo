@@ -102,6 +102,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPC-Eq-kQD">
+                                <rect key="frame" x="0.0" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qPC-Eq-kQD" secondAttribute="height" multiplier="1:1" id="BNc-46-hnv"/>
+                                    <constraint firstAttribute="width" constant="80" id="Cwc-Qs-eFy"/>
+                                    <constraint firstAttribute="height" constant="80" id="p8C-Pu-OR9"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="backseta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cwc-Qs-eFy"/>
+                                        <exclude reference="p8C-Pu-OR9"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="returnToLogin:" destination="0JG-kv-lcD" eventType="touchUpInside" id="Y3M-Vl-SBk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -120,8 +140,11 @@
                             <constraint firstAttribute="centerY" secondItem="faY-5O-nDz" secondAttribute="centerY" constant="-110" id="cLF-UT-PYS"/>
                             <constraint firstItem="faY-5O-nDz" firstAttribute="centerX" secondItem="syb-md-0jr" secondAttribute="centerX" constant="-0.5" id="ea1-uz-7Jq"/>
                             <constraint firstItem="DXL-nj-rFo" firstAttribute="top" secondItem="syb-md-0jr" secondAttribute="bottom" constant="8" id="ihS-7W-sBz"/>
+                            <constraint firstItem="qPC-Eq-kQD" firstAttribute="leading" secondItem="2Vj-Cf-iEq" secondAttribute="leading" id="irp-sz-Mlk"/>
                             <constraint firstItem="syb-md-0jr" firstAttribute="centerX" secondItem="DXL-nj-rFo" secondAttribute="centerX" id="lEU-oC-u1M"/>
                             <constraint firstAttribute="trailing" secondItem="hvF-Qy-nOR" secondAttribute="trailing" id="nQT-a7-gLw"/>
+                            <constraint firstItem="hvF-Qy-nOR" firstAttribute="width" secondItem="qPC-Eq-kQD" secondAttribute="width" multiplier="6" id="owP-hx-Kc0"/>
+                            <constraint firstItem="qPC-Eq-kQD" firstAttribute="top" secondItem="2Vj-Cf-iEq" secondAttribute="top" constant="16" id="rCf-eI-Vpc"/>
                             <constraint firstItem="faY-5O-nDz" firstAttribute="width" secondItem="syb-md-0jr" secondAttribute="width" multiplier="1.1" id="vbD-Ou-7zf"/>
                             <constraint firstItem="hvF-Qy-nOR" firstAttribute="top" secondItem="2Vj-Cf-iEq" secondAttribute="top" id="w93-QI-fAW"/>
                             <constraint firstItem="ACD-1O-X4T" firstAttribute="width" secondItem="DDr-S2-ZMU" secondAttribute="width" id="wJ2-dD-5dz"/>
@@ -129,6 +152,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="returnButton" destination="qPC-Eq-kQD" id="zbO-OP-H1V"/>
                         <outlet property="txt_confirm_password" destination="ACD-1O-X4T" id="Mac-0o-y3j"/>
                         <outlet property="txt_email" destination="DXL-nj-rFo" id="8qY-Et-5EQ"/>
                         <outlet property="txt_nome" destination="syb-md-0jr" id="RPD-XA-oc6"/>
@@ -183,7 +207,6 @@
                                             <constraint firstAttribute="height" constant="30" id="LjD-kT-Caj"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
@@ -307,7 +330,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3j-4L-f4X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3j-4L-f4X">
                                 <rect key="frame" x="239" y="271" width="120" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
@@ -668,7 +691,7 @@
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-9Q-Oak">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-X5-rJq">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-X5-rJq">
                                 <rect key="frame" x="274" y="543" width="50" height="30"/>
                                 <state key="normal" title="Apagar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -743,7 +766,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8U-X2-fyp" id="BLb-5u-J0R">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGX-FB-pmO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGX-FB-pmO">
                                                     <rect key="frame" x="179" y="53" width="49" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.36470588235294116" green="0.29019607843137257" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
@@ -1425,6 +1448,7 @@
     </scenes>
     <resources>
         <image name="Landscape - Retina" width="375" height="667"/>
+        <image name="backseta" width="586" height="586"/>
         <image name="body" width="77" height="89"/>
         <image name="boy head" width="77" height="59"/>
         <image name="chao" width="1025" height="286"/>
