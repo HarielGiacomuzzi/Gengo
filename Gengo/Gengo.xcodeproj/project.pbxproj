@@ -59,6 +59,7 @@
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
 		5E55DF751ADE8EFD00293FD7 /* TestDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */; };
+		5E6C388D1B0FB8C7006460EC /* WatchDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
 		5E6C3FE31AC12E5700B57FD1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FE01AC12E5700B57FD1 /* GameViewController.m */; };
 		5E6D96E21AC5E1340063E962 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D96E11AC5E1340063E962 /* StoreViewController.m */; };
@@ -222,7 +223,9 @@
 		5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
 		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
 		5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCellTableViewCell.m; sourceTree = "<group>"; };
+		5E4BC0E31B138C5900F84DE1 /* Gengo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gengo.entitlements; sourceTree = "<group>"; };
 		5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestDictionary.plist; sourceTree = "<group>"; };
+		5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WatchDictionary.plist; sourceTree = "<group>"; };
 		5E6C3FDC1AC12E5700B57FD1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		5E6C3FDF1AC12E5700B57FD1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -499,6 +502,7 @@
 		5ED9E6731ABC810F00905BC5 /* Gengo */ = {
 			isa = PBXGroup;
 			children = (
+				5E4BC0E31B138C5900F84DE1 /* Gengo.entitlements */,
 				DB7119A51ABCA81200ACDD71 /* Frameworks */,
 				DB7119921ABCA7BD00ACDD71 /* Model */,
 				5ED9E6781ABC810F00905BC5 /* AppDelegate.h */,
@@ -635,6 +639,7 @@
 			children = (
 				DBD765A01B0E5F4200FA08A2 /* Info.plist */,
 				DBD765A11B0E5F4200FA08A2 /* PushNotificationPayload.apns */,
+				5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -741,8 +746,11 @@
 				TargetAttributes = {
 					5ED9E6701ABC810F00905BC5 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = DVXNNDG4U4;
+						DevelopmentTeam = ZX7GUMJ35C;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
@@ -755,7 +763,7 @@
 					};
 					DBD7659C1B0E5F4200FA08A2 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = DVXNNDG4U4;
+						DevelopmentTeam = ZX7GUMJ35C;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -764,6 +772,7 @@
 					};
 					DBD765AB1B0E5F4200FA08A2 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ZX7GUMJ35C;
 					};
 				};
 			};
@@ -866,6 +875,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6C388D1B0FB8C7006460EC /* WatchDictionary.plist in Resources */,
 				DBD765A91B0E5F4200FA08A2 /* Images.xcassets in Resources */,
 				DBD765AD1B0E5F4200FA08A2 /* Gengo WatchKit App.app in Resources */,
 			);
@@ -1069,8 +1079,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gengo/Gengo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Gengo",
@@ -1088,8 +1100,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gengo/Gengo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Gengo",
@@ -1180,6 +1194,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1200,6 +1215,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = Gengo_WatchKit_Extension;

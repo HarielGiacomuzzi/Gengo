@@ -34,6 +34,43 @@
     [PFFacebookUtils initializeFacebook];
     
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:150.0/255.0 green:130.0/255.0 blue:169.0/255.0 alpha:1.0]];
+    
+    
+    UIUserNotificationType userNotificationTypes = ( UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound );
+    
+    UIMutableUserNotificationAction *optionA = [[UIMutableUserNotificationAction alloc] init];
+    optionA.identifier = @"optionA";
+    optionA.title = @"Option A";
+    optionA.activationMode = UIUserNotificationActivationModeBackground;
+    optionA.destructive = NO;
+    
+    UIMutableUserNotificationAction *optionB = [[UIMutableUserNotificationAction alloc] init];
+    optionB.identifier = @"optionB";
+    optionB.title = @"Option B";
+    optionB.activationMode = UIUserNotificationActivationModeBackground;
+    optionB.destructive = NO;
+    
+    UIMutableUserNotificationCategory *notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
+    notificationCategory.identifier = @"notificationCategory";
+    NSArray *actions = [[NSArray alloc] initWithObjects:optionA, optionB, nil];
+    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
+    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextMinimal];
+    
+    NSSet *categories = [[NSSet alloc] initWithObjects:notificationCategory, nil];
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:categories];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"Alert Body";
+    notification.alertAction = @"Alert Action";
+    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    notification.userInfo = @{@"key" : @"value"};
+    notification.category = @"notificationCategory";
+
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
  
     
     
@@ -71,5 +108,19 @@
     // attempt to extract a token from the url
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    NSLog(@"recebido");
+}
+
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler {
+    NSLog(@"%@", identifier);
+    
+    if (completionHandler) {
+        
+        completionHandler();
+    }
+}
+
 
 @end

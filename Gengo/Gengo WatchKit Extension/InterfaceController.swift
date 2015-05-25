@@ -11,11 +11,24 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var questionLabel: WKInterfaceLabel!
+    
+    @IBOutlet weak var option1: WKInterfaceButton!
+    @IBOutlet weak var option2: WKInterfaceButton!
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        let plistPath = NSBundle.mainBundle().pathForResource("WatchDictionary", ofType: "plist")
+        if let dict = NSDictionary(contentsOfFile: plistPath!) {
+            var keys = dict.allKeys
+            var question = keys[0] as! String
+            var answer = dict[question] as! String
+            questionLabel.setText(question)
+            option1.setTitle(answer)
+            option2.setTitle("errada")
+        }
+
     }
 
     override func willActivate() {
@@ -27,5 +40,11 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+
+    @IBAction func activateNotificationsButtonClicked() {
+        println("oie")
+    }
+    
+    
 
 }
