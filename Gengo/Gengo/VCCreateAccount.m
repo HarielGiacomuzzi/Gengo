@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txt_email;
 @property (weak, nonatomic) IBOutlet UITextField *txt_password;
 @property (weak, nonatomic) IBOutlet UITextField *txt_confirm_password;
+@property (weak, nonatomic) IBOutlet UIButton *returnButton;
 
 
 
@@ -95,5 +96,14 @@
 -(void)dismissKeyboard {
     [self.view endEditing:YES];
 }
+
+
+
+- (IBAction)returnToLogin:(id)sender {
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 @end
