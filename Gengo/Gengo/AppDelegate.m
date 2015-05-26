@@ -35,61 +35,15 @@
     
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:150.0/255.0 green:130.0/255.0 blue:169.0/255.0 alpha:1.0]];
     
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
-    UIUserNotificationType userNotificationTypes = ( UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound );
-    
-    UIMutableUserNotificationAction *optionA = [[UIMutableUserNotificationAction alloc] init];
-    optionA.identifier = @"optionA";
-    optionA.title = @"Option A";
-    optionA.activationMode = UIUserNotificationActivationModeBackground;
-    optionA.destructive = NO;
-    
-    UIMutableUserNotificationAction *optionB = [[UIMutableUserNotificationAction alloc] init];
-    optionB.identifier = @"optionB";
-    optionB.title = @"Option B";
-    optionB.activationMode = UIUserNotificationActivationModeBackground;
-    optionB.destructive = NO;
-    
-    UIMutableUserNotificationCategory *notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
-    notificationCategory.identifier = @"notificationCategory";
-    NSArray *actions = [[NSArray alloc] initWithObjects:optionA, optionB, nil];
-    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
-    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextMinimal];
-    
-    NSSet *categories = [[NSSet alloc] initWithObjects:notificationCategory, nil];
-    
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:categories];
-    [application registerUserNotificationSettings:settings];
-    [application registerForRemoteNotifications];
-    
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody = @"Alert Body";
-    notification.alertAction = @"Alert Action";
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.userInfo = @{@"key" : @"value"};
-    notification.category = @"notificationCategory";
-
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
- 
-    
+    for (int i = 0; i < 6; i++) {
+        
+        [self setupNotifications:@"essa notificaçao VAI acontecer" optionOne:@"sayonara" optionTwo:@"ohayo" day:i imageNamed:@"oi" rightAnswer:@1];
+        
+    }
     
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    //[SaveUtility SyncUser];
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -120,6 +74,64 @@
         
         completionHandler();
     }
+}
+
+-(void)setupNotifications:(NSString *)question
+                optionOne:(NSString *)optionOne
+                optionTwo:(NSString *)optionTwo
+                      day:(NSInteger )day
+               imageNamed:(NSString *)image
+              rightAnswer:(NSNumber *)answer{
+    
+    UIUserNotificationType userNotificationTypes = ( UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound );
+    
+    UIMutableUserNotificationAction *optionA = [[UIMutableUserNotificationAction alloc] init];
+    optionA.identifier = @"optionA";
+    optionA.title = optionOne;
+    optionA.activationMode = UIUserNotificationActivationModeBackground;
+    optionA.destructive = NO;
+    
+    UIMutableUserNotificationAction *optionB = [[UIMutableUserNotificationAction alloc] init];
+    optionB.identifier = @"Option B";
+    optionB.title = optionTwo;
+    optionB.activationMode = UIUserNotificationActivationModeBackground;
+    optionB.destructive = NO;
+    
+    UIMutableUserNotificationCategory *notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
+    notificationCategory.identifier = @"notificationCategory";
+    NSArray *actions = [[NSArray alloc] initWithObjects:optionA, optionB, nil];
+    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
+    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextMinimal];
+    
+    NSSet *categories = [[NSSet alloc] initWithObjects:notificationCategory, nil];
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:categories];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = question;
+    notification.alertAction = @"responder";
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    notification.userInfo = @{@"image" : image, @"rightAnswer" : answer};
+    notification.category = @"notificationCategory";
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:[NSDate date]]; // gets the year, month, day,hour and minutesfor today's date
+    NSLog(@"%@",components);
+//    [components setDay:components.day + day];
+//    [components setHour: 16];
+    [components setMinute:components.minute + day];
+    [calendar setTimeZone: [NSTimeZone defaultTimeZone]];
+    NSDate *dateToFire = [calendar dateFromComponents:components];
+    
+    [notification setFireDate: dateToFire];
+    [notification setTimeZone: [NSTimeZone defaultTimeZone]];
+    
+    
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
 }
 
 
