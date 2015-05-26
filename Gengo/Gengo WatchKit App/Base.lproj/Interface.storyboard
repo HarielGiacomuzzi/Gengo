@@ -10,9 +10,21 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Gengo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Pergunta?" id="u69-jX-ptj"/>
-                        <button width="1" alignment="left" title="Resposta" id="yKR-61-Z2E"/>
-                        <button width="1" alignment="left" title="Resposta" id="GUY-iQ-rMu"/>
+                        <label alignment="center" text="Label" id="gDN-1n-jrS">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <imageView width="121" height="95" alignment="center" id="XR0-Ku-DtC"/>
+                        <label alignment="center" text="Você sabe como se escreve x em japonês ?" textAlignment="center" numberOfLines="5" id="u69-jX-ptj"/>
+                        <button width="1" alignment="center" title="Resposta A" id="yKR-61-Z2E">
+                            <connections>
+                                <action selector="buttonAClicked" destination="AgC-eL-Hgc" id="M8O-DX-KCT"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="Resposta B" id="GUY-iQ-rMu">
+                            <connections>
+                                <action selector="buttonBCliked" destination="AgC-eL-Hgc" id="Yc1-Dg-QCk"/>
+                            </connections>
+                        </button>
                     </items>
                     <menu key="menu" id="fXp-T3-jJE">
                         <items>
@@ -26,11 +38,13 @@
                     <connections>
                         <outlet property="option1" destination="yKR-61-Z2E" id="N6v-Ug-Tvf"/>
                         <outlet property="option2" destination="GUY-iQ-rMu" id="vTu-hc-AyV"/>
+                        <outlet property="questionImg" destination="XR0-Ku-DtC" id="ort-b4-6e8"/>
                         <outlet property="questionLabel" destination="u69-jX-ptj" id="nXF-mD-DPf"/>
+                        <outlet property="romajiLbl" destination="gDN-1n-jrS" id="jPr-pM-Qn2"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="362.25"/>
+            <point key="canvasLocation" x="235" y="386.75"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

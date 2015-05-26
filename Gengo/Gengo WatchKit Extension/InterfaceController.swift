@@ -11,13 +11,22 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var romajiLbl: WKInterfaceLabel!
     @IBOutlet weak var questionLabel: WKInterfaceLabel!
-    
+    @IBOutlet weak var questionImg: WKInterfaceImage!
     @IBOutlet weak var option1: WKInterfaceButton!
     @IBOutlet weak var option2: WKInterfaceButton!
 
+    var plistPath: String?
+    var counter : Int?
+    var rightOption : UInt8?
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        self.questionImg.setImageNamed("boy head.png");
+        self.plistPath = NSBundle.mainBundle().pathForResource("WatchDictionary", ofType: "plist")
+        self.counter = 0;
+        loadQuestion(counter!);
         
 
     }
@@ -46,5 +55,12 @@ class InterfaceController: WKInterfaceController {
         println(identifier)
     }
     
-
+    func checkAnswer(option : UInt8){
+        if(option == rightOption){
+            counter = counter!+1
+            loadQuestion(counter!);
+        }else{
+            println("Erroooo feio, errou rude :P")
+        }
+    }
 }
