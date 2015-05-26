@@ -13,7 +13,9 @@ import Foundation
 class NotificationController: WKUserNotificationInterfaceController {
 
     @IBOutlet weak var image: WKInterfaceImage!
-    @IBOutlet weak var label: WKInterfaceLabel!
+    @IBOutlet weak var question: WKInterfaceLabel!
+    @IBOutlet weak var optionA: WKInterfaceLabel!
+    @IBOutlet weak var optionB: WKInterfaceLabel!
     
     override init() {
         // Initialize variables here.
@@ -34,27 +36,29 @@ class NotificationController: WKUserNotificationInterfaceController {
 
 
     override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+        var optionA = localNotification.userInfo!["optionA"] as! String
+        var optionB = localNotification.userInfo!["optionB"] as! String
+        var question = localNotification.userInfo!["question"] as! String
+        //var image = localNotification.userInfo!["image"] as! String
         
-        var question = localNotification.alertBody
-        label.setText(question)
-        
-        var dic = localNotification.userInfo
-        var imageName = dic!["image"] as! String
-        image.setImageNamed(imageName)
+        self.question.setText(question)
+        self.optionA.setText(optionA)
+        self.optionB.setText(optionB)
+        //self.image.setImageNamed(image)
         
         
         completionHandler(.Custom)
     }
 
     
-    /*
-    override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
-        // This method is called when a remote notification needs to be presented.
-        // Implement it if you use a dynamic notification interface.
-        // Populate your dynamic notification interface as quickly as possible.
-        //
-        // After populating your dynamic notification interface call the completion block.
-        completionHandler(.Custom)
-    }
-    */
+
+//    override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+//        // This method is called when a remote notification needs to be presented.
+//        // Implement it if you use a dynamic notification interface.
+//        // Populate your dynamic notification interface as quickly as possible.
+//        //
+//        // After populating your dynamic notification interface call the completion block.
+//        completionHandler(.Custom)
+//    }
+
 }

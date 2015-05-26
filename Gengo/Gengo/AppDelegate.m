@@ -37,11 +37,13 @@
     
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
+    [self notificationStuff];
+    
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"WatchDictionaryCopy" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     NSArray *notificationArray = dictionary[@"New item"];
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 3; i++) {
         
         //choses a random question from plist file
         int size = (int)notificationArray.count;
@@ -54,9 +56,14 @@
         NSString *wrongAnswer = question[4];
         NSString *notification = question[5];
         
-        NSLog(@"%d",[self yesOrNo]);
+        //randomizes answer order
+        int rnd = (arc4random() % 30)+1;
+        if(rnd % 5 == 0) {
+            [self setupNotifications:notification optionOne:rightAnswer optionTwo:wrongAnswer day:i imageNamed:image rightAnswer:@0 portuguese:portuguese romanji:romanji];
+        } else {
+            [self setupNotifications:notification optionOne:wrongAnswer optionTwo:rightAnswer day:i imageNamed:image rightAnswer:@1 portuguese:portuguese romanji:romanji];
+        }
 
-        [self setupNotifications:notification optionOne:rightAnswer optionTwo:wrongAnswer day:i imageNamed:image rightAnswer:@1 portuguese:portuguese romanji:romanji];
         
     }
     
@@ -80,15 +87,18 @@
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
--(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    NSLog(@"recebido");
-}
-
 -(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler {
-    NSLog(@"%@", identifier);
+    
+    NSNumber *right = notification.userInfo[@"rightAnswer"];
+    
+    
+    if (([identifier  isEqual: @"A"] && [right  isEqual: @0]) || ([identifier  isEqual: @"B"] && [right  isEqual: @1])) {
+        NSLog(@"certa respostaaaaaa");
+    } else {
+        NSLog(@"burroooooo");
+    }
     
     if (completionHandler) {
-        
         completionHandler();
     }
 }
@@ -102,44 +112,26 @@
                portuguese:(NSString *)portuguese
                   romanji:(NSString *)romanji{
     
-    UIUserNotificationType userNotificationTypes = ( UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound );
-    
-    UIMutableUserNotificationAction *optionA = [[UIMutableUserNotificationAction alloc] init];
-    optionA.identifier = @"optionA";
-    optionA.title = optionOne;
-    optionA.activationMode = UIUserNotificationActivationModeBackground;
-    optionA.destructive = NO;
-    
-    UIMutableUserNotificationAction *optionB = [[UIMutableUserNotificationAction alloc] init];
-    optionB.identifier = @"Option B";
-    optionB.title = optionTwo;
-    optionB.activationMode = UIUserNotificationActivationModeBackground;
-    optionB.destructive = NO;
-    
-    UIMutableUserNotificationCategory *notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
-    notificationCategory.identifier = @"notificationCategory";
-    NSArray *actions = [[NSArray alloc] initWithObjects:optionA, optionB, nil];
-    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
-    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextMinimal];
-    
-    NSSet *categories = [[NSSet alloc] initWithObjects:notificationCategory, nil];
-    
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:categories];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody = question;
+    notification.alertBody = [NSString stringWithFormat:@"%@ A) %@ B) %@",question,optionOne,optionTwo];
     notification.alertAction = @"responder";
     notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.userInfo = @{@"image" : image, @"rightAnswer" : answer, @"portuguese" : portuguese, @"romanji" : romanji};
+    
+    notification.userInfo = @{
+                              @"image" : image,
+                              @"rightAnswer" : answer,
+                              @"portuguese" : portuguese,
+                              @"romanji" : romanji,
+                              @"optionA" : optionOne,
+                              @"optionB" : optionTwo,
+                              @"question" : question
+                              };
+    
     notification.category = @"notificationCategory";
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:[NSDate date]]; // gets the year, month, day,hour and minutesfor today's date
-   // NSLog(@"%@",components);
-//    [components setDay:components.day + day];
-//    [components setHour: 16];
     [components setMinute:components.minute + day];
     [calendar setTimeZone: [NSTimeZone defaultTimeZone]];
     NSDate *dateToFire = [calendar dateFromComponents:components];
@@ -153,11 +145,32 @@
     
 }
 
--(BOOL)yesOrNo {
-    int tmp = (arc4random() % 30)+1;
-    if(tmp % 5 == 0)
-        return YES;
-    return NO;
+-(void)notificationStuff {
+    UIUserNotificationType userNotificationTypes = ( UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound );
+    
+    UIMutableUserNotificationAction *optionA = [[UIMutableUserNotificationAction alloc] init];
+    optionA.identifier = @"A";
+    optionA.title = @"A";
+    optionA.activationMode = UIUserNotificationActivationModeBackground;
+    optionA.destructive = NO;
+    
+    UIMutableUserNotificationAction *optionB = [[UIMutableUserNotificationAction alloc] init];
+    optionB.identifier = @"B";
+    optionB.title = @"B";
+    optionB.activationMode = UIUserNotificationActivationModeBackground;
+    optionB.destructive = NO;
+    
+    UIMutableUserNotificationCategory *notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
+    notificationCategory.identifier = @"notificationCategory";
+    NSArray *actions = [[NSArray alloc] initWithObjects:optionB, optionA, nil];
+    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
+    [notificationCategory setActions:actions forContext:UIUserNotificationActionContextMinimal];
+    
+    NSSet *categories = [[NSSet alloc] initWithObjects:notificationCategory, nil];
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:categories];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 

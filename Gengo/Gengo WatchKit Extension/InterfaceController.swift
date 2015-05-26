@@ -19,15 +19,6 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        let plistPath = NSBundle.mainBundle().pathForResource("WatchDictionary", ofType: "plist")
-        if let dict = NSDictionary(contentsOfFile: plistPath!) {
-            var keys = dict.allKeys
-            var question = keys[0] as! String
-            var answer = dict[question] as! String
-            questionLabel.setText(question)
-            option1.setTitle(answer)
-            option2.setTitle("errada")
-        }
 
     }
 
@@ -41,10 +32,19 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    @IBAction func activateNotificationsButtonClicked() {
-        println("oie")
+    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+        var rightAnswer = localNotification.userInfo!["rightAnswer"] as! Int
+        if((identifier == "A" && rightAnswer == 0) || (identifier == "B" && rightAnswer == 1)) {
+            println("repsosta certa")
+        } else {
+            println("repsosta errada")
+        }
+        
     }
     
+    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+        println(identifier)
+    }
     
 
 }
