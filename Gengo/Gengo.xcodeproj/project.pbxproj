@@ -58,6 +58,7 @@
 		44E03D381AC5ECDF006CDB27 /* ViewTutorial1.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E03D371AC5ECDF006CDB27 /* ViewTutorial1.m */; };
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
+		5E288CCF1B14D7240076610E /* WatchDictionaryCopy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E288CCE1B14D7240076610E /* WatchDictionaryCopy.plist */; };
 		5E55DF751ADE8EFD00293FD7 /* TestDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */; };
 		5E6C388D1B0FB8C7006460EC /* WatchDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
@@ -223,6 +224,7 @@
 		5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
 		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
 		5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCellTableViewCell.m; sourceTree = "<group>"; };
+		5E288CCE1B14D7240076610E /* WatchDictionaryCopy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WatchDictionaryCopy.plist; sourceTree = "<group>"; };
 		5E4BC0E31B138C5900F84DE1 /* Gengo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gengo.entitlements; sourceTree = "<group>"; };
 		5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestDictionary.plist; sourceTree = "<group>"; };
 		5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WatchDictionary.plist; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 				DB2791161ADD941C00661EA0 /* Data.plist */,
 				5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */,
 				5E9AD9191AF063FA00D758F8 /* Items.plist */,
+				5E288CCE1B14D7240076610E /* WatchDictionaryCopy.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				5EDF2C261ACC271700162205 /* GameScene.sks in Resources */,
 				DB92D3641AC5BFBC002DE928 /* View3.xib in Resources */,
 				44C99E2A1ADC9D3C0039CC6B /* hi.wav in Resources */,
+				5E288CCF1B14D7240076610E /* WatchDictionaryCopy.plist in Resources */,
 				44C99E261ADC9D3C0039CC6B /* chi.wav in Resources */,
 				44C99E2D1ADC9D3C0039CC6B /* ka.wav in Resources */,
 				44C99E321ADC9D3C0039CC6B /* ma.wav in Resources */,

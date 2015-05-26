@@ -37,9 +37,26 @@
     
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
-    for (int i = 0; i < 6; i++) {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"WatchDictionaryCopy" ofType:@"plist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    NSArray *notificationArray = dictionary[@"New item"];
+
+    for (int i = 0; i < 4; i++) {
         
-        [self setupNotifications:@"essa notificaçao VAI acontecer" optionOne:@"sayonara" optionTwo:@"ohayo" day:i imageNamed:@"oi" rightAnswer:@1];
+        //choses a random question from plist file
+        int size = (int)notificationArray.count;
+        int index = arc4random() % size;
+        NSArray *question = notificationArray[index];
+        NSString *portuguese = question[0];
+        NSString *romanji = question[1];
+        NSString *image = question[2];
+        NSString *rightAnswer = question[3];
+        NSString *wrongAnswer = question[4];
+        NSString *notification = question[5];
+        
+        NSLog(@"%d",[self yesOrNo]);
+
+        [self setupNotifications:notification optionOne:rightAnswer optionTwo:wrongAnswer day:i imageNamed:image rightAnswer:@1 portuguese:portuguese romanji:romanji];
         
     }
     
@@ -81,7 +98,9 @@
                 optionTwo:(NSString *)optionTwo
                       day:(NSInteger )day
                imageNamed:(NSString *)image
-              rightAnswer:(NSNumber *)answer{
+              rightAnswer:(NSNumber *)answer
+               portuguese:(NSString *)portuguese
+                  romanji:(NSString *)romanji{
     
     UIUserNotificationType userNotificationTypes = ( UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound );
     
@@ -113,12 +132,12 @@
     notification.alertBody = question;
     notification.alertAction = @"responder";
     notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.userInfo = @{@"image" : image, @"rightAnswer" : answer};
+    notification.userInfo = @{@"image" : image, @"rightAnswer" : answer, @"portuguese" : portuguese, @"romanji" : romanji};
     notification.category = @"notificationCategory";
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:[NSDate date]]; // gets the year, month, day,hour and minutesfor today's date
-    NSLog(@"%@",components);
+   // NSLog(@"%@",components);
 //    [components setDay:components.day + day];
 //    [components setHour: 16];
     [components setMinute:components.minute + day];
@@ -132,6 +151,13 @@
     
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     
+}
+
+-(BOOL)yesOrNo {
+    int tmp = (arc4random() % 30)+1;
+    if(tmp % 5 == 0)
+        return YES;
+    return NO;
 }
 
 

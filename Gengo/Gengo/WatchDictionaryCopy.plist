@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>New item</key>
+        <array>
+            <array>
+                <string>Avião</string>
+                <string>hikouki</string>
+                <string>hikouki.png</string>
+                <string>ふね</string>
+                <string>ひこうき</string>
+                <string>Como se escreve avião?</string>
+            </array>
+            <array>
+                <string>Arvore</string>
+                <string>ki</string>
+                <string>ki.png</string>
+                <string>き</string>
+                <string>あした</string>
+                <string>Como se escreve arvore?</string>
+            </array>
+            <array>
+                <string>Árvore</string>
+                <string>ki</string>
+                <string>ki.png</string>
+                <string>き</string>
+                <string>あした</string>
+                <string>Como se escreve árvore?</string>
+            </array>
+            <array>
+                <string>Carro</string>
+                <string>kuruma</string>
+                <string>kuruma.png</string>
+                <string>ふね</string>
+                <string>くるま</string>
+                <string>Como se escreve carro?</string>
+            </array>
+            <array>
+                <string>Livro</string>
+                <string>hon</string>
+                <string>hon.png</string>
+                <string>ほん</string>
+                <string>しゃしん</string>
+                <string>Como se escreve livro?</string>
+            </array>
+            <array>
+                <string>Colégio</string>
+                <string>gakkō</string>
+                <string>gakkō.png</string>
+                <string>がっこう</string>
+                <string>しゃしん</string>
+                <string>Como se escreve livro?</string>
+            </array>
+            <array>
+                <string>Universidade</string>
+                <string>daigaku</string>
+                <string>daigaku.png</string>
+                <string>うち</string>
+                <string>だいがく</string>
+                <string>Como se escreve universidade?</string>
+            </array>
+            <array>
+                <string>Amigo</string>
+                <string>ともだち</string>
+                <string>ともだち.png</string>
+                <string>かれし</string>
+                <string>だいがく</string>
+                <string>Como se escreve amigo?</string>
+            </array>
+            <array>
+                <string>Sol</string>
+                <string>たいよう</string>
+                <string>たいよう.png</string>
+                <string>たいよう</string>
+                <string>くも</string>
+                <string>Como se escreve sol?</string>
+            </array>
+            <array>
+                <string>Maçã</string>
+                <string>りんご</string>
+                <string>りんご.png</string>
+                <string>いちご</string>
+                <string>りんご</string>
+                <string>Como se escreve maçã?</string>
+            </array>
+            <array>
+                <string>Gato</string>
+                <string>ねこ</string>
+                <string>ねこ.png</string>
+                <string>ねこ</string>
+                <string>いぬ</string>
+                <string>Como se escreve gato?</string>
+            </array>
+        </array>
+    </dict>
+</plist>
