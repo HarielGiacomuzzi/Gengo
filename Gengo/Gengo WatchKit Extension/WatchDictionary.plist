@@ -2,88 +2,88 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>New item</key>
+	<key>Questions</key>
 	<array>
 		<array>
-            <string>Avião</string>
-            <string>hikouki</string>
+			<string>Avião</string>
+			<string>hikouki</string>
 			<string>hikouki.png</string>
 			<string>ひこうき</string>
 			<string>ふね</string>
 			<string>Como se escreve avião?</string>
-        </array>
-        <array>
-            <string>Árvore</string>
-            <string>ki</string>
-            <string>ki.png</string>
-            <string>き</string>
-            <string>あした</string>
-            <string>Como se escreve árvore?</string>
-        </array>
-        <array>
-            <string>Carro</string>
-            <string>kuruma</string>
-            <string>kuruma.png</string>
-            <string>くるま</string>
-            <string>ふね</string>
-            <string>Como se escreve carro?</string>
-        </array>
-        <array>
-            <string>Livro</string>
-            <string>hon</string>
-            <string>hon.png</string>
-            <string>ほん</string>
-            <string>しゃしん</string>
-            <string>Como se escreve livro?</string>
-        </array>
-        <array>
-            <string>Colégio</string>
-            <string>gakkō</string>
-            <string>gakkō.png</string>
-            <string>がっこう</string>
-            <string>しゃしん</string>
-            <string>Como se escreve colégio?</string>
-        </array>
-        <array>
-            <string>Universidade</string>
-            <string>daigaku</string>
-            <string>daigaku.png</string>
-            <string>だいがく</string>
-            <string>としょかん</string>
-            <string>Como se escreve universidade?</string>
-        </array>
-        <array>
-            <string>Amigo</string>
-            <string>tomodachi</string>
-            <string>tomodachi.png</string>
-            <string>ともだち</string>
-            <string>かれし</string>
-            <string>Como se escreve amigo?</string>
-        </array>
-        <array>
-            <string>Sol</string>
-            <string>たいよう</string>
-            <string>taiyou.png</string>
-            <string>たいよう</string>
-            <string>くも</string>
-            <string>Como se escreve sol?</string>
-        </array>
-        <array>
-            <string>Maçã</string>
-            <string>りんご</string>
-            <string>ringo.png</string>
-            <string>りんご</string>
-            <string>いちご</string>
-            <string>Como se escreve maçã?</string>
-        </array>
-        <array>
-            <string>Gato</string>
-            <string>ねこ</string>
-            <string>neko.png</string>
-            <string>ねこ</string>
-            <string>いぬ</string>
-            <string>Como se escreve gato?</string>
-        </array>
+		</array>
+		<array>
+			<string>Árvore</string>
+			<string>ki</string>
+			<string>ki.png</string>
+			<string>き</string>
+			<string>あした</string>
+			<string>Como se escreve árvore?</string>
+		</array>
+		<array>
+			<string>Carro</string>
+			<string>kuruma</string>
+			<string>kuruma.png</string>
+			<string>くるま</string>
+			<string>ふね</string>
+			<string>Como se escreve carro?</string>
+		</array>
+		<array>
+			<string>Livro</string>
+			<string>hon</string>
+			<string>hon.png</string>
+			<string>ほん</string>
+			<string>しゃしん</string>
+			<string>Como se escreve livro?</string>
+		</array>
+		<array>
+			<string>Colégio</string>
+			<string>gakkō</string>
+			<string>gakkō.png</string>
+			<string>がっこう</string>
+			<string>しゃしん</string>
+			<string>Como se escreve colégio?</string>
+		</array>
+		<array>
+			<string>Universidade</string>
+			<string>daigaku</string>
+			<string>daigaku.png</string>
+			<string>だいがく</string>
+			<string>としょかん</string>
+			<string>Como se escreve universidade?</string>
+		</array>
+		<array>
+			<string>Amigo</string>
+			<string>tomodachi</string>
+			<string>tomodachi.png</string>
+			<string>ともだち</string>
+			<string>かれし</string>
+			<string>Como se escreve amigo?</string>
+		</array>
+		<array>
+			<string>Sol</string>
+			<string>たいよう</string>
+			<string>taiyou.png</string>
+			<string>たいよう</string>
+			<string>くも</string>
+			<string>Como se escreve sol?</string>
+		</array>
+		<array>
+			<string>Maçã</string>
+			<string>りんご</string>
+			<string>ringo.png</string>
+			<string>りんご</string>
+			<string>いちご</string>
+			<string>Como se escreve maçã?</string>
+		</array>
+		<array>
+			<string>Gato</string>
+			<string>ねこ</string>
+			<string>neko.png</string>
+			<string>ねこ</string>
+			<string>いぬ</string>
+			<string>Como se escreve gato?</string>
+		</array>
 	</array>
 </dict>
 </plist>

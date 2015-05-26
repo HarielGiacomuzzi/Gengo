@@ -11,24 +11,23 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var romajiLbl: WKInterfaceLabel!
     @IBOutlet weak var questionLabel: WKInterfaceLabel!
-    
+    @IBOutlet weak var questionImg: WKInterfaceImage!
     @IBOutlet weak var option1: WKInterfaceButton!
     @IBOutlet weak var option2: WKInterfaceButton!
 
+    var plistPath: String?
+    var counter : Int?
+    var rightOption : UInt8?
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        self.questionImg.setImageNamed("boy head.png");
+        self.plistPath = NSBundle.mainBundle().pathForResource("WatchDictionary", ofType: "plist")
+        self.counter = 0;
+        loadQuestion(counter!);
         
-        let plistPath = NSBundle.mainBundle().pathForResource("WatchDictionary", ofType: "plist")
-        if let dict = NSDictionary(contentsOfFile: plistPath!) {
-            var keys = dict.allKeys
-            var question = keys[0] as! String
-            var answer = dict[question] as! String
-            questionLabel.setText(question)
-            option1.setTitle(answer)
-            option2.setTitle("errada")
-        }
-
     }
 
     override func willActivate() {
@@ -41,10 +40,44 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    @IBAction func activateNotificationsButtonClicked() {
-        println("oie")
+    @IBAction func buttonAClicked() {
+        self.checkAnswer(0);
+    }
+    @IBAction func buttonBCliked() {
+        self.checkAnswer(1);
     }
     
+    func loadQuestion(question : Int){
+        var questionNumber = 0;
+        if(question > 9){
+            self.counter = 0;
+            questionNumber = 0;
+        }else{
+            questionNumber = question;
+        }
+        if let dic = NSDictionary(contentsOfFile: plistPath!){
+            var data : NSArray = (dic.objectForKey("Questions") as? NSArray)!;
+            romajiLbl.setText(data[questionNumber][1] as? String);
+            questionLabel.setText(data[questionNumber][5] as? String);
+//          questionImg.setImageNamed(data[questionNumber][2] as? String);
+            if(Int(arc4random_uniform(11)) > 5){
+                option1.setTitle(data[questionNumber][3] as? String);
+                option2.setTitle(data[questionNumber][4] as? String);
+                rightOption = 0;
+            }else{
+                option1.setTitle(data[questionNumber][4] as? String);
+                option2.setTitle(data[questionNumber][3] as? String);
+                rightOption = 1;
+            }
+        }
+    }
     
-
+    func checkAnswer(option : UInt8){
+        if(option == rightOption){
+            counter = counter!+1
+            loadQuestion(counter!);
+        }else{
+            println("Erroooo feio, errou rude :P")
+        }
+    }
 }
