@@ -41,18 +41,36 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
-        var rightAnswer = localNotification.userInfo!["rightAnswer"] as! Int
-        if((identifier == "A" && rightAnswer == 0) || (identifier == "B" && rightAnswer == 1)) {
-            println("repsosta certa")
-        } else {
-            println("repsosta errada")
-        }
-        
+    @IBAction func buttonAClicked() {
+        self.checkAnswer(0);
+    }
+    @IBAction func buttonBCliked() {
+        self.checkAnswer(1);
     }
     
-    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
-        println(identifier)
+    func loadQuestion(question : Int){
+        var questionNumber = 0;
+        if(question > 9){
+            self.counter = 0;
+            questionNumber = 0;
+        }else{
+            questionNumber = question;
+        }
+        if let dic = NSDictionary(contentsOfFile: plistPath!){
+            var data : NSArray = (dic.objectForKey("Questions") as? NSArray)!;
+            romajiLbl.setText(data[questionNumber][1] as? String);
+            questionLabel.setText(data[questionNumber][5] as? String);
+//          questionImg.setImageNamed(data[questionNumber][2] as? String);
+            if(Int(arc4random_uniform(11)) > 5){
+                option1.setTitle(data[questionNumber][3] as? String);
+                option2.setTitle(data[questionNumber][4] as? String);
+                rightOption = 0;
+            }else{
+                option1.setTitle(data[questionNumber][4] as? String);
+                option2.setTitle(data[questionNumber][3] as? String);
+                rightOption = 1;
+            }
+        }
     }
     
     func checkAnswer(option : UInt8){
@@ -62,5 +80,21 @@ class InterfaceController: WKInterfaceController {
         }else{
             println("Erroooo feio, errou rude :P")
         }
+    }
+    
+    
+    
+    
+    //parte da notification:
+    
+    
+    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+        var rightAnswer = localNotification.userInfo!["rightAnswer"] as! Int
+        if((identifier == "A" && rightAnswer == 0) || (identifier == "B" && rightAnswer == 1)) {
+            println("repsosta certa")
+        } else {
+            println("repsosta errada")
+        }
+        
     }
 }
