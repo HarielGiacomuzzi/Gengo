@@ -91,10 +91,13 @@ class InterfaceController: WKInterfaceController {
     override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
         var rightAnswer = localNotification.userInfo!["rightAnswer"] as! Int
         if((identifier == "A" && rightAnswer == 0) || (identifier == "B" && rightAnswer == 1)) {
-            println("repsosta certa")
+            presentControllerWithName("answerID", context: "right")
         } else {
-            println("repsosta errada")
+            presentControllerWithName("answerID", context: "wrong")
         }
-        
     }
+    
+//    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+//        presentControllerWithName("answerID", context: "wrong")
+//    }
 }

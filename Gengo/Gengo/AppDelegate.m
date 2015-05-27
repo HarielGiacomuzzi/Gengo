@@ -41,9 +41,9 @@
     
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"WatchDictionaryCopy" ofType:@"plist"];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    NSArray *notificationArray = dictionary[@"New item"];
+    NSArray *notificationArray = dictionary[@"Questions"];
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 1; i++) {
         
         //choses a random question from plist file
         int size = (int)notificationArray.count;
@@ -131,12 +131,20 @@
     notification.category = @"notificationCategory";
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:[NSDate date]]; // gets the year, month, day,hour and minutesfor today's date
-    [components setMinute:components.minute + day];
+    
+    // gets the year, month, day,hour and minutesfor today's date
+    NSDateComponents *components = [calendar components:(NSCalendarUnitYear |
+                                                         NSCalendarUnitMonth |
+                                                         NSCalendarUnitDay |
+                                                         NSCalendarUnitHour |
+                                                         NSCalendarUnitMinute)
+                                               fromDate:[NSDate date]];
+    
+    [components setMinute:components.day + day];
     [calendar setTimeZone: [NSTimeZone defaultTimeZone]];
     NSDate *dateToFire = [calendar dateFromComponents:components];
     
-    [notification setFireDate: dateToFire];
+    [notification setFireDate: [NSDate dateWithTimeIntervalSinceNow:10]];
     [notification setTimeZone: [NSTimeZone defaultTimeZone]];
     
     
