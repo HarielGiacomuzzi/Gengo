@@ -83,6 +83,7 @@
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		5EEAAED41ADDC59A0089156C /* GameDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEAAED31ADDC59A0089156C /* GameDictionary.plist */; };
 		DB2791171ADD941C00661EA0 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2791161ADD941C00661EA0 /* Data.plist */; };
+		DB4E28781B14FF770023257E /* HandOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4E28771B14FF770023257E /* HandOffViewController.m */; };
 		DB6627D91B04E9BA00EA3FB3 /* VCCreateAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */; };
 		DB6627DC1B04F0EC00EA3FB3 /* VCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
@@ -266,6 +267,8 @@
 		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5EEAAED31ADDC59A0089156C /* GameDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameDictionary.plist; sourceTree = "<group>"; };
 		DB2791161ADD941C00661EA0 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		DB4E28761B14FF770023257E /* HandOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandOffViewController.h; sourceTree = "<group>"; };
+		DB4E28771B14FF770023257E /* HandOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandOffViewController.m; sourceTree = "<group>"; };
 		DB6627D71B04E9BA00EA3FB3 /* VCCreateAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCCreateAccount.h; sourceTree = "<group>"; };
 		DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCCreateAccount.m; sourceTree = "<group>"; };
 		DB6627DA1B04F0EC00EA3FB3 /* VCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLogin.h; sourceTree = "<group>"; };
@@ -476,6 +479,8 @@
 				DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */,
 				DB6627DA1B04F0EC00EA3FB3 /* VCLogin.h */,
 				DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */,
+				DB4E28761B14FF770023257E /* HandOffViewController.h */,
+				DB4E28771B14FF770023257E /* HandOffViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -911,6 +916,7 @@
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
 				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
 				DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */,
+				DB4E28781B14FF770023257E /* HandOffViewController.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,

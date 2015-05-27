@@ -87,6 +87,19 @@
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    NSLog(@"recebido");
+}
+
+-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler{
+    UIWindow *win = self.window;
+    if (win != nil) {
+        [win.rootViewController restoreUserActivityState:userActivity];
+    }
+    
+    return YES;
+}
+
 -(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler {
     
     NSNumber *right = notification.userInfo[@"rightAnswer"];

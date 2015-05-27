@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
+#import "HandOffViewController.h"
 
 @interface VCLogin : UIViewController
 
