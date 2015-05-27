@@ -49,7 +49,7 @@ class InterfaceController: WKInterfaceController {
     
     func loadQuestion(question : Int){
         var questionNumber = 0;
-        if(question > 9){
+        if(question > 10){
             self.counter = 0;
             questionNumber = 0;
         }else{

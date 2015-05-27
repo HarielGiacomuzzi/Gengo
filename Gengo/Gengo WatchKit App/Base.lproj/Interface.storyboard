@@ -51,13 +51,24 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="Gengo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="ohayou!" id="VXI-pN-r8c"/>
+                            </items>
+                        </group>
+                        <group alignment="left" contentMode="scaleAspectFill" id="uCw-4Q-Ouw">
+                            <items>
+                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" image="boy head" id="NEc-SU-6AU"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="imgGlance" destination="uCw-4Q-Ouw" id="bf3-CY-S3q"/>
+                    </connections>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="72" y="632"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

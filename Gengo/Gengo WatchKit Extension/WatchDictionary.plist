@@ -45,24 +45,16 @@
 			<string>Como se escreve colégio?</string>
 		</array>
 		<array>
-			<string>Universidade</string>
-			<string>daigaku</string>
-			<string>daigaku.png</string>
-			<string>だいがく</string>
-			<string>としょかん</string>
-			<string>Como se escreve universidade?</string>
-		</array>
-		<array>
-			<string>Amigo</string>
-			<string>tomodachi</string>
-			<string>tomodachi.png</string>
-			<string>ともだち</string>
-			<string>かれし</string>
-			<string>Como se escreve amigo?</string>
+			<string>Arroz</string>
+			<string>kome</string>
+			<string>kome.png</string>
+			<string>こめ</string>
+			<string>あんこ</string>
+			<string>Como se escreve arroz?</string>
 		</array>
 		<array>
 			<string>Sol</string>
-			<string>たいよう</string>
+			<string>taiyou</string>
 			<string>taiyou.png</string>
 			<string>たいよう</string>
 			<string>くも</string>
@@ -70,7 +62,7 @@
 		</array>
 		<array>
 			<string>Maçã</string>
-			<string>りんご</string>
+			<string>ringo</string>
 			<string>ringo.png</string>
 			<string>りんご</string>
 			<string>いちご</string>
@@ -78,7 +70,7 @@
 		</array>
 		<array>
 			<string>Gato</string>
-			<string>ねこ</string>
+			<string>neko</string>
 			<string>neko.png</string>
 			<string>ねこ</string>
 			<string>いぬ</string>
