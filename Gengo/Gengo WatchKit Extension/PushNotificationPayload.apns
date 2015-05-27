@@ -4,13 +4,17 @@
             "body": "Test message",
             "title": "Optional title"
         },
-        "category": "myCategory"
+        "category": "notificationCategory"
     },
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
-            "identifier": "firstButtonAction"
+            "title": "A",
+            "identifier": "A"
+        },
+        {
+            "title": "B",
+            "identifier": "B"
         }
     ],
     

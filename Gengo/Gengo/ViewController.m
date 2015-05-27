@@ -49,7 +49,8 @@
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
             [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
             dispatch_async(dispatch_get_main_queue(), ^(void){
-                [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+                [self restoreUserActivityState:nil];
+                //[self performSegueWithIdentifier:@"loginSegue" sender:nil];
             });
         });
         
@@ -59,6 +60,15 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+}
+
+-(void)restoreUserActivityState:(NSUserActivity *)activity{
+    if (activity != nil && self.isLogged) {
+        
+    }
+    if (activity == nil && self.isLogged) {
+        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
