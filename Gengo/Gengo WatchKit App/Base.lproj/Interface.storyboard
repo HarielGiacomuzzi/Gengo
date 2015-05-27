@@ -46,6 +46,20 @@
             </objects>
             <point key="canvasLocation" x="235" y="386.75"/>
         </scene>
+        <!--answerID-->
+        <scene sceneID="mgP-VZ-Lf6">
+            <objects>
+                <controller identifier="answerID" id="XYh-oV-aAz" customClass="AnswerInterfaceController" customModule="Gengo_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="150" alignment="center" verticalAlignment="center" id="ncO-YB-DUA"/>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="ncO-YB-DUA" id="Qv6-91-PPg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="485" y="459"/>
+        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
@@ -68,7 +82,7 @@
                     </items>
                     <notificationCategory key="notificationCategory" identifier="notificationCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="sbJ-4c-ClK"/>
                         <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
                     </connections>
                 </notificationController>
@@ -80,7 +94,7 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Gengo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView width="70" height="63" alignment="center" id="hPa-eO-ufC"/>
+                        <imageView width="136" height="63" alignment="center" image="boy head" id="hPa-eO-ufC"/>
                         <label alignment="center" text="Como se escreve gato?" numberOfLines="10" id="hUK-k7-kh8"/>
                         <label alignment="center" verticalAlignment="center" text="B)cachorro?" id="9zg-Qy-LVj"/>
                         <label alignment="center" text="A) gato?" id="roc-Nb-F12"/>

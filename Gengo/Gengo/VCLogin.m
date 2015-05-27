@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loader;
 
 @property BOOL isLogged;
+@property NSUserActivity* act;
 
 @end
 
@@ -54,7 +55,8 @@
                 [User lodUserWithObject:user[@"userReference"]];
                 if ([User loadUser] != nil) {
                     [self.loader stopAnimating];
-                    [self performSegueWithIdentifier:@"loginSegue" sender:self];
+                    [self restoreUserActivityState:self.act];
+                    //[self performSegueWithIdentifier:@"loginSegue" sender:self];
                 }
             }else{
                 UIAlertView *a = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Login Inválido" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
@@ -71,6 +73,20 @@
     //loginView.delegate = self;
 }
 
+-(void)restoreUserActivityState:(NSUserActivity *)activity{
+    if (activity != nil && !self.isLogged) {
+        self.act = activity;
+        return;
+    }
+    if (activity != nil && self.isLogged) {
+        self.act = activity;
+        [self performSegueWithIdentifier:@"gotoHandOff" sender:nil];
+    }
+    if (activity == nil && self.isLogged) {
+        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+    }
+}
+
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user{
     
@@ -79,9 +95,18 @@
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
             [User lodUserWithEmail:[user objectForKey:@"email"] andUser:user];
             dispatch_async(dispatch_get_main_queue(), ^(void){
-                [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+                [self restoreUserActivityState:self.act];
+                //[self performSegueWithIdentifier:@"loginSegue" sender:nil];
             });
         });
+        
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoHandOff"]) {
+        HandOffViewController* handoff = (HandOffViewController*)segue.destinationViewController;
+        
         
     }
 }

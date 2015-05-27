@@ -70,6 +70,7 @@ class InterfaceController: WKInterfaceController {
                 option2.setTitle(data[questionNumber][3] as? String);
                 rightOption = 1;
             }
+            self.updateUserActivity("com.nekosenseicorporation.Gengo.WatchApp", userInfo: ["question": (data[questionNumber][5] as? String)!, "romaji": (data[questionNumber][1] as? String)!, "imageName" : (data[questionNumber][2] as? String)!, "rightOption" : (data[questionNumber][3] as? String)!,"wrongOption" : (data[questionNumber][4] as? String)!], webpageURL: nil)
         }
     }
     
@@ -91,10 +92,13 @@ class InterfaceController: WKInterfaceController {
     override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
         var rightAnswer = localNotification.userInfo!["rightAnswer"] as! Int
         if((identifier == "A" && rightAnswer == 0) || (identifier == "B" && rightAnswer == 1)) {
-            println("repsosta certa")
+            presentControllerWithName("answerID", context: "right")
         } else {
-            println("repsosta errada")
+            presentControllerWithName("answerID", context: "wrong")
         }
-        
     }
+    
+//    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+//        presentControllerWithName("answerID", context: "wrong")
+//    }
 }

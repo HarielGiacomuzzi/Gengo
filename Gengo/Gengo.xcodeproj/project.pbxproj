@@ -59,6 +59,7 @@
 		5E1D57F01AC1AED500EC1379 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57EF1AC1AED500EC1379 /* LessonTableViewController.m */; };
 		5E1D57F31AC1AF6000EC1379 /* LessonCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */; };
 		5E288CCF1B14D7240076610E /* WatchDictionaryCopy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E288CCE1B14D7240076610E /* WatchDictionaryCopy.plist */; };
+		5E28F22F1B16284D00613047 /* AnswertInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28F22E1B16284D00613047 /* AnswertInterfaceController.swift */; };
 		5E55DF751ADE8EFD00293FD7 /* TestDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */; };
 		5E6C388D1B0FB8C7006460EC /* WatchDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */; };
 		5E6C3FE11AC12E5700B57FD1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C3FDD1AC12E5700B57FD1 /* GameScene.m */; };
@@ -82,6 +83,7 @@
 		5EEA8EFB1ABC8C4E00D141B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */; };
 		5EEAAED41ADDC59A0089156C /* GameDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEAAED31ADDC59A0089156C /* GameDictionary.plist */; };
 		DB2791171ADD941C00661EA0 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2791161ADD941C00661EA0 /* Data.plist */; };
+		DB4E28781B14FF770023257E /* HandOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4E28771B14FF770023257E /* HandOffViewController.m */; };
 		DB6627D91B04E9BA00EA3FB3 /* VCCreateAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */; };
 		DB6627DC1B04F0EC00EA3FB3 /* VCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */; };
 		DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7119941ABCA7E100ACDD71 /* Achievement.m */; };
@@ -225,6 +227,7 @@
 		5E1D57F11AC1AF6000EC1379 /* LessonCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCellTableViewCell.h; sourceTree = "<group>"; };
 		5E1D57F21AC1AF6000EC1379 /* LessonCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCellTableViewCell.m; sourceTree = "<group>"; };
 		5E288CCE1B14D7240076610E /* WatchDictionaryCopy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WatchDictionaryCopy.plist; sourceTree = "<group>"; };
+		5E28F22E1B16284D00613047 /* AnswertInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswertInterfaceController.swift; sourceTree = "<group>"; };
 		5E4BC0E31B138C5900F84DE1 /* Gengo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gengo.entitlements; sourceTree = "<group>"; };
 		5E55DF741ADE8EFD00293FD7 /* TestDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestDictionary.plist; sourceTree = "<group>"; };
 		5E6C388C1B0FB8C7006460EC /* WatchDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WatchDictionary.plist; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 		5EEA8EFA1ABC8C4E00D141B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5EEAAED31ADDC59A0089156C /* GameDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameDictionary.plist; sourceTree = "<group>"; };
 		DB2791161ADD941C00661EA0 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		DB4E28761B14FF770023257E /* HandOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandOffViewController.h; sourceTree = "<group>"; };
+		DB4E28771B14FF770023257E /* HandOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandOffViewController.m; sourceTree = "<group>"; };
 		DB6627D71B04E9BA00EA3FB3 /* VCCreateAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCCreateAccount.h; sourceTree = "<group>"; };
 		DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCCreateAccount.m; sourceTree = "<group>"; };
 		DB6627DA1B04F0EC00EA3FB3 /* VCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLogin.h; sourceTree = "<group>"; };
@@ -474,6 +479,8 @@
 				DB6627D81B04E9BA00EA3FB3 /* VCCreateAccount.m */,
 				DB6627DA1B04F0EC00EA3FB3 /* VCLogin.h */,
 				DB6627DB1B04F0EC00EA3FB3 /* VCLogin.m */,
+				DB4E28761B14FF770023257E /* HandOffViewController.h */,
+				DB4E28771B14FF770023257E /* HandOffViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -631,6 +638,7 @@
 				DBD765A21B0E5F4200FA08A2 /* InterfaceController.swift */,
 				DBD765A41B0E5F4200FA08A2 /* NotificationController.swift */,
 				DBD765A61B0E5F4200FA08A2 /* GlanceController.swift */,
+				5E28F22E1B16284D00613047 /* AnswertInterfaceController.swift */,
 				DBD765A81B0E5F4200FA08A2 /* Images.xcassets */,
 				DBD7659F1B0E5F4200FA08A2 /* Supporting Files */,
 			);
@@ -908,6 +916,7 @@
 				5E7A97221AC1A6FA00FDDF65 /* CharacterDictionary.m in Sources */,
 				5EAACAD51ACA3ED700AA8177 /* UserTableViewCell.m in Sources */,
 				DB7119951ABCA7E100ACDD71 /* Achievement.m in Sources */,
+				DB4E28781B14FF770023257E /* HandOffViewController.m in Sources */,
 				DB7119A01ABCA7FF00ACDD71 /* Puzzle.m in Sources */,
 				DBA17E8F1AC5D08300E807F7 /* TutorialDrawView.m in Sources */,
 				5ED9E67A1ABC810F00905BC5 /* AppDelegate.m in Sources */,
@@ -948,6 +957,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD765A51B0E5F4200FA08A2 /* NotificationController.swift in Sources */,
+				5E28F22F1B16284D00613047 /* AnswertInterfaceController.swift in Sources */,
 				DBD765A31B0E5F4200FA08A2 /* InterfaceController.swift in Sources */,
 				DBD765A71B0E5F4200FA08A2 /* GlanceController.swift in Sources */,
 			);
