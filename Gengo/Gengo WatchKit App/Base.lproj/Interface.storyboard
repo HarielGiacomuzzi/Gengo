@@ -64,9 +64,9 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                        <label alignment="left" text="dasdsa" numberOfLines="5" id="XkS-y5-khE"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="notificationCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
                         <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
@@ -78,9 +78,22 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Gengo_WatchKit_App" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Gengo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="70" height="63" alignment="center" id="hPa-eO-ufC"/>
+                        <label alignment="center" text="Como se escreve gato?" numberOfLines="10" id="hUK-k7-kh8"/>
+                        <label alignment="center" verticalAlignment="center" text="B)cachorro?" id="9zg-Qy-LVj"/>
+                        <label alignment="center" text="A) gato?" id="roc-Nb-F12"/>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="hPa-eO-ufC" id="lWb-8V-LF4"/>
+                        <outlet property="optionA" destination="roc-Nb-F12" id="T1W-ae-Upz"/>
+                        <outlet property="optionB" destination="9zg-Qy-LVj" id="6DD-1d-kCE"/>
+                        <outlet property="question" destination="hUK-k7-kh8" id="mqG-Qn-hBJ"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="553" y="1004.5"/>
         </scene>
     </scenes>
 </document>

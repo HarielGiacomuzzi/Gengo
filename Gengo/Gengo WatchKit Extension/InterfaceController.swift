@@ -28,6 +28,7 @@ class InterfaceController: WKInterfaceController {
         self.counter = 0;
         loadQuestion(counter!);
         
+
     }
 
     override func willActivate() {
@@ -80,5 +81,21 @@ class InterfaceController: WKInterfaceController {
         }else{
             println("Erroooo feio, errou rude :P")
         }
+    }
+    
+    
+    
+    
+    //parte da notification:
+    
+    
+    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+        var rightAnswer = localNotification.userInfo!["rightAnswer"] as! Int
+        if((identifier == "A" && rightAnswer == 0) || (identifier == "B" && rightAnswer == 1)) {
+            println("repsosta certa")
+        } else {
+            println("repsosta errada")
+        }
+        
     }
 }
