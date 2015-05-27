@@ -113,6 +113,15 @@
     NSLog(@"recebido");
 }
 
+-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler{
+    UIWindow *win = self.window;
+    if (win != nil) {
+        [win.rootViewController restoreUserActivityState:userActivity];
+    }
+    
+    return YES;
+}
+
 -(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler {
     NSLog(@"%@", identifier);
     

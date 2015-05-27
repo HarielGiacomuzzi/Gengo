@@ -69,6 +69,7 @@ class InterfaceController: WKInterfaceController {
                 option2.setTitle(data[questionNumber][3] as? String);
                 rightOption = 1;
             }
+            self.updateUserActivity("com.nekosenseicorporation.Gengo.WatchApp", userInfo: ["question": (data[questionNumber][5] as? String)!, "romaji": (data[questionNumber][1] as? String)!, "imageName" : (data[questionNumber][2] as? String)!, "rightOption" : (data[questionNumber][3] as? String)!,"wrongOption" : (data[questionNumber][4] as? String)!], webpageURL: nil)
         }
     }
     
