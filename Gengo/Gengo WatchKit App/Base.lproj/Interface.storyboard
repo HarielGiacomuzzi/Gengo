@@ -102,8 +102,8 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Gengo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView width="136" height="63" alignment="center" image="boy head" id="hPa-eO-ufC"/>
                         <label alignment="center" text="Como se escreve gato?" numberOfLines="10" id="hUK-k7-kh8"/>
+                        <imageView width="136" height="55" alignment="center" image="boy head" id="hPa-eO-ufC"/>
                         <label alignment="center" verticalAlignment="center" text="B)cachorro?" id="9zg-Qy-LVj"/>
                         <label alignment="center" text="A) gato?" id="roc-Nb-F12"/>
                     </items>
