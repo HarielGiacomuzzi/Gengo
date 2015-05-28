@@ -12,10 +12,14 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
     
+    @IBOutlet weak var topImg: WKInterfaceGroup!
     @IBOutlet weak var imgGlance: WKInterfaceGroup!
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        self.topImg.setBackgroundImageNamed("@2xoi_")
+ 
+        self.topImg.startAnimatingWithImagesInRange(NSMakeRange(0, 89), duration: 2.729, repeatCount: 1)
         
         // Configure interface objects here.
     }
