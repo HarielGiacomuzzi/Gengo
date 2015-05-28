@@ -202,7 +202,7 @@
 			<string>ねつ</string>
 			<key>embora</key>
 			<string>のに</string>
-			<key>cerebro</key>
+			<key>cérebro</key>
 			<string>のう</string>
 		</dict>
 		<dict>
@@ -255,7 +255,7 @@
 			<key>はい</key>
 			<string>hai</string>
 			<key>はた</key>
-			<string>hada</string>
+			<string>hata</string>
 			<key>ひと</key>
 			<string>hito</string>
 			<key>ひえ</key>
@@ -407,9 +407,9 @@
 			<key>わかります</key>
 			<string>wakarimasu</string>
 			<key>をとおして</key>
-			<string>otooshite</string>
+			<string>wotooshite</string>
 			<key>をも</key>
-			<string>omo</string>
+			<string>womo</string>
 		</dict>
 	</array>
 </array>
