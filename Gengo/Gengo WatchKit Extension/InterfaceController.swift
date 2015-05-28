@@ -60,7 +60,7 @@ class InterfaceController: WKInterfaceController {
             var data : NSArray = (dic.objectForKey("Questions") as? NSArray)!;
             romajiLbl.setText(data[questionNumber][1] as? String);
             questionLabel.setText(data[questionNumber][5] as? String);
-//          questionImg.setImageNamed(data[questionNumber][2] as? String);
+            questionImg.setImageNamed(data[questionNumber][2] as? String);
             if(Int(arc4random_uniform(11)) > 5){
                 option1.setTitle(data[questionNumber][3] as? String);
                 option2.setTitle(data[questionNumber][4] as? String);
